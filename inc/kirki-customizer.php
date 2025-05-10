@@ -1,4 +1,5 @@
 <?php
+
 /**
  * portolite customizer
  *
@@ -6,168 +7,170 @@
  */
 
 // Exit if accessed directly
-if ( !defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit;
 }
 
 /**
  * Added Panels & Sections
  */
-function portolite_customizer_panels_sections( $wp_customize ) {
+function portolite_customizer_panels_sections($wp_customize)
+{
 
     //Add panel
-    $wp_customize->add_panel( 'portolite_customizer', [
+    $wp_customize->add_panel('portolite_customizer', [
         'priority' => 10,
-        'title'    => esc_html__( 'PortoLite Customizer', 'portolite' ),
-    ] );
+        'title'    => esc_html__('PortoLite Customizer', 'portolite'),
+    ]);
 
     /**
      * Customizer Section
      */
-    $wp_customize->add_section( 'header_top_setting', [
-        'title'       => esc_html__( 'Header Top Setting', 'portolite' ),
+    $wp_customize->add_section('header_top_setting', [
+        'title'       => esc_html__('Header Top Setting', 'portolite'),
         'description' => '',
         'priority'    => 10,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'header_social', [
-        'title'       => esc_html__( 'Header Social', 'portolite' ),
+    $wp_customize->add_section('header_social', [
+        'title'       => esc_html__('Header Social', 'portolite'),
         'description' => '',
         'priority'    => 11,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'section_header_logo', [
-        'title'       => esc_html__( 'Header Setting', 'portolite' ),
+    $wp_customize->add_section('section_header_logo', [
+        'title'       => esc_html__('Header Setting', 'portolite'),
         'description' => '',
         'priority'    => 12,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'section_menu', [
-        'title'       => esc_html__( 'Menu Setting', 'portolite' ),
+    $wp_customize->add_section('section_menu', [
+        'title'       => esc_html__('Menu Setting', 'portolite'),
         'description' => '',
         'priority'    => 12,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'section_preloader', [
-        'title'       => esc_html__( 'Preloader Setting', 'portolite' ),
+    $wp_customize->add_section('section_preloader', [
+        'title'       => esc_html__('Preloader Setting', 'portolite'),
         'description' => '',
         'priority'    => 13,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'blog_setting', [
-        'title'       => esc_html__( 'Blog Setting', 'portolite' ),
+    $wp_customize->add_section('blog_setting', [
+        'title'       => esc_html__('Blog Setting', 'portolite'),
         'description' => '',
         'priority'    => 13,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'header_side_setting', [
-        'title'       => esc_html__( 'Offcanvas Settings', 'portolite' ),
+    $wp_customize->add_section('header_side_setting', [
+        'title'       => esc_html__('Offcanvas Settings', 'portolite'),
         'description' => '',
         'priority'    => 14,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'newsletter_setting', [
-        'title'       => esc_html__( 'Newsletter Settings', 'portolite' ),
+    $wp_customize->add_section('newsletter_setting', [
+        'title'       => esc_html__('Newsletter Settings', 'portolite'),
         'description' => 'Newsletter Styles',
         'priority'    => 14,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'breadcrumb_setting', [
-        'title'       => esc_html__( 'Breadcrumb Setting', 'portolite' ),
+    $wp_customize->add_section('breadcrumb_setting', [
+        'title'       => esc_html__('Breadcrumb Setting', 'portolite'),
         'description' => '',
         'priority'    => 15,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'blog_setting', [
-        'title'       => esc_html__( 'Blog Setting', 'portolite' ),
+    $wp_customize->add_section('blog_setting', [
+        'title'       => esc_html__('Blog Setting', 'portolite'),
         'description' => '',
         'priority'    => 16,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'footer_setting', [
-        'title'       => esc_html__( 'Footer Settings', 'portolite' ),
+    $wp_customize->add_section('footer_setting', [
+        'title'       => esc_html__('Footer Settings', 'portolite'),
         'description' => '',
         'priority'    => 16,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'event_setting', [
-        'title'       => esc_html__( 'Event Settings', 'portolite' ),
+    $wp_customize->add_section('event_setting', [
+        'title'       => esc_html__('Event Settings', 'portolite'),
         'description' => '',
         'priority'    => 16,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'color_setting', [
-        'title'       => esc_html__( 'Color Setting', 'portolite' ),
+    $wp_customize->add_section('color_setting', [
+        'title'       => esc_html__('Color Setting', 'portolite'),
         'description' => '',
         'priority'    => 17,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( '404_page', [
-        'title'       => esc_html__( '404 Page', 'portolite' ),
+    $wp_customize->add_section('404_page', [
+        'title'       => esc_html__('404 Page', 'portolite'),
         'description' => '',
         'priority'    => 18,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'shop_sections', [
-        'title'       => esc_html__( 'Shop Settings ', 'portolite' ),
+    $wp_customize->add_section('shop_sections', [
+        'title'       => esc_html__('Shop Settings ', 'portolite'),
         'description' => '',
         'priority'    => 19,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'typo_setting', [
-        'title'       => esc_html__( 'Typography Setting', 'portolite' ),
+    $wp_customize->add_section('typo_setting', [
+        'title'       => esc_html__('Typography Setting', 'portolite'),
         'description' => '',
         'priority'    => 21,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 
-    $wp_customize->add_section( 'slug_setting', [
-        'title'       => esc_html__( 'Slug Settings', 'portolite' ),
+    $wp_customize->add_section('slug_setting', [
+        'title'       => esc_html__('Slug Settings', 'portolite'),
         'description' => '',
         'priority'    => 22,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
-    ] );
+    ]);
 }
 
-add_action( 'customize_register', 'portolite_customizer_panels_sections' );
+add_action('customize_register', 'portolite_customizer_panels_sections');
 
-function _header_menu( $fields ) {
+function _header_menu($fields)
+{
     $fields[] = [
         'type'        => 'typography',
         'settings'    => 'typography_menu_setting',
-        'label'       => esc_html__( 'Menu Font', 'portolite' ),
+        'label'       => esc_html__('Menu Font', 'portolite'),
         'section'     => 'section_menu',
         'default'     => [
             'font-family'    => '',
@@ -185,55 +188,55 @@ function _header_menu( $fields ) {
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_menu_bg_color',
-        'label'       => __( 'Menu BG Color', 'portolite' ),
-        'description' => esc_html__( 'This is a Menu bg color control.', 'portolite' ),
+        'label'       => __('Menu BG Color', 'portolite'),
+        'description' => esc_html__('This is a Menu bg color control.', 'portolite'),
         'section'     => 'section_menu',
         'default'     => '#0E3531',
         'priority'    => 10,
     ];
 
     return $fields;
-
 }
-add_filter( 'kirki/fields', '_header_menu' );
+add_filter('kirki/fields', '_header_menu');
 
 
-function _header_top_fields( $fields ) {
+function _header_top_fields($fields)
+{
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_topbar_switch',
-        'label'    => esc_html__( 'Topbar Switcher', 'portolite' ),
+        'label'    => esc_html__('Topbar Switcher', 'portolite'),
         'section'  => 'header_top_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_sticky_switch',
-        'label'    => esc_html__( 'Sticky Switcher', 'portolite' ),
+        'label'    => esc_html__('Sticky Switcher', 'portolite'),
         'section'  => 'header_top_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_backtotop',
-        'label'    => esc_html__( 'Back To Top On/Off', 'portolite' ),
+        'label'    => esc_html__('Back To Top On/Off', 'portolite'),
         'section'  => 'header_top_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
@@ -241,27 +244,27 @@ function _header_top_fields( $fields ) {
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_header_right',
-        'label'    => esc_html__( 'Header Right On/Off', 'portolite' ),
+        'label'    => esc_html__('Header Right On/Off', 'portolite'),
         'section'  => 'header_top_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
-    ];    
+    ];
 
     // search on off
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_header_search',
-        'label'    => esc_html__( 'Header Search On/Off', 'portolite' ),
+        'label'    => esc_html__('Header Search On/Off', 'portolite'),
         'section'  => 'header_top_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
@@ -269,13 +272,13 @@ function _header_top_fields( $fields ) {
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_header_lang',
-        'label'    => esc_html__( 'Language On/Off', 'portolite' ),
+        'label'    => esc_html__('Language On/Off', 'portolite'),
         'section'  => 'header_top_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
@@ -283,13 +286,13 @@ function _header_top_fields( $fields ) {
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_header_login',
-        'label'    => esc_html__( 'Login On/Off', 'portolite' ),
+        'label'    => esc_html__('Login On/Off', 'portolite'),
         'section'  => 'header_top_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
@@ -297,13 +300,13 @@ function _header_top_fields( $fields ) {
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_header_cart',
-        'label'    => esc_html__( 'Cart On/Off', 'portolite' ),
+        'label'    => esc_html__('Cart On/Off', 'portolite'),
         'section'  => 'header_top_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
@@ -311,37 +314,37 @@ function _header_top_fields( $fields ) {
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_header_wishlist',
-        'label'    => esc_html__( 'Wishlist On/Off', 'portolite' ),
+        'label'    => esc_html__('Wishlist On/Off', 'portolite'),
         'section'  => 'header_top_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_header_hamburger',
-        'label'    => esc_html__( 'Header Hamburger On/Off', 'portolite' ),
+        'label'    => esc_html__('Header Hamburger On/Off', 'portolite'),
         'section'  => 'header_top_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
-    
+
     // hamburger text
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_header_hamburger_text',
-        'label'    => esc_html__( 'Hamburger Text', 'portolite' ),
+        'label'    => esc_html__('Hamburger Text', 'portolite'),
         'section'  => 'header_top_setting',
-        'default'  => esc_html__( 'Intro', 'portolite' ),
+        'default'  => esc_html__('Intro', 'portolite'),
         'priority' => 10,
     ];
 
@@ -350,78 +353,78 @@ function _header_top_fields( $fields ) {
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_mail_title',
-        'label'    => esc_html__( 'Mail Title', 'portolite' ),
+        'label'    => esc_html__('Mail Title', 'portolite'),
         'section'  => 'header_top_setting',
-        'default'  => esc_html__( 'Email Us:', 'portolite' ),
+        'default'  => esc_html__('Email Us:', 'portolite'),
         'priority' => 10,
-    ];    
+    ];
 
     // email
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_mail_id',
-        'label'    => esc_html__( 'Mail ID', 'portolite' ),
+        'label'    => esc_html__('Mail ID', 'portolite'),
         'section'  => 'header_top_setting',
-        'default'  => esc_html__( 'info@portolite.com', 'portolite' ),
+        'default'  => esc_html__('info@portolite.com', 'portolite'),
         'priority' => 10,
-    ];    
+    ];
 
     // phone title
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_phone_title',
-        'label'    => esc_html__( 'Phone Title', 'portolite' ),
+        'label'    => esc_html__('Phone Title', 'portolite'),
         'section'  => 'header_top_setting',
-        'default'  => esc_html__( 'Call Us', 'portolite' ),
+        'default'  => esc_html__('Call Us', 'portolite'),
         'priority' => 10,
-    ];    
+    ];
 
     // phone
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_phone_num',
-        'label'    => esc_html__( 'Phone', 'portolite' ),
+        'label'    => esc_html__('Phone', 'portolite'),
         'section'  => 'header_top_setting',
-        'default'  => esc_html__( '+964 742 44 763', 'portolite' ),
+        'default'  => esc_html__('+964 742 44 763', 'portolite'),
         'priority' => 10,
-    ];    
+    ];
 
     // time
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_time_text',
-        'label'    => esc_html__( 'Time text', 'portolite' ),
+        'label'    => esc_html__('Time text', 'portolite'),
         'section'  => 'header_top_setting',
-        'default'  => esc_html__( 'Sunday-Thures 10am-07pm', 'portolite' ),
+        'default'  => esc_html__('Sunday-Thures 10am-07pm', 'portolite'),
         'priority' => 10,
-    ];    
+    ];
 
     // welcome
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_welcome_text',
-        'label'    => esc_html__( 'Welcome text', 'portolite' ),
+        'label'    => esc_html__('Welcome text', 'portolite'),
         'section'  => 'header_top_setting',
-        'default'  => esc_html__( 'We are a law firm located in Berlin.', 'portolite' ),
+        'default'  => esc_html__('We are a law firm located in Berlin.', 'portolite'),
         'priority' => 10,
-    ];    
+    ];
 
     // contact
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_contact_button_text',
-        'label'    => esc_html__( 'Contact Button Text', 'portolite' ),
+        'label'    => esc_html__('Contact Button Text', 'portolite'),
         'section'  => 'header_top_setting',
-        'default'  => esc_html__( 'Lets Talk', 'portolite' ),
+        'default'  => esc_html__('Lets Talk', 'portolite'),
         'priority' => 10,
-    ];    
+    ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_contact_button_link',
-        'label'    => esc_html__( 'Contact Button URL', 'portolite' ),
+        'label'    => esc_html__('Contact Button URL', 'portolite'),
         'section'  => 'header_top_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
@@ -429,41 +432,41 @@ function _header_top_fields( $fields ) {
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_login_button_text',
-        'label'    => esc_html__( 'Login Button Text', 'portolite' ),
+        'label'    => esc_html__('Login Button Text', 'portolite'),
         'section'  => 'header_top_setting',
-        'default'  => esc_html__( 'Login', 'portolite' ),
+        'default'  => esc_html__('Login', 'portolite'),
         'priority' => 10,
-    ];    
+    ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_login_button_link',
-        'label'    => esc_html__( 'Login Button URL', 'portolite' ),
+        'label'    => esc_html__('Login Button URL', 'portolite'),
         'section'  => 'header_top_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     return $fields;
-
 }
-add_filter( 'kirki/fields', '_header_top_fields' );
+add_filter('kirki/fields', '_header_top_fields');
 
 /*
 Header Social
  */
-function _header_social_fields( $fields ) {
+function _header_social_fields($fields)
+{
 
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_social_switch',
-        'label'    => esc_html__( 'Social On/Off', 'portolite' ),
+        'label'    => esc_html__('Social On/Off', 'portolite'),
         'section'  => 'header_social',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
@@ -471,63 +474,64 @@ function _header_social_fields( $fields ) {
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_topbar_fb_url',
-        'label'    => esc_html__( 'Facebook Url', 'portolite' ),
+        'label'    => esc_html__('Facebook Url', 'portolite'),
         'section'  => 'header_social',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_topbar_twitter_url',
-        'label'    => esc_html__( 'Twitter Url', 'portolite' ),
+        'label'    => esc_html__('Twitter Url', 'portolite'),
         'section'  => 'header_social',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_topbar_linkedin_url',
-        'label'    => esc_html__( 'Linkedin Url', 'portolite' ),
+        'label'    => esc_html__('Linkedin Url', 'portolite'),
         'section'  => 'header_social',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_topbar_instagram_url',
-        'label'    => esc_html__( 'Instagram Url', 'portolite' ),
+        'label'    => esc_html__('Instagram Url', 'portolite'),
         'section'  => 'header_social',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_topbar_youtube_url',
-        'label'    => esc_html__( 'Youtube Url', 'portolite' ),
+        'label'    => esc_html__('Youtube Url', 'portolite'),
         'section'  => 'header_social',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
 
     return $fields;
 }
-add_filter( 'kirki/fields', '_header_social_fields' );
+add_filter('kirki/fields', '_header_social_fields');
 
 /*
 newsletter setting
  */
-function _newsletter_setting_fields( $fields ) {
+function _newsletter_setting_fields($fields)
+{
     $fields[] = [
         'type'        => 'radio-image',
         'settings'    => 'choose_default_newsletter',
-        'label'       => esc_html__( 'Select Newsletter Style', 'portolite' ),
+        'label'       => esc_html__('Select Newsletter Style', 'portolite'),
         'section'     => 'newsletter_setting',
-        'placeholder' => esc_html__( 'Select an option...', 'portolite' ),
+        'placeholder' => esc_html__('Select an option...', 'portolite'),
         'priority'    => 10,
         'multiple'    => 1,
         'choices'     => [
@@ -542,8 +546,8 @@ function _newsletter_setting_fields( $fields ) {
     $fields[] = [
         'type'        => 'image',
         'settings'    => 'newsletter_bg_img',
-        'label'       => esc_html__( 'Newsletter Background Image', 'portolite' ),
-        'description' => esc_html__( 'Newsletter Background Image', 'portolite' ),
+        'label'       => esc_html__('Newsletter Background Image', 'portolite'),
+        'description' => esc_html__('Newsletter Background Image', 'portolite'),
         'section'     => 'newsletter_setting',
         'default'     => get_template_directory_uri() . '/assets/img/newsletter/newsletter-1.jpg',
     ];
@@ -552,61 +556,61 @@ function _newsletter_setting_fields( $fields ) {
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_newsletter_switch',
-        'label'    => esc_html__( 'Newsletter On/Off', 'portolite' ),
+        'label'    => esc_html__('Newsletter On/Off', 'portolite'),
         'section'  => 'newsletter_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
-    ]; 
+    ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_newsletter_mailchimp_shortcode',
-        'label'    => esc_html__( 'Mailchip Shortcode', 'portolite' ),
+        'label'    => esc_html__('Mailchip Shortcode', 'portolite'),
         'section'  => 'newsletter_setting',
-        'default'  => esc_html__( 'Your shortcode here', 'portolite' ),
+        'default'  => esc_html__('Your shortcode here', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_newsletter_subtitle',
-        'label'    => esc_html__( 'Subtitle', 'portolite' ),
+        'label'    => esc_html__('Subtitle', 'portolite'),
         'section'  => 'newsletter_setting',
-        'default'  => esc_html__( 'PortoLite Discount', 'portolite' ),
+        'default'  => esc_html__('PortoLite Discount', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_newsletter_title',
-        'label'    => esc_html__( 'Title', 'portolite' ),
+        'label'    => esc_html__('Title', 'portolite'),
         'section'  => 'newsletter_setting',
-        'default'  => esc_html__( 'Keep up with our daily and weekly newsletters', 'portolite' ),
+        'default'  => esc_html__('Keep up with our daily and weekly newsletters', 'portolite'),
         'priority' => 10,
     ];
     $fields[] = [
         'type'     => 'textarea',
         'settings' => 'portolite_newsletter_desc',
-        'label'    => esc_html__( 'Description', 'portolite' ),
+        'label'    => esc_html__('Description', 'portolite'),
         'section'  => 'newsletter_setting',
-        'default'  => esc_html__( 'Keep up with our daily and weekly newsletters', 'portolite' ),
+        'default'  => esc_html__('Keep up with our daily and weekly newsletters', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_newsletter_social_switch',
-        'label'    => esc_html__( 'Social On/Off', 'portolite' ),
+        'label'    => esc_html__('Social On/Off', 'portolite'),
         'section'  => 'newsletter_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
@@ -614,91 +618,77 @@ function _newsletter_setting_fields( $fields ) {
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_newsletter_fb_url',
-        'label'    => esc_html__( 'Facebook Url', 'portolite' ),
+        'label'    => esc_html__('Facebook Url', 'portolite'),
         'section'  => 'newsletter_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_newsletter_twitter_url',
-        'label'    => esc_html__( 'Twitter Url', 'portolite' ),
+        'label'    => esc_html__('Twitter Url', 'portolite'),
         'section'  => 'newsletter_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_newsletter_linkedin_url',
-        'label'    => esc_html__( 'Linkedin Url', 'portolite' ),
+        'label'    => esc_html__('Linkedin Url', 'portolite'),
         'section'  => 'newsletter_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_newsletter_instagram_url',
-        'label'    => esc_html__( 'Instagram Url', 'portolite' ),
+        'label'    => esc_html__('Instagram Url', 'portolite'),
         'section'  => 'newsletter_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_newsletter_youtube_url',
-        'label'    => esc_html__( 'Youtube Url', 'portolite' ),
+        'label'    => esc_html__('Youtube Url', 'portolite'),
         'section'  => 'newsletter_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_login_url',
-        'label'    => esc_html__( 'Login URL', 'portolite' ),
+        'label'    => esc_html__('Login URL', 'portolite'),
         'section'  => 'newsletter_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     return $fields;
 }
-add_filter( 'kirki/fields', '_newsletter_setting_fields' );
+add_filter('kirki/fields', '_newsletter_setting_fields');
 
 /*
 Header Settings
  */
-function _header_header_fields( $fields ) {
+function _header_header_fields($fields)
+{
     $fields[] = [
         'type'        => 'radio-image',
         'settings'    => 'choose_default_header',
-        'label'       => esc_html__( 'Select Header Style', 'portolite' ),
+        'label'       => esc_html__('Select Header Style', 'portolite'),
         'section'     => 'section_header_logo',
-        'placeholder' => esc_html__( 'Select an option...', 'portolite' ),
+        'placeholder' => esc_html__('Select an option...', 'portolite'),
         'priority'    => 10,
         'multiple'    => 1,
         'choices'     => [
             'header-style-1'   => get_template_directory_uri() . '/inc/img/header/header-1.png',
             'header-style-2' => get_template_directory_uri() . '/inc/img/header/header-2.png',
-            'header-style-3'  => get_template_directory_uri() . '/inc/img/header/header-3.png',
-            'header-style-4'  => get_template_directory_uri() . '/inc/img/header/header-4.png',
-            'header-style-5'  => get_template_directory_uri() . '/inc/img/header/header-5.png',
-            'header-style-6'  => get_template_directory_uri() . '/inc/img/header/header-6.png',
-            'header-style-7'  => get_template_directory_uri() . '/inc/img/header/header-7.png',
-            'header-style-8'  => get_template_directory_uri() . '/inc/img/header/header-8.png',
-            'header-style-9'  => get_template_directory_uri() . '/inc/img/header/header-9.png',
-            'header-style-10'  => get_template_directory_uri() . '/inc/img/header/header-10.png',
-            'header-style-11'  => get_template_directory_uri() . '/inc/img/header/header-11.png',
-            'header-style-12'  => get_template_directory_uri() . '/inc/img/header/header-12.png',
-            'header-style-13'  => get_template_directory_uri() . '/inc/img/header/header-13.png',
-            'header-style-14'  => get_template_directory_uri() . '/inc/img/header/header-14.png',
-            'header-style-15'  => get_template_directory_uri() . '/inc/img/header/header-15.png',
-            'header-style-16'  => get_template_directory_uri() . '/inc/img/header/header-16.png',
-            'header-style-17'  => get_template_directory_uri() . '/inc/img/header/header-17.png'
         ],
         'default'     => 'header-style-1',
     ];
@@ -707,21 +697,21 @@ function _header_header_fields( $fields ) {
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_transparent_header',
-        'label'    => esc_html__( 'Transparent Style On/Off', 'portolite' ),
+        'label'    => esc_html__('Transparent Style On/Off', 'portolite'),
         'section'  => 'section_header_logo',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
-    ]; 
+    ];
 
     $fields[] = [
         'type'        => 'image',
         'settings'    => 'logo',
-        'label'       => esc_html__( 'Header Logo', 'portolite' ),
-        'description' => esc_html__( 'Upload Your Logo.', 'portolite' ),
+        'label'       => esc_html__('Header Logo', 'portolite'),
+        'description' => esc_html__('Upload Your Logo.', 'portolite'),
         'section'     => 'section_header_logo',
         'default'     => get_template_directory_uri() . '/assets/img/logo/logo-black.svg',
     ];
@@ -729,83 +719,84 @@ function _header_header_fields( $fields ) {
     $fields[] = [
         'type'        => 'image',
         'settings'    => 'seconday_logo',
-        'label'       => esc_html__( 'Header Secondary Logo', 'portolite' ),
-        'description' => esc_html__( 'Header Logo Black', 'portolite' ),
+        'label'       => esc_html__('Header Secondary Logo', 'portolite'),
+        'description' => esc_html__('Header Logo Black', 'portolite'),
         'section'     => 'section_header_logo',
         'default'     => get_template_directory_uri() . '/assets/img/logo/logo.svg',
     ];
 
-    $fields[] = [
-        'type'        => 'image',
-        'settings'    => 'portolite_sticky_logo',
-        'label'       => esc_html__( 'Header Sticky Logo', 'portolite' ),
-        'description' => esc_html__( 'Header Sticky Logo', 'portolite' ),
-        'section'     => 'section_header_logo',
-        'default'     => get_template_directory_uri() . '/assets/img/logo/logo-black-solid.svg',
-    ];
+    // $fields[] = [
+    //     'type'        => 'image',
+    //     'settings'    => 'portolite_sticky_logo',
+    //     'label'       => esc_html__('Header Sticky Logo', 'portolite'),
+    //     'description' => esc_html__('Header Sticky Logo', 'portolite'),
+    //     'section'     => 'section_header_logo',
+    //     'default'     => get_template_directory_uri() . '/assets/img/logo/logo-black-solid.svg',
+    // ];
 
-    $fields[] = [
-        'type'        => 'image',
-        'settings'    => 'portolite_search_logo',
-        'label'       => esc_html__( 'Header Search Logo', 'portolite' ),
-        'description' => esc_html__( 'Header Search Logo', 'portolite' ),
-        'section'     => 'section_header_logo',
-        'default'     => get_template_directory_uri() . '/assets/img/logo/logo.svg',
-    ];
+    // $fields[] = [
+    //     'type'        => 'image',
+    //     'settings'    => 'portolite_search_logo',
+    //     'label'       => esc_html__( 'Header Search Logo', 'portolite' ),
+    //     'description' => esc_html__( 'Header Search Logo', 'portolite' ),
+    //     'section'     => 'section_header_logo',
+    //     'default'     => get_template_directory_uri() . '/assets/img/logo/logo.svg',
+    // ];
 
-        // preloader text
-        $fields[] = [
-            'type'     => 'text',
-            'settings' => 'portolite_logo_width',
-            'label'    => esc_html__( 'Logo Width', 'portolite' ),
-            'section'  => 'section_header_logo',
-            'default'  => esc_html__( '120', 'portolite' ),
-            'priority' => 10,
-        ];
+    // preloader text
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'portolite_logo_width',
+        'label'    => esc_html__('Logo Width', 'portolite'),
+        'section'  => 'section_header_logo',
+        'default'  => esc_html__('120', 'portolite'),
+        'priority' => 10,
+    ];
 
     return $fields;
 }
-add_filter( 'kirki/fields', '_header_header_fields' );
+add_filter('kirki/fields', '_header_header_fields');
 
 /*
 Preloader
  */
-function _header_preloader_fields( $fields ) {
+function _header_preloader_fields($fields)
+{
 
     // preloader switch
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_preloader_switch',
-        'label'    => esc_html__( 'Preloader On/Off', 'portolite' ),
+        'label'    => esc_html__('Preloader On/Off', 'portolite'),
         'section'  => 'section_preloader',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
-    ];  
+    ];
 
     // preloader bar
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_preloader_bar',
-        'label'    => esc_html__( 'Preloader Bar On/Off', 'portolite' ),
+        'label'    => esc_html__('Preloader Bar On/Off', 'portolite'),
         'section'  => 'section_preloader',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
-    ];  
+    ];
 
     // preloader logo
     $fields[] = [
         'type'        => 'image',
         'settings'    => 'portolite_preloader_logo',
-        'label'       => esc_html__( 'Logo Preloader', 'portolite' ),
-        'description' => esc_html__( 'Logo Preloader', 'portolite' ),
+        'label'       => esc_html__('Logo Preloader', 'portolite'),
+        'description' => esc_html__('Logo Preloader', 'portolite'),
         'section'     => 'section_preloader',
         'default'     => get_template_directory_uri() . '/assets/img/logo/logo-black.svg',
     ];
@@ -814,9 +805,9 @@ function _header_preloader_fields( $fields ) {
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_preloader_text',
-        'label'    => esc_html__( 'Preloader text', 'portolite' ),
+        'label'    => esc_html__('Preloader text', 'portolite'),
         'section'  => 'section_preloader',
-        'default'  => esc_html__( 'PortoLite', 'portolite' ),
+        'default'  => esc_html__('PortoLite', 'portolite'),
         'priority' => 10,
     ];
 
@@ -824,27 +815,28 @@ function _header_preloader_fields( $fields ) {
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_preloader_loading_text',
-        'label'    => esc_html__( 'Loading text', 'portolite' ),
+        'label'    => esc_html__('Loading text', 'portolite'),
         'section'  => 'section_preloader',
-        'default'  => esc_html__( 'Loading', 'portolite' ),
+        'default'  => esc_html__('Loading', 'portolite'),
         'priority' => 10,
     ];
 
     return $fields;
 }
-add_filter( 'kirki/fields', '_header_preloader_fields' );
+// add_filter('kirki/fields', '_header_preloader_fields');
 
 /*
 Header Side Info
  */
-function _header_side_fields( $fields ) {
+function _header_side_fields($fields)
+{
 
     $fields[] = [
         'type'        => 'radio-image',
         'settings'    => 'choose_default_offcanvas',
-        'label'       => esc_html__( 'Select Offcanvas Style', 'portolite' ),
+        'label'       => esc_html__('Select Offcanvas Style', 'portolite'),
         'section'     => 'header_side_setting',
-        'placeholder' => esc_html__( 'Select an option...', 'portolite' ),
+        'placeholder' => esc_html__('Select an option...', 'portolite'),
         'priority'    => 10,
         'multiple'    => 1,
         'choices'     => [
@@ -863,48 +855,48 @@ function _header_side_fields( $fields ) {
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_side_hide',
-        'label'    => esc_html__( 'Offcanvas Info On/Off', 'portolite' ),
+        'label'    => esc_html__('Offcanvas Info On/Off', 'portolite'),
         'section'  => 'header_side_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
-    ];  
+    ];
 
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_offcanvas_full_menu',
-        'label'    => esc_html__( 'Offcanvas Full Width Menu On/Off', 'portolite' ),
+        'label'    => esc_html__('Offcanvas Full Width Menu On/Off', 'portolite'),
         'section'  => 'header_side_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
-    ];  
+    ];
 
     // offcanvas default menu
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_offcanvas_default_menu',
-        'label'    => esc_html__( 'Menu On/Off', 'portolite' ),
+        'label'    => esc_html__('Menu On/Off', 'portolite'),
         'section'  => 'header_side_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
-    ];  
+    ];
 
     $fields[] = [
         'type'        => 'image',
         'settings'    => 'portolite_offcanvas_logo',
-        'label'       => esc_html__( 'Logo Offcanvas', 'portolite' ),
-        'description' => esc_html__( 'Logo Offcanvas', 'portolite' ),
+        'label'       => esc_html__('Logo Offcanvas', 'portolite'),
+        'description' => esc_html__('Logo Offcanvas', 'portolite'),
         'section'     => 'header_side_setting',
         'default'     => get_template_directory_uri() . '/assets/img/logo/logo-black.svg',
     ];
@@ -912,8 +904,8 @@ function _header_side_fields( $fields ) {
     $fields[] = [
         'type'        => 'image',
         'settings'    => 'portolite_offcanvas_signature',
-        'label'       => esc_html__( 'Signature Offcanvas', 'portolite' ),
-        'description' => esc_html__( 'Signature Offcanvas', 'portolite' ),
+        'label'       => esc_html__('Signature Offcanvas', 'portolite'),
+        'description' => esc_html__('Signature Offcanvas', 'portolite'),
         'section'     => 'header_side_setting',
         'default'     => get_template_directory_uri() . '/assets/img/shape/offcanvas-signature.png',
     ];
@@ -921,8 +913,8 @@ function _header_side_fields( $fields ) {
     $fields[] = [
         'type'        => 'image',
         'settings'    => 'portolite_offcanvas_thumb',
-        'label'       => esc_html__( 'Offcanvas Thumbnail', 'portolite' ),
-        'description' => esc_html__( 'Offcanvas Thumbnail', 'portolite' ),
+        'label'       => esc_html__('Offcanvas Thumbnail', 'portolite'),
+        'description' => esc_html__('Offcanvas Thumbnail', 'portolite'),
         'section'     => 'header_side_setting',
         'default'     => get_template_directory_uri() . '/assets/img/shape/offcanvas-img-1.png',
     ];
@@ -930,28 +922,28 @@ function _header_side_fields( $fields ) {
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_offcanvas_desc_title',
-        'label'    => esc_html__( 'Description Title', 'portolite' ),
+        'label'    => esc_html__('Description Title', 'portolite'),
         'section'  => 'header_side_setting',
-        'default'  => esc_html__( 'We help to create visual strategies.', 'portolite' ),
+        'default'  => esc_html__('We help to create visual strategies.', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'textarea',
         'settings' => 'portolite_offcanvas_description',
-        'label'    => esc_html__( 'Description ', 'portolite' ),
+        'label'    => esc_html__('Description ', 'portolite'),
         'section'  => 'header_side_setting',
-        'default'  => esc_html__( 'Im a UX Designer, Over the past 10+ years I’ve created well-crafted mobile and web apps by connecting Business goals with user needs.', 'portolite' ),
+        'default'  => esc_html__('Im a UX Designer, Over the past 10+ years I’ve created well-crafted mobile and web apps by connecting Business goals with user needs.', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'textarea',
         'settings' => 'portolite_offcanvas_links',
-        'label'    => esc_html__( 'Offcanvas Links', 'portolite' ),
+        'label'    => esc_html__('Offcanvas Links', 'portolite'),
         'section'  => 'header_side_setting',
-        'default'  => esc_html__( '<a href="#">Privacy Policy</a>
-        <a href="#">Use of terms</a>', 'portolite' ),
+        'default'  => esc_html__('<a href="#">Privacy Policy</a>
+        <a href="#">Use of terms</a>', 'portolite'),
         'priority' => 10,
     ];
 
@@ -959,153 +951,154 @@ function _header_side_fields( $fields ) {
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_offcanvas_social',
-        'label'    => esc_html__( 'Offcanvas Social On/Off', 'portolite' ),
+        'label'    => esc_html__('Offcanvas Social On/Off', 'portolite'),
         'section'  => 'header_side_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
-    ];  
+    ];
 
     // offcanvas social
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_offcanvas_social_title',
-        'label'    => esc_html__( 'Social Title', 'portolite' ),
+        'label'    => esc_html__('Social Title', 'portolite'),
         'section'  => 'header_side_setting',
-        'default'  => esc_html__( 'Follow :', 'portolite' ),
+        'default'  => esc_html__('Follow :', 'portolite'),
         'priority' => 10,
     ];
-        $fields[] = [
-            'type'     => 'text',
-            'settings' => 'portolite_offcanvas_fb_url',
-            'label'    => esc_html__( 'Facebook Url', 'portolite' ),
-            'section'  => 'header_side_setting',
-            'default'  => esc_html__( '#', 'portolite' ),
-            'priority' => 10,
-        ];
-    
-        $fields[] = [
-            'type'     => 'text',
-            'settings' => 'portolite_offcanvas_twitter_url',
-            'label'    => esc_html__( 'Twitter Url', 'portolite' ),
-            'section'  => 'header_side_setting',
-            'default'  => esc_html__( '#', 'portolite' ),
-            'priority' => 10,
-        ];
-    
-        $fields[] = [
-            'type'     => 'text',
-            'settings' => 'portolite_offcanvas_linkedin_url',
-            'label'    => esc_html__( 'Linkedin Url', 'portolite' ),
-            'section'  => 'header_side_setting',
-            'default'  => esc_html__( '#', 'portolite' ),
-            'priority' => 10,
-        ];
-    
-        $fields[] = [
-            'type'     => 'text',
-            'settings' => 'portolite_offcanvas_instagram_url',
-            'label'    => esc_html__( 'Instagram Url', 'portolite' ),
-            'section'  => 'header_side_setting',
-            'default'  => esc_html__( '#', 'portolite' ),
-            'priority' => 10,
-        ];
-    
-        $fields[] = [
-            'type'     => 'text',
-            'settings' => 'portolite_offcanvas_youtube_url',
-            'label'    => esc_html__( 'Youtube Url', 'portolite' ),
-            'section'  => 'header_side_setting',
-            'default'  => esc_html__( '#', 'portolite' ),
-            'priority' => 10,
-        ];
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'portolite_offcanvas_fb_url',
+        'label'    => esc_html__('Facebook Url', 'portolite'),
+        'section'  => 'header_side_setting',
+        'default'  => esc_html__('#', 'portolite'),
+        'priority' => 10,
+    ];
+
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'portolite_offcanvas_twitter_url',
+        'label'    => esc_html__('Twitter Url', 'portolite'),
+        'section'  => 'header_side_setting',
+        'default'  => esc_html__('#', 'portolite'),
+        'priority' => 10,
+    ];
+
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'portolite_offcanvas_linkedin_url',
+        'label'    => esc_html__('Linkedin Url', 'portolite'),
+        'section'  => 'header_side_setting',
+        'default'  => esc_html__('#', 'portolite'),
+        'priority' => 10,
+    ];
+
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'portolite_offcanvas_instagram_url',
+        'label'    => esc_html__('Instagram Url', 'portolite'),
+        'section'  => 'header_side_setting',
+        'default'  => esc_html__('#', 'portolite'),
+        'priority' => 10,
+    ];
+
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'portolite_offcanvas_youtube_url',
+        'label'    => esc_html__('Youtube Url', 'portolite'),
+        'section'  => 'header_side_setting',
+        'default'  => esc_html__('#', 'portolite'),
+        'priority' => 10,
+    ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_offcanvas_phone',
-        'label'    => esc_html__( 'Phone Number', 'portolite' ),
+        'label'    => esc_html__('Phone Number', 'portolite'),
         'section'  => 'header_side_setting',
-        'default'  => esc_html__( '+0989 7876 9865 9', 'portolite' ),
+        'default'  => esc_html__('+0989 7876 9865 9', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_offcanvas_mail',
-        'label'    => esc_html__( 'Email ID', 'portolite' ),
+        'label'    => esc_html__('Email ID', 'portolite'),
         'section'  => 'header_side_setting',
-        'default'  => esc_html__( 'info@portolite.com', 'portolite' ),
+        'default'  => esc_html__('info@portolite.com', 'portolite'),
         'priority' => 10,
     ];
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_offcanvas_location',
-        'label'    => esc_html__( 'Location Text', 'portolite' ),
+        'label'    => esc_html__('Location Text', 'portolite'),
         'section'  => 'header_side_setting',
-        'default'  => esc_html__( '32 East Trusel Court North Tonawanda, NY 14120', 'portolite' ),
+        'default'  => esc_html__('32 East Trusel Court North Tonawanda, NY 14120', 'portolite'),
         'priority' => 10,
     ];
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_offcanvas_location_url',
-        'label'    => esc_html__( 'Location URL', 'portolite' ),
+        'label'    => esc_html__('Location URL', 'portolite'),
         'section'  => 'header_side_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_offcanvas_btn',
-        'label'    => esc_html__( 'Button Text', 'portolite' ),
+        'label'    => esc_html__('Button Text', 'portolite'),
         'section'  => 'header_side_setting',
-        'default'  => esc_html__( 'Contact Us', 'portolite' ),
+        'default'  => esc_html__('Contact Us', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_offcanvas_btn_url',
-        'label'    => esc_html__( 'Button Link', 'portolite' ),
+        'label'    => esc_html__('Button Link', 'portolite'),
         'section'  => 'header_side_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_offcanvas_btn_2',
-        'label'    => esc_html__( 'Button Text 2', 'portolite' ),
+        'label'    => esc_html__('Button Text 2', 'portolite'),
         'section'  => 'header_side_setting',
-        'default'  => esc_html__( 'Work <br> With Us', 'portolite' ),
+        'default'  => esc_html__('Work <br> With Us', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_offcanvas_btn_2_url',
-        'label'    => esc_html__( 'Button Link 2 ', 'portolite' ),
+        'label'    => esc_html__('Button Link 2 ', 'portolite'),
         'section'  => 'header_side_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
     return $fields;
 }
-add_filter( 'kirki/fields', '_header_side_fields' );
+add_filter('kirki/fields', '_header_side_fields');
 
 /*
 _header_page_title_fields
  */
-function _header_page_title_fields( $fields ) {
+function _header_page_title_fields($fields)
+{
     $fields[] = [
         'type'        => 'radio-image',
         'settings'    => 'choose_default_breadcrumb',
-        'label'       => esc_html__( 'Select Breadcrumb Style', 'portolite' ),
+        'label'       => esc_html__('Select Breadcrumb Style', 'portolite'),
         'section'     => 'breadcrumb_setting',
-        'placeholder' => esc_html__( 'Select an option...', 'portolite' ),
+        'placeholder' => esc_html__('Select an option...', 'portolite'),
         'priority'    => 10,
         'multiple'    => 1,
         'choices'     => [
@@ -1120,40 +1113,40 @@ function _header_page_title_fields( $fields ) {
 
     $fields[] = [
         'type'        => 'typography',
-		'settings'    => 'breadcrumb_typography_setting',
-		'label'       => esc_html__( 'Typography Control', 'portolite' ),
-		'description' => esc_html__( 'The full set of options.', 'portolite' ),
-		'section'     => 'breadcrumb_setting',
-		'priority'    => 10,
-		'transport'   => 'auto',
-		'default'     => [
-			'font-family'     => '',
-			'variant'         => '',
-			'font-style'      => 'normal',
-			'color'           => '',
-			'font-size'       => '',
-			'text-transform'  => 'none',
-		],
-		'output'      => [
-			[
-				'element' => 'body .breadcrumb__title',
-			],
-		],
-	];
+        'settings'    => 'breadcrumb_typography_setting',
+        'label'       => esc_html__('Typography Control', 'portolite'),
+        'description' => esc_html__('The full set of options.', 'portolite'),
+        'section'     => 'breadcrumb_setting',
+        'priority'    => 10,
+        'transport'   => 'auto',
+        'default'     => [
+            'font-family'     => '',
+            'variant'         => '',
+            'font-style'      => 'normal',
+            'color'           => '',
+            'font-size'       => '',
+            'text-transform'  => 'none',
+        ],
+        'output'      => [
+            [
+                'element' => 'body .breadcrumb__title',
+            ],
+        ],
+    ];
 
     // Breadcrumb Setting
     $fields[] = [
         'type'        => 'image',
         'settings'    => 'breadcrumb_bg_img',
-        'label'       => esc_html__( 'Breadcrumb Background Image', 'portolite' ),
-        'description' => esc_html__( 'Breadcrumb Background Image', 'portolite' ),
+        'label'       => esc_html__('Breadcrumb Background Image', 'portolite'),
+        'description' => esc_html__('Breadcrumb Background Image', 'portolite'),
         'section'     => 'breadcrumb_setting',
     ];
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_breadcrumb_bg_color',
-        'label'       => __( 'Breadcrumb BG Color', 'portolite' ),
-        'description' => esc_html__( 'This is a Breadcrumb bg color control.', 'portolite' ),
+        'label'       => __('Breadcrumb BG Color', 'portolite'),
+        'description' => esc_html__('This is a Breadcrumb bg color control.', 'portolite'),
         'section'     => 'breadcrumb_setting',
         'default'     => '#e1e1e1',
         'priority'    => 10,
@@ -1162,200 +1155,193 @@ function _header_page_title_fields( $fields ) {
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_breadcrumb_pt',
-        'label'    => esc_html__( 'Breadcrumb Paddint Top', 'portolite' ),
+        'label'    => esc_html__('Breadcrumb Paddint Top', 'portolite'),
         'section'  => 'breadcrumb_setting',
-        'default'  => esc_html__( '115', 'portolite' ),
+        'default'  => esc_html__('115', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_breadcrumb_pb',
-        'label'    => esc_html__( 'Breadcrumb Paddint Bottom', 'portolite' ),
+        'label'    => esc_html__('Breadcrumb Paddint Bottom', 'portolite'),
         'section'  => 'breadcrumb_setting',
-        'default'  => esc_html__( '130', 'portolite' ),
+        'default'  => esc_html__('130', 'portolite'),
         'priority' => 10,
     ];
 
-    
+
     return $fields;
 }
-add_filter( 'kirki/fields', '_header_page_title_fields' );
+add_filter('kirki/fields', '_header_page_title_fields');
 
 /*
 Header Social
  */
-function _header_blog_fields( $fields ) {
-// Blog Setting
+function _header_blog_fields($fields)
+{
+    // Blog Setting
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_blog_btn_switch',
-        'label'    => esc_html__( 'Blog BTN On/Off', 'portolite' ),
+        'label'    => esc_html__('Blog BTN On/Off', 'portolite'),
         'section'  => 'blog_setting',
         'default'  => '1',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_blog_single_social',
-        'label'    => esc_html__( 'Blog Share On/Off', 'portolite' ),
+        'label'    => esc_html__('Blog Share On/Off', 'portolite'),
         'section'  => 'blog_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_blog_cat',
-        'label'    => esc_html__( 'Blog Category Meta On/Off', 'portolite' ),
+        'label'    => esc_html__('Blog Category Meta On/Off', 'portolite'),
         'section'  => 'blog_setting',
         'default'  => '1',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_blog_view',
-        'label'    => esc_html__( 'Blog View Meta On/Off', 'portolite' ),
+        'label'    => esc_html__('Blog View Meta On/Off', 'portolite'),
         'section'  => 'blog_setting',
         'default'  => '1',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_blog_author',
-        'label'    => esc_html__( 'Blog Author Meta On/Off', 'portolite' ),
+        'label'    => esc_html__('Blog Author Meta On/Off', 'portolite'),
         'section'  => 'blog_setting',
         'default'  => '1',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_blog_date',
-        'label'    => esc_html__( 'Blog Date Meta On/Off', 'portolite' ),
+        'label'    => esc_html__('Blog Date Meta On/Off', 'portolite'),
         'section'  => 'blog_setting',
         'default'  => '1',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_blog_comments',
-        'label'    => esc_html__( 'Blog Comments Meta On/Off', 'portolite' ),
+        'label'    => esc_html__('Blog Comments Meta On/Off', 'portolite'),
         'section'  => 'blog_setting',
         'default'  => '1',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_blog_btn',
-        'label'    => esc_html__( 'Blog Button text', 'portolite' ),
+        'label'    => esc_html__('Blog Button text', 'portolite'),
         'section'  => 'blog_setting',
-        'default'  => esc_html__( 'Read More', 'portolite' ),
+        'default'  => esc_html__('Read More', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'breadcrumb_blog_title',
-        'label'    => esc_html__( 'Blog Title', 'portolite' ),
+        'label'    => esc_html__('Blog Title', 'portolite'),
         'section'  => 'blog_setting',
-        'default'  => esc_html__( 'Blog', 'portolite' ),
+        'default'  => esc_html__('Blog', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'breadcrumb_blog_title_details',
-        'label'    => esc_html__( 'Blog Details Title', 'portolite' ),
+        'label'    => esc_html__('Blog Details Title', 'portolite'),
         'section'  => 'blog_setting',
-        'default'  => esc_html__( 'Blog Details', 'portolite' ),
+        'default'  => esc_html__('Blog Details', 'portolite'),
         'priority' => 10,
     ];
     return $fields;
 }
-add_filter( 'kirki/fields', '_header_blog_fields' );
+add_filter('kirki/fields', '_header_blog_fields');
 
 /*
 Footer
  */
-function _header_footer_fields( $fields ) {
+function _header_footer_fields($fields)
+{
     // Footer Setting
     $fields[] = [
         'type'        => 'radio-image',
         'settings'    => 'choose_default_footer',
-        'label'       => esc_html__( 'Choose Footer Style', 'portolite' ),
+        'label'       => esc_html__('Choose Footer Style', 'portolite'),
         'section'     => 'footer_setting',
         'default'     => '5',
-        'placeholder' => esc_html__( 'Select an option...', 'portolite' ),
+        'placeholder' => esc_html__('Select an option...', 'portolite'),
         'priority'    => 10,
         'multiple'    => 1,
         'choices'     => [
             'footer-style-1'   => get_template_directory_uri() . '/inc/img/footer/footer-1.png',
             'footer-style-2' => get_template_directory_uri() . '/inc/img/footer/footer-2.png',
-            'footer-style-3' => get_template_directory_uri() . '/inc/img/footer/footer-3.png',
-            'footer-style-4' => get_template_directory_uri() . '/inc/img/footer/footer-4.png',
-            'footer-style-5' => get_template_directory_uri() . '/inc/img/footer/footer-5.png',
-            'footer-style-6' => get_template_directory_uri() . '/inc/img/footer/footer-6.png',
-            'footer-style-7' => get_template_directory_uri() . '/inc/img/footer/footer-7.png',
-            'footer-style-8' => get_template_directory_uri() . '/inc/img/footer/footer-8.png',
-            'footer-style-9' => get_template_directory_uri() . '/inc/img/footer/footer-9.png',
-            'footer-style-12' => get_template_directory_uri() . '/inc/img/footer/footer-12.png',
-            'footer-style-13' => get_template_directory_uri() . '/inc/img/footer/footer-13.png'
         ],
         'default'     => 'footer-style-1',
     ];
 
-    $fields[] = [
-        'type'        => 'select',
-        'settings'    => 'footer_widget_number',
-        'label'       => esc_html__( 'Widget Number', 'portolite' ),
-        'section'     => 'footer_setting',
-        'default'     => '4',
-        'placeholder' => esc_html__( 'Select an option...', 'portolite' ),
-        'priority'    => 10,
-        'multiple'    => 1,
-        'choices'     => [
-            '4' => esc_html__( 'Widget Number 4', 'portolite' ),
-            '3' => esc_html__( 'Widget Number 3', 'portolite' ),
-            '2' => esc_html__( 'Widget Number 2', 'portolite' ),
-        ],
-    ];
+    // $fields[] = [
+    //     'type'        => 'select',
+    //     'settings'    => 'footer_widget_number',
+    //     'label'       => esc_html__('Widget Number', 'portolite'),
+    //     'section'     => 'footer_setting',
+    //     'default'     => '4',
+    //     'placeholder' => esc_html__('Select an option...', 'portolite'),
+    //     'priority'    => 10,
+    //     'multiple'    => 1,
+    //     'choices'     => [
+    //         '4' => esc_html__('Widget Number 4', 'portolite'),
+    //         '3' => esc_html__('Widget Number 3', 'portolite'),
+    //         '2' => esc_html__('Widget Number 2', 'portolite'),
+    //     ],
+    // ];
 
     $fields[] = [
         'type'        => 'image',
         'settings'    => 'portolite_footer_bg',
-        'label'       => esc_html__( 'Footer Background Image.', 'portolite' ),
-        'description' => esc_html__( 'Footer Background Image.', 'portolite' ),
+        'label'       => esc_html__('Footer Background Image.', 'portolite'),
+        'description' => esc_html__('Footer Background Image.', 'portolite'),
         'section'     => 'footer_setting',
     ];
 
@@ -1363,8 +1349,8 @@ function _header_footer_fields( $fields ) {
     $fields[] = [
         'type'        => 'image',
         'settings'    => 'portolite_footer_logo',
-        'label'       => esc_html__( 'Footer Logo', 'portolite' ),
-        'description' => esc_html__( 'Upload Your Logo.', 'portolite' ),
+        'label'       => esc_html__('Footer Logo', 'portolite'),
+        'description' => esc_html__('Upload Your Logo.', 'portolite'),
         'section'     => 'footer_setting',
         'default'     => get_template_directory_uri() . '/assets/img/logo/logo-black.svg',
     ];
@@ -1372,8 +1358,8 @@ function _header_footer_fields( $fields ) {
     $fields[] = [
         'type'        => 'image',
         'settings'    => 'portolite_footer_payment',
-        'label'       => esc_html__( 'Footer Payment Image.', 'portolite' ),
-        'description' => esc_html__( 'Footer Payment Image.', 'portolite' ),
+        'label'       => esc_html__('Footer Payment Image.', 'portolite'),
+        'description' => esc_html__('Footer Payment Image.', 'portolite'),
         'section'     => 'footer_setting',
         'default'     => get_template_directory_uri() . '/assets/img/footer/footer-payment.png',
     ];
@@ -1381,8 +1367,8 @@ function _header_footer_fields( $fields ) {
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_footer_bg_color',
-        'label'       => __( 'Footer BG Color', 'portolite' ),
-        'description' => esc_html__( 'This is a Footer bg color control.', 'portolite' ),
+        'label'       => __('Footer BG Color', 'portolite'),
+        'description' => esc_html__('This is a Footer bg color control.', 'portolite'),
         'section'     => 'footer_setting',
         'default'     => '#1D1D4D',
         'priority'    => 10,
@@ -1391,8 +1377,8 @@ function _header_footer_fields( $fields ) {
     $fields[] = [
         'type'        => 'textarea',
         'settings'    => 'portolite_footer_bottom_menu',
-        'label'       => __( 'Footer Bottom Links', 'portolite' ),
-        'description' => esc_html__( 'Example: <a href="your-link">Link Text</a>.', 'portolite' ),
+        'label'       => __('Footer Bottom Links', 'portolite'),
+        'description' => esc_html__('Example: <a href="your-link">Link Text</a>.', 'portolite'),
         'section'     => 'footer_setting',
         'priority'    => 10,
     ];
@@ -1401,29 +1387,29 @@ function _header_footer_fields( $fields ) {
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_footer_bottom_language',
-        'label'    => esc_html__( 'Language On/Off', 'portolite' ),
+        'label'    => esc_html__('Language On/Off', 'portolite'),
         'section'  => 'footer_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
-    
+
 
     // social switch
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_footer_social_switch',
-        'label'    => esc_html__( 'Social On/Off', 'portolite' ),
+        'label'    => esc_html__('Social On/Off', 'portolite'),
         'section'  => 'footer_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
@@ -1431,211 +1417,114 @@ function _header_footer_fields( $fields ) {
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_footer_fb_url',
-        'label'    => esc_html__( 'Facebook Url', 'portolite' ),
+        'label'    => esc_html__('Facebook Url', 'portolite'),
         'section'  => 'footer_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_footer_twitter_url',
-        'label'    => esc_html__( 'Twitter Url', 'portolite' ),
+        'label'    => esc_html__('Twitter Url', 'portolite'),
         'section'  => 'footer_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_footer_linkedin_url',
-        'label'    => esc_html__( 'Linkedin Url', 'portolite' ),
+        'label'    => esc_html__('Linkedin Url', 'portolite'),
         'section'  => 'footer_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_footer_instagram_url',
-        'label'    => esc_html__( 'Instagram Url', 'portolite' ),
+        'label'    => esc_html__('Instagram Url', 'portolite'),
         'section'  => 'footer_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_footer_youtube_url',
-        'label'    => esc_html__( 'Youtube Url', 'portolite' ),
+        'label'    => esc_html__('Youtube Url', 'portolite'),
         'section'  => 'footer_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'footer_style_2_switch',
-        'label'    => esc_html__( 'Footer Style 2 On/Off', 'portolite' ),
+        'label'    => esc_html__('Footer Style 2 On/Off', 'portolite'),
         'section'  => 'footer_setting',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
-        ],
-    ];    
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'footer_style_3_switch',
-        'label'    => esc_html__( 'Footer Style 3 On/Off', 'portolite' ),
-        'section'  => 'footer_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'footer_style_4_switch',
-        'label'    => esc_html__( 'Footer Style 4 On/Off', 'portolite' ),
-        'section'  => 'footer_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
-        ],
-    ];
 
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'footer_style_5_switch',
-        'label'    => esc_html__( 'Footer Style 5 On/Off', 'portolite' ),
-        'section'  => 'footer_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
-        ],
-    ];
 
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'footer_style_6_switch',
-        'label'    => esc_html__( 'Footer Style 6 On/Off', 'portolite' ),
-        'section'  => 'footer_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
-        ],
-    ];
 
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'footer_style_7_switch',
-        'label'    => esc_html__( 'Footer Style 7 On/Off', 'portolite' ),
-        'section'  => 'footer_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
-        ],
-    ];
 
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'footer_style_8_switch',
-        'label'    => esc_html__( 'Footer Style 8 On/Off', 'portolite' ),
-        'section'  => 'footer_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
-        ],
-    ];
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'footer_style_9_switch',
-        'label'    => esc_html__( 'Footer Style 9 On/Off', 'portolite' ),
-        'section'  => 'footer_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
-        ],
-    ];
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'footer_style_12_switch',
-        'label'    => esc_html__( 'Footer Style 12 On/Off', 'portolite' ),
-        'section'  => 'footer_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
-        ],
-    ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_copyright',
-        'label'    => esc_html__( 'Copyright', 'portolite' ),
+        'label'    => esc_html__('Copyright', 'portolite'),
         'section'  => 'footer_setting',
-        'default'  => esc_html__( 'Copyright &copy; 2023 Theme_Pure. All Rights Reserved', 'portolite' ),
+        'default'  => esc_html__('Copyright &copy; 2023 Monowar_Hossain. All Rights Reserved', 'portolite'),
         'priority' => 10,
     ];
     return $fields;
 }
-add_filter( 'kirki/fields', '_header_footer_fields' );
+add_filter('kirki/fields', '_header_footer_fields');
 
 
-function portolite_event_fields( $fields ) {
+function portolite_event_fields($fields)
+{
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_event_button_text',
-        'label'    => esc_html__( 'Event Button text', 'portolite' ),
+        'label'    => esc_html__('Event Button text', 'portolite'),
         'section'  => 'event_setting',
-        'default'  => esc_html__( 'Make an Appointment', 'portolite' ),
+        'default'  => esc_html__('Make an Appointment', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_event_button_url',
-        'label'    => esc_html__( 'Event Url', 'portolite' ),
+        'label'    => esc_html__('Event Url', 'portolite'),
         'section'  => 'event_setting',
-        'default'  => esc_html__( '#', 'portolite' ),
+        'default'  => esc_html__('#', 'portolite'),
         'priority' => 10,
     ];
 
     return $fields;
 }
 
-add_filter( 'kirki/fields', 'portolite_event_fields' );
+add_filter('kirki/fields', 'portolite_event_fields');
 
 // color
-function portolite_color_fields( $fields ) {
+function portolite_color_fields($fields)
+{
     // Color Settings
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_color_option',
-        'label'       => __( 'Theme Color', 'portolite' ),
-        'description' => esc_html__( 'This is a Theme color control.', 'portolite' ),
+        'label'       => __('Theme Color', 'portolite'),
+        'description' => esc_html__('This is a Theme color control.', 'portolite'),
         'section'     => 'color_setting',
         'default'     => '#F50963',
         'priority'    => 10,
@@ -1644,109 +1533,109 @@ function portolite_color_fields( $fields ) {
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_color_option_2',
-        'label'       => __( 'Secondary Color', 'portolite' ),
-        'description' => esc_html__( 'This is a Primary color control.', 'portolite' ),
+        'label'       => __('Secondary Color', 'portolite'),
+        'description' => esc_html__('This is a Primary color control.', 'portolite'),
         'section'     => 'color_setting',
         'default'     => '#008080',
         'priority'    => 10,
     ];
-     // Color Settings
+    // Color Settings
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_color_option_3',
-        'label'       => __( 'Theme Color 3', 'portolite' ),
-        'description' => esc_html__( 'This is a Theme color control.', 'portolite' ),
+        'label'       => __('Theme Color 3', 'portolite'),
+        'description' => esc_html__('This is a Theme color control.', 'portolite'),
         'section'     => 'color_setting',
         'default'     => '#F31E5E',
         'priority'    => 10,
     ];
-     // Color Settings
+    // Color Settings
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_color_option_4',
-        'label'       => __( 'Theme Color 4', 'portolite' ),
-        'description' => esc_html__( 'This is a Theme color control.', 'portolite' ),
+        'label'       => __('Theme Color 4', 'portolite'),
+        'description' => esc_html__('This is a Theme color control.', 'portolite'),
         'section'     => 'color_setting',
         'default'     => '#AB6C56',
         'priority'    => 10,
     ];
-     // Color Settings
+    // Color Settings
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_color_option_5',
-        'label'       => __( 'Theme Color 5', 'portolite' ),
-        'description' => esc_html__( 'This is a Theme color control.', 'portolite' ),
+        'label'       => __('Theme Color 5', 'portolite'),
+        'description' => esc_html__('This is a Theme color control.', 'portolite'),
         'section'     => 'color_setting',
         'default'     => '#4353FF',
         'priority'    => 10,
     ];
-     // Color Settings
+    // Color Settings
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_color_option_6',
-        'label'       => __( 'Theme Color 6', 'portolite' ),
-        'description' => esc_html__( 'This is a Theme color control.', 'portolite' ),
+        'label'       => __('Theme Color 6', 'portolite'),
+        'description' => esc_html__('This is a Theme color control.', 'portolite'),
         'section'     => 'color_setting',
         'default'     => '#3661FC',
         'priority'    => 10,
     ];
-     // Color Settings
+    // Color Settings
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_color_option_7',
-        'label'       => __( 'Theme Color 7', 'portolite' ),
-        'description' => esc_html__( 'This is a Theme color control.', 'portolite' ),
+        'label'       => __('Theme Color 7', 'portolite'),
+        'description' => esc_html__('This is a Theme color control.', 'portolite'),
         'section'     => 'color_setting',
         'default'     => '#2CAE76',
         'priority'    => 10,
     ];
-     // Color Settings
+    // Color Settings
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_color_option_8',
-        'label'       => __( 'Theme Color 8', 'portolite' ),
-        'description' => esc_html__( 'This is a Theme color control.', 'portolite' ),
+        'label'       => __('Theme Color 8', 'portolite'),
+        'description' => esc_html__('This is a Theme color control.', 'portolite'),
         'section'     => 'color_setting',
         'default'     => '#FF5A1B',
         'priority'    => 10,
     ];
-     // Color Settings
+    // Color Settings
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_color_option_9',
-        'label'       => __( 'Theme Color 9', 'portolite' ),
-        'description' => esc_html__( 'This is a Theme color control.', 'portolite' ),
+        'label'       => __('Theme Color 9', 'portolite'),
+        'description' => esc_html__('This is a Theme color control.', 'portolite'),
         'section'     => 'color_setting',
         'default'     => '#03041C',
         'priority'    => 10,
     ];
-     // Color Settings
+    // Color Settings
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_color_option_10',
-        'label'       => __( 'Theme Color 10', 'portolite' ),
-        'description' => esc_html__( 'This is a Theme color control.', 'portolite' ),
+        'label'       => __('Theme Color 10', 'portolite'),
+        'description' => esc_html__('This is a Theme color control.', 'portolite'),
         'section'     => 'color_setting',
         'default'     => '#ED212C',
         'priority'    => 10,
     ];
-     // Color Settings
+    // Color Settings
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_color_scrollup',
-        'label'       => __( 'ScrollUp Color', 'portolite' ),
-        'description' => esc_html__( 'This is a ScrollUp colo control.', 'portolite' ),
+        'label'       => __('ScrollUp Color', 'portolite'),
+        'description' => esc_html__('This is a ScrollUp colo control.', 'portolite'),
         'section'     => 'color_setting',
         'default'     => '#03041C',
         'priority'    => 10,
     ];
 
-     // Color Settings
+    // Color Settings
     $fields[] = [
         'type'        => 'text',
         'settings'    => 'portolite_color_footer_gradient',
-        'label'       => __( 'Footer Gradient Color', 'portolite' ),
-        'description' => esc_html__( 'This is a Footer Gradient.', 'portolite' ),
+        'label'       => __('Footer Gradient Color', 'portolite'),
+        'description' => esc_html__('This is a Footer Gradient.', 'portolite'),
         'section'     => 'color_setting',
         'default'     => '',
         'priority'    => 10,
@@ -1754,53 +1643,55 @@ function portolite_color_fields( $fields ) {
 
     return $fields;
 }
-add_filter( 'kirki/fields', 'portolite_color_fields' );
+add_filter('kirki/fields', 'portolite_color_fields');
 
 // 404
-function portolite_404_fields( $fields ) {
+function portolite_404_fields($fields)
+{
     // 404 settings
     $fields[] = [
         'type'        => 'image',
         'settings'    => 'portolite_404_bg',
-        'label'       => esc_html__( '404 Image.', 'portolite' ),
-        'description' => esc_html__( '404 Image.', 'portolite' ),
+        'label'       => esc_html__('404 Image.', 'portolite'),
+        'description' => esc_html__('404 Image.', 'portolite'),
         'section'     => '404_page',
     ];
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_error_title',
-        'label'    => esc_html__( 'Not Found Title', 'portolite' ),
+        'label'    => esc_html__('Not Found Title', 'portolite'),
         'section'  => '404_page',
-        'default'  => esc_html__( 'Oops! Page not found', 'portolite' ),
+        'default'  => esc_html__('Oops! Page not found', 'portolite'),
         'priority' => 10,
     ];
     $fields[] = [
         'type'     => 'textarea',
         'settings' => 'portolite_error_desc',
-        'label'    => esc_html__( '404 Description Text', 'portolite' ),
+        'label'    => esc_html__('404 Description Text', 'portolite'),
         'section'  => '404_page',
-        'default'  => esc_html__( 'Whoops, this is embarassing. Looks like the page you were looking for was not found.', 'portolite' ),
+        'default'  => esc_html__('Whoops, this is embarassing. Looks like the page you were looking for was not found.', 'portolite'),
         'priority' => 10,
     ];
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_error_link_text',
-        'label'    => esc_html__( '404 Link Text', 'portolite' ),
+        'label'    => esc_html__('404 Link Text', 'portolite'),
         'section'  => '404_page',
-        'default'  => esc_html__( 'Back To Home', 'portolite' ),
+        'default'  => esc_html__('Back To Home', 'portolite'),
         'priority' => 10,
     ];
     return $fields;
 }
-add_filter( 'kirki/fields', 'portolite_404_fields' );
+add_filter('kirki/fields', 'portolite_404_fields');
 
 // course_settings
-function portolite_learndash_fields( $fields ) {
+function portolite_learndash_fields($fields)
+{
 
     $fields[] = [
         'type'     => 'number',
         'settings' => 'portolite_learndash_post_number',
-        'label'    => esc_html__( 'Learndash Post Per page', 'portolite' ),
+        'label'    => esc_html__('Learndash Post Per page', 'portolite'),
         'section'  => 'learndash_course_settings',
         'default'  => 6,
         'priority' => 10,
@@ -1809,139 +1700,139 @@ function portolite_learndash_fields( $fields ) {
     $fields[] = [
         'type'        => 'select',
         'settings'    => 'portolite_learndash_order',
-        'label'       => esc_html__( 'Post Order', 'portolite' ),
+        'label'       => esc_html__('Post Order', 'portolite'),
         'section'     => 'learndash_course_settings',
         'default'     => 'DESC',
-        'placeholder' => esc_html__( 'Select an option...', 'portolite' ),
+        'placeholder' => esc_html__('Select an option...', 'portolite'),
         'priority'    => 10,
         'multiple'    => 1,
         'choices'     => [
-            'ASC' => esc_html__( 'ASC', 'portolite' ),
-            'DESC' => esc_html__( 'DESC', 'portolite' ),
+            'ASC' => esc_html__('ASC', 'portolite'),
+            'DESC' => esc_html__('DESC', 'portolite'),
         ],
     ];
 
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'portolite_learndash_related',
-        'label'    => esc_html__( 'Show Related?', 'portolite' ),
+        'label'    => esc_html__('Show Related?', 'portolite'),
         'section'  => 'learndash_course_settings',
         'default'  => 1,
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
 
     return $fields;
-
 }
 
-if ( class_exists( 'SFWD_LMS' ) ) {
-add_filter( 'kirki/fields', 'portolite_learndash_fields' );
+if (class_exists('SFWD_LMS')) {
+    add_filter('kirki/fields', 'portolite_learndash_fields');
 }
 
 
 // shopsettings
-function portolite_shop_fields( $fields ) {
+function portolite_shop_fields($fields)
+{
     $fields[] = [
         'type' => 'toggle',
         'settings' => 'bacola_free_shipping',
-        'label' => esc_attr__( 'Free shipping bar', 'portolite' ),
+        'label' => esc_attr__('Free shipping bar', 'portolite'),
         'section' => 'shop_sections',
         'default' => '0',
-    ];     
+    ];
 
     $fields[] = [
         'type' => 'text',
         'settings' => 'shipping_progress_bar_amount',
-        'label' => esc_attr__( 'Goal Amount', 'portolite' ),
-        'description' => esc_attr__( 'Amount to reach 100% defined in your currency absolute value. For example: 300', 'portolite' ),
+        'label' => esc_attr__('Goal Amount', 'portolite'),
+        'description' => esc_attr__('Amount to reach 100% defined in your currency absolute value. For example: 300', 'portolite'),
         'section' => 'shop_sections',
         'default' => '100',
         'required' => array(
             array(
-              'setting'  => 'bacola_free_shipping',
-              'operator' => '==',
-              'value'    => '1',
+                'setting'  => 'bacola_free_shipping',
+                'operator' => '==',
+                'value'    => '1',
             ),
         ),
-    ];     
+    ];
 
     $fields[] = [
         'type' => 'toggle',
         'settings' => 'shipping_progress_bar_location_mini_cart',
-        'label' => esc_attr__( 'Mini cart', 'portolite' ),
+        'label' => esc_attr__('Mini cart', 'portolite'),
         'section' => 'shop_sections',
         'default' => '0',
         'required' => array(
             array(
-              'setting'  => 'bacola_free_shipping',
-              'operator' => '==',
-              'value'    => '1',
+                'setting'  => 'bacola_free_shipping',
+                'operator' => '==',
+                'value'    => '1',
             ),
         ),
-    ];  
+    ];
 
     $fields[] = [
         'type' => 'toggle',
         'settings' => 'shipping_progress_bar_location_card_page',
-        'label' => esc_attr__( 'Cart page', 'portolite' ),
+        'label' => esc_attr__('Cart page', 'portolite'),
         'section' => 'shop_sections',
         'default' => '0',
         'required' => array(
             array(
-              'setting'  => 'bacola_free_shipping',
-              'operator' => '==',
-              'value'    => '1',
+                'setting'  => 'bacola_free_shipping',
+                'operator' => '==',
+                'value'    => '1',
             ),
         ),
-    ];      
+    ];
 
     $fields[] = [
         'type' => 'toggle',
         'settings' => 'shipping_progress_bar_location_checkout',
-        'label' => esc_attr__( 'Checkout page', 'portolite' ),
+        'label' => esc_attr__('Checkout page', 'portolite'),
         'section' => 'shop_sections',
         'default' => '0',
         'required' => array(
             array(
-              'setting'  => 'bacola_free_shipping',
-              'operator' => '==',
-              'value'    => '1',
+                'setting'  => 'bacola_free_shipping',
+                'operator' => '==',
+                'value'    => '1',
             ),
         ),
-    ];   
+    ];
 
     $fields[] = [
         'type' => 'textarea',
         'settings' => 'shipping_progress_bar_message_initial',
-        'label' => esc_attr__( 'Initial Message', 'portolite' ),
-        'description' => esc_attr__( 'Message to show before reaching the goal. Use shortcode [remainder] to display the amount left to reach the minimum.', 'portolite' ),
+        'label' => esc_attr__('Initial Message', 'portolite'),
+        'description' => esc_attr__('Message to show before reaching the goal. Use shortcode [remainder] to display the amount left to reach the minimum.', 'portolite'),
         'section' => 'shop_sections',
         'default' => 'Add [remainder] to cart and get free shipping!',
         'required' => array(
             array(
-              'setting'  => 'bacola_free_shipping',
-              'operator' => '==',
-              'value'    => '1',
+                'setting'  => 'bacola_free_shipping',
+                'operator' => '==',
+                'value'    => '1',
             ),
         ),
-    ];    
+    ];
 
     $fields[] = [
         'type' => 'textarea',
         'settings' => 'shipping_progress_bar_message_success',
-        'label' => esc_attr__( 'Success message', 'portolite' ),
-        'description' => esc_attr__( 'Message to show after reaching 100%.', 'portolite' ),
+        'label' => esc_attr__('Success message', 'portolite'),
+        'description' => esc_attr__('Message to show after reaching 100%.', 'portolite'),
         'section' => 'shop_sections',
         'default' => 'Your order qualifies for free shipping!',
         'required' => array(
             array(
-              'setting'  => 'bacola_free_shipping',
-              'operator' => '==',
-              'value'    => '1',
+                'setting'  => 'bacola_free_shipping',
+                'operator' => '==',
+                'value'    => '1',
             ),
         ),
     ];
@@ -1949,20 +1840,21 @@ function portolite_shop_fields( $fields ) {
     return $fields;
 }
 
-if (  class_exists( 'WooCommerce' ) ) {
-    add_filter( 'kirki/fields', 'portolite_shop_fields' );
+if (class_exists('WooCommerce')) {
+    add_filter('kirki/fields', 'portolite_shop_fields');
 }
 
 
 /**
  * Added Fields
  */
-function portolite_typo_fields( $fields ) {
+function portolite_typo_fields($fields)
+{
     // typography settings
     $fields[] = [
         'type'        => 'typography',
         'settings'    => 'typography_body_setting',
-        'label'       => esc_html__( 'Body Font', 'portolite' ),
+        'label'       => esc_html__('Body Font', 'portolite'),
         'section'     => 'typo_setting',
         'default'     => [
             'font-family'    => '',
@@ -1980,7 +1872,7 @@ function portolite_typo_fields( $fields ) {
     $fields[] = [
         'type'        => 'typography',
         'settings'    => 'typography_h_setting',
-        'label'       => esc_html__( 'Heading h1 Fonts', 'portolite' ),
+        'label'       => esc_html__('Heading h1 Fonts', 'portolite'),
         'section'     => 'typo_setting',
         'default'     => [
             'font-family'    => '',
@@ -1998,7 +1890,7 @@ function portolite_typo_fields( $fields ) {
     $fields[] = [
         'type'        => 'typography',
         'settings'    => 'typography_h2_setting',
-        'label'       => esc_html__( 'Heading h2 Fonts', 'portolite' ),
+        'label'       => esc_html__('Heading h2 Fonts', 'portolite'),
         'section'     => 'typo_setting',
         'default'     => [
             'font-family'    => '',
@@ -2016,7 +1908,7 @@ function portolite_typo_fields( $fields ) {
     $fields[] = [
         'type'        => 'typography',
         'settings'    => 'typography_h3_setting',
-        'label'       => esc_html__( 'Heading h3 Fonts', 'portolite' ),
+        'label'       => esc_html__('Heading h3 Fonts', 'portolite'),
         'section'     => 'typo_setting',
         'default'     => [
             'font-family'    => '',
@@ -2034,7 +1926,7 @@ function portolite_typo_fields( $fields ) {
     $fields[] = [
         'type'        => 'typography',
         'settings'    => 'typography_h4_setting',
-        'label'       => esc_html__( 'Heading h4 Fonts', 'portolite' ),
+        'label'       => esc_html__('Heading h4 Fonts', 'portolite'),
         'section'     => 'typo_setting',
         'default'     => [
             'font-family'    => '',
@@ -2052,7 +1944,7 @@ function portolite_typo_fields( $fields ) {
     $fields[] = [
         'type'        => 'typography',
         'settings'    => 'typography_h5_setting',
-        'label'       => esc_html__( 'Heading h5 Fonts', 'portolite' ),
+        'label'       => esc_html__('Heading h5 Fonts', 'portolite'),
         'section'     => 'typo_setting',
         'default'     => [
             'font-family'    => '',
@@ -2070,7 +1962,7 @@ function portolite_typo_fields( $fields ) {
     $fields[] = [
         'type'        => 'typography',
         'settings'    => 'typography_h6_setting',
-        'label'       => esc_html__( 'Heading h6 Fonts', 'portolite' ),
+        'label'       => esc_html__('Heading h6 Fonts', 'portolite'),
         'section'     => 'typo_setting',
         'default'     => [
             'font-family'    => '',
@@ -2087,19 +1979,20 @@ function portolite_typo_fields( $fields ) {
     return $fields;
 }
 
-add_filter( 'kirki/fields', 'portolite_typo_fields' );
+add_filter('kirki/fields', 'portolite_typo_fields');
 
 
 // course_settings
-function portolite_course_fields( $fields ) {
+function portolite_course_fields($fields)
+{
 
     $fields[] = [
         'type'        => 'radio-image',
         'settings'    => 'course_style',
-        'label'       => esc_html__( 'Select Course Style', 'portolite' ),
+        'label'       => esc_html__('Select Course Style', 'portolite'),
         'section'     => 'tutor_course_settings',
         'default'     => '5',
-        'placeholder' => esc_html__( 'Select an option...', 'portolite' ),
+        'placeholder' => esc_html__('Select an option...', 'portolite'),
         'priority'    => 10,
         'multiple'    => 1,
         'choices'     => [
@@ -2113,13 +2006,13 @@ function portolite_course_fields( $fields ) {
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'course_search_switch',
-        'label'    => esc_html__( 'Show search?', 'portolite' ),
+        'label'    => esc_html__('Show search?', 'portolite'),
         'section'  => 'tutor_course_settings',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
         'active_callback' => [
             [
@@ -2128,18 +2021,18 @@ function portolite_course_fields( $fields ) {
                 'value'    => true,
             ],
         ],
-    ];    
+    ];
 
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'course_latest_post_switch',
-        'label'    => esc_html__( 'Show latest post?', 'portolite' ),
+        'label'    => esc_html__('Show latest post?', 'portolite'),
         'section'  => 'tutor_course_settings',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
         'active_callback' => [
             [
@@ -2148,18 +2041,18 @@ function portolite_course_fields( $fields ) {
                 'value'    => true,
             ],
         ],
-    ];    
+    ];
 
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'course_category_switch',
-        'label'    => esc_html__( 'Show category filter?', 'portolite' ),
+        'label'    => esc_html__('Show category filter?', 'portolite'),
         'section'  => 'tutor_course_settings',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
         'active_callback' => [
             [
@@ -2168,18 +2061,18 @@ function portolite_course_fields( $fields ) {
                 'value'    => true,
             ],
         ],
-    ];    
+    ];
 
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'course_skill_switch',
-        'label'    => esc_html__( 'Show skill filter?', 'portolite' ),
+        'label'    => esc_html__('Show skill filter?', 'portolite'),
         'section'  => 'tutor_course_settings',
         'default'  => '0',
         'priority' => 10,
         'choices'  => [
-            'on'  => esc_html__( 'Enable', 'portolite' ),
-            'off' => esc_html__( 'Disable', 'portolite' ),
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
         ],
         'active_callback' => [
             [
@@ -2191,10 +2084,9 @@ function portolite_course_fields( $fields ) {
     ];
 
     return $fields;
-
 }
 
-add_filter( 'kirki/fields', 'portolite_course_fields' );
+add_filter('kirki/fields', 'portolite_course_fields');
 
 
 
@@ -2202,30 +2094,31 @@ add_filter( 'kirki/fields', 'portolite_course_fields' );
 /**
  * Added Fields
  */
-function portolite_slug_setting( $fields ) {
+function portolite_slug_setting($fields)
+{
     // slug settings
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_serv_slug',
-        'label'    => esc_html__( 'Services Slug', 'portolite' ),
+        'label'    => esc_html__('Services Slug', 'portolite'),
         'section'  => 'slug_setting',
-        'default'  => esc_html__( 'services', 'portolite' ),
+        'default'  => esc_html__('services', 'portolite'),
         'priority' => 10,
     ];
 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'portolite_port_slug',
-        'label'    => esc_html__( 'Portfolio Slug', 'portolite' ),
+        'label'    => esc_html__('Portfolio Slug', 'portolite'),
         'section'  => 'slug_setting',
-        'default'  => esc_html__( 'portfolio', 'portolite' ),
+        'default'  => esc_html__('portfolio', 'portolite'),
         'priority' => 10,
     ];
 
     return $fields;
 }
 
-add_filter( 'kirki/fields', 'portolite_slug_setting' );
+add_filter('kirki/fields', 'portolite_slug_setting');
 
 
 /**
@@ -2235,13 +2128,14 @@ add_filter( 'kirki/fields', 'portolite_slug_setting' );
  *
  * @return bool|string
  */
-function portolite_THEME_option( $name ) {
+function portolite_THEME_option($name)
+{
     $value = '';
-    if ( class_exists( 'portolite' ) ) {
-        $value = Kirki::get_option( portolite_get_theme(), $name );
+    if (class_exists('portolite')) {
+        $value = Kirki::get_option(portolite_get_theme(), $name);
     }
 
-    return apply_filters( 'portolite_THEME_option', $value, $name );
+    return apply_filters('portolite_THEME_option', $value, $name);
 }
 
 /**
@@ -2249,6 +2143,7 @@ function portolite_THEME_option( $name ) {
  *
  * @return string
  */
-function portolite_get_theme() {
+function portolite_get_theme()
+{
     return 'portolite';
 }

@@ -3,8 +3,8 @@
  * Breadcrumbs for Eduker theme.
  *
  * @package     Eduker
- * @author      Theme_Pure
- * @copyright   Copyright (c) 2022, Theme_Pure
+ * @author      Monowar_Hossain
+ * @copyright   Copyright (c) 2022, Monowar_Hossain
  * @link        https://www.themepure.net
  * @since       Eduker 1.0.0
  */
