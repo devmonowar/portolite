@@ -49,8 +49,6 @@
 
    <?php do_action('portolite_newsletter_style'); ?>
 
-   <?php do_action('portolite_offcanvas_style'); ?>
-
    <!-- header start -->
    <?php do_action('portolite_header_style'); ?>
    <!-- header end -->
