@@ -240,34 +240,6 @@ function _header_top_fields($fields)
         ],
     ];
 
-    // right enable disable
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'portolite_header_right',
-        'label'    => esc_html__('Header Right On/Off', 'portolite'),
-        'section'  => 'header_top_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__('Enable', 'portolite'),
-            'off' => esc_html__('Disable', 'portolite'),
-        ],
-    ];
-
-    // search on off
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'portolite_header_search',
-        'label'    => esc_html__('Header Search On/Off', 'portolite'),
-        'section'  => 'header_top_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__('Enable', 'portolite'),
-            'off' => esc_html__('Disable', 'portolite'),
-        ],
-    ];
-
     // Language on off
     $fields[] = [
         'type'     => 'switch',
@@ -323,31 +295,6 @@ function _header_top_fields($fields)
             'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'portolite_header_hamburger',
-        'label'    => esc_html__('Header Hamburger On/Off', 'portolite'),
-        'section'  => 'header_top_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__('Enable', 'portolite'),
-            'off' => esc_html__('Disable', 'portolite'),
-        ],
-    ];
-
-
-    // hamburger text
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'portolite_header_hamburger_text',
-        'label'    => esc_html__('Hamburger Text', 'portolite'),
-        'section'  => 'header_top_setting',
-        'default'  => esc_html__('Intro', 'portolite'),
-        'priority' => 10,
-    ];
-
 
     // email Title
     $fields[] = [
@@ -1221,76 +1168,11 @@ function portolite_color_fields($fields)
         'default'     => '#F31E5E',
         'priority'    => 10,
     ];
-    // Color Settings
-    $fields[] = [
-        'type'        => 'color',
-        'settings'    => 'portolite_color_option_4',
-        'label'       => __('Theme Color 4', 'portolite'),
-        'description' => esc_html__('This is a Theme color control.', 'portolite'),
-        'section'     => 'color_setting',
-        'default'     => '#AB6C56',
-        'priority'    => 10,
-    ];
-    // Color Settings
-    $fields[] = [
-        'type'        => 'color',
-        'settings'    => 'portolite_color_option_5',
-        'label'       => __('Theme Color 5', 'portolite'),
-        'description' => esc_html__('This is a Theme color control.', 'portolite'),
-        'section'     => 'color_setting',
-        'default'     => '#4353FF',
-        'priority'    => 10,
-    ];
-    // Color Settings
-    $fields[] = [
-        'type'        => 'color',
-        'settings'    => 'portolite_color_option_6',
-        'label'       => __('Theme Color 6', 'portolite'),
-        'description' => esc_html__('This is a Theme color control.', 'portolite'),
-        'section'     => 'color_setting',
-        'default'     => '#3661FC',
-        'priority'    => 10,
-    ];
-    // Color Settings
-    $fields[] = [
-        'type'        => 'color',
-        'settings'    => 'portolite_color_option_7',
-        'label'       => __('Theme Color 7', 'portolite'),
-        'description' => esc_html__('This is a Theme color control.', 'portolite'),
-        'section'     => 'color_setting',
-        'default'     => '#2CAE76',
-        'priority'    => 10,
-    ];
-    // Color Settings
-    $fields[] = [
-        'type'        => 'color',
-        'settings'    => 'portolite_color_option_8',
-        'label'       => __('Theme Color 8', 'portolite'),
-        'description' => esc_html__('This is a Theme color control.', 'portolite'),
-        'section'     => 'color_setting',
-        'default'     => '#FF5A1B',
-        'priority'    => 10,
-    ];
-    // Color Settings
-    $fields[] = [
-        'type'        => 'color',
-        'settings'    => 'portolite_color_option_9',
-        'label'       => __('Theme Color 9', 'portolite'),
-        'description' => esc_html__('This is a Theme color control.', 'portolite'),
-        'section'     => 'color_setting',
-        'default'     => '#03041C',
-        'priority'    => 10,
-    ];
-    // Color Settings
-    $fields[] = [
-        'type'        => 'color',
-        'settings'    => 'portolite_color_option_10',
-        'label'       => __('Theme Color 10', 'portolite'),
-        'description' => esc_html__('This is a Theme color control.', 'portolite'),
-        'section'     => 'color_setting',
-        'default'     => '#ED212C',
-        'priority'    => 10,
-    ];
+
+
+
+
+
     // Color Settings
     $fields[] = [
         'type'        => 'color',

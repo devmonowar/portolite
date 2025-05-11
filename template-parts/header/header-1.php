@@ -44,12 +44,6 @@ $portolite_time_text = get_theme_mod('portolite_time_text', __('Sunday-Thures 10
 
 // header actions
 $portolite_header_lang = get_theme_mod('portolite_header_lang', false);
-$portolite_header_search = get_theme_mod('portolite_header_search', false);
-$portolite_header_hamburger = get_theme_mod('portolite_header_hamburger', false);
-
-// header right
-$portolite_header_right = get_theme_mod('portolite_header_right', false);
-$portolite_menu_col = $portolite_header_right ? 'col-xxl-8 col-xl-8 col-lg-9 d-none d-lg-block' : 'col-xxl-10 col-xl-10 col-lg-10 col-md-8 col-sm-7 col-4 text-end';
 
 ?>
 
@@ -132,62 +126,15 @@ $portolite_menu_col = $portolite_header_right ? 'col-xxl-8 col-xl-8 col-lg-9 d-n
 
                      </div>
                   </div>
-                  <div class="<?php echo esc_attr($portolite_menu_col); ?>">
+                  <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-8 col-sm-7 col-4 text-end">
                      <div class="main-menu pl-15 main-menu-ff-space d-flex d-lg-block align-item-center justify-content-end">
                         <nav id="mobile-menu">
                            <?php portolite_header_menu(); ?>
                         </nav>
-                        <!-- for wp -->
-                        <div class="header__hamburger ml-50 d-lg-none">
-                           <button type="button" class="hamburger-btn hamburger-btn-black offcanvas-open-btn">
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                           </button>
-                        </div>
                      </div>
                   </div>
 
-                  <?php if (!empty($portolite_header_right)): ?>
-                     <div class="col-xxl-2 col-xl-2 col-lg-1 col-md-8 col-sm-7 col-4">
-                        <div class="header__bottom-right d-flex justify-content-end align-items-center pl-30">
-                           <div class="header__action d-none d-xl-block">
-                              <ul>
-                                 <?php if (!empty($portolite_header_search)): ?>
-                                    <li>
-                                       <button type="submit" class="search-open-btn">
-                                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                             <path d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                             <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                          </svg>
-                                       </button>
-                                    </li>
-                                 <?php endif; ?>
 
-                                 <?php if (!empty($portolite_header_hamburger)): ?>
-                                    <li>
-                                       <button type="button" class="hamburger-btn offcanvas-open-btn">
-                                          <span></span>
-                                          <span></span>
-                                          <span></span>
-                                       </button>
-                                    </li>
-                                 <?php endif; ?>
-                              </ul>
-                           </div>
-
-                           <?php if (!empty($portolite_header_hamburger)): ?>
-                              <div class="header__hamburger ml-50 d-xl-none">
-                                 <button type="button" class="hamburger-btn offcanvas-open-btn">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                 </button>
-                              </div>
-                           <?php endif; ?>
-                        </div>
-                     </div>
-                  <?php endif; ?>
                </div>
             </div>
          </div>

@@ -35,48 +35,6 @@ function portolite_check_header()
 add_action('portolite_header_style', 'portolite_check_header', 10);
 
 
-/* portolite offcanvas */
-
-// function portolite_check_offcanvas()
-// {
-//     $portolite_offcanvas_style = function_exists('get_field') ? get_field('offcanvas_style') : NULL;
-//     $portolite_default_offcanvas_style = get_theme_mod('choose_default_offcanvas', 'offcanvas-style-1');
-
-//     if ($portolite_offcanvas_style == 'offcanvas-style-1') {
-//         get_template_part('template-parts/offcanvas/offcanvas-1');
-//     } elseif ($portolite_offcanvas_style == 'offcanvas-style-2') {
-//         get_template_part('template-parts/offcanvas/offcanvas-2');
-//     } elseif ($portolite_offcanvas_style == 'offcanvas-style-3') {
-//         get_template_part('template-parts/offcanvas/offcanvas-3');
-//     } elseif ($portolite_offcanvas_style == 'offcanvas-style-4') {
-//         get_template_part('template-parts/offcanvas/offcanvas-4');
-//     } elseif ($portolite_offcanvas_style == 'offcanvas-style-5') {
-//         get_template_part('template-parts/offcanvas/offcanvas-5');
-//     } elseif ($portolite_offcanvas_style == 'offcanvas-style-6') {
-//         get_template_part('template-parts/offcanvas/offcanvas-6');
-//     } elseif ($portolite_offcanvas_style == 'offcanvas-style-7') {
-//         get_template_part('template-parts/offcanvas/offcanvas-7');
-//     } else {
-//         if ($portolite_default_offcanvas_style == 'offcanvas-style-2') {
-//             get_template_part('template-parts/offcanvas/offcanvas-2');
-//         } elseif ($portolite_default_offcanvas_style == 'offcanvas-style-3') {
-//             get_template_part('template-parts/offcanvas/offcanvas-3');
-//         } elseif ($portolite_default_offcanvas_style == 'offcanvas-style-4') {
-//             get_template_part('template-parts/offcanvas/offcanvas-4');
-//         } elseif ($portolite_default_offcanvas_style == 'offcanvas-style-5') {
-//             get_template_part('template-parts/offcanvas/offcanvas-5');
-//         } elseif ($portolite_default_offcanvas_style == 'offcanvas-style-6') {
-//             get_template_part('template-parts/offcanvas/offcanvas-6');
-//         } elseif ($portolite_default_offcanvas_style == 'offcanvas-style-7') {
-//             get_template_part('template-parts/offcanvas/offcanvas-7');
-//         } else {
-//             get_template_part('template-parts/offcanvas/offcanvas-1');
-//         }
-//     }
-// }
-
-// add_action('portolite_offcanvas_style', 'portolite_check_offcanvas', 10);
-
 
 /* portolite popup-news-letter */
 
@@ -360,40 +318,6 @@ function portolite_newsletter_social_profiles()
 <?php
 }
 
-/**
- * [portolite_offcanvas_social_profiles description]
- * @return [type] [description]
- */
-function portolite_offcanvas_social_profiles()
-{
-
-    $portolite_offcanvas_fb_url = get_theme_mod('portolite_offcanvas_fb_url', __('#', 'portolite'));
-    $portolite_offcanvas_twitter_url = get_theme_mod('portolite_offcanvas_twitter_url', __('#', 'portolite'));
-    $portolite_offcanvas_instagram_url = get_theme_mod('portolite_offcanvas_instagram_url', __('#', 'portolite'));
-    $portolite_offcanvas_linkedin_url = get_theme_mod('portolite_offcanvas_linkedin_url', __('#', 'portolite'));
-    $portolite_offcanvas_youtube_url = get_theme_mod('portolite_offcanvas_youtube_url', __('#', 'portolite'));
-?>
-    <?php if (!empty($portolite_offcanvas_fb_url)): ?>
-        <a href="<?php print esc_url($portolite_offcanvas_fb_url); ?>"><span><i class="fab fa-facebook-f"></i></span></a>
-    <?php endif; ?>
-
-    <?php if (!empty($portolite_offcanvas_twitter_url)): ?>
-        <a href="<?php print esc_url($portolite_offcanvas_twitter_url); ?>"><span><i class="fab fa-twitter"></i></span></a>
-    <?php endif; ?>
-
-    <?php if (!empty($portolite_offcanvas_instagram_url)): ?>
-        <a href="<?php print esc_url($portolite_offcanvas_instagram_url); ?>"><span><i class="fab fa-instagram"></i></span></a>
-    <?php endif; ?>
-
-    <?php if (!empty($portolite_offcanvas_linkedin_url)): ?>
-        <a href="<?php print esc_url($portolite_offcanvas_linkedin_url); ?>"><span><i class="fab fa-linkedin"></i></span></a>
-    <?php endif; ?>
-
-    <?php if (!empty($portolite_offcanvas_youtube_url)): ?>
-        <a href="<?php print esc_url($portolite_offcanvas_youtube_url); ?>"><span><i class="fab fa-youtube"></i></span></a>
-    <?php endif; ?>
-<?php
-}
 
 function portolite_footer_social_profiles()
 {
@@ -455,24 +379,6 @@ function portolite_header_menu()
 <?php
 }
 
-/**
- * [portolite_search_menu description]
- * @return [type] [description]
- */
-function portolite_header_search_menu()
-{
-?>
-    <?php
-    wp_nav_menu([
-        'theme_location' => 'header-search-menu',
-        'menu_class'     => '',
-        'container'      => '',
-        'fallback_cb'    => 'PortoLite_Navwalker_Class::fallback',
-        'walker'         => new PortoLite_Navwalker_Class,
-    ]);
-    ?>
-<?php
-}
 
 /**
  * [portolite_footer_menu description]
@@ -489,35 +395,6 @@ function portolite_footer_menu()
     ]);
 }
 
-/**
- * [portolite_offcanvas_default_menu description]
- * @return [type] [description]
- */
-function portolite_offcanvas_default_menu()
-{
-    wp_nav_menu([
-        'theme_location' => 'offcanvas-menu',
-        'menu_class'     => '',
-        'container'      => '',
-        'fallback_cb'    => 'PortoLite_Navwalker_Class::fallback',
-        'walker'         => new PortoLite_Navwalker_Class,
-    ]);
-}
-
-/**
- * [portolite_offcanvas_full_menu description]
- * @return [type] [description]
- */
-function portolite_offcanvas_full_menu()
-{
-    wp_nav_menu([
-        'theme_location' => 'offcanvas-full-menu',
-        'menu_class'     => '',
-        'container'      => '',
-        'fallback_cb'    => 'PortoLite_Navwalker_Class::fallback',
-        'walker'         => new PortoLite_Navwalker_Class,
-    ]);
-}
 
 /**
  *
@@ -712,97 +589,7 @@ function portolite_custom_color_third()
 }
 add_action('wp_enqueue_scripts', 'portolite_custom_color_third');
 
-// portolite_custom_color_fourth
-function portolite_custom_color_fourth()
-{
-    $color_code = get_theme_mod('portolite_color_option_4', '#AB6C56');
-    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
-    if ($color_code != '') {
-        $custom_css = '';
-        $custom_css .= "html:root { --tp-theme-4 : " . $color_code . "}";
-        wp_add_inline_style('portolite-custom', $custom_css);
-    }
-}
-add_action('wp_enqueue_scripts', 'portolite_custom_color_fourth');
 
-
-// portolite_custom_color_five
-function portolite_custom_color_five()
-{
-    $color_code = get_theme_mod('portolite_color_option_5', '#4353FF');
-    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
-    if ($color_code != '') {
-        $custom_css = '';
-        $custom_css .= "html:root { --tp-theme-5 : " . $color_code . "}";
-        wp_add_inline_style('portolite-custom', $custom_css);
-    }
-}
-add_action('wp_enqueue_scripts', 'portolite_custom_color_five');
-
-// portolite_custom_color_six
-function portolite_custom_color_six()
-{
-    $color_code = get_theme_mod('portolite_color_option_6', '#3661FC');
-    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
-    if ($color_code != '') {
-        $custom_css = '';
-        $custom_css .= "html:root { --tp-theme-6 : " . $color_code . "}";
-        wp_add_inline_style('portolite-custom', $custom_css);
-    }
-}
-add_action('wp_enqueue_scripts', 'portolite_custom_color_six');
-
-// portolite_custom_color_seven
-function portolite_custom_color_seven()
-{
-    $color_code = get_theme_mod('portolite_color_option_7', '#2CAE76');
-    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
-    if ($color_code != '') {
-        $custom_css = '';
-        $custom_css .= "html:root { --tp-theme-7 : " . $color_code . "}";
-        wp_add_inline_style('portolite-custom', $custom_css);
-    }
-}
-add_action('wp_enqueue_scripts', 'portolite_custom_color_seven');
-
-// portolite_custom_color_eight
-function portolite_custom_color_eight()
-{
-    $color_code = get_theme_mod('portolite_color_option_8', '#FF5A1B');
-    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
-    if ($color_code != '') {
-        $custom_css = '';
-        $custom_css .= "html:root { --tp-theme-8 : " . $color_code . "}";
-        wp_add_inline_style('portolite-custom', $custom_css);
-    }
-}
-add_action('wp_enqueue_scripts', 'portolite_custom_color_eight');
-
-// portolite_custom_color_nine
-function portolite_custom_color_nine()
-{
-    $color_code = get_theme_mod('portolite_color_option_9', '#03041C');
-    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
-    if ($color_code != '') {
-        $custom_css = '';
-        $custom_css .= "html:root { --tp-theme-9 : " . $color_code . "}";
-        wp_add_inline_style('portolite-custom', $custom_css);
-    }
-}
-add_action('wp_enqueue_scripts', 'portolite_custom_color_nine');
-
-// portolite_custom_color_ten
-function portolite_custom_color_ten()
-{
-    $color_code = get_theme_mod('portolite_color_option_10', '#ED212C');
-    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
-    if ($color_code != '') {
-        $custom_css = '';
-        $custom_css .= "html:root { --tp-theme-10 : " . $color_code . "}";
-        wp_add_inline_style('portolite-custom', $custom_css);
-    }
-}
-add_action('wp_enqueue_scripts', 'portolite_custom_color_ten');
 
 // scroll to top color
 function portolite_custom_color_scrollup()
