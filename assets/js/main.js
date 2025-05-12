@@ -5,53 +5,6 @@
 	var windowOn = $(window);
 
 	////////////////////////////////////////////////////
-	// 01. PreLoader Js
-
-	$('.preloader__logo img').addClass('logo-blink');
-
-	(function(){
-		function the_id(v){ return document.getElementById(v); }
-		function tp_loadbar(isChecking) {
-		  if(isChecking){
-			var ovrl = the_id("loading"),
-			  
-			  img = document.images,
-			  c = 0,
-			  tot = img.length;
-			  if ($("#tp-loading-line").length > 0) {
-				var prog = the_id("tp-loading-line");
-			  }
-		  if(tot == 0) return doneLoading();
-	  
-		  function imgLoaded(){
-			c += 1;
-			var perc = ((100/tot*c) << 0) +"%";
-			if ($("#tp-loading-line").length > 0) {
-				prog.style.width = perc;
-			}
-
-			if(c===tot) return doneLoading();
-		  }
-		  function doneLoading(){
-			
-			setTimeout(function(){ 
-				$("#loading").fadeOut(500);
-			}, 100);
-		  }
-		  for(var i=0; i<tot; i++) {
-			var tImg     = new Image();
-			tImg.onload  = imgLoaded;
-			tImg.onerror = imgLoaded;
-			tImg.src     = img[i].src;
-		  }
-		  }    
-		}
-		document.addEventListener('load', tp_loadbar(true));
-		document.addEventListener('DOMContentLoaded', tp_loadbar(false));
-		
-	  }());
-	
-
 
 	  $('.main-menu nav > ul > li').slice(-4).addClass('menu-last');
 
@@ -109,46 +62,11 @@
 		$(".newsletter-overlay").removeClass("opened");
 	});
 
-	////////////////////////////////////////////////////
-	// 03. Offcanvas Js
-	$(".offcanvas-open-btn").on("click", function () {
-		$(".offcanvas__area").addClass("offcanvas-opened");
-		$(".offcanvas__full").addClass("offcanvas-full-opened");
-		$(".body-overlay").addClass("opened");
-	});
-
-	$(".offcanvas-close-btn").on("click", function () {
-		$(".offcanvas__area").removeClass("offcanvas-opened");
-		$(".offcanvas__full").removeClass("offcanvas-full-opened");
-		$(".body-overlay").removeClass("opened");
-	});
-
-	////////////////////////////////////////////////////
-	// 03. Offcanvas Js
-	$(".cartmini-open-btn").on("click", function () {
-		$(".cartmini__area").addClass("cartmini-opened");
-		$(".body-overlay").addClass("opened");
-	});
-
-	
-	$(".cartmini-close-btn").on("click", function () {
-		$(".cartmini__area").removeClass("cartmini-opened");
-		$(".body-overlay").removeClass("opened");
-	});
-
 
 	
 
 	////////////////////////////////////////////////////
 	// 03. Search Js
-	$(".search-open-btn").on("click", function () {
-		$(".search__popup").addClass("search-opened");
-	});
-
-	
-	$(".search-close-btn").on("click", function () {
-		$(".search__popup").removeClass("search-opened");
-	});
 	
 	$(".job-form-open-btn").on("click", function () {
 		$(".job__form").slideToggle("job__form");
@@ -184,8 +102,6 @@
 	////////////////////////////////////////////////////
 	// 04. Body overlay Js
 	$(".body-overlay").on("click", function () {
-		$(".offcanvas__area").removeClass("offcanvas-opened");
-		$(".offcanvas__full").removeClass("offcanvas-full-opened");
 		$(".cartmini__area").removeClass("cartmini-opened");
 		$(".body-overlay").removeClass("opened");
 	});
