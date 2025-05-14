@@ -48,8 +48,6 @@ if (!function_exists('portolite_setup')):
         register_nav_menus([
             'main-menu' => esc_html__('Main Menu', 'portolite'),
             'footer-menu' => esc_html__('Footer Menu', 'portolite'),
-            'offcanvas-menu' => esc_html__('Offcanvas Default Menu', 'portolite'),
-            'offcanvas-full-menu' => esc_html__('Offcanvas Full Menu', 'portolite'),
         ]);
 
         /*
