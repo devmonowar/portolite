@@ -42,8 +42,6 @@ $portolite_mail_id = get_theme_mod('portolite_mail_id', __('info@portolite.com',
 $portolite_phone_num = get_theme_mod('portolite_phone_num', __('+964 742 44 763', 'portolite'));
 $portolite_time_text = get_theme_mod('portolite_time_text', __('Sunday-Thures 10am-07pm', 'portolite'));
 
-// header actions
-$portolite_header_lang = get_theme_mod('portolite_header_lang', false);
 
 ?>
 
@@ -103,11 +101,10 @@ $portolite_header_lang = get_theme_mod('portolite_header_lang', false);
                      </div>
                   </div>
                   <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-2">
-                     <?php if (!empty($portolite_header_lang)): ?>
-                        <div class="header__top-right d-flex justify-content-end align-items-center">
-                           <?php portolite_header_lang_defualt(); ?>
-                        </div>
-                     <?php endif; ?>
+
+                     <div class="header__top-right d-flex justify-content-end align-items-center">
+                        kichu ekta
+                     </div>
                   </div>
                </div>
             </div>

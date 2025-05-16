@@ -240,20 +240,6 @@ function _header_top_fields($fields)
         ],
     ];
 
-    // Language on off
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'portolite_header_lang',
-        'label'    => esc_html__('Language On/Off', 'portolite'),
-        'section'  => 'header_top_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__('Enable', 'portolite'),
-            'off' => esc_html__('Disable', 'portolite'),
-        ],
-    ];
-
     // login on off
     $fields[] = [
         'type'     => 'switch',
