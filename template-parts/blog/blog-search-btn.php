@@ -16,7 +16,7 @@ $portolite_search_btn_switch = get_theme_mod( 'portolite_blog_btn_switch', true 
 
 <?php if ( !empty( $portolite_search_btn_switch ) ): ?>
 <div class="search__blog-btn">
-    <a href="<?php the_permalink();?>" class="tp-btn-border">
+    <a href="<?php the_permalink();?>" class="ptl-btn-border">
         <?php print esc_html( $portolite_search_btn );?>
         <span>
             <svg width="26" height="9" viewBox="0 0 26 9" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -78,11 +78,11 @@ if ( post_password_required() ) {
     $aria_req    = ( $req ? " aria-required='true'" : '' );
 
     $fields = array(
-        'author' => '<div class="row"><div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6"><div class="postbox__comment-input"> <input placeholder="'.  esc_attr__('Enter Name', 'portolite').'" id="author" class="tp-form-control" name="author" type="text" value="' . esc_attr( $commenter[ 'comment_author' ] ) . '" size="30"' . $aria_req . ' /></div></div>',
+        'author' => '<div class="row"><div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6"><div class="postbox__comment-input"> <input placeholder="'.  esc_attr__('Enter Name', 'portolite').'" id="author" class="ptl-form-control" name="author" type="text" value="' . esc_attr( $commenter[ 'comment_author' ] ) . '" size="30"' . $aria_req . ' /></div></div>',
 
-        'email'  => '<div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6"><div class="postbox__comment-input"><input placeholder="'.  esc_attr__('Enter Email', 'portolite').'" id="email" name="email" class="tp-form-control" type="email" value="' . esc_attr( $commenter[ 'comment_author_email' ] ) . '" size="30"' . $aria_req . ' /></div></div>',
+        'email'  => '<div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6"><div class="postbox__comment-input"><input placeholder="'.  esc_attr__('Enter Email', 'portolite').'" id="email" name="email" class="ptl-form-control" type="email" value="' . esc_attr( $commenter[ 'comment_author_email' ] ) . '" size="30"' . $aria_req . ' /></div></div>',
 
-        'url'    => '<div class="col-xxl-4 col-xl-4 col-lg-12"><div class="postbox__comment-input"><input placeholder="'.  esc_attr__('Enter Website', 'portolite').'" id="url" name="url" class="tp-form-control" type="url" value="' . esc_attr( $commenter[ 'comment_author_url' ] ) . '" size="30" /></div></div></div>'
+        'url'    => '<div class="col-xxl-4 col-xl-4 col-lg-12"><div class="postbox__comment-input"><input placeholder="'.  esc_attr__('Enter Website', 'portolite').'" id="url" name="url" class="ptl-form-control" type="url" value="' . esc_attr( $commenter[ 'comment_author_url' ] ) . '" size="30" /></div></div></div>'
     );
 
     if ( is_user_logged_in() ) {
@@ -95,12 +95,12 @@ if ( post_password_required() ) {
         'comment_field'      => '
             <div class="row post-input">
                 <div class="col-md-12 ' . $cl . '">
-                    <div class="postbox__comment-input"><textarea class="tp-form-control msg-box" placeholder="'.  esc_attr__('Enter Your Comment', 'portolite').'" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+                    <div class="postbox__comment-input"><textarea class="ptl-form-control msg-box" placeholder="'.  esc_attr__('Enter Your Comment', 'portolite').'" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
                 </div></div>
                 <div class="clearfix"></div>
             </div>
         ',
-        'submit_button'    => '<div class="col-xl-12"><button class="tp-btn" type="submit">' . esc_html__( 'Post Comment', 'portolite' ) . ' </button></div>',
+        'submit_button'    => '<div class="col-xl-12"><button class="ptl-btn" type="submit">' . esc_html__( 'Post Comment', 'portolite' ) . ' </button></div>',
         /** This filter is documented in wp-includes/link-template.php */
         'must_log_in'        => '
             <p class="must-log-in">
@@ -113,7 +113,7 @@ if ( post_password_required() ) {
             </p>',
         'id_form'            => 'commentform',
         'id_submit'          => 'submit',
-        'class_submit'       => 'tp-btn',
+        'class_submit'       => 'ptl-btn',
         'title_reply'        => esc_html__( 'Leave a Reply', 'portolite' ),
         'title_reply_to'     => esc_html__( 'Leave a Reply to %s', 'portolite' ),
         'cancel_reply_link'  => esc_html__( 'Cancel reply', 'portolite' ),

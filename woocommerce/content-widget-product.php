@@ -28,14 +28,14 @@ if ( ! is_a( $product, 'WC_Product' ) ) {
 <li>
 	<?php do_action( 'woocommerce_widget_product_item_start', $args ); ?>
 
-	<div class="tp-product-sidebar-rating-item d-flex align-items-center">
-		<div class="tp-product-sidebar-rating-thumb mr-20">
+	<div class="ptl-product-sidebar-rating-item d-flex align-items-center">
+		<div class="ptl-product-sidebar-rating-thumb mr-20">
 			<a href="<?php echo esc_url( $product->get_permalink() ); ?>">
 				<?php echo esc_html( $product->get_image()); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			</a>
 		</div>
-		<div class="tp-product-sidebar-rating-content">
-			<h3 class="tp-product-sidebar-rating-title product-title">
+		<div class="ptl-product-sidebar-rating-content">
+			<h3 class="ptl-product-sidebar-rating-title product-title">
 				<a href="<?php echo esc_url( $product->get_permalink() ); ?>">
 					<?php echo wp_kses_post( $product->get_name() ); ?>
 				</a>
@@ -45,7 +45,7 @@ if ( ! is_a( $product, 'WC_Product' ) ) {
 				<?php echo wc_get_rating_html( $product->get_average_rating() ); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			<?php endif; ?>
 
-			<div class="tp-product-sidebar-rating-price">
+			<div class="ptl-product-sidebar-rating-price">
 				<?php echo esc_html($product->get_price_html()); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			</div>
 		</div>

@@ -46,36 +46,7 @@ function portolite_register_required_plugins()
             'slug'     => 'woocommerce',
             'required' => false,
         ],
-        [
-            'name'     => esc_html__('WPC Smart Wishlist', 'portolite'),
-            'slug'     => 'woo-smart-wishlist',
-            'required' => false,
-        ],
-        [
-            'name'     => esc_html__('WPC Smart Compare', 'portolite'),
-            'slug'     => 'woo-smart-compare',
-            'required' => false,
-        ],
-        [
-            'name'     => esc_html__('WPC Smart Quick View', 'portolite'),
-            'slug'     => 'woo-smart-quick-view',
-            'required' => false,
-        ],
-        [
-            'name'     => esc_html__('YITH WooCommerce Ajax Product Filter', 'portolite'),
-            'slug'     => 'yith-woocommerce-ajax-navigation',
-            'required' => false,
-        ],
-        [
-            'name'     => esc_html__('WPZOOM Social Feed Widget & Block', 'portolite'),
-            'slug'     => 'instagram-widget-by-wpzoom',
-            'required' => false,
-        ],
-        [
-            'name'     => esc_html__('Event Manager', 'portolite'),
-            'slug'     => 'wp-event-solution',
-            'required' => false,
-        ],
+
     ];
 
     $config = [

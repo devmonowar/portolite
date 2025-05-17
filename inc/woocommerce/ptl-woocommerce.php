@@ -49,11 +49,11 @@ function portolite_shipping_progress_bar() {
         
     ?>
     
-    <div class="tp-free-progress-bar">
+    <div class="ptl-free-progress-bar">
         <div class="free-shipping-notice">
             <?php echo wp_kses( $message, 'post' ); ?>
         </div>
-        <div class="tp-progress-bar">
+        <div class="ptl-progress-bar">
             <span class="progress progress-bar progress-bar-striped progress-bar-animated" data-width="<?php echo esc_attr( $percent ); ?>%"></span>
         </div>
     </div>
@@ -111,11 +111,11 @@ if ( ! function_exists( 'portolite_header_add_to_cart_fragment' ) ) {
     function portolite_header_add_to_cart_fragment( $fragments ) {
         ob_start();
         ?>
-        <span class="cart__count" id="tp-cart-item">
+        <span class="cart__count" id="ptl-cart-item">
             <?php echo esc_html( WC()->cart->cart_contents_count ); ?>
         </span>
         <?php
-        $fragments['#tp-cart-item'] = ob_get_clean();
+        $fragments['#ptl-cart-item'] = ob_get_clean();
 
         return $fragments;
     }
@@ -453,7 +453,7 @@ if ( ! function_exists( 'woocommerce_breadcrumb' ) ) {
                 'woocommerce_breadcrumb_defaults',
                 array(
                     'delimiter'   => '<span class="dvdr"><i class="fa-regular fa-angle-right"></i></span>',
-                    'wrap_before' => '<nav class="woocommerce-breadcrumb tp-woo-breadcrumb__list">',
+                    'wrap_before' => '<nav class="woocommerce-breadcrumb ptl-woo-breadcrumb__list">',
                     'wrap_after'  => '</nav>',
                     'before'      => '',
                     'after'       => '',

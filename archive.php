@@ -14,7 +14,7 @@ $blog_column = is_active_sidebar( 'blog-sidebar' ) ? 8 : 12;
 ?>
 
 	<!-- search result item area start -->
-	<section class="tp-blog-area postbox__area grey-bg-4 pt-120 pb-100">
+	<section class="ptl-blog-area postbox__area grey-bg-4 pt-120 pb-100">
     	<div class="container">
 			<div class="row">
 				<div class="col-lg-<?php print esc_attr( $blog_column );?>">
@@ -41,7 +41,7 @@ $blog_column = is_active_sidebar( 'blog-sidebar' ) ? 8 : 12;
 							<?php
 								endwhile;
 							?>
-								<div class="tp-pagination mt-20">
+								<div class="ptl-pagination mt-20">
 									<?php portolite_pagination( '<i class="fal fa-arrow-left"></i>', '<i class="fal fa-arrow-right"></i>', '', ['class' => ''] );
 									?>
 								</div>

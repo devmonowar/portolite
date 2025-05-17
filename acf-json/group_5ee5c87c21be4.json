@@ -1,0 +1,52 @@
+{
+    "key": "group_5ee5c87c21be4",
+    "title": "Post Formatted",
+    "fields": [
+        {
+            "key": "field_5ee5e1f7dfd22",
+            "label": "Fromate Link",
+            "name": "fromate_style",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_format",
+                "operator": "==",
+                "value": "video"
+            }
+        ],
+        [
+            {
+                "param": "post_format",
+                "operator": "==",
+                "value": "audio"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "modified": 1747463869
+}

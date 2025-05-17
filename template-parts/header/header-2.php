@@ -136,7 +136,7 @@
                         <div class="col-xxl-2 col-xl-3 col-lg-3 col-6">
                            <div class="header__style-4-right d-flex align-items-center justify-content-end">
                               <div class="header__btn-4 text-end d-none d-lg-block">
-                              <a href="<?php echo esc_url($portolite_contact_button_link); ?>" class="tp-btn-brown"><?php echo esc_html($portolite_contact_button_text); ?></a>
+                              <a href="<?php echo esc_url($portolite_contact_button_link); ?>" class="ptl-btn-brown"><?php echo esc_html($portolite_contact_button_text); ?></a>
                               </div>
                               <div class="header__hamburger ml-50 d-lg-none">
                                  <button type="button" class="hamburger-btn hamburger-btn-brown offcanvas-open-btn">
@@ -177,7 +177,7 @@
 
                            <?php if ( !empty( $portolite_contact_button_text ) ): ?>
                            <div class="header__btn-4 text-end">
-                              <a href="<?php echo esc_url($portolite_contact_button_link); ?>" class="tp-btn-brown"><?php echo esc_html($portolite_contact_button_text); ?></a>
+                              <a href="<?php echo esc_url($portolite_contact_button_link); ?>" class="ptl-btn-brown"><?php echo esc_html($portolite_contact_button_text); ?></a>
                            </div>
                            <?php endif; ?>
                            

@@ -30,7 +30,7 @@ class Theme_Register {
 			$version = $theme_object->get('Version');
 			$author = $theme_object->get('Author');
 			
-			$reg_url = "https://api.themepure.net/wp-json/tp-api/v1/test-code";
+			$reg_url = "https://api.themepure.net/wp-json/ptl-api/v1/test-code";
 			$theme_reg_data = array(
     		    'url'   => $reg_url,
     		    'theme'  => $theme,
@@ -44,7 +44,7 @@ class Theme_Register {
 			wp_localize_script('theme-register', 'theme_reg_data', $theme_reg_data);
 		}else{
 		    $license_code = get_option('tp_envato_purchase_code');
-    		$deactivate_url = "https://api.themepure.net/wp-json/tp-api/v1/deactivate";
+    		$deactivate_url = "https://api.themepure.net/wp-json/ptl-api/v1/deactivate";
     		
     		$theme_data = array(
     		    'url'   => $deactivate_url,
@@ -74,31 +74,31 @@ class Theme_Register {
 		<form method="post" id="purchase_code_form" class="notice notice-info">
 			<div class="theme-register-wrapper">
 				<div class="theme-register-header">
-					<h2 class="hndle ui-sortable-handle"><?php esc_html_e('Register Theme','tp-api'); ?></h2>
+					<h2 class="hndle ui-sortable-handle"><?php esc_html_e('Register Theme','ptl-api'); ?></h2>
 				</div>
 				<p><?php esc_html_e('You\'re almost done. Just one more step. In order to gain full access
-					to all demos, premium plugins and support, please register your theme\'s purchase code.','tp-api'); ?></p>
-				<h4><?php esc_html_e('Your Envato Purchase Code','tp-api'); ?></h4>
+					to all demos, premium plugins and support, please register your theme\'s purchase code.','ptl-api'); ?></p>
+				<h4><?php esc_html_e('Your Envato Purchase Code','ptl-api'); ?></h4>
 	
 				<p>
 					<input class="regular-text code" type="text" name="purchase_code" id="purchase_code" value="">
 				</p>
 	
 				<p>
-					<a href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-" target="_blank"><?php esc_html_e('Where to find the code?','tp-api'); ?></a>
+					<a href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-" target="_blank"><?php esc_html_e('Where to find the code?','ptl-api'); ?></a>
 				</p>
 	
 				<p>
 					<label>
 						<input type="checkbox" name="confirm_activation"><?php esc_html_e('I confirm that, according to the Envato
 						License Terms, I am licensed to use the purchase code for a single project. Using it on multiple
-						installations is a copyright violation.','tp-api'); ?>
+						installations is a copyright violation.','ptl-api'); ?>
 					</label>
-					<a href="https://themeforest.net/licenses/terms/regular" target="_blank"><?php esc_html_e('License details.','tp-api'); ?></a>
+					<a href="https://themeforest.net/licenses/terms/regular" target="_blank"><?php esc_html_e('License details.','ptl-api'); ?></a>
 				</p>
 	
-				<p class="tp-actions">
-					<button class="button button-primary" id="register" name="register_theme"><?php esc_html_e('Register Theme','tp-api'); ?></button>
+				<p class="ptl-actions">
+					<button class="button button-primary" id="register" name="register_theme"><?php esc_html_e('Register Theme','ptl-api'); ?></button>
 				</p>
 			</div>
 		</form>
@@ -217,7 +217,7 @@ class Theme_Register {
 							</svg>
 							<div class="welcome-panel-column-content">
 								<h3>Theme Support</h3>
-								<p><?php echo esc_html__('Envato allows 1 license for 1 project located on 1 domain. It means that 1 purchase key can be used only for 1 site. Each additional site will require an additional purchase key.','tp-api'); ?>
+								<p><?php echo esc_html__('Envato allows 1 license for 1 project located on 1 domain. It means that 1 purchase key can be used only for 1 site. Each additional site will require an additional purchase key.','ptl-api'); ?>
 								</p>
 								<a href="https://help.themepure.net/support/">Go to support</a>
 							</div>
@@ -254,7 +254,7 @@ class Theme_Register {
 					</div>
 				</div>
 			</div>
-			<button class="button button-primary" id="deactivate"><?php esc_html_e('Deactivate License Key', 'tp-api'); ?></button>
+			<button class="button button-primary" id="deactivate"><?php esc_html_e('Deactivate License Key', 'ptl-api'); ?></button>
 		</div>
 		<?php endif; endif;
 
@@ -286,7 +286,7 @@ class Theme_Register {
 			$version = $theme_object->get('Version');
 			$author = $theme_object->get('Author');
 			
-			$url = "https://api.themepure.net/wp-json/tp-api/v1/check-code?code={$purchase_code}&domain={$_SERVER['HTTP_HOST']}&theme={$theme}&version={$version}&author={$author}";
+			$url = "https://api.themepure.net/wp-json/ptl-api/v1/check-code?code={$purchase_code}&domain={$_SERVER['HTTP_HOST']}&theme={$theme}&version={$version}&author={$author}";
 			$response = wp_remote_get($url);
 
             if(is_wp_error($response)){
@@ -371,7 +371,7 @@ class Theme_Register {
 			$item['plugin'] = '';
 			$item['plugin']	= $item['sanitized_plugin'];
 			$action_links = array(
-				'tp_registration_required' => sprintf( __( '<a style="color: red;" href="%s">Register Theme To Unlock It</a>', 'tp-api' ), esc_url( admin_url( 'themes.php?page=register-theme' ) ) ),
+				'tp_registration_required' => sprintf( __( '<a style="color: red;" href="%s">Register Theme To Unlock It</a>', 'ptl-api' ), esc_url( admin_url( 'themes.php?page=register-theme' ) ) ),
 			);
 		}
 
@@ -405,8 +405,8 @@ class Theme_Register {
 		if(empty(self::tp_get_registered_purchase_code())){
 			echo '<div class="notice notice-warning">
 				<p>' . sprintf(
-				esc_html__( 'Enter your Envato Purchase Code to receive Theme and plugin updates %s', 'tp-api' ),
-				'<a href="' . admin_url('themes.php?page=register-theme') . '">' . esc_html__( 'Enter Purchase Code', 'tp-api' ) . '</a>') . '</p>
+				esc_html__( 'Enter your Envato Purchase Code to receive Theme and plugin updates %s', 'ptl-api' ),
+				'<a href="' . admin_url('themes.php?page=register-theme') . '">' . esc_html__( 'Enter Purchase Code', 'ptl-api' ) . '</a>') . '</p>
 			</div>';
 		}
 	}
@@ -431,11 +431,11 @@ class Theme_Register {
 	public function tp_prevent_modal(){
 		?>
 		<!-- The Modal -->
-		<div id="register-modal" class="tp-modal">
+		<div id="register-modal" class="ptl-modal">
 	
 			<!-- Modal content -->
-			<div class="tp-modal-content">
-				<span class="tp-modal-close">&times;</span>
+			<div class="ptl-modal-content">
+				<span class="ptl-modal-close">&times;</span>
 				<p><?php esc_html_e('Please register theme with your evato purchase code to activate this plugin.', 'shofy-core'); ?> <a href="<?php echo esc_url( admin_url( 'themes.php?page=register-theme' ) ); ?>"><?php esc_html_e('Register Theme', 'shofy-core'); ?></a></p>
 			</div>
 	

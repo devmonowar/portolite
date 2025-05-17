@@ -1,4 +1,4 @@
-<div class="tp-page-post">
+<div class="ptl-page-post">
 <?php
     the_content();
     wp_link_pages( [

@@ -80,7 +80,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
 
-	<div class="tp-order-details-wrapper">
+	<div class="ptl-order-details-wrapper">
 		<?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
 	</div>
 

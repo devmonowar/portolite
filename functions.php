@@ -207,7 +207,7 @@ require_once PORTOLITE_THEME_INC . '/common/portolite-breadcrumb.php';
 require_once PORTOLITE_THEME_INC . '/common/portolite-scripts.php';
 require_once PORTOLITE_THEME_INC . '/common/portolite-widgets.php';
 if (class_exists('WooCommerce')) {
-    require_once PORTOLITE_THEME_INC . '/woocommerce/tp-woocommerce.php';
+    require_once PORTOLITE_THEME_INC . '/woocommerce/ptl-woocommerce.php';
 }
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.

@@ -25,14 +25,14 @@ defined( 'ABSPATH' ) || exit;
 	// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 	?>
 
-	<div class="tp-product-sidebar-rating-item d-flex align-items-center">
-		<div class="tp-product-sidebar-rating-thumb mr-20">
+	<div class="ptl-product-sidebar-rating-item d-flex align-items-center">
+		<div class="ptl-product-sidebar-rating-thumb mr-20">
 			<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 				<?php echo esc_html($product->get_image()); ?>
 			</a>
 		</div>
-		<div class="tp-product-sidebar-rating-content">
-			<h3 class="tp-product-sidebar-rating-title product-title"><?php echo wp_kses_post( $product->get_name() ); ?></h3>
+		<div class="ptl-product-sidebar-rating-content">
+			<h3 class="ptl-product-sidebar-rating-title product-title"><?php echo wp_kses_post( $product->get_name() ); ?></h3>
 			<?php echo wc_get_rating_html( intval( get_comment_meta( $comment->comment_ID, 'rating', true ) ) ); ?>
 
 			<span class="reviewer">

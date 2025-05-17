@@ -73,7 +73,7 @@ do_action( 'woocommerce_before_main_content' );
                      <div class="col-lg-6 col-md-7">
                         <div class="shop__sort d-flex flex-wrap justify-content-md-end align-items-center">
                            <div class="shop__sort-item">
-                              <div class="shop__sort-tab tp-tab">
+                              <div class="shop__sort-tab ptl-tab">
                                  <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                       <button class="nav-link active" id="nav-grid-tab" data-bs-toggle="tab" data-bs-target="#nav-grid" type="button" role="tab" aria-controls="nav-grid" aria-selected="true">

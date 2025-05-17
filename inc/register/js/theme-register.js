@@ -60,12 +60,12 @@
     });
 
     $(document).ready(function(){
-        $(document).on('click', '[data-slug="tp-core"] .activate a', function(e){
+        $(document).on('click', '[data-slug="ptl-core"] .activate a', function(e){
             e.preventDefault();
             $('#register-modal').show();
         });
 
-        $('.tp-modal-close').on('click', function(){
+        $('.ptl-modal-close').on('click', function(){
             $('#register-modal').hide();
         })
     })

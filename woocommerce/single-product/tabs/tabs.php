@@ -34,14 +34,14 @@ if ( ! empty( $product_tabs ) ) : ?>
 <section class="product__details-tab-area pt-110 pb-110">
 	<div class="product__details-tab-nav">
 		<nav>
-			<div class="product__details-tab-nav-inner nav tp-tab-menu d-flex flex-sm-nowrap flex-wrap" id="nav-tab-info" role="tablist">
+			<div class="product__details-tab-nav-inner nav ptl-tab-menu d-flex flex-sm-nowrap flex-wrap" id="nav-tab-info" role="tablist">
 				<?php foreach ( $product_tabs as $key => $product_tab ) : 
 
 					$active = ($key == array_key_first($product_tabs)) ? 'active' : '';
 				?>
 				<button class="nav-link <?php echo esc_attr( $key ); ?>_tab <?php echo esc_attr($active); ?>" id="nav-desc-tab-<?php echo esc_attr( $key ); ?>" data-bs-toggle="tab" data-bs-target="#nav-desc-<?php echo esc_attr( $key ); ?>" type="button" role="tab" aria-controls="nav-desc-<?php echo esc_attr( $key ); ?>" aria-selected="true"><?php echo wp_kses_post( apply_filters( 'woocommerce_product_' . $key . '_tab_title', $product_tab['title'], $key ) ); ?></button>
 				<?php endforeach; ?>
-				<span id="marker" class="tp-tab-line d-none d-sm-inline-block"></span>
+				<span id="marker" class="ptl-tab-line d-none d-sm-inline-block"></span>
 			</div>
 		</nav> 
 	</div>

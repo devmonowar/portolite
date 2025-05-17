@@ -1,7 +1,7 @@
 
 
-.tp-img-reveal[data-fx="1"]::after,
-.tp-img-reveal[data-fx="2"]::after {
+.ptl-img-reveal[data-fx="1"]::after,
+.ptl-img-reveal[data-fx="2"]::after {
 	content: '';
 	z-index: -1;
 	width: 100%;
@@ -15,17 +15,17 @@
 	transition: transform 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000);
 }
 
-.tp-img-reveal[data-fx="1"]::after,
-.tp-img-reveal[data-fx="2"]::after {
+.ptl-img-reveal[data-fx="1"]::after,
+.ptl-img-reveal[data-fx="2"]::after {
 	bottom: 0;
 }
 
-.tp-img-reveal[data-fx="1"]:hover::after,
-.tp-img-reveal[data-fx="2"]:hover::after {
+.ptl-img-reveal[data-fx="1"]:hover::after,
+.ptl-img-reveal[data-fx="2"]:hover::after {
 	transform: scale3d(1,1,1)
 }
 
-.tp-img-reveal[data-fx="6"]::after {
+.ptl-img-reveal[data-fx="6"]::after {
 	content: '';
 	z-index: -1;
 	width: 100%;
@@ -39,17 +39,17 @@
 	transition: transform 0.7s cubic-bezier(0.860, 0.000, 0.070, 1.000);
 }
 
-.tp-img-reveal[data-fx="6"]::after {
+.ptl-img-reveal[data-fx="6"]::after {
 	bottom: 0;
 }
 
 
-.tp-img-reveal[data-fx="6"]:hover::after {
+.ptl-img-reveal[data-fx="6"]:hover::after {
 	transform: scale3d(1,1,1)
 }
 
 
-.tp-img-reveal[data-fx="14"]::after {
+.ptl-img-reveal[data-fx="14"]::after {
 	content: '';
 	z-index: -1;
 	width: 100%;
@@ -62,11 +62,11 @@
 	transform-origin: 0% 50%;
 }
 
-.tp-img-reveal[data-fx="14"]::after {
+.ptl-img-reveal[data-fx="14"]::after {
 	bottom: 0;
 }
 
-.tp-img-reveal[data-fx="14"]:hover::after {
+.ptl-img-reveal[data-fx="14"]:hover::after {
 	animation: loop 0.5s infinite;
 }
 
@@ -77,7 +77,7 @@
 	100% { transform-origin: 100% 50%; transform: scale3d(0,1,1); }
 }
 
-.tp-img-reveal-wrapper {
+.ptl-img-reveal-wrapper {
 	position: fixed;
 	width: 250px;
 	height: 270px;
@@ -89,14 +89,14 @@
 	
 }
 
-.tp-img-reveal-wrapper__inner,
-.tp-img-reveal-wrapper__img {
+.ptl-img-reveal-wrapper__inner,
+.ptl-img-reveal-wrapper__img {
 	width: 100%;
 	height: 100%;
 	position: relative;
 }
 
-.tp-img-reveal-wrapper__deco {
+.ptl-img-reveal-wrapper__deco {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -105,7 +105,7 @@
 	background-color: #181314;
 }
 
-.tp-img-reveal-wrapper__img {
+.ptl-img-reveal-wrapper__img {
 	background-size: cover;
 	background-position: 50% 50%;
 }

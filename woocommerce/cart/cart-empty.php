@@ -23,11 +23,11 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'woocommerce_cart_is_empty' );
 
 if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
-	<div class="tp-empty-cart">
+	<div class="ptl-empty-cart">
 		<img src="<?php echo get_template_directory_uri() . '/assets/img/product/empty-cart.jpg' ?>" alt="<?php echo esc_attr__('empty-cart', 'portolite'); ?>">
 	</div>
 	<p class="return-to-shop text-center">
-		<a class="tp-btn button wc-backward<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
+		<a class="ptl-btn button wc-backward<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
 			<?php
 				/**
 				 * Filter "Return To Shop" text.

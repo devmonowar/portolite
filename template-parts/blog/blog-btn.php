@@ -15,7 +15,7 @@ $portolite_blog_btn_switch = get_theme_mod( 'portolite_blog_btn_switch', true );
 
 <?php if ( !empty( $portolite_blog_btn_switch ) ): ?>
 <div class="postbox__read-more">
-    <a href="<?php the_permalink();?>" class="tp-btn">
+    <a href="<?php the_permalink();?>" class="ptl-btn">
     <?php print esc_html( $portolite_blog_btn );?>
         <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 6.97559L1 6.97559" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

@@ -39,14 +39,14 @@
         constructor(el) {
             this.DOM = {el: el};
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
-            this.DOM.reveal.innerHTML = `<div class="tp-img-reveal-wrapper__inner">
-                <div class="tp-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img ? this.DOM.el.dataset.img: ''})">
-                    <div class="tp-hover-wrapper"> 
-                        <span class="tp-hover-subtitle tp-el-box-desc">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span>
-                        <h3 class="tp-hover-title tp-el-box-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3>
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
+            this.DOM.reveal.innerHTML = `<div class="ptl-img-reveal-wrapper__inner">
+                <div class="ptl-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img ? this.DOM.el.dataset.img: ''})">
+                    <div class="ptl-hover-wrapper"> 
+                        <span class="ptl-hover-subtitle ptl-el-box-desc">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span>
+                        <h3 class="ptl-hover-title ptl-el-box-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3>
                         <p>${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p>
-                        <div class="tp-hover-meta tp-el-box-tag">
+                        <div class="ptl-hover-meta ptl-el-box-tag">
                             <span>
                                 <a href="${this.DOM.el.dataset.metaTagLink ? this.DOM.el.dataset.metaTagLink: '#'}">${this.DOM.el.dataset.metaTag ? this.DOM.el.dataset.metaTag: ''}</a>
                             </span>
@@ -61,9 +61,9 @@
                 </div>
             </div>`;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealInner = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__inner');
+            this.DOM.revealInner = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__inner');
             this.DOM.revealInner.style.overflow = 'hidden';
-            this.DOM.revealImg = this.DOM.revealInner.querySelector('.tp-img-reveal-wrapper__img');
+            this.DOM.revealImg = this.DOM.revealInner.querySelector('.ptl-img-reveal-wrapper__img');
 
             this.initEvents();
         }
@@ -146,12 +146,12 @@
         constructor(el) {
             this.DOM = {el: el};
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
-            this.DOM.reveal.innerHTML = `<div class="tp-img-reveal-wrapper__inner">
-                <div class="tp-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img ? this.DOM.el.dataset.img: ''})">
-                    <div class="portfolio__hover-wrapper tp-el-box">
-                        <h4 class="portfolio__hover-title tp-el-box-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h4>
-                        <div class="portfolio__hover-category tp-el-box-tag">
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
+            this.DOM.reveal.innerHTML = `<div class="ptl-img-reveal-wrapper__inner">
+                <div class="ptl-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img ? this.DOM.el.dataset.img: ''})">
+                    <div class="portfolio__hover-wrapper ptl-el-box">
+                        <h4 class="portfolio__hover-title ptl-el-box-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h4>
+                        <div class="portfolio__hover-category ptl-el-box-tag">
                             <span>
                             <a href="${this.DOM.el.dataset.metaTagLink ? this.DOM.el.dataset.metaTagLink: '#'}">${this.DOM.el.dataset.metaTag ? this.DOM.el.dataset.metaTag: ''}</a>
                             </span>
@@ -160,9 +160,9 @@
                 </div>
             </div>`;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealInner = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__inner');
+            this.DOM.revealInner = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__inner');
             this.DOM.revealInner.style.overflow = 'hidden';
-            this.DOM.revealImg = this.DOM.revealInner.querySelector('.tp-img-reveal-wrapper__img');
+            this.DOM.revealImg = this.DOM.revealInner.querySelector('.ptl-img-reveal-wrapper__img');
 
             this.initEvents();
         }
@@ -244,14 +244,14 @@
         constructor(el) {
             this.DOM = {el: el};
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
-            this.DOM.reveal.innerHTML = `<div class="tp-img-reveal-wrapper__inner">
-                <div class="tp-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img ? this.DOM.el.dataset.img: ''})">
-                    <div class="tp-hover-wrapper"> 
-                        <span class="tp-hover-subtitle tp-el-box-desc">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span>
-                        <h3 class="tp-hover-title tp-el-box-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3>
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
+            this.DOM.reveal.innerHTML = `<div class="ptl-img-reveal-wrapper__inner">
+                <div class="ptl-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img ? this.DOM.el.dataset.img: ''})">
+                    <div class="ptl-hover-wrapper"> 
+                        <span class="ptl-hover-subtitle ptl-el-box-desc">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span>
+                        <h3 class="ptl-hover-title ptl-el-box-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3>
                         <p>${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p>
-                        <div class="tp-hover-meta tp-el-box-tag">
+                        <div class="ptl-hover-meta ptl-el-box-tag">
                             <span>
                                 <a href="${this.DOM.el.dataset.metaTagLink ? this.DOM.el.dataset.metaTagLink: '#'}">${this.DOM.el.dataset.metaTag ? this.DOM.el.dataset.metaTag: ''}</a>
                             </span>
@@ -266,9 +266,9 @@
                 </div>
             </div>`;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealInner = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__inner');
+            this.DOM.revealInner = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__inner');
             this.DOM.revealInner.style.overflow = 'hidden';
-            this.DOM.revealImg = this.DOM.revealInner.querySelector('.tp-img-reveal-wrapper__img');
+            this.DOM.revealImg = this.DOM.revealInner.querySelector('.ptl-img-reveal-wrapper__img');
 
             this.initEvents();
         }
@@ -354,15 +354,15 @@
         constructor(el) {
             this.DOM = {el: el};
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
             this.DOM.reveal.style.overflow = 'hidden';
-            this.DOM.reveal.innerHTML = `<div class="tp-img-reveal-wrapper__inner">
-                <div class="tp-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img ? this.DOM.el.dataset.img: ''})">
-                    <div class="tp-hover-wrapper"> 
-                        <span class="tp-hover-subtitle tp-el-box-desc">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span>
-                        <h3 class="tp-hover-title tp-el-box-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3>
+            this.DOM.reveal.innerHTML = `<div class="ptl-img-reveal-wrapper__inner">
+                <div class="ptl-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img ? this.DOM.el.dataset.img: ''})">
+                    <div class="ptl-hover-wrapper"> 
+                        <span class="ptl-hover-subtitle ptl-el-box-desc">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span>
+                        <h3 class="ptl-hover-title ptl-el-box-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3>
                         <p>${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p>
-                        <div class="tp-hover-meta tp-el-box-tag">
+                        <div class="ptl-hover-meta ptl-el-box-tag">
                             <span>
                                 <a href="${this.DOM.el.dataset.metaTagLink ? this.DOM.el.dataset.metaTagLink: '#'}">${this.DOM.el.dataset.metaTag ? this.DOM.el.dataset.metaTag: ''}</a>
                             </span>
@@ -377,9 +377,9 @@
                 </div>
             </div>`;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealInner = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__inner');
+            this.DOM.revealInner = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__inner');
             this.DOM.revealInner.style.overflow = 'hidden';
-            this.DOM.revealImg = this.DOM.revealInner.querySelector('.tp-img-reveal-wrapper__img');
+            this.DOM.revealImg = this.DOM.revealInner.querySelector('.ptl-img-reveal-wrapper__img');
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
             this.initEvents();
@@ -485,14 +485,14 @@
         constructor(el) {
             this.DOM = {el: el};
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
-            this.DOM.reveal.innerHTML = `<div class="tp-img-reveal-wrapper__inner">
-            <div class="tp-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img ? this.DOM.el.dataset.img: ''})">
-                    <div class="tp-hover-wrapper"> 
-                        <span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span>
-                        <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3>
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
+            this.DOM.reveal.innerHTML = `<div class="ptl-img-reveal-wrapper__inner">
+            <div class="ptl-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img ? this.DOM.el.dataset.img: ''})">
+                    <div class="ptl-hover-wrapper"> 
+                        <span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span>
+                        <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3>
                         <p>${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p>
-                        <div class="tp-hover-meta">
+                        <div class="ptl-hover-meta">
                             <span>
                                 <a href="${this.DOM.el.dataset.metaTagLink ? this.DOM.el.dataset.metaTagLink: '#'}">${this.DOM.el.dataset.metaTag ? this.DOM.el.dataset.metaTag: ''}</a>
                             </span>
@@ -507,9 +507,9 @@
                 </div>
             </div>`;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealInner = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__inner');
+            this.DOM.revealInner = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__inner');
             this.DOM.revealInner.style.overflow = 'hidden';
-            this.DOM.revealImg = this.DOM.revealInner.querySelector('.tp-img-reveal-wrapper__img');
+            this.DOM.revealImg = this.DOM.revealInner.querySelector('.ptl-img-reveal-wrapper__img');
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
             this.initEvents();
@@ -611,14 +611,14 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
-            this.DOM.reveal.innerHTML = `<div class="tp-img-reveal-wrapper__deco"></div>
-            <div class="tp-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img ? this.DOM.el.dataset.img: ''})">
-            <div class="tp-hover-wrapper"> 
-                <span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span>
-                <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3>
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
+            this.DOM.reveal.innerHTML = `<div class="ptl-img-reveal-wrapper__deco"></div>
+            <div class="ptl-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img ? this.DOM.el.dataset.img: ''})">
+            <div class="ptl-hover-wrapper"> 
+                <span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span>
+                <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3>
                 <p>${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p>
-                <div class="tp-hover-meta">
+                <div class="ptl-hover-meta">
                     <span>
                         <a href="${this.DOM.el.dataset.metaTagLink ? this.DOM.el.dataset.metaTagLink: '#'}">${this.DOM.el.dataset.metaTag ? this.DOM.el.dataset.metaTag: ''}</a>
                     </span>
@@ -633,10 +633,10 @@
         </div>
             </div>`;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealInner = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__inner');
+            this.DOM.revealInner = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__inner');
             this.DOM.revealInner.style.overflow = 'hidden';
-            this.DOM.revealDeco = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__deco');
-            this.DOM.revealImg = this.DOM.revealInner.querySelector('.tp-img-reveal-wrapper__img');
+            this.DOM.revealDeco = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__deco');
+            this.DOM.revealImg = this.DOM.revealInner.querySelector('.ptl-img-reveal-wrapper__img');
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
             this.initEvents();
@@ -740,14 +740,14 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
             this.DOM.reveal.style.overflow = 'hidden';
-            this.DOM.reveal.innerHTML = `<div class="tp-img-reveal-wrapper__deco"></div><div class="tp-img-reveal-wrapper__inner"><div class="tp-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div></div>`;
+            this.DOM.reveal.innerHTML = `<div class="ptl-img-reveal-wrapper__deco"></div><div class="ptl-img-reveal-wrapper__inner"><div class="ptl-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div></div>`;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealInner = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__inner');
+            this.DOM.revealInner = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__inner');
             this.DOM.revealInner.style.overflow = 'hidden';
-            this.DOM.revealDeco = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__deco');
-            this.DOM.revealImg = this.DOM.revealInner.querySelector('.tp-img-reveal-wrapper__img');
+            this.DOM.revealDeco = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__deco');
+            this.DOM.revealImg = this.DOM.revealInner.querySelector('.ptl-img-reveal-wrapper__img');
 
             this.initEvents();
         }
@@ -855,12 +855,12 @@
         constructor(el) {
             this.DOM = {el: el};
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
-            this.DOM.reveal.innerHTML = `<div class="tp-img-reveal-wrapper__deco"></div><div class="tp-img-reveal-wrapper__inner"><div class="tp-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div></div>`;
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
+            this.DOM.reveal.innerHTML = `<div class="ptl-img-reveal-wrapper__deco"></div><div class="ptl-img-reveal-wrapper__inner"><div class="ptl-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div></div>`;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealInner = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__inner');
-            this.DOM.revealDeco = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__deco');
-            this.DOM.revealImg = this.DOM.revealInner.querySelector('.tp-img-reveal-wrapper__img');
+            this.DOM.revealInner = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__inner');
+            this.DOM.revealDeco = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__deco');
+            this.DOM.revealImg = this.DOM.revealInner.querySelector('.ptl-img-reveal-wrapper__img');
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
             this.initEvents();
@@ -975,13 +975,13 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
-            this.DOM.reveal.innerHTML = `<div class="tp-img-reveal-wrapper__deco"></div><div class="tp-img-reveal-wrapper__inner"><div class="tp-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div></div>`;
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
+            this.DOM.reveal.innerHTML = `<div class="ptl-img-reveal-wrapper__deco"></div><div class="ptl-img-reveal-wrapper__inner"><div class="ptl-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div></div>`;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealInner = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__inner');
+            this.DOM.revealInner = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__inner');
             this.DOM.revealInner.style.overflow = 'hidden';
-            this.DOM.revealDeco = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__deco');
-            this.DOM.revealImg = this.DOM.revealInner.querySelector('.tp-img-reveal-wrapper__img');
+            this.DOM.revealDeco = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__deco');
+            this.DOM.revealImg = this.DOM.revealInner.querySelector('.ptl-img-reveal-wrapper__img');
             this.rect = this.DOM.reveal.getBoundingClientRect();
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
@@ -1085,13 +1085,13 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
-            this.DOM.reveal.innerHTML = `<div class="tp-img-reveal-wrapper__deco"></div><div class="tp-img-reveal-wrapper__inner"><div class="tp-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div></div>`;
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
+            this.DOM.reveal.innerHTML = `<div class="ptl-img-reveal-wrapper__deco"></div><div class="ptl-img-reveal-wrapper__inner"><div class="ptl-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div></div>`;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealInner = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__inner');
+            this.DOM.revealInner = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__inner');
             this.DOM.revealInner.style.overflow = 'hidden';
-            this.DOM.revealDeco = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__deco');
-            this.DOM.revealImg = this.DOM.revealInner.querySelector('.tp-img-reveal-wrapper__img');
+            this.DOM.revealDeco = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__deco');
+            this.DOM.revealImg = this.DOM.revealInner.querySelector('.ptl-img-reveal-wrapper__img');
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
             this.initEvents();
@@ -1196,13 +1196,13 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
-            this.DOM.reveal.innerHTML = `<div class="tp-img-reveal-wrapper__deco"></div><div class="tp-img-reveal-wrapper__inner"><div class="tp-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div></div>`;
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
+            this.DOM.reveal.innerHTML = `<div class="ptl-img-reveal-wrapper__deco"></div><div class="ptl-img-reveal-wrapper__inner"><div class="ptl-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div></div>`;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealInner = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__inner');
+            this.DOM.revealInner = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__inner');
             this.DOM.revealInner.style.overflow = 'hidden';
-            this.DOM.revealDeco = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__deco');
-            this.DOM.revealImg = this.DOM.revealInner.querySelector('.tp-img-reveal-wrapper__img');
+            this.DOM.revealDeco = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__deco');
+            this.DOM.revealImg = this.DOM.revealInner.querySelector('.ptl-img-reveal-wrapper__img');
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
             this.initEvents();
@@ -1299,20 +1299,20 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
             this.DOM.reveal.style.overflow = 'hidden';
-            this.DOM.reveal.innerHTML = `<div class="tp-img-reveal-wrapper__deco"></div><div class="tp-img-reveal-wrapper__inner"><div class="tp-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div></div>`;
+            this.DOM.reveal.innerHTML = `<div class="ptl-img-reveal-wrapper__deco"></div><div class="ptl-img-reveal-wrapper__inner"><div class="ptl-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div></div>`;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealInner = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__inner');
+            this.DOM.revealInner = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__inner');
             this.DOM.revealInner.style.overflow = 'hidden';
-            this.DOM.revealDeco = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__deco');
+            this.DOM.revealDeco = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__deco');
             TweenMax.set(this.DOM.revealDeco, {
                 width: '1%',
                 height: '100%',
                 background: 'white',
                 left: '50%'
             });
-            this.DOM.revealImg = this.DOM.revealInner.querySelector('.tp-img-reveal-wrapper__img');
+            this.DOM.revealImg = this.DOM.revealInner.querySelector('.ptl-img-reveal-wrapper__img');
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
             this.initEvents();
@@ -1433,16 +1433,16 @@
         constructor(el) {
             this.DOM = {el: el};
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper'; 
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper'; 
             this.totalDecos = 7;
             let inner = '';
             for (let i = 0; i <= this.totalDecos-1; ++i) {
-                inner += '<div class="tp-img-reveal-wrapper__deco"></div>';
+                inner += '<div class="ptl-img-reveal-wrapper__deco"></div>';
             }
-            inner += `<div class="tp-img-reveal-wrapper__inner"><div class="tp-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div></div>`
+            inner += `<div class="ptl-img-reveal-wrapper__inner"><div class="ptl-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div></div>`
             this.DOM.reveal.innerHTML = inner;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealDecos = [...this.DOM.reveal.querySelectorAll('.tp-img-reveal-wrapper__deco')];
+            this.DOM.revealDecos = [...this.DOM.reveal.querySelectorAll('.ptl-img-reveal-wrapper__deco')];
             this.DOM.revealDecos.forEach((deco, pos) => {
                 TweenMax.set(deco, {
                     width: pos === this.totalDecos-1 ? '100%' : `${getRandomFloat(40,100)}%`,
@@ -1452,9 +1452,9 @@
                     scaleX: 0
                 });
             });
-            this.DOM.revealInner = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__inner');
+            this.DOM.revealInner = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__inner');
             this.DOM.revealInner.style.overflow = 'hidden';
-            this.DOM.revealImg = this.DOM.revealInner.querySelector('.tp-img-reveal-wrapper__img');
+            this.DOM.revealImg = this.DOM.revealInner.querySelector('.ptl-img-reveal-wrapper__img');
 
             this.initEvents();
         }
@@ -1551,16 +1551,16 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
             this.DOM.reveal.style.zIndex = -1;
             this.totalImages = 3;
             let inner = '';
             for (let i = 0; i <= this.totalImages-1; ++i) {
-                inner += `<div class="tp-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
+                inner += `<div class="ptl-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
             }
             this.DOM.reveal.innerHTML = inner;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.tp-img-reveal-wrapper__img')];
+            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.ptl-img-reveal-wrapper__img')];
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
             this.initEvents();
@@ -1642,15 +1642,15 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
             let inner = '';
             const imgsArr = this.DOM.el.dataset.img.split(',');
             for (let i = 0, len = imgsArr.length; i <= len-1; ++i ) {
-                inner += `<div class="tp-img-reveal-wrapper__img" style="transform-origin:0% 0%;opacity:0;position:absolute;background-image:url(${imgsArr[i]})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
+                inner += `<div class="ptl-img-reveal-wrapper__img" style="transform-origin:0% 0%;opacity:0;position:absolute;background-image:url(${imgsArr[i]})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
             }
             this.DOM.reveal.innerHTML = inner;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.tp-img-reveal-wrapper__img')];
+            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.ptl-img-reveal-wrapper__img')];
             this.imgsTotal = this.DOM.revealImgs.length;
 
             this.initEvents();
@@ -1733,15 +1733,15 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
             this.totalImages = 5;
             let inner = '';
             for (let i = 0; i <= this.totalImages-1; ++i) {
-                inner += `<div class="tp-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
+                inner += `<div class="ptl-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
             }
             this.DOM.reveal.innerHTML = inner;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.tp-img-reveal-wrapper__img')];
+            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.ptl-img-reveal-wrapper__img')];
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
             this.initEvents();
@@ -1834,15 +1834,15 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
             this.totalImages = 10;
             let inner = '';
             for (let i = 0; i <= this.totalImages-1; ++i) {
-                inner += `<div class="tp-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
+                inner += `<div class="ptl-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
             }
             this.DOM.reveal.innerHTML = inner;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.tp-img-reveal-wrapper__img')];
+            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.ptl-img-reveal-wrapper__img')];
             this.rect = this.DOM.reveal.getBoundingClientRect();
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
@@ -1938,15 +1938,15 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
             this.totalImages = 10;
             let inner = '';
             for (let i = 0; i <= this.totalImages-1; ++i) {
-                inner += `<div class="tp-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
+                inner += `<div class="ptl-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
             }
             this.DOM.reveal.innerHTML = inner;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.tp-img-reveal-wrapper__img')];
+            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.ptl-img-reveal-wrapper__img')];
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
             this.initEvents();
@@ -2042,15 +2042,15 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
             this.totalImages = 10;
             let inner = '';
             for (let i = 0; i <= this.totalImages-1; ++i) {
-                inner += `<div class="tp-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
+                inner += `<div class="ptl-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
             }
             this.DOM.reveal.innerHTML = inner;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.tp-img-reveal-wrapper__img')];
+            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.ptl-img-reveal-wrapper__img')];
             this.rect = this.DOM.reveal.getBoundingClientRect();
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
@@ -2144,15 +2144,15 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
             this.totalImages = 35;
             let inner = '';
             for (let i = 0; i <= this.totalImages-1; ++i) {
-                inner += `<div class="tp-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
+                inner += `<div class="ptl-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
             }
             this.DOM.reveal.innerHTML = inner;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.tp-img-reveal-wrapper__img')];
+            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.ptl-img-reveal-wrapper__img')];
             this.rect = this.DOM.reveal.getBoundingClientRect();
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
@@ -2249,16 +2249,16 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
             this.totalImages = 10;
             let inner = '';
             for (let i = 0; i <= this.totalImages-1; ++i) {
-                inner += i === this.totalImages-1 ? `<div class="tp-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>` :
-                                                    `<div class="tp-img-reveal-wrapper__img" style="filter: hue-rotate(60deg) saturate(5); position: absolute; background-image:url(${this.DOM.el.dataset.img})"></div>`;
+                inner += i === this.totalImages-1 ? `<div class="ptl-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>` :
+                                                    `<div class="ptl-img-reveal-wrapper__img" style="filter: hue-rotate(60deg) saturate(5); position: absolute; background-image:url(${this.DOM.el.dataset.img})"></div>`;
             }
             this.DOM.reveal.innerHTML = inner;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.tp-img-reveal-wrapper__img')];
+            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.ptl-img-reveal-wrapper__img')];
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
             this.letterColor = getComputedStyle(this.DOM.el).color;
@@ -2354,16 +2354,16 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
             this.totalImages = 15;
             let inner = '';
             for (let i = 0; i <= this.totalImages-1; ++i) {
-                inner += i === this.totalImages-1 ? `<div class="tp-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>` :
-                                                    `<div class="tp-img-reveal-wrapper__img" style="filter: hue-rotate(90deg) saturate(9); position: absolute; background-image:url(${this.DOM.el.dataset.img})"></div>`;
+                inner += i === this.totalImages-1 ? `<div class="ptl-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>` :
+                                                    `<div class="ptl-img-reveal-wrapper__img" style="filter: hue-rotate(90deg) saturate(9); position: absolute; background-image:url(${this.DOM.el.dataset.img})"></div>`;
             }
             this.DOM.reveal.innerHTML = inner;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.tp-img-reveal-wrapper__img')];
+            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.ptl-img-reveal-wrapper__img')];
             this.rect = this.DOM.reveal.getBoundingClientRect();
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
@@ -2465,10 +2465,10 @@
         constructor(el) {
             this.DOM = {el: el};
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
-            this.DOM.reveal.innerHTML = `<div class="tp-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
+            this.DOM.reveal.innerHTML = `<div class="ptl-img-reveal-wrapper__img" style="background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealImg = this.DOM.reveal.querySelector('.tp-img-reveal-wrapper__img');
+            this.DOM.revealImg = this.DOM.reveal.querySelector('.ptl-img-reveal-wrapper__img');
 
             this.initEvents();
         }
@@ -2560,15 +2560,15 @@
             this.DOM = {el: el};
             
             this.DOM.reveal = document.createElement('div');
-            this.DOM.reveal.className = 'tp-img-reveal-wrapper';
+            this.DOM.reveal.className = 'ptl-img-reveal-wrapper';
             this.totalImages = 15;
             let inner = '';
             for (let i = 0; i <= this.totalImages-1; ++i) {
-                inner += `<div class="tp-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="tp-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="tp-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="tp-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
+                inner += `<div class="ptl-img-reveal-wrapper__img" style="position: absolute; background-image:url(${this.DOM.el.dataset.img})"><span class="ptl-hover-subtitle">${this.DOM.el.dataset.subtitle ? this.DOM.el.dataset.subtitle: ''}</span> <h3 class="ptl-hover-title">${this.DOM.el.dataset.title ? this.DOM.el.dataset.title: ''}</h3><p class="ptl-hover-desc">${this.DOM.el.dataset.desc ? this.DOM.el.dataset.desc: ''}</p></div>`;
             }
             this.DOM.reveal.innerHTML = inner;
             this.DOM.el.appendChild(this.DOM.reveal);
-            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.tp-img-reveal-wrapper__img')];
+            this.DOM.revealImgs = [...this.DOM.reveal.querySelectorAll('.ptl-img-reveal-wrapper__img')];
             this.rect = this.DOM.reveal.getBoundingClientRect();
             charming(this.DOM.el);
             this.DOM.letters = [...this.DOM.el.querySelectorAll('span')];
@@ -2658,30 +2658,30 @@
         }
     }
     
-    [...document.querySelectorAll('[data-fx="24"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="24"]')].forEach(link => new HoverPortfolio(link));
-    [...document.querySelectorAll('[data-fx="1"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="1"]')].forEach(link => new HoverImgFx1(link));
-    [...document.querySelectorAll('[data-fx="2"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="2"]')].forEach(link => new HoverImgFx2(link));
-    [...document.querySelectorAll('[data-fx="3"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="3"]')].forEach(link => new HoverImgFx3(link));
-    [...document.querySelectorAll('[data-fx="4"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="4"]')].forEach(link => new HoverImgFx4(link));
-    [...document.querySelectorAll('[data-fx="5"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="5"]')].forEach(link => new HoverImgFx5(link));
-    [...document.querySelectorAll('[data-fx="6"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="6"]')].forEach(link => new HoverImgFx6(link));
-    [...document.querySelectorAll('[data-fx="7"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="7"]')].forEach(link => new HoverImgFx7(link));
-    [...document.querySelectorAll('[data-fx="8"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="8"]')].forEach(link => new HoverImgFx8(link));
-    [...document.querySelectorAll('[data-fx="9"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="9"]')].forEach(link => new HoverImgFx9(link));
-    [...document.querySelectorAll('[data-fx="10"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="10"]')].forEach(link => new HoverImgFx10(link));
-    [...document.querySelectorAll('[data-fx="11"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="11"]')].forEach(link => new HoverImgFx11(link));
-    [...document.querySelectorAll('[data-fx="12"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="12"]')].forEach(link => new HoverImgFx12(link));
-    [...document.querySelectorAll('[data-fx="13"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="13"]')].forEach(link => new HoverImgFx13(link));
-    [...document.querySelectorAll('[data-fx="14"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="14"]')].forEach(link => new HoverImgFx14(link));
-    [...document.querySelectorAll('[data-fx="15"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="15"]')].forEach(link => new HoverImgFx15(link));
-    [...document.querySelectorAll('[data-fx="16"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="16"]')].forEach(link => new HoverImgFx16(link));
-    [...document.querySelectorAll('[data-fx="17"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="17"]')].forEach(link => new HoverImgFx17(link));
-    [...document.querySelectorAll('[data-fx="18"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="18"]')].forEach(link => new HoverImgFx18(link));
-    [...document.querySelectorAll('[data-fx="19"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="19"]')].forEach(link => new HoverImgFx19(link));
-    [...document.querySelectorAll('[data-fx="20"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="20"]')].forEach(link => new HoverImgFx20(link));
-    [...document.querySelectorAll('[data-fx="21"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="21"]')].forEach(link => new HoverImgFx21(link));
-    [...document.querySelectorAll('[data-fx="22"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="22"]')].forEach(link => new HoverImgFx22(link));
-    [...document.querySelectorAll('[data-fx="23"] > .tp-img-reveal-item, .tp-img-reveal-item[data-fx="23"]')].forEach(link => new HoverImgFx23(link));
+    [...document.querySelectorAll('[data-fx="24"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="24"]')].forEach(link => new HoverPortfolio(link));
+    [...document.querySelectorAll('[data-fx="1"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="1"]')].forEach(link => new HoverImgFx1(link));
+    [...document.querySelectorAll('[data-fx="2"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="2"]')].forEach(link => new HoverImgFx2(link));
+    [...document.querySelectorAll('[data-fx="3"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="3"]')].forEach(link => new HoverImgFx3(link));
+    [...document.querySelectorAll('[data-fx="4"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="4"]')].forEach(link => new HoverImgFx4(link));
+    [...document.querySelectorAll('[data-fx="5"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="5"]')].forEach(link => new HoverImgFx5(link));
+    [...document.querySelectorAll('[data-fx="6"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="6"]')].forEach(link => new HoverImgFx6(link));
+    [...document.querySelectorAll('[data-fx="7"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="7"]')].forEach(link => new HoverImgFx7(link));
+    [...document.querySelectorAll('[data-fx="8"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="8"]')].forEach(link => new HoverImgFx8(link));
+    [...document.querySelectorAll('[data-fx="9"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="9"]')].forEach(link => new HoverImgFx9(link));
+    [...document.querySelectorAll('[data-fx="10"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="10"]')].forEach(link => new HoverImgFx10(link));
+    [...document.querySelectorAll('[data-fx="11"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="11"]')].forEach(link => new HoverImgFx11(link));
+    [...document.querySelectorAll('[data-fx="12"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="12"]')].forEach(link => new HoverImgFx12(link));
+    [...document.querySelectorAll('[data-fx="13"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="13"]')].forEach(link => new HoverImgFx13(link));
+    [...document.querySelectorAll('[data-fx="14"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="14"]')].forEach(link => new HoverImgFx14(link));
+    [...document.querySelectorAll('[data-fx="15"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="15"]')].forEach(link => new HoverImgFx15(link));
+    [...document.querySelectorAll('[data-fx="16"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="16"]')].forEach(link => new HoverImgFx16(link));
+    [...document.querySelectorAll('[data-fx="17"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="17"]')].forEach(link => new HoverImgFx17(link));
+    [...document.querySelectorAll('[data-fx="18"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="18"]')].forEach(link => new HoverImgFx18(link));
+    [...document.querySelectorAll('[data-fx="19"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="19"]')].forEach(link => new HoverImgFx19(link));
+    [...document.querySelectorAll('[data-fx="20"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="20"]')].forEach(link => new HoverImgFx20(link));
+    [...document.querySelectorAll('[data-fx="21"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="21"]')].forEach(link => new HoverImgFx21(link));
+    [...document.querySelectorAll('[data-fx="22"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="22"]')].forEach(link => new HoverImgFx22(link));
+    [...document.querySelectorAll('[data-fx="23"] > .ptl-img-reveal-item, .ptl-img-reveal-item[data-fx="23"]')].forEach(link => new HoverImgFx23(link));
 
     // Demo purspose only: Preload all the images in the page..
     const contentel = document.querySelector('.content');

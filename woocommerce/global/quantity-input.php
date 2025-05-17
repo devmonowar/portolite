@@ -28,10 +28,10 @@ if ( $max_value && $min_value === $max_value ) {
 	$label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 'portolite' ), wp_strip_all_tags( $args['product_name'] ) ) : esc_html__( 'Quantity', 'portolite' );
 	?>
 	<div class="product__details-quantity">
-		<div class="quantity tp-product-quantity mt-10 mb-10">
+		<div class="quantity ptl-product-quantity mt-10 mb-10">
 			<?php do_action( 'woocommerce_before_quantity_input_field' ); ?>
 			<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_attr( $label ); ?></label>
-			<div class="qty_button minus tp-cart-minus">
+			<div class="qty_button minus ptl-cart-minus">
 				<svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg> 
@@ -39,7 +39,7 @@ if ( $max_value && $min_value === $max_value ) {
 			<input
 				type="text"
 				id="<?php echo esc_attr( $input_id ); ?>"
-				class="<?php echo esc_attr( join( ' tp-cart-input ', (array) $classes ) ); ?>"
+				class="<?php echo esc_attr( join( ' ptl-cart-input ', (array) $classes ) ); ?>"
 				step="<?php echo esc_attr( $step ); ?>"
 				min="<?php echo esc_attr( $min_value ); ?>"
 				max="<?php echo esc_attr( 0 < $max_value ? $max_value : '' ); ?>"
@@ -52,7 +52,7 @@ if ( $max_value && $min_value === $max_value ) {
 				autocomplete="<?php echo esc_attr( isset( $autocomplete ) ? $autocomplete : 'on' ); ?>"
 			/>
 			<?php do_action( 'woocommerce_after_quantity_input_field' ); ?>
-			<div class="qty_button plus tp-cart-plus">
+			<div class="qty_button plus ptl-cart-plus">
 				<svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.21924 7H13.3836" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M7.30176 13V1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

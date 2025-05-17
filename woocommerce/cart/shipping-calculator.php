@@ -88,7 +88,7 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
 			</p>
 		<?php endif; ?>
 
-		<p><button type="submit" name="calc_shipping" value="1" class="tp-btn button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>"><?php esc_html_e( 'Update', 'portolite' ); ?></button></p>
+		<p><button type="submit" name="calc_shipping" value="1" class="ptl-btn button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>"><?php esc_html_e( 'Update', 'portolite' ); ?></button></p>
 		<?php wp_nonce_field( 'woocommerce-shipping-calculator', 'woocommerce-shipping-calculator-nonce' ); ?>
 	</section>
 </form>

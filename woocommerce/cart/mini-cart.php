@@ -108,7 +108,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
       <p class="woocommerce-mini-cart__empty-message">
       	<?php esc_html_e( 'No products in the cart.', 'portolite' );?>
       </p>	
-      <a href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>" class="tp-btn"><?php esc_html_e( 'Go to Shop', 'portolite' );?></a>
+      <a href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>" class="ptl-btn"><?php esc_html_e( 'Go to Shop', 'portolite' );?></a>
    </div>
 
 <?php endif; ?>

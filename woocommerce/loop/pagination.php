@@ -28,7 +28,7 @@ if ( $total <= 1 ) {
 	return;
 }
 ?>
-<div class="tp-pagination tp-pagination-style-2">
+<div class="ptl-pagination ptl-pagination-style-2">
 	<nav class="woocommerce-pagination">
 		<?php
 		echo paginate_links(

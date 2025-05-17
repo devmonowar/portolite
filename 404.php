@@ -92,7 +92,7 @@ $portolite_error_desc = get_theme_mod('portolite_error_desc', __('Whoops, this i
                         <?php endif; ?>
 
                         <?php if(!empty($portolite_error_link_text)) : ?>
-                        <a href="<?php print esc_url(home_url('/'));?>" class="tp-btn">
+                        <a href="<?php print esc_url(home_url('/'));?>" class="ptl-btn">
                            <?php print esc_html($portolite_error_link_text);?>
                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M16 6.97559L1 6.97559" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

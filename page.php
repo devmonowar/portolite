@@ -15,11 +15,11 @@
 get_header();
 ?>
 
-<div class="tp-page-area pt-120 pb-120">
+<div class="ptl-page-area pt-120 pb-120">
     <div class="container">
 		<div class="row">
 			<div class="col-xl-12">
-				<div class="tp-page-content">
+				<div class="ptl-page-content">
 					<?php
 						if ( have_posts() ):
 							while ( have_posts() ): the_post();

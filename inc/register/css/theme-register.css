@@ -2,8 +2,8 @@
     padding: 20px;
 }
 
-/* The tp-Modal (background) */
-.tp-modal {
+/* The ptl-Modal (background) */
+.ptl-modal {
     display: none;
     /* Hidden by default */
     position: fixed;
@@ -24,8 +24,8 @@
     /* Black w/ opacity */
 }
 
-/* tp-Modal Content/Box */
-.tp-modal-content {
+/* ptl-Modal Content/Box */
+.ptl-modal-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 40px 30px;
@@ -34,8 +34,8 @@
     position: relative;
 }
 
-/* The tp-modal-Close Button */
-.tp-modal-close {
+/* The ptl-modal-Close Button */
+.ptl-modal-close {
     color: #aaa;
     font-size: 28px;
     font-weight: bold;
@@ -45,8 +45,8 @@
     z-index: 1033;
 }
 
-.tp-modal-close:hover,
-.tp-modal-close:focus {
+.ptl-modal-close:hover,
+.ptl-modal-close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
