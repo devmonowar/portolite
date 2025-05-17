@@ -342,7 +342,7 @@ function portolite_check_footer()
 // portolite_copyright_text
 function portolite_copyright_text()
 {
-    print get_theme_mod('portolite_copyright', esc_html__('Copyright © 2023 Monowar_Hossain. All Rights Reserved', 'portolite'));
+    print get_theme_mod('portolite_copyright', esc_html__('Copyright © 2025 Monowar_Hossain. All Rights Reserved', 'portolite'));
 }
 
 
