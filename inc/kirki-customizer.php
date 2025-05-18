@@ -1095,31 +1095,6 @@ function _header_footer_fields($fields)
 add_filter('kirki/fields', '_header_footer_fields');
 
 
-function portolite_event_fields($fields)
-{
-
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'portolite_event_button_text',
-        'label'    => esc_html__('Event Button text', 'portolite'),
-        'section'  => 'event_setting',
-        'default'  => esc_html__('Make an Appointment', 'portolite'),
-        'priority' => 10,
-    ];
-
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'portolite_event_button_url',
-        'label'    => esc_html__('Event Url', 'portolite'),
-        'section'  => 'event_setting',
-        'default'  => esc_html__('#', 'portolite'),
-        'priority' => 10,
-    ];
-
-    return $fields;
-}
-
-add_filter('kirki/fields', 'portolite_event_fields');
 
 // color
 function portolite_color_fields($fields)
@@ -1520,37 +1495,6 @@ function portolite_typo_fields($fields)
 }
 
 add_filter('kirki/fields', 'portolite_typo_fields');
-
-
-
-/**
- * Added Fields
- */
-function portolite_slug_setting($fields)
-{
-    // slug settings
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'portolite_serv_slug',
-        'label'    => esc_html__('Services Slug', 'portolite'),
-        'section'  => 'slug_setting',
-        'default'  => esc_html__('services', 'portolite'),
-        'priority' => 10,
-    ];
-
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'portolite_port_slug',
-        'label'    => esc_html__('Portfolio Slug', 'portolite'),
-        'section'  => 'slug_setting',
-        'default'  => esc_html__('portfolio', 'portolite'),
-        'priority' => 10,
-    ];
-
-    return $fields;
-}
-
-add_filter('kirki/fields', 'portolite_slug_setting');
 
 
 /**
