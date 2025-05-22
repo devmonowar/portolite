@@ -191,13 +191,13 @@
 	$('.ptl-blog-area select, .ptl-shop-area select, .ptl-blog-area select, .slider__area select, .job__input select, .contact__area select, .footer__area select').niceSelect();
 
 
-	var tp_rtl = localStorage.getItem('tp_dir');
-	let rtl_setting = tp_rtl == 'rtl' ? true : false;
+	var ptl_rtl = localStorage.getItem('ptl_dir');
+	let rtl_setting = ptl_rtl == 'rtl' ? true : false;
 
 
 	////////////////////////////////////////////////////
 	// 08. slider__active Slider Js
-	function tp_main_slider(){
+	function ptl_main_slider(){
 		if ($(".slider__nav-active").length > 0) {
 			var slidernav = new Swiper(".slider__nav-active", {
 				spaceBetween: 0,
@@ -295,7 +295,7 @@
 		}
 	}
 
-	function tp_architech_sllider(){
+	function ptl_architech_sllider(){
 		if ($(".slider__nav-active").length > 0) {
 			var slidernav = new Swiper(".slider__nav-active", {
 				spaceBetween: 0,
@@ -417,7 +417,7 @@
         }
     });
 
-	function tp_swiper_slider(){
+	function ptl_swiper_slider(){
 		var verticalslider2 = new Swiper('.slider__active-12', {
 			direction: "vertical",
 			slidesPerView: 1,
@@ -448,7 +448,7 @@
 		});
 	}
 
-	function tp_team(){
+	function ptl_team(){
 
 		var slider = new Swiper('.team__slider-active', {
 			slidesPerView: 4,
@@ -514,7 +514,7 @@
 
 	}
 
-	function tp_testimonial(){
+	function ptl_testimonial(){
 
 	var slider = new Swiper('.testimonial__slider-active', {
 		slidesPerView: 1,
@@ -910,7 +910,7 @@
 
 	}
 
-	function tp_testimonial_2(){
+	function ptl_testimonial_2(){
 
 		var slider = new Swiper('.testimonial__slider-active-14', {
 			centeredSlides: true,
@@ -1097,7 +1097,7 @@
 	}
 
 	
-	function tp_social_slider(){
+	function ptl_social_slider(){
 		var slider = new Swiper('.testimonial__slider-active-10', {
 			centeredSlides: true,
 			slidesPerView: 1,
@@ -1118,7 +1118,7 @@
 		});
 	}
 
-	function tp_product(){
+	function ptl_product(){
 		var slider = new Swiper('.product__related-slider-active', {
 			slidesPerView: 4,
 			spaceBetween: 30,
@@ -1157,7 +1157,7 @@
 		
 	}
 
-	function tp_product_2(){
+	function ptl_product_2(){
 		var slider = new Swiper('.product__category-slider-active', {
 			slidesPerView: 4,
 			spaceBetween: 30,
@@ -1210,7 +1210,7 @@
 	}
 
 
-	function tp_biography(){
+	function ptl_biography(){
 		$('.biography__slider-content-active').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
@@ -1275,7 +1275,7 @@
 		});
 	}
 
-	function tp_brand(){
+	function ptl_brand(){
 		
 		var slider = new Swiper('.award__slider-active', {
 			slidesPerView: 4,
@@ -1408,7 +1408,7 @@
 	};
 
 
-	function tp_portfolio(){
+	function ptl_portfolio(){
 
 		var slider = new Swiper('.portfolio__slider-active-5', {
 			slidesPerView: 4,
@@ -1548,7 +1548,7 @@
 	
 	}
 
-	function tp_portfolio_2(){
+	function ptl_portfolio_2(){
 		if ($(".portfolio__slider-active").length > 0) {
 			$('.portfolio__slider-active').slick({
 				autoplay: false,
@@ -1593,7 +1593,7 @@
 		}
 	}
 
-	function tp_portfolio_3(){
+	function ptl_portfolio_3(){
 		var portfoliohorizontal = new Swiper('.portfolio__horizontal-active', {
 			slidesPerView: 1,
 			spaceBetween: 0,
@@ -1617,7 +1617,7 @@
 		});
 	}
 
-	function tp_portfolio_architech(){
+	function ptl_portfolio_architech(){
 		var slider = new Swiper('.portfolio__slider-active-8', {
 			slidesPerView: 4,
 			spaceBetween: 0,
@@ -1660,7 +1660,7 @@
 		});
 	}
 
-	function tp_elements(){
+	function ptl_elements(){
 		if ($(".elements__carousel-active").length > 0) {
 			$('.elements__carousel-active').slick({
 				autoplay: false,
@@ -1810,7 +1810,7 @@
 	}
 
 
-	function tp_instagram(){
+	function ptl_instagram(){
 		var slider = new Swiper('.instagram__slider-active-swiper', {
 			slidesPerView: 6,
 			spaceBetween: 12,
@@ -1895,7 +1895,7 @@
 		}
 	}
 
-	function tp_blog(){
+	function ptl_blog(){
 		var postboxSlider = new Swiper('.postbox__slider', {
 			slidesPerView: 1,
 			spaceBetween: 0,
@@ -2018,7 +2018,7 @@
 
 	}
 
-	function tp_blog_2(){
+	function ptl_blog_2(){
 		var slider = new Swiper('.blog__breadcrumb-slider-active', {
 			loop: true,
 			slidesPerView: 1,
@@ -2054,7 +2054,7 @@
 		});
 	}
 
-	function tp_about_gallery(){
+	function ptl_about_gallery(){
 		if ($(".about__gallery-slider-active").length > 0) {
 			$('.about__gallery-slider-active').slick({
 				autoplay: false,
@@ -2457,14 +2457,14 @@
 	};
 
 	if ($('#marker').length > 0) {
-		function tp_tab_line(){
+		function ptl_tab_line(){
 			var marker = document.querySelector('#marker');
 			var item = document.querySelectorAll('.ptl-tab-menu button');
 			var itemActive = document.querySelector('.ptl-tab-menu .nav-link.active');
 
 			// rtl settings
-			var tp_rtl = localStorage.getItem('tp_dir');
-			let rtl_setting = tp_rtl == 'rtl' ? 'right' : 'left';
+			var ptl_rtl = localStorage.getItem('ptl_dir');
+			let rtl_setting = ptl_rtl == 'rtl' ? 'right' : 'left';
 
 			function indicator(e){
 				marker.style.left = e.offsetLeft+"px";
@@ -2519,11 +2519,11 @@
 				return anchorWidths;
 			}
 		}
-		tp_tab_line();
+		ptl_tab_line();
 	}
 
 	if ($('#marker-vertical').length > 0) {
-		function tp_tab_line_2(){
+		function ptl_tab_line_2(){
 				var marker = document.querySelector('#marker-vertical');
 				var item = document.querySelectorAll('.ptl-tab-menu button');
 				var itemActive = document.querySelector('.ptl-tab-menu .nav-link.active');
@@ -2583,73 +2583,73 @@
 				  }
 	
 		}
-		tp_tab_line_2();
+		ptl_tab_line_2();
 	}
 
 
 	$(window).on("elementor/frontend/init", function () {
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-slider.default",tp_main_slider
+			"frontend/element_ready/ptl-slider.default",ptl_main_slider
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-slider-architech.default",tp_architech_sllider
+			"frontend/element_ready/ptl-slider-architech.default",ptl_architech_sllider
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-swiper-slider.default",tp_swiper_slider
+			"frontend/element_ready/ptl-swiper-slider.default",ptl_swiper_slider
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-team.default",tp_team
+			"frontend/element_ready/ptl-team.default",ptl_team
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-testimonial-slider.default",tp_testimonial_2
+			"frontend/element_ready/ptl-testimonial-slider.default",ptl_testimonial_2
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-testimonial.default",tp_testimonial
+			"frontend/element_ready/ptl-testimonial.default",ptl_testimonial
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-slider-social.default",tp_social_slider
+			"frontend/element_ready/ptl-slider-social.default",ptl_social_slider
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-product.default",tp_product
+			"frontend/element_ready/ptl-product.default",ptl_product
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/product-category-slider.default",tp_product_2
+			"frontend/element_ready/product-category-slider.default",ptl_product_2
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-slider-timeline.default",tp_biography
+			"frontend/element_ready/ptl-slider-timeline.default",ptl_biography
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-brand.default",tp_brand
+			"frontend/element_ready/ptl-brand.default",ptl_brand
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-portfolio.default",tp_portfolio
+			"frontend/element_ready/ptl-portfolio.default",ptl_portfolio
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-portfolio-photo.default",tp_portfolio_2
+			"frontend/element_ready/ptl-portfolio-photo.default",ptl_portfolio_2
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-portfolio-slider.default",tp_portfolio_3
+			"frontend/element_ready/ptl-portfolio-slider.default",ptl_portfolio_3
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-portfolio-architech.default",tp_portfolio_architech
+			"frontend/element_ready/ptl-portfolio-architech.default",ptl_portfolio_architech
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-elements.default",tp_elements
+			"frontend/element_ready/ptl-elements.default",ptl_elements
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-instagram.default",tp_instagram
+			"frontend/element_ready/ptl-instagram.default",ptl_instagram
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/blogpost.default",tp_blog
+			"frontend/element_ready/blogpost.default",ptl_blog
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/blogpost-grid.default",tp_blog_2
+			"frontend/element_ready/blogpost-grid.default",ptl_blog_2
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/ptl-gallery-slider.default",tp_about_gallery
+			"frontend/element_ready/ptl-gallery-slider.default",ptl_about_gallery
 		);
 		elementorFrontend.hooks.addAction(
-			"frontend/element_ready/tpel-carousel.default",tp_elements
+			"frontend/element_ready/tpel-carousel.default",ptl_elements
 		);
 	});
 

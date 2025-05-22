@@ -9,22 +9,22 @@ class Theme_Register {
 	private static $instance = false;
 
 	public function __construct(){
-		add_action( 'admin_menu', array( $this, 'tp_register_theme') );
+		add_action( 'admin_menu', array( $this, 'ptl_register_theme') );
 		add_action( 'admin_enqueue_scripts', array( $this, 'theme_register_scripts' ) );
-		add_action( 'admin_notices', array( $this, 'tp_notice_for_activation' ) );
-		add_action( 'after_switch_theme', array( $this, 'tp_activate_theme_action' ) );
-		add_action( 'theme_activation', array( $this, 'tp_protect_activation' ) );
-		add_action('admin_footer', array($this, 'tp_prevent_modal'));
+		add_action( 'admin_notices', array( $this, 'ptl_notice_for_activation' ) );
+		add_action( 'after_switch_theme', array( $this, 'ptl_activate_theme_action' ) );
+		add_action( 'theme_activation', array( $this, 'ptl_protect_activation' ) );
+		add_action('admin_footer', array($this, 'ptl_prevent_modal'));
 
-		$tp_tgmpa_prefix = ( defined( 'WP_NETWORK_ADMIN' ) && WP_NETWORK_ADMIN ) ? 'network_admin_' : '';
-		add_filter( 'tgmpa_' . $tp_tgmpa_prefix . 'plugin_action_links', array( $this, 'tp_tgmpa_filter_action_links'), 10, 4 );
-		add_filter( 'tgmpa_table_data_item', array( $this, 'tp_tgmpa_table_data' ), 10, 2);
-		add_filter( 'tgmpa_table_columns', array( $this, 'tp_tgmpa_table_columns' ));
+		$ptl_tgmpa_prefix = ( defined( 'WP_NETWORK_ADMIN' ) && WP_NETWORK_ADMIN ) ? 'network_admin_' : '';
+		add_filter( 'tgmpa_' . $ptl_tgmpa_prefix . 'plugin_action_links', array( $this, 'ptl_tgmpa_filter_action_links'), 10, 4 );
+		add_filter( 'tgmpa_table_data_item', array( $this, 'ptl_tgmpa_table_data' ), 10, 2);
+		add_filter( 'tgmpa_table_columns', array( $this, 'ptl_tgmpa_table_columns' ));
 	}
 
 	public function theme_register_scripts(){
 		wp_enqueue_style('theme-register', get_parent_theme_file_uri().'/inc/register/css/theme-register.css', null, '1.0.0', 'all');
-		if(!self::tp_is_theme_registered()){
+		if(!self::ptl_is_theme_registered()){
 			$theme_object = wp_get_theme();
 			$theme = $theme_object->get('Name');
 			$version = $theme_object->get('Version');
@@ -43,7 +43,7 @@ class Theme_Register {
 			wp_enqueue_script('theme-register', get_parent_theme_file_uri(). '/inc/register/js/theme-register.js', array('jquery'), '1.0.0', true);
 			wp_localize_script('theme-register', 'theme_reg_data', $theme_reg_data);
 		}else{
-		    $license_code = get_option('tp_envato_purchase_code');
+		    $license_code = get_option('ptl_envato_purchase_code');
     		$deactivate_url = "https://api.themepure.net/wp-json/ptl-api/v1/deactivate";
     		
     		$theme_data = array(
@@ -60,16 +60,16 @@ class Theme_Register {
 		
 	}
 
-	public function tp_register_theme() {
-		add_submenu_page( 'themes.php', 'Register Theme', 'Register Theme', 'manage_options', 'register-theme', array( $this, 'tp_register_theme_options' ) );
+	public function ptl_register_theme() {
+		add_submenu_page( 'themes.php', 'Register Theme', 'Register Theme', 'manage_options', 'register-theme', array( $this, 'ptl_register_theme_options' ) );
 	}
 
-	public function tp_register_theme_options() {
+	public function ptl_register_theme_options() {
 		if ( !current_user_can( 'manage_options' ) )  {
 			wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 		}
 	
-		if(empty(self::tp_get_registered_purchase_code()) || isset($_GET['success'], $_GET['deactivate']) && !isset($_GET['item_id'], $_GET['code']) && $_GET['deactivate'] == true):
+		if(empty(self::ptl_get_registered_purchase_code()) || isset($_GET['success'], $_GET['deactivate']) && !isset($_GET['item_id'], $_GET['code']) && $_GET['deactivate'] == true):
 		?>
 		<form method="post" id="purchase_code_form" class="notice notice-info">
 			<div class="theme-register-wrapper">
@@ -263,12 +263,12 @@ class Theme_Register {
 		}
 		
 		if(isset($_GET['success'], $_GET['deactivate']) && $_GET['deactivate'] == true){
-		    update_option( 'tp_envato_purchase_code', '' );
-            update_option( 'tp_envato_purchase_item_id', '' );
+		    update_option( 'ptl_envato_purchase_code', '' );
+            update_option( 'ptl_envato_purchase_item_id', '' );
 		}
 		if(isset($_GET['item_id'], $_GET['code']) && self::is_purchase_code_exists($_GET['code'])){
-		    update_option( 'tp_envato_purchase_code', $_GET['code'] );
-            update_option( 'tp_envato_purchase_item_id', $_GET['item_id'] );
+		    update_option( 'ptl_envato_purchase_code', $_GET['code'] );
+            update_option( 'ptl_envato_purchase_item_id', $_GET['item_id'] );
             echo '<div class="notice notice-success"><p>Theme registered succesfully.</p></div>';
 		}
 	
@@ -297,7 +297,7 @@ class Theme_Register {
     			$body = json_decode(wp_remote_retrieve_body($response), true);
     			
     			
-    			if(isset($body['code']) && $body['code'] == 'tp_api_error'){
+    			if(isset($body['code']) && $body['code'] == 'ptl_api_error'){
     				echo '<div class="notice notice-error"><p>'.$body['message'].'</p></div>';
     				return;
     			}
@@ -306,8 +306,8 @@ class Theme_Register {
     				return;
     			}
     			if( isset($body['item_id']) && isset($body['status']) && $body['status'] == 'registered' ){
-    				update_option( 'tp_envato_purchase_code', $purchase_code );
-                	update_option( 'tp_envato_purchase_item_id', $body['item_id'] );
+    				update_option( 'ptl_envato_purchase_code', $purchase_code );
+                	update_option( 'ptl_envato_purchase_item_id', $body['item_id'] );
     				echo '<div class="notice notice-success"><p>'.$body['message'].'</p></div>';
     				return;
     			}
@@ -341,15 +341,15 @@ class Theme_Register {
 	/**
 	 * Get theme purchase code
 	 */
-	public static function tp_get_registered_purchase_code() {
-		return get_option( 'tp_envato_purchase_code' );
+	public static function ptl_get_registered_purchase_code() {
+		return get_option( 'ptl_envato_purchase_code' );
 	}
 
 	/**
 	 * Check if the theme already registered
 	 */
-	public static function tp_is_theme_registered() {
-		$purchase_code =  self::tp_get_registered_purchase_code();
+	public static function ptl_is_theme_registered() {
+		$purchase_code =  self::ptl_get_registered_purchase_code();
 		$registered_by_purchase_code =  ! empty( $purchase_code );
 	
 		// Purchase code entered correctly.
@@ -363,15 +363,15 @@ class Theme_Register {
 	 * Filter TGMPA action links.
 	 */
 
-	public function tp_tgmpa_filter_action_links( $action_links, $item_slug, $item, $view_context ) {
+	public function ptl_tgmpa_filter_action_links( $action_links, $item_slug, $item, $view_context ) {
 		$source = !empty( $item['source'] ) ? $item['source'] : '';
 
 		// Prevent installing theme's premium plugins.
-		if ( 'External Source' === $source && !self::tp_is_theme_registered() ) {
+		if ( 'External Source' === $source && !self::ptl_is_theme_registered() ) {
 			$item['plugin'] = '';
 			$item['plugin']	= $item['sanitized_plugin'];
 			$action_links = array(
-				'tp_registration_required' => sprintf( __( '<a style="color: red;" href="%s">Register Theme To Unlock It</a>', 'ptl-api' ), esc_url( admin_url( 'themes.php?page=register-theme' ) ) ),
+				'ptl_registration_required' => sprintf( __( '<a style="color: red;" href="%s">Register Theme To Unlock It</a>', 'ptl-api' ), esc_url( admin_url( 'themes.php?page=register-theme' ) ) ),
 			);
 		}
 
@@ -381,8 +381,8 @@ class Theme_Register {
 	/**
 	 * TGMpa Table data
 	 */
-	public function tp_tgmpa_table_data($table_data, $plugin){
-		if(!self::tp_is_theme_registered()){
+	public function ptl_tgmpa_table_data($table_data, $plugin){
+		if(!self::ptl_is_theme_registered()){
 			unset($table_data['plugin']);
 			$table_data['plugin']	= $plugin['name'];
 		}
@@ -393,7 +393,7 @@ class Theme_Register {
 	/**
 	 * TGMPA table columns
 	 */
-	public function tp_tgmpa_table_columns( $columns ){
+	public function ptl_tgmpa_table_columns( $columns ){
 		return $columns;
 	} 
 
@@ -401,8 +401,8 @@ class Theme_Register {
 	 * Admin Notice
 	 */
 
-	public function tp_notice_for_activation() {
-		if(empty(self::tp_get_registered_purchase_code())){
+	public function ptl_notice_for_activation() {
+		if(empty(self::ptl_get_registered_purchase_code())){
 			echo '<div class="notice notice-warning">
 				<p>' . sprintf(
 				esc_html__( 'Enter your Envato Purchase Code to receive Theme and plugin updates %s', 'ptl-api' ),
@@ -414,7 +414,7 @@ class Theme_Register {
 	/**
 	 * While activating the theme
 	 */
-	public function tp_activate_theme_action(){
+	public function ptl_activate_theme_action(){
 		wp_redirect( admin_url('themes.php?page=register-theme') );
 	}
 
@@ -422,13 +422,13 @@ class Theme_Register {
 	 * If license deactive try not to run the theme
 	 */
 
-	public function tp_protect_activation(){
-		if(empty(self::tp_get_registered_purchase_code())){
+	public function ptl_protect_activation(){
+		if(empty(self::ptl_get_registered_purchase_code())){
 			wp_die('Your theme is not activate!');
 		}
 	}
 
-	public function tp_prevent_modal(){
+	public function ptl_prevent_modal(){
 		?>
 		<!-- The Modal -->
 		<div id="register-modal" class="ptl-modal">

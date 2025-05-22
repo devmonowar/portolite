@@ -17,10 +17,10 @@
                 $('#deactivate').text('Deactivatig...').attr('disabled', 'disabled');
             },
             success:function(res){
-                if(res.code == 'tp_api_success' && res.status == 'deactivated'){
+                if(res.code == 'ptl_api_success' && res.status == 'deactivated'){
                     $('#deactivate').closest('wrap').append(`<div class="notice notice-success"><p>${res.message}</p></div>`);
                 }
-                if(res.code == 'tp_api_error' && res.status == 'not_found'){
+                if(res.code == 'ptl_api_error' && res.status == 'not_found'){
                     $('#deactivate').closest('wrap').append(`<div class="notice notice-error"><p>${res.message}</p></div>`);
                 }
                 setTimeout(() => {

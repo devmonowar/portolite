@@ -74,14 +74,6 @@ function portolite_customizer_panels_sections($wp_customize)
         'panel'       => 'portolite_customizer',
     ]);
 
-    $wp_customize->add_section('header_side_setting', [
-        'title'       => esc_html__('Offcanvas Settings', 'portolite'),
-        'description' => '',
-        'priority'    => 14,
-        'capability'  => 'edit_theme_options',
-        'panel'       => 'portolite_customizer',
-    ]);
-
     $wp_customize->add_section('newsletter_setting', [
         'title'       => esc_html__('Newsletter Settings', 'portolite'),
         'description' => 'Newsletter Styles',
@@ -98,24 +90,8 @@ function portolite_customizer_panels_sections($wp_customize)
         'panel'       => 'portolite_customizer',
     ]);
 
-    $wp_customize->add_section('blog_setting', [
-        'title'       => esc_html__('Blog Setting', 'portolite'),
-        'description' => '',
-        'priority'    => 16,
-        'capability'  => 'edit_theme_options',
-        'panel'       => 'portolite_customizer',
-    ]);
-
     $wp_customize->add_section('footer_setting', [
         'title'       => esc_html__('Footer Settings', 'portolite'),
-        'description' => '',
-        'priority'    => 16,
-        'capability'  => 'edit_theme_options',
-        'panel'       => 'portolite_customizer',
-    ]);
-
-    $wp_customize->add_section('event_setting', [
-        'title'       => esc_html__('Event Settings', 'portolite'),
         'description' => '',
         'priority'    => 16,
         'capability'  => 'edit_theme_options',
@@ -138,26 +114,10 @@ function portolite_customizer_panels_sections($wp_customize)
         'panel'       => 'portolite_customizer',
     ]);
 
-    $wp_customize->add_section('shop_sections', [
-        'title'       => esc_html__('Shop Settings ', 'portolite'),
-        'description' => '',
-        'priority'    => 19,
-        'capability'  => 'edit_theme_options',
-        'panel'       => 'portolite_customizer',
-    ]);
-
     $wp_customize->add_section('typo_setting', [
         'title'       => esc_html__('Typography Setting', 'portolite'),
         'description' => '',
         'priority'    => 21,
-        'capability'  => 'edit_theme_options',
-        'panel'       => 'portolite_customizer',
-    ]);
-
-    $wp_customize->add_section('slug_setting', [
-        'title'       => esc_html__('Slug Settings', 'portolite'),
-        'description' => '',
-        'priority'    => 22,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
     ]);

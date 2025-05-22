@@ -36,12 +36,12 @@
                 },
                 success:function(res){
                     // console.log(res);
-                    if(res.code == 'tp_api_success' && res.status == 'registered'){
+                    if(res.code == 'ptl_api_success' && res.status == 'registered'){
                         $('#error').html(`<div class="notice notice-success"><p>${res.message}</p></div>`);
                         setTimeout(() => {
                             window.location.href = theme_reg_data.admin_url + '&activate=true&item_id='+res.item_id+'&code='+code;
                         }, 1000);
-                    }else if(res.code == 'tp_api_error'){
+                    }else if(res.code == 'ptl_api_error'){
                         $('#error').html(`<div class="notice notice-error"><p>${res.message}</p></div>`);
                     }else{
                         setTimeout(() => {
