@@ -45,97 +45,554 @@ $portolite_time_text = get_theme_mod('portolite_time_text', __('Sunday-Thures 10
 
 ?>
 
-<!-- header area start -->
-<header>
-   <div class="header__area <?php echo esc_attr($portolite_transparent_enable); ?>">
-      <?php if (!empty($portolite_topbar_switch)): ?>
-         <div class="header__top header__border d-none d-lg-block">
-            <div class="container">
-               <div class="row align-items-center">
-                  <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-10">
-                     <div class="header__info">
-                        <ul>
-                           <?php if (!empty($portolite_mail_id)): ?>
-                              <li>
-                                 <a href="mailto:<?php echo esc_attr($portolite_mail_id); ?>">
-                                    <span>
-                                       <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M11.5 12.9H4.5C2.4 12.9 1 11.85 1 9.4V4.5C1 2.05 2.4 1 4.5 1H11.5C13.6 1 15 2.05 15 4.5V9.4C15 11.85 13.6 12.9 11.5 12.9Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                          <path d="M11.5 4.85059L9.309 6.60059C8.588 7.17459 7.405 7.17459 6.684 6.60059L4.5 4.85059" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                       </svg>
-                                    </span>
-                                    <?php echo esc_html($portolite_mail_id); ?>
-                                 </a>
-                              </li>
-                           <?php endif; ?>
 
-                           <?php if (!empty($portolite_phone_num)): ?>
-                              <li>
-                                 <a href="tel:<?php echo esc_attr($portolite_phone_num); ?>">
-                                    <span>
-                                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M14.979 12.431C14.979 12.683 14.923 12.942 14.804 13.194C14.685 13.446 14.531 13.684 14.328 13.908C13.985 14.286 13.607 14.559 13.18 14.734C12.76 14.909 12.305 15 11.815 15C11.101 15 10.338 14.832 9.533 14.489C8.728 14.146 7.923 13.684 7.125 13.103C6.32 12.515 5.557 11.864 4.829 11.143C4.108 10.415 3.457 9.652 2.876 8.854C2.302 8.056 1.84 7.258 1.504 6.467C1.168 5.669 1 4.906 1 4.178C1 3.702 1.084 3.247 1.252 2.827C1.42 2.4 1.686 2.008 2.057 1.658C2.505 1.217 2.995 1 3.513 1C3.709 1 3.905 1.042 4.08 1.126C4.262 1.21 4.423 1.336 4.549 1.518L6.173 3.807C6.299 3.982 6.39 4.143 6.453 4.297C6.516 4.444 6.551 4.591 6.551 4.724C6.551 4.892 6.502 5.06 6.404 5.221C6.313 5.382 6.18 5.55 6.012 5.718L5.48 6.271C5.403 6.348 5.368 6.439 5.368 6.551C5.368 6.607 5.375 6.656 5.389 6.712C5.41 6.768 5.431 6.81 5.445 6.852C5.571 7.083 5.788 7.384 6.096 7.748C6.411 8.112 6.747 8.483 7.111 8.854C7.489 9.225 7.853 9.568 8.224 9.883C8.588 10.191 8.889 10.401 9.127 10.527C9.162 10.541 9.204 10.562 9.253 10.583C9.309 10.604 9.365 10.611 9.428 10.611C9.547 10.611 9.638 10.569 9.715 10.492L10.247 9.967C10.422 9.792 10.59 9.659 10.751 9.575C10.912 9.477 11.073 9.428 11.248 9.428C11.381 9.428 11.521 9.456 11.675 9.519C11.829 9.582 11.99 9.673 12.165 9.792L14.482 11.437C14.664 11.563 14.79 11.71 14.867 11.885C14.937 12.06 14.979 12.235 14.979 12.431Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" />
-                                          <path d="M12.5497 5.89986C12.5497 5.47986 12.2207 4.83586 11.7307 4.31086C11.2827 3.82786 10.6877 3.44986 10.0997 3.44986" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                          <path d="M14.9997 5.9C14.9997 3.191 12.8087 1 10.0997 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                       </svg>
-                                    </span>
-                                    <?php echo esc_html($portolite_phone_num); ?>
-                                 </a>
-                              </li>
-                           <?php endif; ?>
 
-                           <?php if (!empty($portolite_time_text)): ?>
-                              <li>
-                                 <span>
-                                    <span>
-                                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M15 8C15 11.864 11.864 15 8 15C4.136 15 1 11.864 1 8C1 4.136 4.136 1 8 1C11.864 1 15 4.136 15 8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                          <path d="M10.5969 10.226L8.42691 8.93101C8.04891 8.70701 7.74091 8.16801 7.74091 7.72701V4.85701" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                       </svg>
-                                    </span>
-                                    <?php echo esc_html($portolite_time_text); ?>
-                                 </span>
-                              </li>
+
+<div class="page-wrapper">
+   <header class="main-header">
+      <div class="main-header__wrapper">
+         <nav class="main-menu">
+            <div class="main-menu__wrapper">
+               <div class="container">
+                  <div class="main-menu__wrapper-inner">
+                     <div class="main-menu__left">
+                        <div class="main-header__logo">
+                           <?php if (function_exists('portolite_header_logo')) : ?>
+                              <?php portolite_header_logo();
+                              ?>
                            <?php endif; ?>
-                        </ul>
+                        </div>
                      </div>
-                  </div>
-                  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-2">
+                     <div class="main-menu__main-menu-box">
 
-                     <div class="header__top-right d-flex justify-content-end align-items-center">
-                        kichu ekta
+                        <?php portolite_header_menu(); ?>
+
+                     </div>
+
+                     <div class="main-menu__right">
+                        <div class="main-menu__social">
+                           <?php portolite_header_social_profiles(); ?>
+                        </div>
+                        <div class="main-menu__nav-sidebar-icon">
+                           <a class="navSidebar-button" href="#">
+                              <span class="icon-dots-menu-one"></span>
+                              <span class="icon-dots-menu-two"></span>
+                              <span class="icon-dots-menu-three"></span>
+                           </a>
+                        </div>
+                     </div>
+
+
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </div>
+   </header>
+
+   <div class="stricky-header stricked-menu main-menu">
+      <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+   </div><!-- /.stricky-header -->
+
+
+
+
+   <!-- Main Slider Start -->
+   <section class="main-slider">
+      <div class="main-slider__wrap">
+         <div class="main-slider__carousel owl-carousel owl-theme">
+            <div class="item">
+               <div class="main-slider__shape-1">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shapes/main-slider-shape-1.png" alt="">
+               </div>
+               <div class="container">
+                  <div class="main-slider__content">
+                     <h2 class="main-slider__title">Where Quality is a <br> Service Meets the <br> <span>Open
+                           Road</span> </h2>
+                     <p class="main-slider__text">Car service is essential for maintaining the performance
+                        and <br> longevity of your vehicle. From oil changes Car service</p>
+                     <div class="main-slider__btn-and-video-box">
+                        <div class="main-slider__btn-box">
+                           <a href="contact.html" class="thm-btn">Get Started<span
+                                 class="icon-arrow-up-right"></span></a>
+                        </div>
+                        <div class="main-slider__video-link">
+                           <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
+                              <div class="main-slider__video-icon">
+                                 <span class="icon-video"></span>
+                                 <i class="ripple"></i>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="main-slider__img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/resources/main-slider-img-1.jpg" alt="" class="float-bob-y">
                      </div>
                   </div>
                </div>
             </div>
+
+            <div class="item">
+               <div class="main-slider__shape-1">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shapes/main-slider-shape-1.png" alt="">
+               </div>
+               <div class="container">
+                  <div class="main-slider__content">
+                     <h2 class="main-slider__title">Where Quality is a <br> Service Meets the <br> <span>Open
+                           Road</span> </h2>
+                     <p class="main-slider__text">Car service is essential for maintaining the performance
+                        and <br> longevity of your vehicle. From oil changes Car service</p>
+                     <div class="main-slider__btn-and-video-box">
+                        <div class="main-slider__btn-box">
+                           <a href="contact.html" class="thm-btn">Get Started<span
+                                 class="icon-arrow-up-right"></span></a>
+                        </div>
+                        <div class="main-slider__video-link">
+                           <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
+                              <div class="main-slider__video-icon">
+                                 <span class="icon-video"></span>
+                                 <i class="ripple"></i>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="main-slider__img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/resources/main-slider-img-2.jpg" alt="" class="float-bob-y">
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="item">
+               <div class="main-slider__shape-1">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shapes/main-slider-shape-1.png" alt="">
+               </div>
+               <div class="container">
+                  <div class="main-slider__content">
+                     <h2 class="main-slider__title">Where Quality is a <br> Service Meets the <br> <span>Open
+                           Road</span> </h2>
+                     <p class="main-slider__text">Car service is essential for maintaining the performance
+                        and <br> longevity of your vehicle. From oil changes Car service</p>
+                     <div class="main-slider__btn-and-video-box">
+                        <div class="main-slider__btn-box">
+                           <a href="contact.html" class="thm-btn">Get Started<span
+                                 class="icon-arrow-up-right"></span></a>
+                        </div>
+                        <div class="main-slider__video-link">
+                           <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
+                              <div class="main-slider__video-icon">
+                                 <span class="icon-video"></span>
+                                 <i class="ripple"></i>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="main-slider__img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/resources/main-slider-img-3.jpg" alt="" class="float-bob-y">
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+
          </div>
-      <?php endif; ?>
-      <div class="header__bottom <?php echo esc_attr($portolite_bottom_border); ?> <?php echo esc_attr($enable_sticky) ?>" id="header-sticky">
-         <div class="container">
-            <div class="mega-menu-wrapper p-relative">
-               <div class="row align-items-center">
-                  <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-sm-5 col-8">
-                     <div class="logo logo-border">
-                        <?php if (function_exists('portolite_header_logo')) : ?>
-                           <?php portolite_header_logo();
-                           ?>
-                        <?php endif; ?>
+      </div>
+   </section>
+   <!--Main Slider End -->
 
+
+   <!--Counter One Start -->
+   <section class="counter-one">
+      <div class="container">
+         <div class="counter-one__inner">
+            <ul class="list-unstyled counter-one__list">
+               <li class="wow fadeInLeft" data-wow-delay="100ms">
+                  <div class="counter-one__single">
+                     <div class="counter-one__count-box">
+                        <h3 class="odometer" data-count="600">00</h3>
+                        <span>+</span>
+                     </div>
+                     <p class="counter-one__text">Team member</p>
+                  </div>
+               </li>
+               <li class="wow fadeInLeft" data-wow-delay="200ms">
+                  <div class="counter-one__single">
+                     <div class="counter-one__count-box">
+                        <h3 class="odometer" data-count="2">00</h3>
+                        <span>k+</span>
+                     </div>
+                     <p class="counter-one__text">Service Complete</p>
+                  </div>
+               </li>
+               <li class="wow fadeInRight" data-wow-delay="300ms">
+                  <div class="counter-one__single">
+                     <div class="counter-one__count-box">
+                        <h3 class="odometer" data-count="53">00</h3>
+                        <span>+</span>
+                     </div>
+                     <p class="counter-one__text">Winning award</p>
+                  </div>
+               </li>
+               <li class="wow fadeInRight" data-wow-delay="400ms">
+                  <div class="counter-one__single">
+                     <div class="counter-one__count-box">
+                        <h3 class="odometer" data-count="3">00</h3>
+                        <span>k+</span>
+                     </div>
+                     <p class="counter-one__text">Client Review</p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </section>
+   <!--Counter One End -->
+
+
+   <!--Blog Details Start-->
+   <section class="blog-details">
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-8 col-lg-7">
+               <div class="blog-details__left">
+                  <div class="blog-details__img-box">
+                     <div class="blog-details__img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/blog-details-img-1.jpg" alt="">
+
+                        <ul class="blog-details__meta list-unstyled">
+                           <li>
+                              <p><span class="icon-calendar"></span>October 19, 2022</p>
+                           </li>
+                           <li>
+                              <p><span class="icon-user-2"></span>By admin</p>
+                           </li>
+                           <li>
+                              <p><span class="icon-folder"></span>Category</p>
+                           </li>
+                        </ul>
                      </div>
                   </div>
-                  <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-8 col-sm-7 col-4 text-end">
-                     <div class="main-menu pl-15 main-menu-ff-space d-flex d-lg-block align-item-center justify-content-end">
-                        <nav id="mobile-menu">
-                           <?php portolite_header_menu(); ?>
-                        </nav>
+                  <div class="blog-details__content">
+                     <h3 class="blog-details__title-1">Auto Pro Mechanic Shop</h3>
+                     <p class="blog-details__text-1">Car service is essential for maintaining the performance
+                        and
+                        longevity of your vehicle. From oil changes and tire rotations to engine diagnostics
+                        and
+                        brake repairs, car service ensures</p>
+                     <div class="blog-details__client-box">
+                        <div class="blog-details__client-box-bg-shape"
+                           style="background-image: url(assets/images/shapes/blog-details-client-box-bg-shape.png);">
+                        </div>
+                        <div class="blog-details__client-quote">
+                           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon/quote-2.png" alt="">
+                        </div>
+                        <div class="blog-details__client-ratting">
+                           <span class="icon-star"></span>
+                           <span class="icon-star"></span>
+                           <span class="icon-star"></span>
+                           <span class="star-white icon-star"></span>
+                           <span class="star-white icon-star"></span>
+                        </div>
+                        <div class="blog-details__client-info">
+                           <div class="blog-details__client-img">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/blog-details-client-img-1.jpg" alt="">
+                           </div>
+                           <div class="blog-details__client-content">
+                              <p>Marketing Ceo</p>
+                              <h5>Chirs Bekham</h5>
+                           </div>
+                        </div>
+                        <p class="blog-details__client-text">Car service is essential for maintaining the
+                           performance and longevity of your vehicle. From oil changes and tire rotations
+                           to engine diagnostics and brake repairs, car service ensures</p>
+                     </div>
+                     <h3 class="blog-details__title-2">Careful Car Service Station</h3>
+                     <div class="blog-details__points-box">
+                        <ul class="blog-details__points-list list-unstyled">
+                           <li>
+                              <div class="icon">
+                                 <span class="icon-double-arrow-right"></span>
+                              </div>
+                              <p>The Car Doctor Service</p>
+                           </li>
+                           <li>
+                              <div class="icon">
+                                 <span class="icon-double-arrow-right"></span>
+                              </div>
+                              <p>Reliable Roadside Assistance</p>
+                           </li>
+                        </ul>
+                        <ul class="blog-details__points-list list-unstyled">
+                           <li>
+                              <div class="icon">
+                                 <span class="icon-double-arrow-right"></span>
+                              </div>
+                              <p>SpeedySpark Car Care</p>
+                           </li>
+                           <li>
+                              <div class="icon">
+                                 <span class="icon-double-arrow-right"></span>
+                              </div>
+                              <p>Quick Fix Auto Repairs</p>
+                           </li>
+                        </ul>
+                        <ul class="blog-details__points-list list-unstyled">
+                           <li>
+                              <div class="icon">
+                                 <span class="icon-double-arrow-right"></span>
+                              </div>
+                              <p>EasyDrive Maintenance</p>
+                           </li>
+                           <li>
+                              <div class="icon">
+                                 <span class="icon-double-arrow-right"></span>
+                              </div>
+                              <p>Professional Care for Your Car</p>
+                           </li>
+                        </ul>
+                     </div>
+                     <h5 class="blog-details__title-3">Drive Stress-Free with Our Service</h5>
+                     <p class="blog-details__text-2">Car service is essential for maintaining the performance
+                        and longevity of your vehicle. From oil changes and tire rotations to engine
+                        diagnostics and brake repairs, car service ensures Car service is essential for
+                        maintaining the performance and longevity of your vehicle. From oil changes and tire
+                        rotations</p>
+                     <p class="blog-details__text-3">Car service is essential for maintaining the performance
+                        and longevity of your vehicle. From oil changes and tire rotations to engine
+                        diagnostics and brake repairs, car service ensures</p>
+                     <div class="blog-details__img-box">
+                        <div class="row">
+                           <div class="col-xl-6">
+                              <div class="blog-details__img-box-img-1">
+                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/blog-details-img-box-img-1.jpg" alt="">
+                              </div>
+                           </div>
+                           <div class="col-xl-6">
+                              <div class="blog-details__img-box-img-1">
+                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/blog-details-img-box-img-2.jpg" alt="">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="blog-details__tag-and-social">
+                        <div class="blog-details__tag-box">
+                           <span class="blog-details__tag-title">Tags:</span>
+                           <div class="blog-details__tag-list">
+                              <a href="#">Shop</a>
+                              <a href="#">Car Service</a>
+                              <a href="#">Car Wash</a>
+                           </div>
+                        </div>
+                        <div class="blog-details__social">
+                           <a href="#"><span class="icon-facebook-f"></span></a>
+                           <a href="#"><span class="icon-instagram"></span></a>
+                           <a href="#"><span class="icon-Vector"></span></a>
+                           <a href="#"><span class="icon-linkedin-in"></span></a>
+                        </div>
+                     </div>
+                     <div class="blog-details__prev-next">
+                        <div class="blog-details__prev">
+                           <a href="#"> <span class="icon-arrow-left"></span> Previous</a>
+                        </div>
+                        <div class="blog-details__next">
+                           <a href="#">Next <span class="icon-arrow-right"></span></a>
+                        </div>
+                     </div>
+                     <div class="comment-one">
+                        <h3 class="comment-one__title">01 Comment</h3>
+                        <div class="comment-one__single">
+                           <div class="comment-one__image">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/comment-1-1.jpg" alt="">
+                           </div>
+                           <div class="comment-one__content">
+                              <h3>Cody Fisher</h3>
+                              <span>Marketing Coordinator</span>
+                              <p>Car service is essential for maintaining the performance and longevity of
+                                 your vehicle. From oil changes and tire rotations to engine diagnostics
+                              </p>
+                              <div class="comment-one__btn-box">
+                                 <a href="blog-details.html" class="thm-btn">Reply</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="comment-form">
+                        <h3 class="comment-form__title">Leave A Comment</h3>
+                        <form action="assets/inc/sendemail.php"
+                           class="comment-one__form contact-form-validated" novalidate="novalidate">
+                           <div class="row">
+                              <div class="col-xl-6">
+                                 <div class="comment-form__input-box">
+                                    <input type="text" placeholder="Your Name" name="name">
+                                 </div>
+                              </div>
+                              <div class="col-xl-6">
+                                 <div class="comment-form__input-box">
+                                    <input type="email" placeholder="Your Email" name="email">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-xl-12">
+                                 <div class="comment-form__input-box text-message-box">
+                                    <textarea name="message" placeholder="Message here.."></textarea>
+                                 </div>
+                                 <div class="comment-form__btn-box">
+                                    <button type="submit" class="thm-btn">Sent
+                                       now<span class="icon-arrow-up-right"></span></button>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                        <div class="result"></div>
                      </div>
                   </div>
-
-
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-5">
+               <div class="sidebar">
+                  <div class="sidebar__single sidebar__search">
+                     <form action="#" class="sidebar__search-form">
+                        <input type="search" placeholder="Search..">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                     </form>
+                  </div>
+                  <div class="sidebar__single sidebar__post">
+                     <div class="sidebar__title-box">
+                        <h3 class="sidebar__title">Popular Post</h3>
+                        <div class="sidebar__title-shape-box">
+                           <div class="sidebar__title-shape-1"></div>
+                           <div class="sidebar__title-shape-2"></div>
+                        </div>
+                     </div>
+                     <ul class="sidebar__post-list list-unstyled">
+                        <li>
+                           <div class="sidebar__post-image">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/lp-1-1.jpg" alt="">
+                           </div>
+                           <div class="sidebar__post-content">
+                              <p class="sidebar__post-date"><span class="icon-calendar"></span>October 19,
+                                 2024</p>
+                              <h3>
+                                 <a href="blog-details.html">Expert Guidance the Better Results</a>
+                              </h3>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="sidebar__post-image">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/lp-1-2.jpg" alt="">
+                           </div>
+                           <div class="sidebar__post-content">
+                              <p class="sidebar__post-date"><span class="icon-calendar"></span>November
+                                 20,
+                                 2024</p>
+                              <h3>
+                                 <a href="blog-details.html">the performance and longe of your
+                                    vehicle</a>
+                              </h3>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="sidebar__post-image">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/lp-1-3.jpg" alt="">
+                           </div>
+                           <div class="sidebar__post-content">
+                              <p class="sidebar__post-date"><span class="icon-calendar"></span>October 19,
+                                 2024</p>
+                              <h3>
+                                 <a href="blog-details.html">Car service is essential for maintaining</a>
+                              </h3>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="sidebar__single sidebar__all-category">
+                     <div class="sidebar__title-box">
+                        <h3 class="sidebar__title">Catagory</h3>
+                        <div class="sidebar__title-shape-box">
+                           <div class="sidebar__title-shape-1"></div>
+                           <div class="sidebar__title-shape-2"></div>
+                        </div>
+                     </div>
+                     <ul class="sidebar__all-category-list list-unstyled">
+                        <li>
+                           <a href="#">EasyDrive Maintenance Center <span>01</span></a>
+                        </li>
+                        <li>
+                           <a href="#">Elite Auto Services <span>02</span></a>
+                        </li>
+                        <li>
+                           <a href="#">Smooth Ride Vehicle Care <span>03</span></a>
+                        </li>
+                        <li>
+                           <a href="#">Careful Car Service Station <span>04</span></a>
+                        </li>
+                        <li>
+                           <a href="#">AutoPro Mechanic Shop <span>05</span></a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="sidebar__single sidebar__tags">
+                     <div class="sidebar__title-box">
+                        <h3 class="sidebar__title">Popular Tags</h3>
+                        <div class="sidebar__title-shape-box">
+                           <div class="sidebar__title-shape-1"></div>
+                           <div class="sidebar__title-shape-2"></div>
+                        </div>
+                     </div>
+                     <div class="sidebar__tags-list">
+                        <a href="#">Shop</a>
+                        <a href="#">Car Service</a>
+                        <a href="#">Car Wash</a>
+                        <a href="#">Station</a>
+                        <a href="#">Auto Services</a>
+                        <a href="#">Car Care</a>
+                     </div>
+                  </div>
+                  <div class="sidebar__single sidebar__gallery">
+                     <div class="sidebar__title-box">
+                        <h3 class="sidebar__title">Gallery</h3>
+                        <div class="sidebar__title-shape-box">
+                           <div class="sidebar__title-shape-1"></div>
+                           <div class="sidebar__title-shape-2"></div>
+                        </div>
+                     </div>
+                     <ul class="sidebar__gallery-list list-unstyled">
+                        <li>
+                           <div class="sidebar__gallery-img">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/sidebar-gallery-1-1.jpg" alt="">
+                           </div>
+                        </li>
+                        <li>
+                           <div class="sidebar__gallery-img">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/sidebar-gallery-1-2.jpg" alt="">
+                           </div>
+                        </li>
+                        <li>
+                           <div class="sidebar__gallery-img">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/sidebar-gallery-1-3.jpg" alt="">
+                           </div>
+                        </li>
+                        <li>
+                           <div class="sidebar__gallery-img">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/sidebar-gallery-1-4.jpg" alt="">
+                           </div>
+                        </li>
+                        <li>
+                           <div class="sidebar__gallery-img">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/sidebar-gallery-1-5.jpg" alt="">
+                           </div>
+                        </li>
+                        <li>
+                           <div class="sidebar__gallery-img">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery/sidebar-gallery-1-6.jpg" alt="">
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
                </div>
             </div>
          </div>
       </div>
-   </div>
-</header>
-<!-- header area end -->
+   </section>
+   <!--Blog Details End-->

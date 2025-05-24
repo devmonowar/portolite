@@ -602,20 +602,20 @@ function _header_header_fields($fields)
 
     $fields[] = [
         'type'        => 'image',
-        'settings'    => 'logo',
-        'label'       => esc_html__('Header Logo', 'portolite'),
-        'description' => esc_html__('Upload Your Logo.', 'portolite'),
+        'settings'    => 'white_logo', // Updated from 'logo'
+        'label'       => esc_html__('Header White Logo', 'portolite'),
+        'description' => esc_html__('Upload White Logo (for dark background)', 'portolite'),
         'section'     => 'section_header_logo',
-        'default'     => get_template_directory_uri() . '/assets/img/logo/logo-black.svg',
+        'default'     => get_template_directory_uri() . '/assets/img/logo/white-logo.png',
     ];
 
     $fields[] = [
         'type'        => 'image',
-        'settings'    => 'seconday_logo',
-        'label'       => esc_html__('Header Secondary Logo', 'portolite'),
-        'description' => esc_html__('Header Logo Black', 'portolite'),
+        'settings'    => 'black_logo', // Updated from 'seconday_logo'
+        'label'       => esc_html__('Header Black Logo', 'portolite'),
+        'description' => esc_html__('Upload Black Logo (for white background)', 'portolite'),
         'section'     => 'section_header_logo',
-        'default'     => get_template_directory_uri() . '/assets/img/logo/logo.svg',
+        'default'     => get_template_directory_uri() . '/assets/img/logo/black-logo.png',
     ];
 
     // $fields[] = [

@@ -114,6 +114,38 @@ function portolite_breadcrumb_func()
                 </div>
             </section>
 
+
+            <!--Page breadcrumb Start-->
+            <section class="page-header">
+                <div class="page-header__wrap">
+                    <div class="page-header__shape-1"
+                        style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/shapes/page-header-shape-1.png);"></div>
+                    <div class="container">
+                        <div class="page-header__inner">
+                            <div class="page-header__shape-2"></div>
+                            <div class="page-header__shape-3"></div>
+                            <div class="page-header__shape-4"></div>
+                            <div class="page-header__img-1">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/resources/page-header-img-1.png" alt="">
+                                <div class="page-header__shape-5">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shapes/page-header-shape-5.png" alt="">
+                                </div>
+                            </div>
+                            <h2>Blog Details</h2>
+                            <div class="thm-breadcrumb__box">
+                                <ul class="thm-breadcrumb list-unstyled">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><span class="icon-angle-right"></span></li>
+                                    <li>Blog Details</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Page breadcrumb End-->
+
+
         <?php elseif ($portolite_breadcrumb_style == 'breadcrumb-style-2' && empty($_GET['s'])) : ?>
 
             <!-- breadcrumb style 2 -->

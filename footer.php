@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -9,8 +10,15 @@
  * @package portolite
  */
 
-do_action( 'portolite_footer_style' );
+// Footer style action hook (includes footer markup/layout)
+do_action('portolite_footer_style');
 
-wp_footer();?>
-    </body>
+// WordPress footer function for scripts and plugins
+wp_footer();
+?>
+
+</div><!-- #page -->
+
+</body>
+
 </html>
