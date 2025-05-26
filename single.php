@@ -14,7 +14,7 @@ $blog_column = is_active_sidebar('blog-sidebar') ? 8 : 12;
 
 ?>
 
-<main class="ptl-blog-area blog-list ekta-class">
+<section class="ptl-blog-area blog-details">
 	<div class="container">
 		<div class="row">
 			<div class="col-xxl-<?php print esc_attr($blog_column); ?> col-xl-<?php print esc_attr($blog_column); ?> col-lg-<?php print esc_attr($blog_column); ?>">
@@ -27,8 +27,8 @@ $blog_column = is_active_sidebar('blog-sidebar') ? 8 : 12;
 
 					?>
 
-						<?php
-						if (get_previous_post_link() and get_next_post_link()): ?>
+
+						<?php if (get_previous_post_link() || get_next_post_link()): ?>
 
 
 							<div class="blog-details__prev-next">
@@ -40,11 +40,11 @@ $blog_column = is_active_sidebar('blog-sidebar') ? 8 : 12;
 										$prev_link = get_permalink($prev_post);
 									?>
 										<a href="<?php echo esc_url($prev_link); ?>">
-											<span class="icon-arrow-left"></span> <?php echo esc_html__('Previous', 'your-textdomain'); ?>
+											<span class="icon-arrow-left"></span> <?php echo esc_html__('Previous', 'portolite'); ?>
 										</a>
 									<?php else : ?>
 										<a href="#">
-											<span class="icon-arrow-left"></span> <?php echo esc_html__('Previous', 'your-textdomain'); ?>
+											<span class="icon-arrow-left"></span> <?php echo esc_html__('Previous', 'portolite'); ?>
 										</a>
 									<?php endif; ?>
 								</div>
@@ -57,11 +57,11 @@ $blog_column = is_active_sidebar('blog-sidebar') ? 8 : 12;
 										$next_link = get_permalink($next_post);
 									?>
 										<a href="<?php echo esc_url($next_link); ?>">
-											<?php echo esc_html__('Next', 'your-textdomain'); ?> <span class="icon-arrow-right"></span>
+											<?php echo esc_html__('Next', 'portolite'); ?> <span class="icon-arrow-right"></span>
 										</a>
 									<?php else : ?>
 										<a href="#">
-											<?php echo esc_html__('Next', 'your-textdomain'); ?> <span class="icon-arrow-right"></span>
+											<?php echo esc_html__('Next', 'portolite'); ?> <span class="icon-arrow-right"></span>
 										</a>
 									<?php endif; ?>
 								</div>
@@ -73,10 +73,8 @@ $blog_column = is_active_sidebar('blog-sidebar') ? 8 : 12;
 						<?php
 						endif; ?>
 
-
 					<?php
 
-						get_template_part('template-parts/biography');
 
 						// If comments are open or we have at least one comment, load up the comment template.
 						if (comments_open() || get_comments_number()):
@@ -98,15 +96,10 @@ $blog_column = is_active_sidebar('blog-sidebar') ? 8 : 12;
 
 				</aside>
 
-				<div class="col-lg-4">
-					<div class="tp-sidebar-wrapper ">
-						<?php get_sidebar(); ?>
-					</div>
-				</div>
 			<?php endif; ?>
 		</div>
 	</div>
-	</section>
+</section>
 
-	<?php
-	get_footer();
+<?php
+get_footer();

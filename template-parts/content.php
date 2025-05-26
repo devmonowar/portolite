@@ -24,9 +24,7 @@ if (is_single()) : ?>
         <?php if (has_post_thumbnail()) : ?>
             <div class="blog-details__img-box">
                 <div class="blog-details__img">
-                    <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail('full'); ?>
-                    </a>
+                    <?php the_post_thumbnail('full'); ?>
                 </div>
                 <ul class="blog-list__meta list-unstyled">
                     <li>
@@ -39,33 +37,35 @@ if (is_single()) : ?>
             </div>
         <?php endif; ?>
 
-        <div class="blog-list__content">
+        <div class="blog-details__content">
 
-            <?php get_template_part('template-parts/blog/blog-meta'); ?>
 
-            <h3 class="blog-list__title">
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            <h3 class="blog-details__title-1">
+                <?php the_title(); ?>
             </h3>
 
-            <div class="blog-list__btn-box">
-                <?php the_content(); ?>
+            <?php the_content(); ?>
 
-                <!-- blog btn -->
-                <?php get_template_part('template-parts/blog/blog-btn'); ?>
-            </div>
+            <?php get_template_part('template-parts/blog/blog-tags-social'); ?>
         </div>
+
+        <style>
+            .blog-details__content p {
+                margin-bottom: 30px;
+            }
+
+            .blog-details__content p:last-child {
+                margin-bottom: 50px;
+            }
+        </style>
+
     </article>
     <!-- details end -->
 
 
-
-
 <?php else: ?>
 
-
-
-
-    <!--Blog List Single Start-->
+    <!--Blog List  Start-->
     <article id="post-<?php the_ID(); ?>" <?php post_class('blog-list__single format-standard'); ?>>
 
         <?php if (has_post_thumbnail()) : ?>
@@ -88,8 +88,6 @@ if (is_single()) : ?>
 
         <div class="blog-list__content">
 
-            <?php get_template_part('template-parts/blog/blog-meta'); ?>
-
             <h3 class="blog-list__title">
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h3>
@@ -102,7 +100,7 @@ if (is_single()) : ?>
             </div>
         </div>
     </article>
-    <!--Blog List Single End-->
+    <!--Blog List  End-->
 
 
 

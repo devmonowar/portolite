@@ -59,7 +59,9 @@ function portolite_breadcrumb_func()
         $_id = get_option('page_for_posts');
     }
 
+    $_id = isset($_id) ? $_id : get_the_ID();
     $is_breadcrumb = function_exists('get_field') ? get_field('is_it_invisible_breadcrumb', $_id) : '';
+
     if (!empty($_GET['s'])) {
         $is_breadcrumb = null;
     }
@@ -93,28 +95,6 @@ function portolite_breadcrumb_func()
 
         if ($portolite_breadcrumb_style == 'breadcrumb-style-1' && empty($_GET['s'])) : ?>
 
-            <!-- breadcrumb style 1 -->
-            <section class="breadcrumb__area pt-130 pb-115 breadcrumb__style-10 p-relative z-index-1 <?php print esc_attr($breadcrumb_class); ?>" data-padding-top="<?php echo esc_attr($padding_top) ?>px" data-padding-bottom="<?php echo esc_attr($padding_bottom) ?>px" data-bg-color="<?php echo esc_attr($bg_img_color); ?>">
-                <div class="breadcrumb__bg-4 breadcrumb__bg-overlay m-img include-bg" data-background="<?php print esc_attr($bg_img); ?>"></div>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <?php if (!empty($breadcrumb_info_switch)) : ?>
-                            <div class="col-xl-10">
-                                <div class="breadcrumb__content text-center">
-                                    <h3 class="breadcrumb__title"><?php echo wp_kses_post($title); ?></h3>
-                                    <div class="breadcrumb__list">
-                                        <?php if (function_exists('bcn_display')) {
-                                            bcn_display();
-                                        } ?>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </section>
-
-
             <!--Page breadcrumb Start-->
             <section class="page-header">
                 <div class="page-header__wrap">
@@ -136,7 +116,7 @@ function portolite_breadcrumb_func()
                                 <ul class="thm-breadcrumb list-unstyled">
                                     <li><a href="index.html">Home</a></li>
                                     <li><span class="icon-angle-right"></span></li>
-                                    <li>Blog Details</li>
+                                    <li>Blog Details(breadcrumb pore banabo)</li>
                                 </ul>
                             </div>
                         </div>

@@ -40,7 +40,6 @@
          <!-- back to top end -->
       <?php endif; ?>
 
-      <?php do_action('portolite_newsletter_style'); ?>
 
       <!-- header start -->
       <?php do_action('portolite_header_style'); ?>

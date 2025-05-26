@@ -159,6 +159,37 @@ function portolite_mobile_logo()
 <?php }
 
 
+
+function portolite_custom_comments($comment, $args, $depth)
+{
+?>
+    <li <?php comment_class('comment-one__single'); ?> id="comment-<?php comment_ID(); ?>">
+        <div class="comment-one__image">
+            <?php echo get_avatar($comment, 80); ?>
+        </div>
+        <div class="comment-one__content">
+            <h3><?php comment_author(); ?></h3>
+            <span><?php echo get_comment_date(); ?></span>
+            <p><?php comment_text(); ?></p>
+            <div class="comment-one__btn-box">
+                <?php
+                comment_reply_link(array_merge($args, array(
+                    'reply_text' => esc_html__('Reply', 'portolite'),
+                    'depth'      => $depth,
+                    'max_depth'  => $args['max_depth'],
+                    'before'     => '<div>',
+                    'after'      => '</div>',
+                )));
+                ?>
+            </div>
+        </div>
+    </li>
+<?php
+}
+
+
+
+
 /**
  * [portolite_header_social_profiles description]
  * @return [type] [description]
