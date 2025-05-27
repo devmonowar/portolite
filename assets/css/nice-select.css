@@ -46,8 +46,8 @@
     top: 50%;
     margin-top: -4px;
     display: block;
-    border-bottom: 1px solid var(--crank-gray);
-    border-right: 1px solid var(--crank-gray);
+    border-bottom: 1px solid var(--portolite-gray);
+    border-right: 1px solid var(--portolite-gray);
     content: '';
     width: 8px;
     height: 8px;
@@ -123,7 +123,7 @@
 
 
 .nice-select .list {
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
     border-radius: 5px;
     box-sizing: border-box;
     margin-top: 0px;
@@ -168,7 +168,7 @@
 .nice-select .option.focus,
 .nice-select .option.selected.focus {
     color: #ffffff;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
 }
 
 .nice-select .option.selected {
@@ -190,6 +190,6 @@
 }
 
 .get-flight-two__inner .nice-select:after {
-    border-bottom: 2px solid var(--crank-gray);
-    border-right: 2px solid var(--crank-gray);
+    border-bottom: 2px solid var(--portolite-gray);
+    border-right: 2px solid var(--portolite-gray);
 }

@@ -40,10 +40,10 @@
     text-align: center;
     font-size: 16px;
     line-height: 16px;
-    color: var(--crank-black);
-    background-color: var(--crank-white);
+    color: var(--portolite-black);
+    background-color: var(--portolite-white);
     padding: 13px 30px 13px;
-    border: 1px solid var(--crank-base);
+    border: 1px solid var(--portolite-base);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -55,8 +55,8 @@
 }
 
 .pricing-one__main-tab-box .tab-buttons .tab-btn.active-btn span {
-    color: var(--crank-white);
-    background-color: var(--crank-base);
+    color: var(--portolite-white);
+    background-color: var(--portolite-base);
 }
 
 .pricing-one__main-tab-box .tab-buttons .tab-btn:nth-child(1) span {
@@ -106,7 +106,7 @@
 .pricing-one__single {
     position: relative;
     display: block;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     padding: 35px 40px 40px;
     border-radius: 20px;
     margin-bottom: 30px;
@@ -118,7 +118,7 @@
 
 .pricing-one__single:hover {
     transform: translateY(-10px);
-    border-bottom: 3px solid var(--crank-base);
+    border-bottom: 3px solid var(--portolite-base);
 }
 
 .pricing-one__title-box {
@@ -136,7 +136,7 @@
 .pricing-one__text {
     font-size: 12px;
     line-height: 20px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .pricing-one__price-and-icon-box {
@@ -147,7 +147,7 @@
     flex-wrap: wrap;
     margin-top: 18px;
     margin-bottom: 29px;
-    border-bottom: 1px solid var(--crank-bdr-color);
+    border-bottom: 1px solid var(--portolite-bdr-color);
     padding-bottom: 16px;
 }
 
@@ -166,8 +166,8 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 16px;
-    color: var(--crank-gray);
-    font-family: var(--crank-font);
+    color: var(--portolite-gray);
+    font-family: var(--portolite-font);
 }
 
 .pricing-one__icon-box {
@@ -191,7 +191,7 @@
     right: 0;
     bottom: 0;
     border-radius: 50%;
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
     transform: scaleX(0.7) rotateX(20deg);
     opacity: 0;
     transition: all 0.4s linear;
@@ -206,7 +206,7 @@
 
 .pricing-one__icon-box span {
     font-size: 30px;
-    color: var(--crank-base);
+    color: var(--portolite-base);
     position: relative;
     display: inline-block;
     transition: all 500ms linear;
@@ -216,7 +216,7 @@
 
 .pricing-one__single:hover .pricing-one__icon-box span {
     transform: scale(0.9);
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .list-unstyled.pricing-one__points {
@@ -246,7 +246,7 @@
     position: relative;
     display: inline-block;
     font-size: 15px;
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .list-unstyled.pricing-one__points li .text {
@@ -264,11 +264,11 @@
 .pricing-one__btn-box .thm-btn {
     width: 100%;
     background-color: #f4f4f4;
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .pricing-one__btn-box .thm-btn::after {
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
 }
 
 .pricing-one__single:hover .pricing-one__btn-box .thm-btn::after {
@@ -277,7 +277,7 @@
 }
 
 .pricing-one__single:hover .pricing-one__btn-box .thm-btn {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 /*--------------------------------------------------------------
@@ -329,7 +329,7 @@
     text-align: center;
     font-size: 16px;
     line-height: 16px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
     background-color: transparent;
     padding: 17px 30px 17px;
     font-weight: 700;
@@ -353,8 +353,8 @@
 }
 
 .pricing-two__tab-box .pricing-two-tab-buttons .p-tab-btn.active-btn span {
-    color: var(--crank-white);
-    background-color: var(--crank-base);
+    color: var(--portolite-white);
+    background-color: var(--portolite-base);
 }
 
 .pricing-two__tab-box .p-tabs-content {
@@ -403,7 +403,7 @@
 .pricing-two__single {
     position: relative;
     display: block;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     padding: 40px 40px 40px;
     border-radius: 20px;
     margin-bottom: 30px;
@@ -423,7 +423,7 @@
 }
 
 .pricing-two__single:hover .pricing-two__title-box {
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
 }
 
 .pricing-two__title {
@@ -435,14 +435,14 @@
 }
 
 .pricing-two__single:hover .pricing-two__title {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .pricing-two__price-and-text-box {
     position: relative;
     display: block;
     margin-top: 25px;
-    border-bottom: 1px solid var(--crank-bdr-color);
+    border-bottom: 1px solid var(--portolite-bdr-color);
     padding-bottom: 19px;
     margin-bottom: 18px;
 }
@@ -463,8 +463,8 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 16px;
-    color: var(--crank-gray);
-    font-family: var(--crank-font);
+    color: var(--portolite-gray);
+    font-family: var(--portolite-font);
 }
 
 .pricing-two__price-text {
@@ -499,7 +499,7 @@
     position: relative;
     display: inline-block;
     font-size: 15px;
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .list-unstyled.pricing-two__points li .text {
@@ -516,11 +516,11 @@
 .pricing-two__btn-box .thm-btn {
     width: 100%;
     background-color: #f4f4f4;
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .pricing-two__btn-box .thm-btn::after {
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
 }
 
 .pricing-two__single:hover .pricing-two__btn-box .thm-btn::after {
@@ -529,7 +529,7 @@
 }
 
 .pricing-two__single:hover .pricing-two__btn-box .thm-btn {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .pricing-two__carousel .owl-nav {
@@ -546,9 +546,9 @@
     width: 60px;
     line-height: 60px;
     border-radius: 50%;
-    color: var(--crank-black);
+    color: var(--portolite-black);
     background-color: transparent;
-    border: 3px solid var(--crank-bdr-color);
+    border: 3px solid var(--portolite-bdr-color);
     font-size: 20px;
     margin: 0;
     text-align: center;
@@ -563,9 +563,9 @@
     width: 60px;
     line-height: 60px;
     border-radius: 50%;
-    color: var(--crank-black);
+    color: var(--portolite-black);
     background-color: transparent;
-    border: 3px solid var(--crank-bdr-color);
+    border: 3px solid var(--portolite-bdr-color);
     font-size: 20px;
     margin: 0;
     text-align: center;
@@ -591,8 +591,8 @@
 
 .pricing-two__carousel.owl-theme .owl-nav .owl-next:hover,
 .pricing-two__carousel.owl-theme .owl-nav .owl-prev:hover {
-    color: var(--crank-base);
-    border: 3px solid var(--crank-base);
+    color: var(--portolite-base);
+    border: 3px solid var(--portolite-base);
 }
 
 
@@ -639,7 +639,7 @@
     text-align: center;
     font-size: 16px;
     line-height: 16px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
     background-color: #F4F4F4;
     padding: 17px 30px 17px;
     font-weight: 700;
@@ -653,8 +653,8 @@
 }
 
 .pricing-three__main-tab-box .tab-buttons .tab-btn.active-btn span {
-    color: var(--crank-white);
-    background-color: var(--crank-base);
+    color: var(--portolite-white);
+    background-color: var(--portolite-base);
 }
 
 .pricing-three__main-tab-box .tab-buttons .tab-btn:nth-child(1) span {
@@ -707,7 +707,7 @@
     padding: 35px 40px 40px;
     border-radius: 20px;
     margin-bottom: 30px;
-    border: 1px solid var(--crank-bdr-color);
+    border: 1px solid var(--portolite-bdr-color);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
     overflow: hidden;
@@ -721,7 +721,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     transform: scaleX(0.7) rotateX(20deg);
     opacity: 0;
     transition: all 0.4s linear;
@@ -774,19 +774,19 @@
 }
 
 .pricing-three__single:hover .pricing-three__title {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .pricing-three__text {
     font-size: 12px;
     line-height: 20px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .pricing-three__single:hover .pricing-three__text {
-    color: rgba(var(--crank-white-rgb), .80);
+    color: rgba(var(--portolite-white-rgb), .80);
 }
 
 .pricing-three__price-and-icon-box {
@@ -794,7 +794,7 @@
     display: block;
     margin-top: 18px;
     margin-bottom: 29px;
-    border-bottom: 1px solid var(--crank-bdr-color);
+    border-bottom: 1px solid var(--portolite-bdr-color);
     padding-bottom: 16px;
 }
 
@@ -812,21 +812,21 @@
 }
 
 .pricing-three__single:hover .pricing-three__price {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .pricing-three__price span {
     font-size: 16px;
     font-weight: 400;
     line-height: 16px;
-    color: var(--crank-gray);
-    font-family: var(--crank-font);
+    color: var(--portolite-gray);
+    font-family: var(--portolite-font);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .pricing-three__single:hover .pricing-three__price span {
-    color: rgba(var(--crank-white-rgb), .80);
+    color: rgba(var(--portolite-white-rgb), .80);
 }
 
 .pricing-three__points {
@@ -856,13 +856,13 @@
     position: relative;
     display: inline-block;
     font-size: 15px;
-    color: var(--crank-base);
+    color: var(--portolite-base);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .pricing-three__single:hover .pricing-three__points li .icon span {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .pricing-three__points li .text {
@@ -877,7 +877,7 @@
 }
 
 .pricing-three__single:hover .pricing-three__points li .text p {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .pricing-three__btn-box {
@@ -891,7 +891,7 @@
 }
 
 .pricing-three__btn-box .thm-btn::after {
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
 }
 
 .pricing-three__single:hover .pricing-three__btn-box .thm-btn::after {
@@ -900,7 +900,7 @@
 }
 
 .pricing-three__single:hover .pricing-three__btn-box .thm-btn {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 /*--------------------------------------------------------------
@@ -911,7 +911,7 @@
 }
 
 .pricing-four .pricing-two__single {
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
 }
@@ -921,8 +921,8 @@
 }
 
 .pricing-four .pricing-two__tab-box .pricing-two-tab-buttons .p-tab-btn.active-btn span {
-    color: var(--crank-white);
-    background-color: var(--crank-base);
+    color: var(--portolite-white);
+    background-color: var(--portolite-base);
 }
 
 .pricing-four .pricing-two__carousel.owl-carousel .owl-stage-outer {

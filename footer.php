@@ -1,5 +1,3 @@
-<?php do_action('portolite_newsletter_style'); ?>
-
 <?php
 
 

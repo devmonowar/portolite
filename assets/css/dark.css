@@ -4,7 +4,7 @@ body .team-one__plus,
 .pricing-one__icon-box,
 .contact-one__experience,
 .services-one__single {
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
 }
 
 
@@ -66,7 +66,7 @@ body .team-one__plus,
 .counter-one__count-box>span,
 .counter-one__text,
 .counter-one__count-box h3 {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 
@@ -75,29 +75,29 @@ body .team-one__plus,
 
 
 .faq-one .faq-one__accrodion-title-count::after {
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
 }
 
 .faq-one .faq-one-accrodion .accrodion-content {
-    border-bottom: 3px solid rgba(var(--crank-white-rgb), .20);
+    border-bottom: 3px solid rgba(var(--portolite-white-rgb), .20);
 }
 
 .faq-one .faq-one-accrodion .accrodion-title h4::before {
-    color: var(--crank-white);
-    background-color: rgba(var(--crank-white-rgb), .20);
+    color: var(--portolite-white);
+    background-color: rgba(var(--portolite-white-rgb), .20);
 }
 
 .faq-one .faq-one-accrodion .accrodion.active .accrodion-title h4::before {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .pricing-one__price-and-icon-box {
-    border-bottom: 1px solid rgba(var(--crank-white-rgb), .20);
+    border-bottom: 1px solid rgba(var(--portolite-white-rgb), .20);
 }
 
 .team-one__plus,
 .team-one__single {
-    border: 1px solid rgba(var(--crank-white-rgb), .20);
+    border: 1px solid rgba(var(--portolite-white-rgb), .20);
 }
 
 .faq-one .faq-one-accrodion .accrodion {
@@ -105,7 +105,7 @@ body .team-one__plus,
 }
 
 .blog-one__btn-box .thm-btn::after {
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
 }
 
 

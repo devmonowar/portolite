@@ -29,7 +29,7 @@
 .why-choose-one__user-box {
     position: relative;
     display: block;
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
     border-radius: 20px;
     text-align: center;
     padding: 30px 20px 26px;
@@ -52,9 +52,9 @@
 
 .why-choose-one__user-text {
     font-weight: 600;
-    font-family: var(--crank-font-two);
+    font-family: var(--portolite-font-two);
     text-transform: capitalize;
-    color: var(--crank-white);
+    color: var(--portolite-white);
     line-height: 28px;
 }
 
@@ -84,7 +84,7 @@
 
 .why-choose-one__user-img img {
     width: 100%;
-    border: 2px solid var(--crank-white);
+    border: 2px solid var(--portolite-white);
     border-radius: 50%;
 }
 
@@ -92,8 +92,8 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
-    color: var(--crank-white);
-    font-family: var(--crank-font-two);
+    color: var(--portolite-white);
+    font-family: var(--portolite-font-two);
     text-transform: capitalize;
 }
 
@@ -110,16 +110,16 @@
     font-size: 45px;
     font-weight: 600;
     line-height: 55px !important;
-    color: var(--crank-white);
-    font-family: var(--crank-font-two) !important;
+    color: var(--portolite-white);
+    font-family: var(--portolite-font-two) !important;
 }
 
 .why-choose-one__count-box span {
     font-size: 45px;
     font-weight: 600;
     line-height: 55px !important;
-    color: var(--crank-white);
-    font-family: var(--crank-font-two) !important;
+    color: var(--portolite-white);
+    font-family: var(--portolite-font-two) !important;
 }
 
 .why-choose-one__img {
@@ -156,18 +156,18 @@
     left: 0;
     bottom: 0;
     width: 3px;
-    background-color: var(--crank-bdr-color);
+    background-color: var(--portolite-bdr-color);
     border-radius: 2px;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .why-choose-one__list li.active::before {
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
 }
 
 .why-choose-one__list li:hover::before {
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
 }
 
 .why-choose-one__list li+li {
@@ -178,32 +178,32 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
-    color: rgba(var(--crank-black-rgb), .50);
+    color: rgba(var(--portolite-black-rgb), .50);
     margin-bottom: 21px;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .why-choose-one__list li.active .why-choose-one__list-title {
-    color: rgba(var(--crank-black-rgb), 1);
+    color: rgba(var(--portolite-black-rgb), 1);
 }
 
 .why-choose-one__list li:hover .why-choose-one__list-title {
-    color: rgba(var(--crank-black-rgb), 1);
+    color: rgba(var(--portolite-black-rgb), 1);
 }
 
 .why-choose-one__list-text {
-    color: rgba(var(--crank-gray-rgb), .50);
+    color: rgba(var(--portolite-gray-rgb), .50);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .why-choose-one__list li.active .why-choose-one__list-text {
-    color: rgba(var(--crank-gray-rgb), 1);
+    color: rgba(var(--portolite-gray-rgb), 1);
 }
 
 .why-choose-one__list li:hover .why-choose-one__list-text {
-    color: rgba(var(--crank-gray-rgb), 1);
+    color: rgba(var(--portolite-gray-rgb), 1);
 }
 
 .why-choose-one__list-count {
@@ -218,7 +218,7 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
-    color: rgba(var(--crank-black-rgb), .50);
+    color: rgba(var(--portolite-black-rgb), .50);
     counter-increment: count;
     content: "0"counter(count);
     transition: all 200ms linear;
@@ -228,11 +228,11 @@
 }
 
 .why-choose-one__list li.active .why-choose-one__list-count:before {
-    color: rgba(var(--crank-black-rgb), 1);
+    color: rgba(var(--portolite-black-rgb), 1);
 }
 
 .why-choose-one__list li:hover .why-choose-one__list-count:before {
-    color: rgba(var(--crank-black-rgb), 1);
+    color: rgba(var(--portolite-black-rgb), 1);
 }
 
 /*--------------------------------------------------------------

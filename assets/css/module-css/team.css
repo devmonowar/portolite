@@ -11,7 +11,7 @@
 .team-one__single {
     position: relative;
     display: block;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     border: 1px solid #e1e1e1;
     border-radius: 20px;
     padding: 10px;
@@ -35,7 +35,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--crank-black);
+    background: var(--portolite-black);
     opacity: 0;
     transition: background-color 0.5s ease;
     transition: all 0.5s ease;
@@ -79,9 +79,9 @@
     justify-content: center;
     width: 60px;
     height: 60px;
-    border: 1px solid var(--crank-bdr-color);
+    border: 1px solid var(--portolite-bdr-color);
     border-radius: 50%;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     margin: 0 auto;
     cursor: pointer;
     -webkit-transition: all 500ms ease;
@@ -89,21 +89,21 @@
 }
 
 .team-one__plus-and-social:hover .team-one__plus {
-    border: 1px solid var(--crank-base);
-    background-color: var(--crank-base);
+    border: 1px solid var(--portolite-base);
+    background-color: var(--portolite-base);
 }
 
 .team-one__plus span {
     position: relative;
     display: inline-block;
     font-size: 20px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .team-one__plus-and-social:hover .team-one__plus span {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .team-one__social {
@@ -140,14 +140,14 @@
     width: 45px;
     height: 45px;
     font-size: 16px;
-    color: var(--crank-white);
-    background-color: var(--crank-black);
+    color: var(--portolite-white);
+    background-color: var(--portolite-black);
     border-radius: 50%;
 }
 
 .team-one__social a:hover {
-    color: var(--crank-white);
-    background-color: var(--crank-base);
+    color: var(--portolite-white);
+    background-color: var(--portolite-base);
 }
 
 .team-one__title-box {
@@ -165,11 +165,11 @@
 }
 
 .team-one__title a {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .team-one__title a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 /*--------------------------------------------------------------
@@ -203,7 +203,7 @@
     display: flex;
     align-items: center;
     gap: 80px;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     border-radius: 20px;
     padding: 28px 40px 30px;
     overflow: hidden;
@@ -217,7 +217,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
@@ -284,7 +284,7 @@
     right: 0;
     bottom: 0;
     width: 1px;
-    background-color: var(--crank-bdr-color);
+    background-color: var(--portolite-bdr-color);
 }
 
 .team-two__name-box::after {
@@ -294,7 +294,7 @@
     right: 11px;
     bottom: 0;
     width: 1px;
-    background-color: var(--crank-bdr-color);
+    background-color: var(--portolite-bdr-color);
 }
 
 .team-two__name-box h3 {
@@ -306,11 +306,11 @@
 }
 
 .team-two__list li:hover .team-two__name-box h3 a {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .team-two__name-box h3 a {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .team-two__name-box p {
@@ -319,7 +319,7 @@
 }
 
 .team-two__list li:hover .team-two__name-box p {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .team-two__text {
@@ -328,7 +328,7 @@
 }
 
 .team-two__list li:hover .team-two__text {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 /* hover image */
@@ -370,9 +370,9 @@
     width: 43px;
     height: 43px;
     font-size: 14px;
-    color: var(--crank-white);
-    border: 3px solid var(--crank-white);
-    background-color: var(--crank-base);
+    color: var(--portolite-white);
+    border: 3px solid var(--portolite-white);
+    background-color: var(--portolite-base);
     border-radius: 50%;
     cursor: pointer;
     transform: rotate(-15deg);
@@ -394,7 +394,7 @@
     width: 100%;
     margin: 0 auto 0;
     padding: 120px 15px 90px;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     border-radius: 40px;
     overflow: hidden;
     z-index: 1;
@@ -435,11 +435,11 @@
 }
 
 .team-three__left .section-title-two__title {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .team-three__text {
-    color: var(--crank-white);
+    color: var(--portolite-white);
     margin-bottom: 118px;
 }
 
@@ -449,11 +449,11 @@
 }
 
 .team-three__btn-box .thm-btn:after {
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
 }
 
 .team-three__btn-box .thm-btn:hover {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .team-three__right {
@@ -482,8 +482,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(var(--crank-white-rgb), .05);
-    border: 1px solid rgba(var(--crank-white-rgb), .10);
+    background-color: rgba(var(--portolite-white-rgb), .05);
+    border: 1px solid rgba(var(--portolite-white-rgb), .10);
     border-radius: 20px;
     transition: background-color 0.7s ease;
     transition: all 0.7s ease;
@@ -491,7 +491,7 @@
 }
 
 .team-three__single:hover .team-three__img:before {
-    border: 1px solid rgba(var(--crank-white-rgb), 1);
+    border: 1px solid rgba(var(--portolite-white-rgb), 1);
 }
 
 .team-three__img img {
@@ -503,7 +503,7 @@
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
     padding: 30px 12px 30px;
     border-radius: 20px;
     opacity: 0;
@@ -532,11 +532,11 @@
     display: flex;
     align-items: center;
     font-size: 16px;
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .team-three__social li a:hover {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .team-three__content {
@@ -553,11 +553,11 @@
 }
 
 .team-three__title a {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .team-three__title a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 /*--------------------------------------------------------------
@@ -574,7 +574,7 @@
     display: block;
     max-width: 1680px;
     width: 100%;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     border-radius: 60px;
     margin: 0 auto 0;
     padding: 120px 0 83px;
@@ -621,7 +621,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     margin: 0 auto;
     cursor: pointer;
     -webkit-transition: all 500ms ease;
@@ -629,20 +629,20 @@
 }
 
 .team-four__plus-and-social:hover .team-four__plus {
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
 }
 
 .team-four__plus span {
     position: relative;
     display: inline-block;
     font-size: 15px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .team-four__plus-and-social:hover .team-four__plus span {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .team-four__social {
@@ -650,7 +650,7 @@
     left: 0;
     right: 0;
     top: -206px;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     padding: 30px 10px 30px;
     border-radius: 20px;
     text-align: center;
@@ -679,11 +679,11 @@
     display: flex;
     align-items: center;
     font-size: 16px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .team-four__social a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .team-four__sub-title {
@@ -707,11 +707,11 @@
 }
 
 .team-four__name a {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .team-four__name a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 
@@ -729,7 +729,7 @@
     position: relative;
     display: block;
     padding-bottom: 40px;
-    border-bottom: 1px solid var(--crank-bdr-color);
+    border-bottom: 1px solid var(--portolite-bdr-color);
     margin-bottom: 37px;
 }
 
@@ -775,7 +775,7 @@
 .team-details__client-address {
     position: relative;
     display: block;
-    border-top: 1px solid var(--crank-bdr-color);
+    border-top: 1px solid var(--portolite-bdr-color);
     margin-top: 19px;
     padding-top: 20px;
 }
@@ -797,7 +797,7 @@
 }
 
 .team-details__client-address li p span {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .team-details__client-address li h5 {
@@ -808,11 +808,11 @@
 }
 
 .team-details__client-address li h5 a {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .team-details__client-address li h5 a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .team-details__bottom {
@@ -867,7 +867,7 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 30px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
     margin-bottom: 11px;
 }
 
@@ -875,7 +875,7 @@
     position: relative;
     width: 100%;
     height: 10px;
-    background-color: var(--crank-bdr-color);
+    background-color: var(--portolite-bdr-color);
     border-radius: 6px;
 }
 
@@ -885,7 +885,7 @@
     width: 0px;
     height: 10px;
     border-radius: 5px;
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
     -webkit-transition: all 1500ms ease;
     -ms-transition: all 1500ms ease;
     -o-transition: all 1500ms ease;
@@ -897,12 +897,12 @@
     position: absolute;
     right: -18px;
     bottom: 22px;
-    color: var(--crank-gray);
+    color: var(--portolite-gray);
     line-height: 26px;
     font-size: 18px;
     text-align: center;
     font-weight: 600;
-    font-family: var(--crank-font-two);
+    font-family: var(--portolite-font-two);
     opacity: 0;
     -webkit-transition: all 500ms ease;
     -ms-transition: all 500ms ease;

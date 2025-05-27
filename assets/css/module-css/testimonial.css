@@ -14,7 +14,7 @@
     width: 100%;
     margin: 0 auto 0;
     padding: 120px 15px 120px;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     border-radius: 60px;
     overflow: hidden;
 }
@@ -24,7 +24,7 @@
 }
 
 .testimonial-one__wrap .section-title__title {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .testimonial-one__carousel {
@@ -42,7 +42,7 @@
 .testimonial-one__single {
     position: relative;
     display: block;
-    border: 1px solid var(--crank-bdr-color);
+    border: 1px solid var(--portolite-bdr-color);
     border-radius: 20px;
     padding: 27px 160px 26px;
     padding-right: 40px;
@@ -92,19 +92,19 @@
 }
 
 .testimonial-one__client-name a {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .testimonial-one__client-name a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .testimonial-one__client-text {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .testimonial-one__text {
-    color: var(--crank-white);
+    color: var(--portolite-white);
     font-size: 22px;
     line-height: 32px;
 }
@@ -126,7 +126,7 @@
     position: relative;
     display: inline-block;
     font-size: 22px;
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .testimonial-one__carousel .owl-nav {
@@ -143,8 +143,8 @@
     width: 60px;
     line-height: 60px;
     border-radius: 50%;
-    color: var(--crank-white);
-    background-color: var(--crank-base);
+    color: var(--portolite-white);
+    background-color: var(--portolite-base);
     border: none;
     font-size: 20px;
     margin: 0;
@@ -160,8 +160,8 @@
     width: 60px;
     line-height: 60px;
     border-radius: 50%;
-    color: var(--crank-white);
-    background-color: var(--crank-base);
+    color: var(--portolite-white);
+    background-color: var(--portolite-base);
     border: none;
     font-size: 20px;
     margin: 0;
@@ -188,8 +188,8 @@
 
 .testimonial-one__carousel.owl-theme .owl-nav .owl-next:hover,
 .testimonial-one__carousel.owl-theme .owl-nav .owl-prev:hover {
-    background-color: rgba(var(--crank-base-rgb), .20);
-    color: var(--crank-white);
+    background-color: rgba(var(--portolite-base-rgb), .20);
+    color: var(--portolite-white);
 }
 
 /*--------------------------------------------------------------
@@ -205,7 +205,7 @@
 .testimonial-two__inner {
     position: relative;
     display: block;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     border-radius: 20px;
     max-width: 1410px;
     margin: 0 auto;
@@ -219,7 +219,7 @@
     right: 0;
     bottom: 0;
     width: 50%;
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
     z-index: -1;
 }
 
@@ -269,7 +269,7 @@
     font-size: 45px;
     font-weight: 600;
     line-height: 55px;
-    color: var(--crank-white);
+    color: var(--portolite-white);
     text-transform: capitalize;
     margin-bottom: 60px;
 }
@@ -282,7 +282,7 @@
 .testimonial-two__single {
     position: relative;
     display: block;
-    border: 1px solid rgba(var(--crank-white-rgb), .50);
+    border: 1px solid rgba(var(--portolite-white-rgb), .50);
     border-radius: 20px;
     padding: 36px 40px 38px;
 }
@@ -297,25 +297,25 @@
     font-size: 36px;
     font-weight: 500;
     line-height: 46px;
-    color: var(--crank-white);
+    color: var(--portolite-white);
     text-transform: capitalize;
     margin-bottom: 3px;
 }
 
 .testimonial-two__name a {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .testimonial-two__name a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .testimonial-two__sub-title {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .testimonial-two__text {
-    color: var(--crank-white);
+    color: var(--portolite-white);
     font-size: 26px;
     font-weight: 500;
     line-height: 35px;
@@ -331,7 +331,7 @@
     position: relative;
     display: inline-block;
     font-size: 44px;
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .testimonial-two__carousel.owl-carousel .owl-dots {
@@ -353,7 +353,7 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     margin: 0px;
     padding: 0px;
     transition: all 100ms linear;
@@ -361,7 +361,7 @@
 }
 
 .testimonial-two__carousel.owl-carousel .owl-dot.active {
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
 }
 
 .testimonial-two__carousel.owl-carousel .owl-dots .owl-dot:before {
@@ -378,7 +378,7 @@
 }
 
 .testimonial-two__carousel.owl-carousel .owl-dot.active:before {
-    border: 1px solid var(--crank-base);
+    border: 1px solid var(--portolite-base);
 }
 
 .testimonial-two__carousel.owl-carousel .owl-dot:focus {
@@ -419,7 +419,7 @@
     display: block;
     max-width: 1680px;
     width: 100%;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     margin: 0 auto;
     padding: 120px 0 120px;
     border-radius: 60px;
@@ -451,7 +451,7 @@
     position: relative;
     display: inline-block;
     font-size: 24px;
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .testimonial-three__ratting {
@@ -469,11 +469,11 @@
 }
 
 .testimonial-three__ratting .last-icon {
-    color: rgba(var(--crank-black-rgb), .10);
+    color: rgba(var(--portolite-black-rgb), .10);
 }
 
 .testimonial-three__text {
-    border: 1px solid var(--crank-bdr-color);
+    border: 1px solid var(--portolite-bdr-color);
     border-radius: 20px;
     font-size: 20px;
     line-height: 29px;
@@ -515,11 +515,11 @@
 }
 
 .testimonial-three__client-content h4 a {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .testimonial-three__client-content h4 a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .testimonial-three__client-content p {
@@ -540,8 +540,8 @@
     width: 60px;
     line-height: 60px;
     border-radius: 50%;
-    color: var(--crank-white);
-    background-color: rgba(var(--crank-base-rgb), .20);
+    color: var(--portolite-white);
+    background-color: rgba(var(--portolite-base-rgb), .20);
     border: none;
     font-size: 20px;
     margin: 0;
@@ -557,8 +557,8 @@
     width: 60px;
     line-height: 60px;
     border-radius: 50%;
-    color: var(--crank-white);
-    background-color: rgba(var(--crank-base-rgb), .20);
+    color: var(--portolite-white);
+    background-color: rgba(var(--portolite-base-rgb), .20);
     border: none;
     font-size: 20px;
     margin: 0;
@@ -585,8 +585,8 @@
 
 .testimonial-three__carousel.owl-theme .owl-nav .owl-next:hover,
 .testimonial-three__carousel.owl-theme .owl-nav .owl-prev:hover {
-    background-color: rgba(var(--crank-base-rgb), 1);
-    color: var(--crank-white);
+    background-color: rgba(var(--portolite-base-rgb), 1);
+    color: var(--portolite-white);
 }
 
 /*--------------------------------------------------------------
@@ -630,7 +630,7 @@
 .testimonial-four__single {
     position: relative;
     display: block;
-    border: 1px solid var(--crank-bdr-color);
+    border: 1px solid var(--portolite-bdr-color);
     background-color: #F4F4F4;
     padding: 40px 40px 40px;
     border-radius: 20px;
@@ -654,7 +654,7 @@
     position: relative;
     display: block;
     font-size: 40px;
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .testimonial-four__rating {
@@ -673,7 +673,7 @@
 }
 
 .testimonial-four__rating span:last-child {
-    color: rgba(var(--crank-black-rgb), .10);
+    color: rgba(var(--portolite-black-rgb), .10);
 }
 
 .testimonial-four__text {
@@ -706,11 +706,11 @@
 }
 
 .testimonial-four__client-name a {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .testimonial-four__client-name a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .testimonial-four__client-sub-title {
@@ -735,14 +735,14 @@
 .testimonial-four__car-repair-box {
     position: relative;
     display: block;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     padding: 30px 30px 30px;
     border-radius: 20px;
 }
 
 .testimonial-four__car-repair-title {
     font-size: 45px;
-    color: var(--crank-white);
+    color: var(--portolite-white);
     font-weight: 600;
     line-height: 55px;
     margin-bottom: 30px;
@@ -773,7 +773,7 @@
     padding-right: 30px;
     outline: none;
     font-size: 16px;
-    color: rgba(var(--crank-white-rgb), .80);
+    color: rgba(var(--portolite-white-rgb), .80);
     display: block;
     font-weight: 400;
     border-radius: 25px;
@@ -784,7 +784,7 @@
     background-color: #232323;
     border: none;
     border-radius: 25px;
-    color: rgba(var(--crank-white-rgb), .80);
+    color: rgba(var(--portolite-white-rgb), .80);
     font-size: 16px;
     font-weight: 400;
     height: 50px;
@@ -799,8 +799,8 @@
     position: absolute;
     top: 45%;
     right: 30px;
-    border-bottom: 1px solid var(--crank-base);
-    border-right: 1px solid var(--crank-base);
+    border-bottom: 1px solid var(--portolite-base);
+    border-right: 1px solid var(--portolite-base);
 }
 
 .testimonial-four__btn-box {
@@ -817,11 +817,11 @@
 }
 
 .testimonial-four__btn-box .thm-btn::after {
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
 }
 
 .testimonial-four__btn-box .thm-btn:hover {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 /*--------------------------------------------------------------
@@ -830,7 +830,7 @@
 .testimonial-page {
     position: relative;
     display: block;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     padding: 150px 0 60px;
     overflow: hidden;
     margin: 120px 0 120px;
@@ -848,12 +848,12 @@
     position: relative;
     display: block;
     padding: 150px 0 170px;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     margin: 120px 0 120px;
 }
 
 .testimonial-carousel-page .carousel-dot-style.owl-carousel .owl-dot.active {
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
 }
 
 

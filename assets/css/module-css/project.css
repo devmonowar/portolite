@@ -31,7 +31,7 @@
 .project-details__information-box {
     position: relative;
     display: block;
-    border: 1px solid var(--crank-bdr-color);
+    border: 1px solid var(--portolite-bdr-color);
     border-radius: 20px;
     padding: 36px 39px 40px;
 }
@@ -56,7 +56,7 @@
 .project-details__information-list li {
     position: relative;
     display: block;
-    border-bottom: 1px solid var(--crank-bdr-color);
+    border-bottom: 1px solid var(--portolite-bdr-color);
     padding-bottom: 7px;
 }
 
@@ -68,17 +68,17 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 34px;
-    font-family: var(--crank-font-two);
-    color: var(--crank-black);
+    font-family: var(--portolite-font-two);
+    color: var(--portolite-black);
 }
 
 .project-details__information-list li p span {
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
-    font-family: var(--crank-font);
+    font-family: var(--portolite-font);
     margin-left: 5px;
-    color: var(--crank-gray);
+    color: var(--portolite-gray);
 }
 
 .project-details__information-social-box {
@@ -93,8 +93,8 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 34px;
-    font-family: var(--crank-font-two);
-    color: var(--crank-black);
+    font-family: var(--portolite-font-two);
+    color: var(--portolite-black);
 }
 
 .project-details__information-social {
@@ -114,12 +114,12 @@
     background-color: #F4F4F4;
     border-radius: 50%;
     font-size: 18px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .project-details__information-social a:hover {
-    background-color: var(--crank-base);
-    color: var(--crank-white);
+    background-color: var(--portolite-base);
+    color: var(--portolite-white);
 }
 
 .project-details__content {
@@ -177,7 +177,7 @@
     position: relative;
     display: inline-block;
     font-size: 14px;
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .project-details__points-img {
@@ -202,7 +202,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     border-radius: 20px;
     padding: 20px 30px 20px;
     margin-top: 35px;
@@ -215,7 +215,7 @@
     bottom: 20px;
     width: 1px;
     height: 50px;
-    background-color: var(--crank-bdr-color);
+    background-color: var(--portolite-bdr-color);
     transform: translateX(-50%);
 }
 
@@ -232,8 +232,8 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 34px;
-    font-family: var(--crank-font-two);
-    color: var(--crank-white);
+    font-family: var(--portolite-font-two);
+    color: var(--portolite-white);
 }
 
 .project-details__prev a span {
@@ -244,17 +244,17 @@
     width: 50px;
     height: 50px;
     background-color: transparent;
-    border: 1px solid var(--crank-base);
+    border: 1px solid var(--portolite-base);
     border-radius: 50%;
     font-size: 16px;
-    color: var(--crank-white);
+    color: var(--portolite-white);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .project-details__prev a:hover span {
-    background-color: var(--crank-base);
-    color: var(--crank-white);
+    background-color: var(--portolite-base);
+    color: var(--portolite-white);
 }
 
 .project-details__next {
@@ -270,8 +270,8 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 34px;
-    font-family: var(--crank-font-two);
-    color: var(--crank-white);
+    font-family: var(--portolite-font-two);
+    color: var(--portolite-white);
 }
 
 .project-details__next a span {
@@ -282,17 +282,17 @@
     width: 50px;
     height: 50px;
     background-color: transparent;
-    border: 1px solid var(--crank-base);
+    border: 1px solid var(--portolite-base);
     border-radius: 50%;
     font-size: 16px;
-    color: var(--crank-white);
+    color: var(--portolite-white);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .project-details__next a:hover span {
-    background-color: var(--crank-base);
-    color: var(--crank-white);
+    background-color: var(--portolite-base);
+    color: var(--portolite-white);
 }
 
 

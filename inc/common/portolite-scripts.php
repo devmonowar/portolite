@@ -18,7 +18,7 @@ function portolite_scripts()
         wp_enqueue_style('bootstrap', PORTOLITE_THEME_CSS_DIR . 'bootstrap.min.css', array());
     }
     wp_enqueue_style('animate-min', PORTOLITE_THEME_CSS_DIR . 'animate.min.css', []);
-    wp_enqueue_style('crank-custom-animate', PORTOLITE_THEME_CSS_DIR . 'custom-animate.css', []);
+    wp_enqueue_style('portolite-custom-animate', PORTOLITE_THEME_CSS_DIR . 'custom-animate.css', []);
     wp_enqueue_style('swiper-bundle', PORTOLITE_THEME_CSS_DIR . 'swiper.min.css', []);
     wp_enqueue_style('font-awesome', PORTOLITE_THEME_CSS_DIR . 'font-awesome-all.css', []);
     wp_enqueue_style('jarallax', PORTOLITE_THEME_CSS_DIR . 'jarallax.css', []);
@@ -46,10 +46,10 @@ function portolite_scripts()
     wp_enqueue_style('module-blog', PORTOLITE_THEME_CSS_DIR . 'module-css/blog.css', []);
     wp_enqueue_style('module-page-header', PORTOLITE_THEME_CSS_DIR . 'module-css/page-header.css', []);
 
-    wp_enqueue_style('crank-core', PORTOLITE_THEME_CSS_DIR . 'crank-core.css', [], time());
-    wp_enqueue_style('crank-unit', PORTOLITE_THEME_CSS_DIR . 'crank-unit.css', [], time());
-    wp_enqueue_style('crank-custom', PORTOLITE_THEME_CSS_DIR . 'crank-custom.css', []);
-    wp_enqueue_style('crank-style', get_stylesheet_uri());
+    wp_enqueue_style('portolite-core', PORTOLITE_THEME_CSS_DIR . 'portolite-core.css', [], time());
+    wp_enqueue_style('portolite-unit', PORTOLITE_THEME_CSS_DIR . 'portolite-unit.css', [], time());
+    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
+    wp_enqueue_style('portolite-style', get_stylesheet_uri());
 
 
     // all js
@@ -74,7 +74,7 @@ function portolite_scripts()
     wp_enqueue_script('ScrollTrigger', PORTOLITE_THEME_JS_DIR . 'ScrollTrigger.js', ['jquery'], false, true);
     wp_enqueue_script('SplitText', PORTOLITE_THEME_JS_DIR . 'SplitText.js', ['jquery'], false, true);
     wp_enqueue_script('aos', PORTOLITE_THEME_JS_DIR . 'aos.js', ['jquery'], false, true);
-    wp_enqueue_script('crank-main', PORTOLITE_THEME_JS_DIR . 'main.js', ['jquery'], time(), true);
+    wp_enqueue_script('portolite-main', PORTOLITE_THEME_JS_DIR . 'main.js', ['jquery'], time(), true);
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');

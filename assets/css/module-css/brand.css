@@ -10,7 +10,7 @@
 .brand-one__inner {
     position: relative;
     display: block;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     padding: 53px 0;
     border-radius: 20px;
 }
@@ -57,7 +57,7 @@
 .brand-two__inner {
     position: relative;
     display: block;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     padding: 53px 0;
     border-radius: 20px;
 }

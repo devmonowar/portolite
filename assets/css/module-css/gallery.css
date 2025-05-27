@@ -53,7 +53,7 @@
     bottom: -2px;
     left: 0;
     right: 0;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     border-radius: 20px;
     opacity: 0;
     visibility: hidden;
@@ -114,8 +114,8 @@
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    color: var(--crank-white);
-    background-color: var(--crank-base);
+    color: var(--portolite-white);
+    background-color: var(--portolite-base);
     -webkit-transform: scale(0);
     transform: scale(0);
     opacity: 0;
@@ -132,8 +132,8 @@
 }
 
 .gallery-one__icon a:hover {
-    color: var(--crank-black);
-    background-color: var(--crank-white);
+    color: var(--portolite-black);
+    background-color: var(--portolite-white);
 }
 
 
@@ -143,13 +143,13 @@
 .gallery-two {
     position: relative;
     display: block;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     padding: 120px 0 120px;
     z-index: 1;
 }
 
 .gallery-two .section-title__title {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .gallery-two__tab-box {
@@ -169,7 +169,7 @@
     position: relative;
     display: block;
     cursor: pointer;
-    background-color: var(--crank-gray);
+    background-color: var(--portolite-gray);
     padding: 8px 15px 7px;
     border-radius: 20px;
     overflow: hidden;
@@ -183,7 +183,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
     background-position: center top;
     transition-delay: .1s;
     transition-timing-function: ease-in-out;
@@ -212,18 +212,18 @@
     display: inline-block;
     font-size: 18px;
     font-weight: 600;
-    color: var(--crank-white);
-    font-family: var(--crank-font-two);
+    color: var(--portolite-white);
+    font-family: var(--portolite-font-two);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .gallery-two__tab-box .gallery-two-tab-buttons .p-tab-btn:hover span {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .gallery-two__tab-box .gallery-two-tab-buttons .p-tab-btn.active-btn span {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .gallery-two__tab-box .p-tabs-content {
@@ -317,7 +317,7 @@
 }
 
 .gallery-two__carousel.owl-carousel .owl-dot.active {
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
     width: 145px;
 }
 
@@ -375,7 +375,7 @@
     bottom: -2px;
     left: 0;
     right: 0;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     border-radius: 20px;
     opacity: 0;
     visibility: hidden;
@@ -428,8 +428,8 @@
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    color: var(--crank-white);
-    background-color: var(--crank-base);
+    color: var(--portolite-white);
+    background-color: var(--portolite-base);
     -webkit-transform: scale(0);
     transform: scale(0);
     opacity: 0;
@@ -446,8 +446,8 @@
 }
 
 .gallery-three__icon a:hover {
-    color: var(--crank-black);
-    background-color: var(--crank-white);
+    color: var(--portolite-black);
+    background-color: var(--portolite-white);
 }
 
 .gallery-three__list--two {
@@ -534,7 +534,7 @@
     position: absolute;
     left: 40px;
     bottom: 40px;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -568,15 +568,15 @@
 }
 
 .gallery-four__title-box h3 a {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .gallery-four__title-box h3 a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .gallery-four__title-box p {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .gallery-four__arrow {
@@ -592,15 +592,15 @@
     width: 60px;
     height: 60px;
     font-size: 20px;
-    color: var(--crank-white);
+    color: var(--portolite-white);
     transform: rotate(-45deg);
-    border: 1px solid var(--crank-white);
+    border: 1px solid var(--portolite-white);
     border-radius: 50%;
 }
 
 .gallery-four__arrow a:hover {
-    background-color: var(--crank-white);
-    color: var(--crank-base);
+    background-color: var(--portolite-white);
+    color: var(--portolite-base);
 }
 
 

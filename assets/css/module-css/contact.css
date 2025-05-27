@@ -16,7 +16,7 @@
 .contact-one__left-content {
     position: relative;
     display: block;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     padding: 78px 40px 40px;
     border-radius: 20px;
     overflow: hidden;
@@ -56,7 +56,7 @@
 
 .contact-one__title-box p {
     font-size: 14px;
-    color: var(--crank-white);
+    color: var(--portolite-white);
     font-weight: 600;
     text-transform: uppercase;
     line-height: 14px;
@@ -65,7 +65,7 @@
 
 .contact-one__title-box h3 {
     font-size: 45px;
-    color: var(--crank-white);
+    color: var(--portolite-white);
     font-weight: 600;
     line-height: 55px;
     margin-top: 16px;
@@ -88,12 +88,12 @@
     height: 60px;
     width: 100%;
     background-color: transparent;
-    border: 1px solid var(--crank-white);
+    border: 1px solid var(--portolite-white);
     padding-left: 30px;
     padding-right: 30px;
     outline: none;
     font-size: 16px;
-    color: rgba(var(--crank-white-rgb), .80);
+    color: rgba(var(--portolite-white-rgb), .80);
     display: block;
     font-weight: 400;
     border-radius: 20px;
@@ -102,9 +102,9 @@
 
 .contact-one__input-box .select-box .nice-select {
     background-color: transparent;
-    border: 1px solid var(--crank-white);
+    border: 1px solid var(--portolite-white);
     border-radius: 20px;
-    color: rgba(var(--crank-white-rgb), .80);
+    color: rgba(var(--portolite-white-rgb), .80);
     font-size: 16px;
     font-weight: 400;
     height: 60px;
@@ -119,8 +119,8 @@
     position: absolute;
     top: 47%;
     right: 30px;
-    border-bottom: 1px solid var(--crank-white);
-    border-right: 1px solid var(--crank-white);
+    border-bottom: 1px solid var(--portolite-white);
+    border-right: 1px solid var(--portolite-white);
 }
 
 .contact-one__btn-box {
@@ -136,11 +136,11 @@
 }
 
 .contact-one__btn-box .thm-btn::after {
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
 }
 
 .contact-one__btn-box .thm-btn:hover {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .contact-one__right {
@@ -177,7 +177,7 @@
     left: 0;
     width: 315px;
     height: 275px;
-    background-color: rgba(var(--crank-black-rgb), .20);
+    background-color: rgba(var(--portolite-black-rgb), .20);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,7 +190,7 @@
     left: 50%;
     width: 275px;
     height: 240px;
-    background-color: rgba(var(--crank-white-rgb), 1);
+    background-color: rgba(var(--portolite-white-rgb), 1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -213,10 +213,10 @@
     justify-content: center;
     height: 66px;
     width: 66px;
-    background-color: rgba(var(--crank-black-rgb), .10);
+    background-color: rgba(var(--portolite-black-rgb), .10);
     border-radius: 50%;
     font-size: 36px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .contact-one__experience-count-box {
@@ -229,21 +229,21 @@
     font-size: 54px;
     font-weight: 600;
     line-height: 54px !important;
-    font-family: var(--crank-font-two) !important;
+    font-family: var(--portolite-font-two) !important;
 }
 
 .contact-one__experience-count-box>span {
     font-size: 54px;
     font-weight: 600;
     line-height: 54px;
-    font-family: var(--crank-font-two);
+    font-family: var(--portolite-font-two);
     position: relative;
     top: -5px;
 }
 
 .contact-one__experience-text {
     font-size: 20px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
     margin-top: 15px;
 }
 
@@ -253,7 +253,7 @@
 
 #ui-datepicker-div.ui-widget-content {
     background: #fff none repeat scroll 0 0;
-    border: 1px solid var(--crank-black);
+    border: 1px solid var(--portolite-black);
     color: #252525;
     font-size: 14px;
     border-radius: 0px;
@@ -262,17 +262,17 @@
 }
 
 #ui-datepicker-div.ui-datepicker .ui-datepicker-header {
-    background: var(--crank-base) none repeat scroll 0 0;
-    border: 2px solid var(--crank-base);
+    background: var(--portolite-base) none repeat scroll 0 0;
+    border: 2px solid var(--portolite-base);
     border-radius: 0;
-    color: var(--crank-white);
+    color: var(--portolite-white);
     font-weight: 700;
     padding: 5px 0;
     position: relative;
 }
 
 .ui-datepicker td a {
-    color: var(--crank-black) !important;
+    color: var(--portolite-black) !important;
     text-align: center;
     background-image: none !important;
     background: #f5f5f5 !important;
@@ -282,9 +282,9 @@
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
-    border: 1px solid var(--crank-black) !important;
-    background: var(--crank-black) !important;
-    color: var(--crank-white) !important;
+    border: 1px solid var(--portolite-black) !important;
+    background: var(--portolite-black) !important;
+    color: var(--portolite-white) !important;
 }
 
 .ui-datepicker .ui-datepicker-prev {
@@ -309,7 +309,7 @@
 .ui-datepicker .ui-datepicker-prev:hover,
 .ui-datepicker .ui-datepicker-next:hover {
     top: 7px;
-    background: var(--crank-white);
+    background: var(--portolite-white);
     border: none;
 }
 
@@ -329,13 +329,13 @@
 
 .ui-datepicker-calendar .ui-state-default:hover,
 .ui-datepicker-calendar .ui-state-default:active {
-    background: var(--crank-black);
-    color: var(--crank-white);
-    border-color: var(--crank-black);
+    background: var(--portolite-black);
+    color: var(--portolite-white);
+    border-color: var(--portolite-black);
 }
 
 #ui-datepicker-div.ui-widget {
-    font-family: var(--crank-font);
+    font-family: var(--portolite-font);
 }
 
 
@@ -362,13 +362,13 @@
     display: block;
     max-width: 1680px;
     margin: 0 auto;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     border-radius: 60px;
     padding: 120px 0 120px;
 }
 
 .contact-two__inner .section-title-two__title {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .contact-two__single {
@@ -387,13 +387,13 @@
     gap: 20px;
     font-size: 18px;
     font-weight: 600;
-    color: var(--crank-white);
+    color: var(--portolite-white);
     text-transform: capitalize;
     margin-bottom: 23px;
 }
 
 .contact-two__title span {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .contact-two__list {
@@ -411,11 +411,11 @@
 }
 
 .contact-two__list li p {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .contact-two__list li p a {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .google-map__one {
@@ -440,15 +440,15 @@
 }
 
 .contact-two__btn-box .thm-btn span {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .contact-two__btn-box .thm-btn::after {
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
 }
 
 .contact-two__btn-box .thm-btn:hover {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 
@@ -495,13 +495,13 @@
     height: 60px;
     width: 100%;
     line-height: 60px;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     border: none;
     padding-left: 30px;
     padding-right: 30px;
     outline: none;
     font-size: 16px;
-    color: var(--crank-gray);
+    color: var(--portolite-gray);
     display: block;
     font-weight: 400;
     border-radius: 20px;
@@ -514,13 +514,13 @@
 .contact-three__input-box .nice-select {
     height: 60px;
     width: 100%;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     border: none;
     padding-left: 30px;
     padding-right: 30px;
     outline: none;
     font-size: 16px;
-    color: var(--crank-gray);
+    color: var(--portolite-gray);
     display: block;
     font-weight: 400;
     border-radius: 20px;
@@ -534,28 +534,28 @@
     right: 33px;
     width: 8px;
     height: 8px;
-    border-bottom: 2px solid var(--crank-base);
-    border-right: 2px solid var(--crank-base);
+    border-bottom: 2px solid var(--portolite-base);
+    border-right: 2px solid var(--portolite-base);
     margin-top: 0px;
     z-index: 10;
 }
 
 .contact-three__input-box .nice-select .option {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .contact-three__input-box textarea {
     position: relative;
     height: 135px;
     width: 100%;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     border: none;
     padding-top: 10px;
     padding-left: 30px;
     padding-right: 30px;
     outline: none;
     font-size: 16px;
-    color: var(--crank-gray);
+    color: var(--portolite-gray);
     display: block;
     font-weight: 400;
     border-radius: 20px;
@@ -626,7 +626,7 @@
     position: relative;
     display: inline-block;
     font-size: 16px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .contact-four__contact-list li h5 {
@@ -637,11 +637,11 @@
 }
 
 .contact-four__contact-list li h5 a {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .contact-four__contact-list li h5 a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .contact-four__right {

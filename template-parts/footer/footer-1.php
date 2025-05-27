@@ -34,30 +34,10 @@ $bg_color = !empty($portolite_footer_bg_color_from_page) ? $portolite_footer_bg_
     <div class="site-footer__wrap">
         <div class="site-footer__shape-1"></div>
         <div class="site-footer__shape-2"></div>
-        <div class="site-footer__newsletter">
-            <div class="container">
-                <div class="site-footer__newsletter-inner">
-                    <div class="site-footer__newsletter-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/resources/site-footer-newsletter-img-1.png" alt="">
-                    </div>
-                    <div class="site-footer__newsletter-inner-content">
-                        <div class="site-footer__newsletter-shape-1"
-                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/shapes/site-footer-newsletter-shape-1.png);">
-                        </div>
-                        <h2 class="site-footer__newsletter-title">Partering With You To Transform <br> Your
-                            Vision
-                            Into Reality</h2>
-                        <form class="site-footer__newsletter-form">
-                            <div class="site-footer__newsletter-input">
-                                <input type="email" placeholder="Your email...">
-                            </div>
-                            <button type="submit" class="thm-btn">Subscribe <span class="icon-send"></span>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <?php do_action('portolite_newsletter_style'); ?>
+
+
         <div class="site-footer__top">
             <div class="container">
                 <div class="site-footer__top-inner">

@@ -11,7 +11,7 @@
 .services-one__inner {
     position: relative;
     display: block;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     max-width: 1710px;
     width: 100%;
     margin: 0 auto 0;
@@ -22,7 +22,7 @@
 .services-one__single {
     position: relative;
     display: block;
-    border: 2px solid var(--crank-black);
+    border: 2px solid var(--portolite-black);
     border-radius: 20px;
     text-align: center;
     padding: 30px 30px 25px;
@@ -45,7 +45,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     border-radius: 17px;
     transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
@@ -110,7 +110,7 @@
     height: 100px;
     width: 100px;
     margin: 0 auto 0;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     border-radius: 50%;
     border: 1px solid transparent;
     overflow: hidden;
@@ -120,7 +120,7 @@
 }
 
 .services-one__single:hover .services-one__icon {
-    border: 1px solid var(--crank-white);
+    border: 1px solid var(--portolite-white);
     background-color: transparent;
 }
 
@@ -128,14 +128,14 @@
     position: relative;
     display: inline-block;
     font-size: 50px;
-    color: var(--crank-white);
+    color: var(--portolite-white);
     -webkit-transition: all 0.90s ease;
     -o-transition: all 0.90s ease;
     transition: all 0.90s ease;
 }
 
 .services-one__single:hover .services-one__icon span {
-    color: var(--crank-white);
+    color: var(--portolite-white);
     transform: scale(1.02) translateX(2px);
 }
 
@@ -186,11 +186,11 @@
 }
 
 .services-one__title a {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .services-one__single:hover .services-one__title a {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .services-one__text {
@@ -199,7 +199,7 @@
 }
 
 .services-one__single:hover .services-one__text {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 /*--------------------------------------------------------------
@@ -215,8 +215,8 @@
 .services-two__single {
     position: relative;
     display: block;
-    background-color: var(--crank-white);
-    border: 1px solid var(--crank-bdr-color);
+    background-color: var(--portolite-white);
+    border: 1px solid var(--portolite-bdr-color);
     border-radius: 20px;
     padding: 52px 40px 39px;
     margin-bottom: 30px;
@@ -231,11 +231,11 @@
 }
 
 .services-two__title a {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .services-two__title a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .services-two__icon {
@@ -248,7 +248,7 @@
     position: relative;
     display: inline-block;
     font-size: 60px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
     transition: all 500ms linear;
     transition-delay: 0.1s;
     transform: scale(1);
@@ -281,7 +281,7 @@
 .services-three__single {
     position: relative;
     display: block;
-    border: 1px solid var(--crank-bdr-color);
+    border: 1px solid var(--portolite-bdr-color);
     padding: 35px 30px 28px;
     border-radius: 20px;
     margin-bottom: 30px;
@@ -291,7 +291,7 @@
 }
 
 .services-three__single:hover {
-    border: 1px solid var(--crank-base);
+    border: 1px solid var(--portolite-base);
     transform: translateY(-10px);
 }
 
@@ -305,7 +305,7 @@
     position: relative;
     display: inline-block;
     font-size: 65px;
-    color: var(--crank-gray);
+    color: var(--portolite-gray);
     -webkit-transition: all 500ms linear;
     transition: all 500ms linear;
     -webkit-transition-delay: 0.1s;
@@ -314,7 +314,7 @@
 
 .services-three__single:hover .services-three__icon span {
     transform: scale(.9);
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .services-three__title {
@@ -326,11 +326,11 @@
 }
 
 .services-three__title a {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .services-three__title a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .services-three__read-more {
@@ -343,7 +343,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -351,11 +351,11 @@
 
 .services-three__read-more a span {
     font-size: 18px;
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .services-three__read-more a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 /*--------------------------------------------------------------
@@ -376,7 +376,7 @@
 .services-four__single {
     position: relative;
     display: block;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     padding: 30px 30px 63px;
     border-radius: 20px;
     margin-bottom: 30px;
@@ -392,7 +392,7 @@
     width: 100px;
     border-radius: 50%;
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     z-index: 1;
 }
 
@@ -404,7 +404,7 @@
     right: 0;
     bottom: 0;
     border-radius: 50%;
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
     transform: scaleX(0.7) rotateX(20deg);
     opacity: 0;
     transition: all 0.4s linear;
@@ -421,7 +421,7 @@
     position: relative;
     display: inline-block;
     font-size: 50px;
-    color: var(--crank-base);
+    color: var(--portolite-base);
     transition: all 500ms linear;
     transition-delay: 0.1s;
     transform: scale(1);
@@ -429,7 +429,7 @@
 
 .services-four__single:hover .services-four__icon span {
     transform: scale(0.9);
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .services-four__title {
@@ -441,11 +441,11 @@
 }
 
 .services-four__title a {
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .services-four__title a:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .services-four__bottom {
@@ -532,7 +532,7 @@
     justify-content: center;
     width: 65px;
     height: 65px;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     border-radius: 50%;
 }
 
@@ -540,7 +540,7 @@
     position: relative;
     display: inline-block;
     font-size: 40px;
-    color: var(--crank-black);
+    color: var(--portolite-black);
 }
 
 .service-details__single-title {
@@ -564,7 +564,7 @@
 .service-details__service-list-box {
     position: relative;
     display: block;
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     padding: 38px 40px 40px;
@@ -598,7 +598,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: #F4F4F4;
-    color: var(--crank-gray);
+    color: var(--portolite-gray);
     padding: 11px 29px 12px;
     border: 1px solid #F4F4F4;
     border-radius: 25px;
@@ -606,14 +606,14 @@
 
 .service-details__service-list li:hover a,
 .service-details__service-list li.active a {
-    border: 1px solid var(--crank-base);
-    background-color: var(--crank-white);
+    border: 1px solid var(--portolite-base);
+    background-color: var(--portolite-white);
 }
 
 .service-details__contact-box {
     position: relative;
     display: block;
-    background-color: var(--crank-black);
+    background-color: var(--portolite-black);
     border-radius: 20px;
     text-align: center;
     padding: 60px 30px 58px;
@@ -652,7 +652,7 @@
     font-size: 36px;
     font-weight: 500;
     line-height: 40px;
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .service-details__contact-icon {
@@ -662,7 +662,7 @@
     justify-content: center;
     width: 70px;
     height: 70px;
-    background-color: var(--crank-base);
+    background-color: var(--portolite-base);
     border-radius: 50%;
     margin: 22px auto 20px;
     webkit-transition: all 500ms ease;
@@ -670,39 +670,39 @@
 }
 
 .service-details__contact-icon:hover {
-    background-color: var(--crank-white);
+    background-color: var(--portolite-white);
 }
 
 .service-details__contact-icon span {
     position: relative;
     display: inline-block;
     font-size: 24px;
-    color: var(--crank-white);
+    color: var(--portolite-white);
     webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .service-details__contact-icon:hover span {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .service-details__contact-sub-title {
-    color: var(--crank-white);
+    color: var(--portolite-white);
 }
 
 .service-details__contact-number {
     font-size: 24px;
     font-weight: 600;
     line-height: 34px;
-    font-family: var(--crank-font-two);
-    color: var(--crank-white);
+    font-family: var(--portolite-font-two);
+    color: var(--portolite-white);
     margin-top: 18px;
     position: relative;
     display: block;
 }
 
 .service-details__contact-number:hover {
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .service-details__bottom {
@@ -773,7 +773,7 @@
     position: relative;
     display: inline-block;
     font-size: 14px;
-    color: var(--crank-base);
+    color: var(--portolite-base);
 }
 
 .service-details__bottom-img-two {
