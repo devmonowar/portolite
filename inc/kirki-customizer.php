@@ -707,6 +707,15 @@ function _header_page_title_fields($fields)
         'description' => esc_html__('Breadcrumb Background Image', 'portolite'),
         'section'     => 'breadcrumb_setting',
     ];
+
+    $fields[] = [
+        'type'        => 'image',
+        'settings'    => 'breadcrumb_right_img',
+        'label'       => esc_html__('Right Image', 'portolite'),
+        'description' => esc_html__('Right Image', 'portolite'),
+        'section'     => 'breadcrumb_setting',
+    ];
+
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_breadcrumb_bg_color',

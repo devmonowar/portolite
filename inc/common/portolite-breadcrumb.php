@@ -32,6 +32,7 @@ function portolite_breadcrumb_func()
 
     // Settings
     $bg_img = get_theme_mod('breadcrumb_bg_img');
+    $right_img = get_theme_mod('breadcrumb_right_img');
     $color = get_theme_mod('portolite_breadcrumb_bg_color', '#e1e1e1');
     $padding_top = get_theme_mod('portolite_breadcrumb_pt', '115');
     $padding_bottom = get_theme_mod('portolite_breadcrumb_pb', '130');
@@ -46,27 +47,42 @@ function portolite_breadcrumb_func()
     $breadcrumb_class = is_front_page() ? 'home_front_page' : '';
 ?>
 
-    <section class="breadcrumb__area <?php echo esc_attr($style); ?> <?php echo esc_attr($breadcrumb_class); ?> include-bg"
-        style="
-        padding-top: <?php echo esc_attr($padding_top); ?>px;
-        padding-bottom: <?php echo esc_attr($padding_bottom); ?>px;
-        background-color: <?php echo esc_attr($color); ?>;
-        background-image: url('<?php echo esc_url($bg_img); ?>');
-    ">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xxl-8 col-xl-8 col-lg-10">
-                    <div class="breadcrumb__content text-center p-relative z-index-1">
-                        <h3 class="breadcrumb__title"><?php echo wp_kses_post($title); ?></h3>
-                        <div class="breadcrumb__list">
-                            <?php if (function_exists('bcn_display')) bcn_display(); ?>
+
+    <!--Page Header Start-->
+    <section class="page-header breadcrumb__area <?php echo esc_attr($style); ?> <?php echo esc_attr($breadcrumb_class); ?>">
+        <div class="page-header__wrap">
+            <div class="page-header__shape-1" style="background-color: <?php echo esc_attr($color); ?>; background-image: url('<?php echo esc_url($bg_img); ?>');"></div>
+            <div class="container">
+                <div class="page-header__inner"
+                    style="
+                    padding-top: <?php echo esc_attr($padding_top); ?>px;
+                    padding-bottom: <?php echo esc_attr($padding_bottom); ?>px;
+                    ">
+                    <div class="page-header__shape-2"></div>
+                    <div class="page-header__shape-3"></div>
+                    <div class="page-header__shape-4"></div>
+
+                    <?php if (!empty($right_img)) : ?>
+                        <div class="page-header__img-1">
+                            <img src="<?php echo esc_url($right_img); ?>" alt="">
+                            <div class="page-header__shape-5">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shapes/page-header-shape-5.png" alt="">
+                            </div>
                         </div>
+
+                    <?php endif; ?>
+
+                    <h2><?php echo wp_kses_post($title); ?></h2>
+                    <div class="thm-breadcrumb__box">
+                        <ul class="thm-breadcrumb list-unstyled">
+                            <?php if (function_exists('bcn_display')) bcn_display(); ?>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    <!--Page Header End-->
 
 <?php
 }

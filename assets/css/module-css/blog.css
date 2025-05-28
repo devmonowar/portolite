@@ -655,14 +655,16 @@
     background-color: var(--portolite-base);
     padding: 8px 20px 7px !important;
     border-radius: 20px;
+    z-index: 1;
 }
-
 .blog-details__meta li {
     position: relative;
-    display: block;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
-.blog-details__meta li p {
+.blog-details__meta li span {
     position: relative;
     display: flex;
     align-items: center;
@@ -670,7 +672,8 @@
     color: var(--portolite-white);
 }
 
-.blog-details__meta li p span {
+.blog-details__meta li span,
+.blog-details__meta li a {
     font-size: 16px;
     color: var(--portolite-white);
 }
@@ -684,7 +687,13 @@
     overflow: hidden;
     z-index: 1;
 }
+.blog-details__content p {
+    margin-bottom: 30px;
+}
 
+.blog-details__content p:last-child {
+    margin-bottom: 50px;
+}
 .blog-details__client-box-bg-shape {
     position: absolute;
     top: 0;
@@ -1587,7 +1596,9 @@
 .blog-list__title a:hover {
     color: var(--portolite-base);
 }
-
+.blog-list_excerpt {
+    margin-bottom: 40px;
+}
 .blog-list__btn-box {
     position: relative;
     display: block;

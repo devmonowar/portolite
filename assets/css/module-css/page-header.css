@@ -60,7 +60,8 @@
     display: inline-block;
 }
 
-.thm-breadcrumb li {
+.thm-breadcrumb span,
+.thm-breadcrumb span.current-item {
     position: relative;
     display: inline-block;
     font-size: 24px;
@@ -72,14 +73,14 @@
     transition: all 500ms ease;
 }
 
-.thm-breadcrumb li span {
+.thm-breadcrumb > span > span {
     position: relative;
     font-size: 12px;
     margin-left: 14px;
     margin-right: 13px;
 }
 
-.thm-breadcrumb li a {
+.thm-breadcrumb span a {
     position: relative;
     display: inline-block;
     color: var(--portolite-white);
@@ -87,7 +88,7 @@
     transition: all 500ms ease;
 }
 
-.thm-breadcrumb li:hover a {
+.thm-breadcrumb span:hover a {
     color: var(--portolite-base);
 }
 

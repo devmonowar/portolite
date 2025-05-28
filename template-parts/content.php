@@ -26,14 +26,9 @@ if (is_single()) : ?>
                 <div class="blog-details__img">
                     <?php the_post_thumbnail('full'); ?>
                 </div>
-                <ul class="blog-list__meta list-unstyled">
-                    <li>
-                        <p><span class="icon-calendar"></span><?php echo get_the_date(); ?></p>
-                    </li>
-                    <li>
-                        <p><span class="icon-user-2"></span>By <?php the_author(); ?></p>
-                    </li>
-                </ul>
+
+                <?php get_template_part('template-parts/blog/blog-meta'); ?>
+
             </div>
         <?php endif; ?>
 
@@ -50,13 +45,7 @@ if (is_single()) : ?>
         </div>
 
         <style>
-            .blog-details__content p {
-                margin-bottom: 30px;
-            }
 
-            .blog-details__content p:last-child {
-                margin-bottom: 50px;
-            }
         </style>
 
     </article>
@@ -75,14 +64,9 @@ if (is_single()) : ?>
                         <?php the_post_thumbnail('full'); ?>
                     </a>
                 </div>
-                <ul class="blog-list__meta list-unstyled">
-                    <li>
-                        <p><span class="icon-calendar"></span><?php echo get_the_date(); ?></p>
-                    </li>
-                    <li>
-                        <p><span class="icon-user-2"></span>By <?php the_author(); ?></p>
-                    </li>
-                </ul>
+
+                <?php get_template_part('template-parts/blog/blog-meta'); ?>
+
             </div>
         <?php endif; ?>
 
@@ -92,12 +76,13 @@ if (is_single()) : ?>
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h3>
 
-            <div class="blog-list__btn-box">
+            <div class="blog-list_excerpt">
                 <?php the_excerpt(); ?>
-
-                <!-- blog btn -->
-                <?php get_template_part('template-parts/blog/blog-btn'); ?>
             </div>
+
+            <!-- blog btn -->
+            <?php get_template_part('template-parts/blog/blog-btn'); ?>
+
         </div>
     </article>
     <!--Blog List  End-->
