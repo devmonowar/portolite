@@ -22,10 +22,6 @@ function portolite_body_classes($classes)
     if (!is_active_sidebar('sidebar-1')) {
         $classes[] = 'no-sidebar';
     }
-    if (function_exists('tutor')) {
-        $user_name = sanitize_text_field(get_query_var('tutor_student_username'));
-        $get_user = tutor_utils()->get_user_by_login($user_name);
-    }
 
     if (!empty($get_user)) {
         $classes[] = 'profile-breadcrumb';

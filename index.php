@@ -34,7 +34,6 @@ $blog_column = is_active_sidebar('blog-sidebar') ? 8 : 12;
 					?>
 							<header>
 								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-								<h2>ei ta show korteche naki index file</h2>
 							</header>
 
 						<?php

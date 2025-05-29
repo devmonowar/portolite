@@ -1,0 +1,47 @@
+[
+    {
+        "key": "group_blog_section",
+        "title": "Blog Section",
+        "fields": [
+            {
+                "key": "field_blog_tagline",
+                "label": "Blog Tagline",
+                "name": "blog_tagline",
+                "type": "text"
+            },
+            {
+                "key": "field_blog_title",
+                "label": "Blog Title",
+                "name": "blog_title",
+                "type": "text"
+            },
+            {
+                "key": "field_blog_btn_text",
+                "label": "Button Text",
+                "name": "blog_btn_text",
+                "type": "text"
+            },
+            {
+                "key": "field_blog_btn_url",
+                "label": "Button URL",
+                "name": "blog_btn_url",
+                "type": "url"
+            },
+            {
+                "key": "field_blog_count",
+                "label": "Number of Posts",
+                "name": "blog_post_count",
+                "type": "number"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ]
+    }
+]

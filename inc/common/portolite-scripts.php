@@ -20,7 +20,7 @@ function portolite_scripts()
     wp_enqueue_style('animate-min', PORTOLITE_THEME_CSS_DIR . 'animate.min.css', []);
     wp_enqueue_style('portolite-custom-animate', PORTOLITE_THEME_CSS_DIR . 'custom-animate.css', []);
     wp_enqueue_style('swiper-bundle', PORTOLITE_THEME_CSS_DIR . 'swiper.min.css', []);
-    wp_enqueue_style('font-awesome', PORTOLITE_THEME_CSS_DIR . 'font-awesome-all.css', []);
+    wp_enqueue_style('font-awesome5', PORTOLITE_THEME_CSS_DIR . 'font-awesome-all.css', []);
     wp_enqueue_style('jarallax', PORTOLITE_THEME_CSS_DIR . 'jarallax.css', []);
     wp_enqueue_style('magnific-popup', PORTOLITE_THEME_CSS_DIR . 'jquery.magnific-popup.css', []);
     wp_enqueue_style('flaticon', PORTOLITE_THEME_CSS_DIR . 'flaticon.css', []);
