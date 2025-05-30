@@ -1,6 +1,6 @@
 {
     "key": "group_68381afecce84",
-    "title": "Home Page",
+    "title": "Hero slider, Counters and service",
     "fields": [
         {
             "key": "field_68381affc7821",
@@ -476,7 +476,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "template-home.php"
+                "value": "default"
             }
         ]
     ],
@@ -486,8 +486,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748515903
+    "modified": 1748596367
 }
