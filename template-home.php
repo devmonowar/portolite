@@ -28,7 +28,7 @@ get_header();
         <?php elseif (get_row_layout() == 'about'): ?>
             <?php get_template_part('template-parts/sections/about'); ?>
 
-        <?php elseif (get_row_layout() == 'brand-logos'): ?>
+        <?php elseif (get_row_layout() == 'brand_logos'): ?>
             <?php get_template_part('template-parts/sections/brand-logos'); ?>
 
         <?php elseif (get_row_layout() == 'gallery_section'): ?>
@@ -40,7 +40,7 @@ get_header();
         <?php elseif (get_row_layout() == 'testimonial'): ?>
             <?php get_template_part('template-parts/sections/testimonial'); ?>
 
-        <?php elseif (get_row_layout() == 'team'): ?>
+        <?php elseif (get_row_layout() == 'team_members'): ?>
             <?php get_template_part('template-parts/sections/team'); ?>
 
         <?php elseif (get_row_layout() == 'contact'): ?>

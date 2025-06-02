@@ -21,7 +21,7 @@ $images              = get_sub_field('gallery_images');
                                     </div>
                                 <?php endif; ?>
                                 <?php if (!empty($heading)): ?>
-                                    <h2 class="section-title__title title-animation"><?php echo esc_html($heading); ?></h2>
+                                    <h2 class="section-title__title title-animation"><?php echo wp_kses_post($heading); ?></h2>
                                 <?php endif; ?>
                             </div>
                         </div>
