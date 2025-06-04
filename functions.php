@@ -320,7 +320,6 @@ function stop_thumbs($sizes)
 
 
 
-
 add_filter('acf/settings/save_json', function () {
     return get_stylesheet_directory() . '/acf-json';
 });
