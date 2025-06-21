@@ -1,8 +1,7 @@
 <?php
 
 /**
- * Template Name: Home Page Template
- * @package portolite
+ * Template Name: Page (Flexible Sections)
  */
 
 get_header();

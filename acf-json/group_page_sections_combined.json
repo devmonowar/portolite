@@ -2021,7 +2021,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "template-home.php"
+                "value": "page-sections.php"
             }
         ]
     ],
@@ -2034,5 +2034,5 @@
     "active": true,
     "description": "Combined flexible layout for home page sections",
     "show_in_rest": 0,
-    "modified": 1750502890
+    "modified": 1750520463
 }
