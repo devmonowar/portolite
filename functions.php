@@ -328,3 +328,24 @@ add_filter('acf/settings/load_json', function ($paths) {
     $paths[] = get_stylesheet_directory() . '/acf-json';
     return $paths;
 });
+
+
+
+// functions.php
+
+function register_team_post_type()
+{
+    register_post_type('team', [
+        'labels' => [
+            'name' => __('Team Members'),
+            'singular_name' => __('Team Member')
+        ],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'team'],
+        'supports' => ['title', 'editor', 'thumbnail'],
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-groups'
+    ]);
+}
+add_action('init', 'register_team_post_type');
