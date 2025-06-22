@@ -233,7 +233,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
+                    "default_value": "icon-pintarest",
                     "maxlength": "",
                     "allow_in_bindings": 0,
                     "placeholder": "",
@@ -281,5 +281,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1750514045
+    "modified": 1750609052
 }

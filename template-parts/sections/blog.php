@@ -3,8 +3,8 @@
 <?php
 $blog_tagline    = get_sub_field('blog_tagline');
 $blog_title      = get_sub_field('blog_title');
-$blog_btn_text   = get_sub_field('blog_btn_text');
-$blog_btn_url    = get_sub_field('blog_btn_url');
+$blog_btn_text   = get_sub_field('blog_btn_text') ?: 'View More';
+$blog_btn_url    = get_sub_field('blog_btn_url') ?: get_permalink(get_option('page_for_posts'));
 $blog_post_count = get_sub_field('blog_post_count') ?: 3;
 
 $query = new WP_Query([
@@ -29,13 +29,11 @@ $query = new WP_Query([
                     <?php endif; ?>
                 </div>
 
-                <?php if ($blog_btn_text && $blog_btn_url): ?>
-                    <div class="blog-one__btn-box">
-                        <a href="<?php echo esc_url($blog_btn_url); ?>" class="thm-btn">
-                            <?php echo esc_html($blog_btn_text); ?><span class="icon-arrow-up-right"></span>
-                        </a>
-                    </div>
-                <?php endif; ?>
+                <div class="blog-one__btn-box">
+                    <a href="<?php echo esc_url($blog_btn_url); ?>" class="thm-btn">
+                        <?php echo esc_html($blog_btn_text); ?><span class="icon-arrow-up-right"></span>
+                    </a>
+                </div>
             </div>
 
             <div class="blog-one__bottom">
@@ -68,6 +66,7 @@ $query = new WP_Query([
         </div>
     </section>
 <?php endif; ?>
+
 
 
 <!--Blog One End -->

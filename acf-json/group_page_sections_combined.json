@@ -291,7 +291,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": 200,
                                     "min": "",
                                     "max": "",
                                     "allow_in_bindings": 0,
@@ -357,7 +357,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Latest Service",
                             "maxlength": "",
                             "allow_in_bindings": 0,
                             "placeholder": "",
@@ -454,7 +454,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": "icon-broken-car",
                                     "maxlength": "",
                                     "allow_in_bindings": 0,
                                     "placeholder": "",
@@ -539,7 +539,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": "fadeInLeft",
                                     "maxlength": "",
                                     "allow_in_bindings": 0,
                                     "placeholder": "",
@@ -561,7 +561,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": 200,
                                     "min": "",
                                     "max": "",
                                     "allow_in_bindings": 0,
@@ -627,7 +627,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "AboUt Us",
                             "maxlength": "",
                             "allow_in_bindings": 0,
                             "placeholder": "",
@@ -872,7 +872,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Latest Gallery",
                             "maxlength": "",
                             "allow_in_bindings": 0,
                             "placeholder": "",
@@ -973,7 +973,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Ask Question",
                             "maxlength": "",
                             "allow_in_bindings": 0,
                             "placeholder": "",
@@ -1122,7 +1122,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "TESTIMONIAL",
                             "maxlength": "",
                             "allow_in_bindings": 0,
                             "placeholder": "",
@@ -1316,7 +1316,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Our Team",
                             "maxlength": "",
                             "allow_in_bindings": 0,
                             "placeholder": "",
@@ -1513,7 +1513,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Pricing Plan",
                             "maxlength": "",
                             "allow_in_bindings": 0,
                             "placeholder": "",
@@ -1913,7 +1913,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Latest Blog And News",
                             "maxlength": "",
                             "allow_in_bindings": 0,
                             "placeholder": "",
@@ -1955,7 +1955,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "View More",
                             "maxlength": "",
                             "allow_in_bindings": 0,
                             "placeholder": "",
@@ -1965,7 +1965,7 @@
                         {
                             "key": "field_683dc9aa70fe5",
                             "label": "Button URL",
-                            "name": "button_url",
+                            "name": "blog_btn_url",
                             "aria-label": "",
                             "type": "text",
                             "instructions": "",
@@ -2034,5 +2034,5 @@
     "active": true,
     "description": "Combined flexible layout for home page sections",
     "show_in_rest": 0,
-    "modified": 1750520463
+    "modified": 1750614888
 }
