@@ -1,8 +1,11 @@
 <!--Counter One Start -->
 
+<?php
+$style_class = get_sub_field('counter_style') ?: 'counter-one'; // default class
+?>
 
 <?php if (have_rows('counters')): ?>
-    <section class="counter-one">
+    <section class="<?php echo esc_attr($style_class); ?>">
         <div class="container">
             <div class="counter-one__inner">
                 <ul class="list-unstyled counter-one__list">

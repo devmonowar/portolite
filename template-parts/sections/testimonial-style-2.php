@@ -2,12 +2,12 @@
 
 
 <?php
-$section_title = get_sub_field('testimonial_section_title');
+$testimonial_title   = get_sub_field('testimonial_title');
 $image         = get_sub_field('testimonial_image');
 $testimonials  = get_sub_field('testimonials'); // Repeater
 ?>
 
-<?php if ($testimonials): ?>
+<?php if (!empty($testimonial_title) || !empty($testimonials)) : ?>
     <section class="testimonial-two">
         <div class="testimonial-two__inner">
             <div class="testimonial-two__shape-1"></div>
@@ -24,8 +24,8 @@ $testimonials  = get_sub_field('testimonials'); // Repeater
                 <div class="row">
                     <div class="col-xl-6 col-lg-6">
                         <div class="testimonial-two__left">
-                            <?php if ($section_title): ?>
-                                <h3 class="testimonial-two__title"><?php echo esc_html($section_title); ?></h3>
+                            <?php if ($testimonial_title): ?>
+                                <h3 class="testimonial-two__title"><?php echo esc_html($testimonial_title); ?></h3>
                             <?php endif; ?>
 
                             <div class="testimonial-two__carousel owl-theme owl-carousel">

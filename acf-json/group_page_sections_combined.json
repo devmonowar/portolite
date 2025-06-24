@@ -189,6 +189,36 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_685a195954394",
+                            "label": "Counter Style",
+                            "name": "counter_style",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "counter-one": "counter-one",
+                                "counter-three": "counter-three",
+                                "counter-two": "counter-two"
+                            },
+                            "default_value": "counter-one",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
                             "key": "field_683987a735b5a",
                             "label": "Counters",
                             "name": "counters",
@@ -1179,7 +1209,15 @@
                                     "type": "image",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_6855a18494e41",
+                                                "operator": "!=",
+                                                "value": "style_2"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
@@ -1265,6 +1303,40 @@
                                     "parent_repeater": "field_6839d9eb9c4ab"
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_6858b74f7e524",
+                            "label": "Testimonial Image",
+                            "name": "testimonial_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_6855a18494e41",
+                                        "operator": "==",
+                                        "value": "style_2"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
                         }
                     ],
                     "min": "",
@@ -1496,7 +1568,7 @@
                 "layout_683a7333ed0a0": {
                     "key": "layout_683a7333ed0a0",
                     "name": "pricing",
-                    "label": "pricing",
+                    "label": "Pricing",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1705,7 +1777,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": "Get Started Now",
                                     "maxlength": "",
                                     "allow_in_bindings": 0,
                                     "placeholder": "",
@@ -1879,7 +1951,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": "Get Started Now",
                                     "maxlength": "",
                                     "allow_in_bindings": 0,
                                     "placeholder": "",
@@ -2034,5 +2106,5 @@
     "active": true,
     "description": "Combined flexible layout for home page sections",
     "show_in_rest": 0,
-    "modified": 1750614888
+    "modified": 1750735399
 }

@@ -79,7 +79,10 @@ $skills    = get_field('skills', $team_id); // repeater: skill_name, skill_perce
                     <div class="col-xl-6 col-lg-6">
                         <div class="team-details__bottom-left">
                             <h3 class="team-details__bottom-title">Biography</h3>
-                            <p class="team-details__bottom-text"><?php echo nl2br(esc_html($bio)); ?></p>
+                            <div class="team-details__bottom-text">
+                                <?php echo wp_kses_post($bio); ?>
+                            </div>
+
                         </div>
                     </div>
                 <?php endif; ?>
