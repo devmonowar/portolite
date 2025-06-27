@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying posts
  *
@@ -7,51 +8,32 @@
  * @package portolite
  */
 
-if ( is_single() ) : ?>
-    <article id="post-<?php the_ID();?>" <?php post_class( 'postbox__item format-search mb-50' );?>>
-        <?php if ( has_post_thumbnail() ): ?>
-            <div class="postbox__thumb">
-                <?php the_post_thumbnail( 'full', ['class' => 'img-responsive'] );?>
+?>
+
+
+<article id="post-<?php the_ID(); ?>" <?php post_class('blog-list__single search__blog-item mb-30'); ?>>
+
+    <?php if (has_post_thumbnail()) : ?>
+        <div class="blog-list__img-box">
+            <div class="blog-list__img">
+                <a href="<?php the_permalink(); ?>">
+                    <?php the_post_thumbnail('full'); ?>
+                </a>
             </div>
-        <?php endif;?>
-
-        <div class="postbox__content">
-            <!-- blog meta -->
-            <?php get_template_part( 'template-parts/blog/blog-meta' ); ?>
-            <h3 class="postbox__title">
-                <?php the_title();?>
-            </h3>
-            <div class="postbox__text">
-               <?php the_content();?>
-                <?php
-                    wp_link_pages( [
-                        'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'portolite' ),
-                        'after'       => '</div>',
-                        'link_before' => '<span class="page-number">',
-                        'link_after'  => '</span>',
-                    ] );
-                ?>
-            </div>
-            <?php print portolite_get_tag();?>
+            <?php get_template_part('template-parts/blog/blog-meta'); ?>
         </div>
-    </article>
-<?php else: ?>
+    <?php endif; ?>
 
-    <article id="post-<?php the_ID();?>" <?php post_class( 'search__blog-item mb-30' );?>>
-        <div class="search__blog-content">
+    <div class="blog-list__content">
+        <h3 class="blog-list__title">
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </h3>
 
-            <?php get_template_part( 'template-parts/blog/search-result-top-meta' ); ?>
-
-            <h3 class="search__blog-title">
-                <a href="<?php the_permalink();?>"><?php the_title();?></a>
-            </h3>
-
-            <?php the_excerpt();?>
-
-            <?php get_template_part( 'template-parts/blog/search-result-meta' ); ?>
-            
-            <?php get_template_part( 'template-parts/blog/blog-search-btn' ); ?>
-            
+        <div class="blog-list_excerpt">
+            <?php the_excerpt(); ?>
         </div>
-    </article>    
-<?php endif;?>
+
+        <?php get_template_part('template-parts/blog/blog-btn'); ?>
+    </div>
+
+</article>

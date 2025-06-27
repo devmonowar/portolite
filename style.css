@@ -22,3 +22,10 @@ body {
     margin-top: 20px;
 }
 
+
+.pt-120 {
+    padding-top: 120px;
+}
+.pb-80 {
+    padding-bottom: 80px;
+}

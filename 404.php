@@ -36,9 +36,9 @@ $portolite_error_desc = get_theme_mod('portolite_error_desc', __('Whoops, this i
                   <p class="error-page__text"><?php print esc_html($portolite_error_desc); ?></p>
                <?php endif; ?>
 
-               <form class="error-page__form">
+               <form class="error-page__form" action="<?php print esc_url(home_url('/')); ?>">
                   <div class="error-page__form-input">
-                     <input type="search" placeholder="Search here">
+                     <input type="search" name="s" value="<?php echo esc_attr(get_search_query()) ?>" placeholder="<?php echo esc_attr__('Search here', 'portolite'); ?>">
                      <button type="submit"><i class="fas fa-search"></i></button>
                   </div>
                </form>
