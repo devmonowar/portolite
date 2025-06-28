@@ -4,7 +4,7 @@ Theme URI: #
 Author: #
 Author URI: #
 Description: PortoLite – Creative Agency & Portfolio WordPress Theme
-Version: 1.2.0
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: portolite
@@ -22,9 +22,11 @@ body {
     margin-top: 20px;
 }
 
-
 .pt-120 {
     padding-top: 120px;
+}
+.pb-100 {
+    padding-bottom: 100px;
 }
 .pb-80 {
     padding-bottom: 80px;

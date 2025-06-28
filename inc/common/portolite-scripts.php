@@ -1,22 +1,24 @@
 <?php
 
 /**
- * portolite_scripts description
- * @return [type] [description]
+ * Enqueue theme styles and scripts
  */
 function portolite_scripts()
 {
+
 
     /**
      * all css files
      */
 
     wp_enqueue_style('portolite-fonts', portolite_fonts_url(), array(), time());
+
     if (is_rtl()) {
-        wp_enqueue_style('bootstrap-rtl', PORTOLITE_THEME_CSS_DIR . 'bootstrap-rtl.css', array());
+        wp_enqueue_style('bootstrap-rtl', PORTOLITE_THEME_CSS_DIR . 'bootstrap-rtl.css', []);
     } else {
-        wp_enqueue_style('bootstrap', PORTOLITE_THEME_CSS_DIR . 'bootstrap.min.css', array());
+        wp_enqueue_style('bootstrap', PORTOLITE_THEME_CSS_DIR . 'bootstrap.min.css', []);
     }
+
     wp_enqueue_style('animate-min', PORTOLITE_THEME_CSS_DIR . 'animate.min.css', []);
     wp_enqueue_style('portolite-custom-animate', PORTOLITE_THEME_CSS_DIR . 'custom-animate.css', []);
     wp_enqueue_style('swiper-bundle', PORTOLITE_THEME_CSS_DIR . 'swiper.min.css', []);
@@ -84,23 +86,13 @@ function portolite_scripts()
 add_action('wp_enqueue_scripts', 'portolite_scripts');
 
 
-
 /**
- * Register Oswald & Poppins fonts from Google Fonts
+ * Register Google Fonts
  */
 function portolite_fonts_url()
 {
-    $font_url = '';
-
-    /*
-    Translators: If there are characters in your language that are not supported
-    by chosen font(s), translate this to 'off'. Do not translate into your own language.
-    */
     if ('off' !== _x('on', 'Google font: on or off', 'portolite')) {
-        $font_url = 'https://fonts.googleapis.com/css2?' . urlencode(
-            'family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap'
-        );
+        return 'https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap';
     }
-
-    return $font_url;
+    return '';
 }

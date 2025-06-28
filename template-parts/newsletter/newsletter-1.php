@@ -1,64 +1,65 @@
 <?php
 
 /**
- * Template part for displaying header layout one
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * Template part for displaying newsletter layout one
  *
  * @package portolite
  */
 
-// breadcrumb code
-$bg_img_from_page = function_exists('get_field') ? get_field('newsletter_background_image') : '';
-$newsletter_shortcode_from_page = function_exists('get_field') ? get_field('newsletter_shortcode') : '';
+// Get values from ACF (if available)
+$bg_img_acf               = function_exists('get_field') ? get_field('newsletter_background_image') : '';
+$newsletter_shortcode_acf = function_exists('get_field') ? get_field('newsletter_shortcode') : '';
+$title_acf                = function_exists('get_field') ? get_field('newsletter_title') : '';
+$switch_acf               = function_exists('get_field') ? get_field('newsletter_switch') : null;
+$img_acf                  = function_exists('get_field') ? get_field('newsletter_right_image') : ''; // Image array expected
 
-$mailchimp_shortcode_customizer = get_theme_mod('portolite_newsletter_mailchimp_shortcode', __('Your Shortcode here', 'portolite'));
+// Get values from Theme Customizer
+$bg_img_theme             = get_theme_mod('newsletter_bg_img');
+$newsletter_shortcode_theme = get_theme_mod('portolite_newsletter_shortcode', __('Your Shortcode here', 'portolite'));
+$title_theme              = get_theme_mod('portolite_newsletter_title', __('Partering With You To Transform <br> Your  Vision Into Reality', 'portolite'));
+$switch_theme             = get_theme_mod('portolite_newsletter_switch', false);
+$img_theme                = get_theme_mod('portolite_newsletter_right_img'); // Just image URL
 
-$mailchimp_shortcode = !empty($newsletter_shortcode_from_page) ? $newsletter_shortcode_from_page : $mailchimp_shortcode_customizer;
-// get_theme_mod
-$bg_img = get_theme_mod('newsletter_bg_img');
+// Final values (ACF > Theme Mod)
+$bg_img                 = !empty($bg_img_acf['url']) ? esc_url($bg_img_acf['url']) : esc_url($bg_img_theme);
+$newsletter_shortcode  = !empty($newsletter_shortcode_acf) ? $newsletter_shortcode_acf : $newsletter_shortcode_theme;
+$newsletter_title      = !empty($title_acf) ? $title_acf : $title_theme;
+$enabled               = ($switch_acf !== null) ? $switch_acf : $switch_theme;
 
-// header info 
-$portolite_newsletter_title = get_theme_mod('portolite_newsletter_title', __('Keep up with our daily and weekly newsletters', 'portolite'));
-
-
-
-$portolite_newsletter_switch = get_theme_mod('portolite_newsletter_switch', false);
-
-$bg_img = !empty($bg_img_from_page) ? $bg_img_from_page['url'] : $bg_img;
-
-
-
-
+// Right image handling (array expected from ACF)
+$right_image_url = !empty($img_acf['url']) ? esc_url($img_acf['url']) : esc_url($img_theme);
+$right_image_alt = !empty($img_acf['alt']) ? esc_attr($img_acf['alt']) : ''; // No fallback alt, per your request
 
 ?>
 
-
-
-
-<?php if (!empty($portolite_newsletter_switch)) : ?>
-
+<?php if (!empty($enabled)) : ?>
    <div class="site-footer__newsletter">
       <div class="container">
          <div class="site-footer__newsletter-inner">
-            <div class="site-footer__newsletter-img">
-               <img src="<?php echo get_template_directory_uri(); ?>/assets/images/resources/site-footer-newsletter-img-1.png" alt="">
-            </div>
-            <div class="site-footer__newsletter-inner-content">
-               <div class="site-footer__newsletter-shape-1"
-                  style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/shapes/site-footer-newsletter-shape-1.png);">
+
+            <?php if (!empty($right_image_url)) : ?>
+               <div class="site-footer__newsletter-img">
+                  <img src="<?php echo $right_image_url; ?>" alt="<?php echo $right_image_alt; ?>">
                </div>
+            <?php endif; ?>
 
-               <?php if (!empty($portolite_newsletter_title)) : ?>
-                  <h2 class="site-footer__newsletter-title"><?php echo portolite_kses($portolite_newsletter_title); ?></h2>
+            <div class="site-footer__newsletter-inner-content">
+               <?php if (!empty($bg_img)) : ?>
+                  <div class="site-footer__newsletter-shape-1"
+                     style="background-image: url(<?php echo $bg_img; ?>);">
+                  </div>
                <?php endif; ?>
 
-               <?php if (!empty($mailchimp_shortcode)): ?>
-                  <?php print do_shortcode($mailchimp_shortcode); ?>
+               <?php if (!empty($newsletter_title)) : ?>
+                  <h2 class="site-footer__newsletter-title"><?php echo portolite_kses($newsletter_title); ?></h2>
+               <?php endif; ?>
+
+               <?php if (!empty($newsletter_shortcode)) : ?>
+                  <?php echo do_shortcode($newsletter_shortcode); ?>
                <?php endif; ?>
             </div>
+
          </div>
       </div>
    </div>
-
 <?php endif; ?>

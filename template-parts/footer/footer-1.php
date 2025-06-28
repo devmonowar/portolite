@@ -26,9 +26,6 @@ $bg_color = !empty($portolite_footer_bg_color_from_page) ? $portolite_footer_bg_
 ?>
 
 
-
-
-
 <!--Site Footer Start-->
 <footer class="site-footer">
     <div class="site-footer__wrap">
@@ -73,6 +70,7 @@ $bg_color = !empty($portolite_footer_bg_color_from_page) ? $portolite_footer_bg_
                                     <ul class="list-unstyled site-footer__bottom-menu">
                                         <?php echo portolite_kses($portolite_footer_bottom_menu); ?>
                                     </ul>
+
 
                                 <?php endif; ?>
                             </div>

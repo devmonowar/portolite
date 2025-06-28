@@ -1,22 +1,28 @@
 <?php
+
+/**
+ * Post meta for blog details (date, author, category)
+ *
+ * @package portolite
+ */
+
 $categories = get_the_terms(get_the_ID(), 'category');
 
-$portolite_blog_date     = get_theme_mod('portolite_blog_date', true);
-$portolite_blog_comments = get_theme_mod('portolite_blog_comments', true);
-$portolite_blog_author   = get_theme_mod('portolite_blog_author', true);
-$portolite_blog_cat      = get_theme_mod('portolite_blog_cat', true);
+$show_date     = get_theme_mod('portolite_blog_date', true);
+$show_author   = get_theme_mod('portolite_blog_author', true);
+$show_category = get_theme_mod('portolite_blog_cat', true);
 ?>
 
 <ul class="blog-details__meta list-unstyled">
 
-    <?php if (!empty($portolite_blog_date)) : ?>
+    <?php if ($show_date): ?>
         <li>
             <span class="icon-calendar"></span>
-            <span><?php echo get_the_date(); ?></span>
+            <span><?php echo esc_html(get_the_date(get_option('date_format'))); ?></span>
         </li>
     <?php endif; ?>
 
-    <?php if (!empty($portolite_blog_author)) : ?>
+    <?php if ($show_author): ?>
         <li>
             <span class="icon-user-2"></span>
             <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>">
@@ -25,7 +31,7 @@ $portolite_blog_cat      = get_theme_mod('portolite_blog_cat', true);
         </li>
     <?php endif; ?>
 
-    <?php if (!empty($portolite_blog_cat) && !empty($categories) && !is_wp_error($categories)) : ?>
+    <?php if ($show_category && !empty($categories) && !is_wp_error($categories)) : ?>
         <li>
             <span class="icon-folder"></span>
             <a href="<?php echo esc_url(get_category_link($categories[0]->term_id)); ?>">

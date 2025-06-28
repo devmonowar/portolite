@@ -1,83 +1,79 @@
 <?php
-    $author_data = get_the_author_meta( 'description', get_query_var( 'author' ) );
-    $author_name = get_the_author_meta( 'portolite_write_by');
-    $facebook_url = get_the_author_meta( 'portolite_facebook' );
-    $twitter_url = get_the_author_meta( 'portolite_twitter' );
-    $linkedin_url = get_the_author_meta( 'portolite_linkedin' );
-    $instagram_url = get_the_author_meta( 'portolite_instagram' );
-    $portolite_url = get_the_author_meta( 'portolite_youtube' );
-    $portolite_write_by = get_the_author_meta( 'portolite_write_by' );
-    $author_bio_avatar_size = 180;
 
+/**
+ * Blog post meta info for single post
+ *
+ * @package portolite
+ */
 
-    $categories = get_the_terms( $post->ID, 'category' );
-    $portolite_blog_date = get_theme_mod( 'portolite_blog_date', true );
-    $portolite_blog_comments = get_theme_mod( 'portolite_blog_comments', true );
-    $portolite_blog_author = get_theme_mod( 'portolite_blog_author', true );
-    $portolite_blog_cat = get_theme_mod( 'portolite_blog_cat', false );
-    $portolite_blog_view = get_theme_mod( 'portolite_blog_view', false );
+$facebook_url  = get_the_author_meta('portolite_facebook');
+$twitter_url   = get_the_author_meta('portolite_twitter');
+$linkedin_url  = get_the_author_meta('portolite_linkedin');
+$instagram_url = get_the_author_meta('portolite_instagram');
+$youtube_url   = get_the_author_meta('portolite_youtube');
+$author_id     = get_the_author_meta('ID');
+$author_email  = get_the_author_meta('user_email');
+$author_url    = get_author_posts_url($author_id);
+$author_avatar = get_avatar($author_email, 180, '', '', ['class' => 'media-object img-circle']);
 
+$show_date     = get_theme_mod('portolite_blog_date', true);
+$show_comments = get_theme_mod('portolite_blog_comments', true);
+$show_author   = get_theme_mod('portolite_blog_author', true);
+$show_views    = get_theme_mod('portolite_blog_view', false);
 ?>
 
+<div class="postbox__meta-wrapper d-flex align-items-center flex-wrap">
 
-    <div class="postbox__meta-wrapper d-flex align-items-center flex-wrap">
-
-        
-        <?php if(!empty(get_author_posts_url( get_the_author_meta( 'ID' ) )) && !empty($portolite_blog_author)) : ?>
+    <?php if ($show_author): ?>
         <div class="postbox__meta-item mb-30 dd">
             <div class="postbox__meta-author d-flex align-items-center">
-                <?php if(!empty(get_avatar(get_the_author_meta( 'user_email' ), $author_bio_avatar_size, '', '', [ 'class' => 'media-object img-circle' ]))) : ?>
                 <div class="postbox__meta-author-thumb">
-                    <a href="<?php print esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );?>">
-                        <?php print get_avatar(get_avatar(get_the_author_meta( 'user_email' ), $author_bio_avatar_size, '', '', [ 'class' => 'media-object img-circle' ]) );?>
+                    <a href="<?php echo esc_url($author_url); ?>">
+                        <?php echo $author_avatar; ?>
                     </a>
                 </div>
-                <?php endif; ?>
                 <div class="postbox__meta-content">
-
-                <span class="postbox__meta-type"><?php echo esc_html__( 'Author', 'portolite' ); ?></span>
-
-                <p class="postbox__meta-name">
-                    <a href="<?php print esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );?>">
-                        <?php print get_the_author();?>
-                    </a>
-                </p>
+                    <span class="postbox__meta-type"><?php esc_html_e('Author', 'portolite'); ?></span>
+                    <p class="postbox__meta-name">
+                        <a href="<?php echo esc_url($author_url); ?>">
+                            <?php the_author(); ?>
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
-        <?php endif; ?>
-        
-        <?php if ( !empty($portolite_blog_date) ): ?>
-        <div class="postbox__meta-item mb-30">
-            <div class="postbox__meta-content">
-                <span class="postbox__meta-type"><?php echo esc_html__( 'Published', 'portolite' ); ?></span>
-                <p class="postbox__meta-name"><?php the_time( get_option('date_format') ); ?></p>
-            </div>
-        </div>  
-        <?php endif; ?>      
+    <?php endif; ?>
 
-        <?php if ( !empty($portolite_blog_comments) ): ?>
+    <?php if ($show_date): ?>
         <div class="postbox__meta-item mb-30">
             <div class="postbox__meta-content">
-                <span class="postbox__meta-type"><?php comments_number();?></span>
-                <p class="postbox__meta-name"><a href="<?php comments_link();?>"><?php echo esc_html__( 'Join the Conversation', 'portolite' ); ?></a></p>
+                <span class="postbox__meta-type"><?php esc_html_e('Published', 'portolite'); ?></span>
+                <p class="postbox__meta-name"><?php the_time(get_option('date_format')); ?></p>
             </div>
         </div>
-        <?php endif; ?>  
+    <?php endif; ?>
 
-
-        <?php if(function_exists('getPostViews') && !empty($portolite_blog_view)) : ?>
+    <?php if ($show_comments): ?>
         <div class="postbox__meta-item mb-30">
             <div class="postbox__meta-content">
-                <span class="postbox__meta-type"><?php echo esc_html__( 'View', 'portolite' ); ?></span>
+                <span class="postbox__meta-type"><?php comments_number(); ?></span>
                 <p class="postbox__meta-name">
-                    <?php echo getPostViews(get_the_ID()); ?>
-                    <?php echo esc_html__('Views', 'portolite'); ?>
+                    <a href="<?php comments_link(); ?>"><?php esc_html_e('Join the Conversation', 'portolite'); ?></a>
                 </p>
             </div>
         </div>
-        <?php endif; ?>
+    <?php endif; ?>
 
-    </div>
+    <?php if (function_exists('getPostViews') && $show_views): ?>
+        <div class="postbox__meta-item mb-30">
+            <div class="postbox__meta-content">
+                <span class="postbox__meta-type"><?php esc_html_e('View', 'portolite'); ?></span>
+                <p class="postbox__meta-name">
+                    <?php echo esc_html(getPostViews(get_the_ID())); ?>
+                    <?php esc_html_e('Views', 'portolite'); ?>
+                </p>
+            </div>
+        </div>
+    <?php endif; ?>
 
-
+</div>

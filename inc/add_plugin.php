@@ -2,10 +2,14 @@
 
 /**
  * TGM Plugin Activation Setup for Portolite Theme
+ *
+ * @package portolite
  */
 
+// Include TGM Plugin Activation class
 require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 
+// Register required and recommended plugins
 add_action('tgmpa_register', 'portolite_register_required_plugins');
 
 function portolite_register_required_plugins()
@@ -17,7 +21,7 @@ function portolite_register_required_plugins()
             'required' => true,
         ],
         [
-            'name'     => esc_html__('WP Classic Editor', 'portolite'),
+            'name'     => esc_html__('Classic Editor', 'portolite'),
             'slug'     => 'classic-editor',
             'required' => false,
         ],
@@ -46,18 +50,17 @@ function portolite_register_required_plugins()
             'slug'     => 'woocommerce',
             'required' => false,
         ],
-
     ];
 
     $config = [
-        'id'           => 'portolite',
-        'menu'         => 'tgmpa-install-plugins',
-        'parent_slug'  => 'themes.php',
-        'capability'   => 'edit_theme_options',
-        'has_notices'  => true,
-        'dismissable'  => true,
-        'is_automatic' => false,
-        'message'      => '',
+        'id'           => 'portolite',                    // Unique ID for TGM
+        'menu'         => 'tgmpa-install-plugins',        // Menu slug
+        'parent_slug'  => 'themes.php',                   // Parent menu
+        'capability'   => 'edit_theme_options',           // Who can see this
+        'has_notices'  => true,                           // Show admin notice
+        'dismissable'  => true,                           // Allow dismiss
+        'is_automatic' => false,                          // Auto activate after install
+        'message'      => '',                             // Custom message (optional)
     ];
 
     tgmpa($plugins, $config);

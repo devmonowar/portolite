@@ -26,19 +26,19 @@ add_action('after_setup_theme', 'portolite_custom_header_setup');
 /**
  * Output custom styles for the header if needed
  */
-if (! function_exists('portolite_header_style')) :
+if (!function_exists('portolite_header_style')) :
     function portolite_header_style()
     {
         $header_text_color = get_header_textcolor();
 
-        // Bail if the default text color is being used
+        // Bail if default text color is being used
         if (get_theme_support('custom-header', 'default-text-color') === $header_text_color) {
             return;
         }
 
 ?>
         <style type="text/css">
-            <?php if (! display_header_text()) : ?>.site-title,
+            <?php if (!display_header_text()) : ?>.site-title,
             .site-description {
                 position: absolute;
                 clip: rect(1px, 1px, 1px, 1px);

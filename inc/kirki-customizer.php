@@ -445,6 +445,7 @@ function _newsletter_setting_fields($fields)
         'default'     => get_template_directory_uri() . '/assets/img/newsletter/newsletter-1.jpg',
     ];
 
+
     // header transparent switch
     $fields[] = [
         'type'     => 'switch',
@@ -460,21 +461,12 @@ function _newsletter_setting_fields($fields)
     ];
 
     $fields[] = [
-        'type'     => 'text',
-        'settings' => 'portolite_newsletter_mailchimp_shortcode',
-        'label'    => esc_html__('Mailchip Shortcode', 'portolite'),
-        'section'  => 'newsletter_setting',
-        'default'  => esc_html__('Your shortcode here', 'portolite'),
-        'priority' => 10,
-    ];
-
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'portolite_newsletter_subtitle',
-        'label'    => esc_html__('Subtitle', 'portolite'),
-        'section'  => 'newsletter_setting',
-        'default'  => esc_html__('PortoLite Discount', 'portolite'),
-        'priority' => 10,
+        'type'        => 'image',
+        'settings'    => 'portolite_newsletter_right_img',
+        'label'       => esc_html__('Newsletter Right Image', 'portolite'),
+        'description' => esc_html__('Newsletter Right Image', 'portolite'),
+        'section'     => 'newsletter_setting',
+        'default'     => get_template_directory_uri() . '/assets/img/newsletter/newsletter-1.jpg',
     ];
 
     $fields[] = [
@@ -482,15 +474,16 @@ function _newsletter_setting_fields($fields)
         'settings' => 'portolite_newsletter_title',
         'label'    => esc_html__('Title', 'portolite'),
         'section'  => 'newsletter_setting',
-        'default'  => esc_html__('Keep up with our daily and weekly newsletters', 'portolite'),
+        'default'  => esc_html__('Partering With You To Transform <br> Your  Vision Into Reality', 'portolite'),
         'priority' => 10,
     ];
+
     $fields[] = [
-        'type'     => 'textarea',
-        'settings' => 'portolite_newsletter_desc',
-        'label'    => esc_html__('Description', 'portolite'),
+        'type'     => 'text',
+        'settings' => 'portolite_newsletter_shortcode',
+        'label'    => esc_html__('Newsletter Shortcode', 'portolite'),
         'section'  => 'newsletter_setting',
-        'default'  => esc_html__('Keep up with our daily and weekly newsletters', 'portolite'),
+        'default'  => esc_html__('Your shortcode here', 'portolite'),
         'priority' => 10,
     ];
 
