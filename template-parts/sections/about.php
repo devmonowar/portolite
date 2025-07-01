@@ -74,7 +74,7 @@ $style = get_sub_field('about_style') ?: 'style_1'; // fallback
                                     <?php if ($style === 'style_2'): ?>
                                         <div class="about-five__shope-box">
                                             <div class="about-five__shope-box-bg-shape"
-                                                style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/shapes/about-five-shope-box-bg-shape.png);">
+                                                style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/shapes/about-five-shope-box-bg-shape.png);">
                                             </div>
                                             <?php if ($box_icon): ?>
                                                 <div class="about-five__shope-icon">

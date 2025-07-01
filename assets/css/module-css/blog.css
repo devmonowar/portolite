@@ -1211,60 +1211,6 @@
     border-radius: 2px;
 }
 
-.sidebar__search {
-    position: relative;
-    display: block;
-    padding: 40px 40px 40px;
-    background-color: var(--portolite-white);
-    border-top: 3px solid #E8092E;
-    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
-    border-radius: 20px;
-}
-
-.sidebar__search-form {
-    position: relative;
-    display: block;
-}
-
-.sidebar__search-form input[type="search"] {
-    display: block;
-    outline: none;
-    border: none;
-    font-weight: 400;
-    font-size: 16px;
-    height: 60px;
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 70px;
-    color: var(--portolite-black);
-    border-radius: 30px;
-    background-color: #F4F4F4;
-}
-
-.sidebar__search-form button[type="submit"] {
-    color: var(--portolite-base);
-    font-size: 18px;
-    position: absolute;
-    top: 0;
-    right: 9px;
-    bottom: 0;
-    max-width: 60px;
-    width: 100%;
-    outline: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    background-color: transparent;
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
-}
-
-.sidebar__search-form button[type="submit"]:hover {
-    color: var(--portolite-black);
-}
-
 .sidebar__post {
     position: relative;
     display: block;

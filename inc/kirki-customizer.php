@@ -442,7 +442,7 @@ function _newsletter_setting_fields($fields)
         'label'       => esc_html__('Newsletter Background Image', 'portolite'),
         'description' => esc_html__('Newsletter Background Image', 'portolite'),
         'section'     => 'newsletter_setting',
-        'default'     => get_template_directory_uri() . '/assets/img/newsletter/newsletter-1.jpg',
+        'default'     => get_template_directory_uri() . '/assets/img/newsletter/site-footer-newsletter-shape-1.png',
     ];
 
 
@@ -466,7 +466,7 @@ function _newsletter_setting_fields($fields)
         'label'       => esc_html__('Newsletter Right Image', 'portolite'),
         'description' => esc_html__('Newsletter Right Image', 'portolite'),
         'section'     => 'newsletter_setting',
-        'default'     => get_template_directory_uri() . '/assets/img/newsletter/newsletter-1.jpg',
+        'default'     => get_template_directory_uri() . '/assets/img/shapes/site-footer-newsletter-shape-1.png',
     ];
 
     $fields[] = [

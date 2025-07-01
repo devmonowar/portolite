@@ -31,10 +31,12 @@ function portolite_breadcrumb_func()
     $_id = is_home() ? get_option('page_for_posts') : get_the_ID();
 
     // Option to hide breadcrumb via ACF
-    $hide = function_exists('get_field') ? get_field('is_it_invisible_breadcrumb', $_id) : '';
-    if (!empty($_GET['s'])) $hide = null; // Always show on search results
+    $is_breadcrumb = function_exists('get_field') ? get_field('is_it_invisible_breadcrumb', $_id) : '';
+    if (!empty($_GET['s'])) {
+        $is_breadcrumb = null;
+    }
 
-    if (!empty($hide)) return;
+    if (!empty($is_breadcrumb)) return;
 
     // Theme mod and ACF settings
     $bg_img        = get_theme_mod('breadcrumb_bg_img');
@@ -49,12 +51,10 @@ function portolite_breadcrumb_func()
     if (!$hide_img && !empty($img_from_page['url'])) {
         $bg_img = $img_from_page['url'];
     }
-
-    $breadcrumb_class = is_front_page() ? 'home_front_page' : '';
 ?>
 
     <!--Page Header Start-->
-    <section class="page-header breadcrumb__area <?php echo esc_attr($style); ?> <?php echo esc_attr($breadcrumb_class); ?>">
+    <section class="page-header breadcrumb__area <?php echo esc_attr($style); ?>">
         <div class="page-header__wrap">
             <div class="page-header__shape-1" style="background-color: <?php echo esc_attr($color); ?>; background-image: url('<?php echo esc_url($bg_img); ?>');"></div>
             <div class="container">
@@ -67,9 +67,10 @@ function portolite_breadcrumb_func()
 
                     <?php if (!empty($right_img)) : ?>
                         <div class="page-header__img-1">
-                            <img src="<?php echo esc_url($right_img); ?>" alt="<?php esc_attr_e('Breadcrumb Decoration', 'portolite'); ?>">
+                            <img src="<?php echo esc_url($right_img); ?>" alt="<?php echo esc_attr__('Breadcrumb Decoration', 'portolite'); ?>">
+
                             <div class="page-header__shape-5">
-                                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/shapes/page-header-shape-5.png'); ?>" alt="">
+                                <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/shapes/page-header-shape-5.png'); ?>" alt="">
                             </div>
                         </div>
                     <?php endif; ?>
@@ -78,9 +79,18 @@ function portolite_breadcrumb_func()
 
                     <div class="thm-breadcrumb__box">
                         <ul class="thm-breadcrumb list-unstyled">
-                            <?php if (function_exists('bcn_display')) bcn_display(); ?>
+                            <?php
+                            if (function_exists('bcn_display')) {
+                                bcn_display();
+                            } else {
+                                echo '<li><a href="' . esc_url(home_url('/')) . '">Home</a></li>';
+                                echo '<li class="sep"><i class="fas fa-angle-right"></i></li>';
+                                echo '<li class="current">' . esc_html($title) . '</li>';
+                            }
+                            ?>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </div>

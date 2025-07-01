@@ -12,13 +12,13 @@ $testimonials  = get_sub_field('testimonials'); // Repeater
         <div class="testimonial-two__inner">
             <div class="testimonial-two__shape-1"></div>
             <div class="testimonial-two__shape-2">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shapes/testimonial-two-shape-2.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shapes/testimonial-two-shape-2.png" alt="">
             </div>
             <div class="testimonial-two__shape-3">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shapes/testimonial-two-shape-3.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shapes/testimonial-two-shape-3.png" alt="">
             </div>
             <div class="testimonial-two__shape-4">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/shapes/testimonial-two-shape-4.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shapes/testimonial-two-shape-4.png" alt="">
             </div>
             <div class="container">
                 <div class="row">

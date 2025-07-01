@@ -14,7 +14,8 @@ $switch_acf               = function_exists('get_field') ? get_field('newsletter
 $img_acf                  = function_exists('get_field') ? get_field('newsletter_right_image') : ''; // Image array expected
 
 // Get values from Theme Customizer
-$bg_img_theme             = get_theme_mod('newsletter_bg_img');
+$bg_img_theme = get_theme_mod('newsletter_bg_img', get_template_directory_uri() . '/assets/img/shapes/site-footer-newsletter-shape-1.png');
+
 $newsletter_shortcode_theme = get_theme_mod('portolite_newsletter_shortcode', __('Your Shortcode here', 'portolite'));
 $title_theme              = get_theme_mod('portolite_newsletter_title', __('Partering With You To Transform <br> Your  Vision Into Reality', 'portolite'));
 $switch_theme             = get_theme_mod('portolite_newsletter_switch', false);

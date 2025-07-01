@@ -39,18 +39,9 @@ $bg_color = !empty($portolite_footer_bg_color_from_page) ? $portolite_footer_bg_
             <div class="container">
                 <div class="site-footer__top-inner">
                     <div class="row">
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                            <?php dynamic_sidebar('footer-1'); ?>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                            <?php dynamic_sidebar('footer-2'); ?>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                            <?php dynamic_sidebar('footer-3'); ?>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                            <?php dynamic_sidebar('footer-4'); ?>
-                        </div>
+
+                        <?php dynamic_sidebar('footer-sidebar'); ?>
+
                     </div>
                 </div>
             </div>
