@@ -42,7 +42,7 @@ body {
     position: relative;
     display: block;
     padding: 25px 40px 40px;
-    background-color: var(--crank-white);
+    background-color: #fff;
     border-top: 3px solid #E8092E;
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
@@ -120,7 +120,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--crank-gray);
+    color: #17080a;
     z-index: 1;
 }
 
@@ -132,7 +132,7 @@ body {
 }
 
 .sidebar__single.widget_tag_cloud .tagcloud a {
-    color: var(--crank-black);
+    color: #171717;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
     display: inline-block;
@@ -212,4 +212,77 @@ body {
     color: #fff;
     font-size: 16px;
 }
+.site-footer__bottom-menu {
+    justify-content: flex-end;
+}
 
+/* header__top */
+.header__top {
+    color: #fff;
+}
+.header__top.header__border {
+    background: #232323;
+}
+.header__border {
+    border-bottom: 1px solid #ffffff38;
+}
+header.main-header {
+    background: #232323;
+    position: relative;
+}
+
+.header__border {
+    border-bottom: 1px solid rgba(3, 18, 32, 0.07);
+}
+.header__right {
+    text-align: right;
+}
+.header__info ul li,
+.header__right ul li  {
+    list-style: none;
+    display: inline-block;
+    margin-right: 14px;
+    padding: 4px 0;
+    padding-right: 20px;
+    position: relative;
+}
+.header__info ul li a, 
+.header__info ul li span,
+.header__right ul li span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+.header__info ul li a span, 
+.header__info ul li span span {
+    margin-right: 4px;
+    color: #fff
+}
+
+
+.footer__social-3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: end;
+}
+.footer__social-3 a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #fff;
+    overflow: hidden;
+    z-index: 1;
+}
+.footer__social-3 a:hover {
+    color: #e8092e;
+    background-color: #fff;
+}

@@ -23,53 +23,65 @@ $bg_img = !empty($portolite_footer_bg_url_from_page['url']) ? $portolite_footer_
 // bg color
 $bg_color = !empty($portolite_footer_bg_color_from_page) ? $portolite_footer_bg_color_from_page : $footer_bg_color;
 
+// social switch
+$portolite_footer_social_switch = get_theme_mod('portolite_footer_social_switch', false);
+$portolite_copyright_center = $portolite_footer_social_switch ? 'col-sm-6' : 'col-sm-12 text-center';
+
+
 ?>
 
 
 <!--Site Footer Start-->
+
 <footer class="site-footer">
     <div class="site-footer__wrap">
+
         <div class="site-footer__shape-1"></div>
         <div class="site-footer__shape-2"></div>
 
         <?php do_action('portolite_newsletter_style'); ?>
 
 
-        <div class="site-footer__top">
-            <div class="container">
-                <div class="site-footer__top-inner">
-                    <div class="row">
+        <?php if (is_active_sidebar('footer-sidebar')) : ?>
+            <div class="site-footer__top">
+                <div class="container">
+                    <div class="site-footer__top-inner">
+                        <div class="row">
 
-                        <?php dynamic_sidebar('footer-sidebar'); ?>
+                            <?php dynamic_sidebar('footer-sidebar'); ?>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="site-footer__bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="site-footer__bottom-inner">
-                            <div class="site-footer__copyright">
-                                <p class="site-footer__copyright-text"><?php print portolite_copyright_text(); ?></p>
-                            </div>
-
-                            <div class="site-footer__bottom-menu-box">
-                                <?php if (!empty($portolite_footer_bottom_menu)): ?>
-
-                                    <ul class="list-unstyled site-footer__bottom-menu">
-                                        <?php echo portolite_kses($portolite_footer_bottom_menu); ?>
-                                    </ul>
-
-
-                                <?php endif; ?>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+        <?php endif; ?>
+
+
+        <div class="site-footer__bottom two">
+            <div class="container">
+
+                <div class="row site-footer__bottom-inner">
+                    <div class="<?php echo esc_attr($portolite_copyright_center); ?>">
+                        <div class="site-footer__copyright">
+                            <p class="site-footer__copyright-text"><?php print portolite_copyright_text(); ?></p>
+                        </div>
+                    </div>
+                    <?php if (!empty($portolite_footer_social_switch)): ?>
+                        <div class="col-sm-6 ">
+                            <div class="footer__social-3 text-sm-end">
+                                <?php portolite_footer_social_profiles(); ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                </div>
+
+
+            </div>
         </div>
+
+
+
     </div>
 </footer>
 <!--Site Footer End-->

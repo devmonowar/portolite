@@ -40,15 +40,13 @@ if (is_singular() && function_exists('get_field')) {
 
       <?php if (!empty($portolite_backtotop)) : ?>
          <!-- Back to Top Start -->
-         <div class="back-to-top-wrapper">
-            <button id="back_to_top" type="button" class="back-to-top-btn" aria-label="Back to Top">
-               <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-               </svg>
-            </button>
-         </div>
+         <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+            <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+            <span class="scroll-to-top__text"> Go Back Top</span>
+         </a>
          <!-- Back to Top End -->
       <?php endif; ?>
+
 
       <!-- Header Start -->
       <?php do_action('portolite_header_style'); ?>

@@ -36,7 +36,7 @@
     padding-top: 244px;
     padding-bottom: 195px;
     background-color: var(--portolite-black);
-    border-radius: 60px;
+    border-radius: 0 0 60px 60px;
     z-index: 10;
 }
 

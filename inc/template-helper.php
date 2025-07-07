@@ -415,47 +415,6 @@ if (!function_exists('portolite_pagination')) {
 
 
 
-// header top bg color
-function portolite_breadcrumb_bg_color()
-{
-    $color_code = get_theme_mod('portolite_breadcrumb_bg_color', '#e1e1e1');
-    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
-    if ($color_code != '') {
-        $custom_css = '';
-        $custom_css .= ".breadcrumb-bg.gray-bg{ background: " . $color_code . "}";
-
-        wp_add_inline_style('portolite-breadcrumb-bg', $custom_css);
-    }
-}
-add_action('wp_enqueue_scripts', 'portolite_breadcrumb_bg_color');
-
-
-
-// breadcrumb-spacing
-function portolite_breadcrumb_spacing_combined()
-{
-    $padding_top = get_theme_mod('portolite_breadcrumb_spacing', '160px');
-    $padding_bottom = get_theme_mod('portolite_breadcrumb_bottom_spacing', '160px');
-
-    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
-
-    $custom_css = '';
-
-    if ($padding_top != '') {
-        $custom_css .= ".breadcrumb-spacing { padding-top: {$padding_top}; } ";
-    }
-    if ($padding_bottom != '') {
-        $custom_css .= ".breadcrumb-spacing { padding-bottom: {$padding_bottom}; } ";
-    }
-
-    if ($custom_css !== '') {
-        wp_add_inline_style('portolite-custom', $custom_css);
-    }
-}
-add_action('wp_enqueue_scripts', 'portolite_breadcrumb_spacing_combined');
-
-
-
 
 
 // scrollup

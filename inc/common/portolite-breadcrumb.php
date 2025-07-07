@@ -32,6 +32,8 @@ function portolite_breadcrumb_func()
 
     // Option to hide breadcrumb via ACF
     $is_breadcrumb = function_exists('get_field') ? get_field('is_it_invisible_breadcrumb', $_id) : '';
+
+    
     if (!empty($_GET['s'])) {
         $is_breadcrumb = null;
     }
@@ -39,9 +41,9 @@ function portolite_breadcrumb_func()
     if (!empty($is_breadcrumb)) return;
 
     // Theme mod and ACF settings
+    $color         = get_theme_mod('portolite_breadcrumb_bg_color', '#e1e1e1');
     $bg_img        = get_theme_mod('breadcrumb_bg_img');
     $right_img     = get_theme_mod('breadcrumb_right_img');
-    $color         = get_theme_mod('portolite_breadcrumb_bg_color', '#e1e1e1');
     $padding_top   = get_theme_mod('portolite_breadcrumb_pt', '115');
     $padding_bottom = get_theme_mod('portolite_breadcrumb_pb', '130');
     $style         = function_exists('get_field') ? get_field('breadcrumb_style') : get_theme_mod('choose_default_breadcrumb', 'breadcrumb-style-1');
@@ -75,7 +77,7 @@ function portolite_breadcrumb_func()
                         </div>
                     <?php endif; ?>
 
-                    <h2><?php echo wp_kses_post($title); ?></h2>
+                    <h2 class="breadcrumb__title"><?php echo wp_kses_post($title); ?></h2>
 
                     <div class="thm-breadcrumb__box">
                         <ul class="thm-breadcrumb list-unstyled">

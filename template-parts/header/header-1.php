@@ -7,32 +7,9 @@
  */
 
 $portolite_topbar_switch         = get_theme_mod('portolite_topbar_switch', false);
-$portolite_transparent_header    = get_theme_mod('portolite_transparent_header', false);
-$is_it_transparent_header        = function_exists('get_field') ? get_field('is_it_transparent_header') : '';
-
 $portolite_sticky_switch         = get_theme_mod('portolite_sticky_switch', false);
-$enable_sticky                   = !empty($portolite_sticky_switch) ? 'header__sticky' : '';
+$enable_sticky                   = !empty($portolite_sticky_switch) ? 'stricky-header' : '';
 
-$portolite_transparent_enable    = '';
-$portolite_transparent_logo      = false;
-$portolite_bottom_border         = '';
-
-// Transparent logic
-if ($is_it_transparent_header) {
-   if (!$portolite_transparent_header) {
-      $portolite_transparent_enable = 'header__transparent';
-      $portolite_transparent_logo   = true;
-      $portolite_bottom_border      = 'header__bottom-border';
-   } else {
-      $portolite_transparent_enable = 'header__white-solid';
-      $portolite_transparent_logo   = false;
-      $portolite_bottom_border      = '';
-   }
-} else {
-   $portolite_transparent_enable = $portolite_transparent_header ? 'header__transparent' : 'header__white-solid';
-   $portolite_transparent_logo   = $portolite_transparent_header;
-   $portolite_bottom_border      = $portolite_transparent_header ? 'header__bottom-border' : '';
-}
 
 // Header info
 $portolite_mail_id   = get_theme_mod('portolite_mail_id', __('info@portolite.com', 'portolite'));
@@ -42,7 +19,60 @@ $portolite_time_text = get_theme_mod('portolite_time_text', __('Sunday-Thursday 
 ?>
 
 <div class="page-wrapper">
-   <header class="main-header <?php echo esc_attr($portolite_transparent_enable . ' ' . $enable_sticky . ' ' . $portolite_bottom_border); ?>">
+
+   <?php if (!empty($portolite_topbar_switch)): ?>
+      <div class="header__top header__border d-none d-lg-block">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-8">
+                  <div class="header__info">
+                     <ul>
+                        <?php if (!empty($portolite_mail_id)): ?>
+                           <li>
+                              <a href="mailto:<?php echo esc_attr($portolite_mail_id); ?>">
+                                 <span class="icon-user"></span>
+                                 <?php echo esc_html($portolite_mail_id); ?>
+                              </a>
+                           </li>
+                        <?php endif; ?>
+
+                        <?php if (!empty($portolite_phone_num)): ?>
+                           <li>
+                              <a href="tel:<?php echo esc_attr($portolite_phone_num); ?>">
+                                 <span class="icon-user"></span>
+                                 <?php echo esc_html($portolite_phone_num); ?>
+                              </a>
+                           </li>
+                        <?php endif; ?>
+
+
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4">
+
+                  <?php if (!empty($portolite_time_text)): ?>
+                     <div class="header__right">
+                        <ul>
+                           <li>
+                              <span>
+                                 <span class="icon-user"></span>
+                                 <?php echo esc_html($portolite_time_text); ?>
+                              </span>
+                           </li>
+                        </ul>
+
+                     </div>
+                  <?php endif; ?>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   <?php endif; ?>
+
+
+   <header class="main-header">
       <div class="main-header__wrapper">
          <nav class="main-menu">
             <div class="main-menu__wrapper">
@@ -77,6 +107,9 @@ $portolite_time_text = get_theme_mod('portolite_time_text', __('Sunday-Thursday 
       </div>
    </header>
 
-   <div class="stricky-header stricked-menu main-menu">
-      <div class="sticky-header__content"></div>
-   </div>
+   <?php if (!empty($enable_sticky)): ?>
+      <div class="<?php echo esc_attr($enable_sticky) ?> stricked-menu main-menu">
+         <div class="sticky-header__content"></div>
+      </div>
+
+   <?php endif; ?>

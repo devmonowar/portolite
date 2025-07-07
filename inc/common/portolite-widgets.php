@@ -40,7 +40,7 @@ function portolite_widgets_init()
     register_sidebar([
         'name'          => esc_html__('Footer Sidebar', 'portolite'),
         'id'            => 'footer-sidebar',
-        'description'   => esc_html__('Widgets area for Footer Style 1', 'portolite'),
+        'description'   => esc_html__('Widgets area for Footer Style', 'portolite'),
         'before_widget' => '<div id="%1$s" class="col-xl-3 col-lg-6 footer_widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4 class="footer-widget__title">',

@@ -10,6 +10,7 @@
 
 get_header();
 
+
 $portolite_error_title     = get_theme_mod('portolite_error_title', __("Sorry we can't find that page!", 'portolite'));
 $portolite_error_link_text = get_theme_mod('portolite_error_link_text', __('Back To Home', 'portolite'));
 $portolite_error_desc      = get_theme_mod('portolite_error_desc', __('The page you are looking for was never existed.', 'portolite'));

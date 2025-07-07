@@ -30,7 +30,11 @@ $blog_tag_col = $portolite_blog_single_social ? 'col-xl-7' : 'col-xl-12';
         <div class="blog-details__content">
             <h3 class="blog-details__title-1"><?php the_title(); ?></h3>
             <?php the_content(); ?>
-            <?php get_template_part('template-parts/blog/blog-tags-social'); ?>
+
+            <?php if (!empty($portolite_blog_single_social)): ?>
+                <?php get_template_part('template-parts/blog/blog-tags-social'); ?>
+            <?php endif; ?>
+
         </div>
 
     </article>
