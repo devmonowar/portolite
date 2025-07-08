@@ -64,7 +64,7 @@ $portolite_copyright_center = $portolite_footer_social_switch ? 'col-sm-6' : 'co
                 <div class="row site-footer__bottom-inner">
                     <div class="<?php echo esc_attr($portolite_copyright_center); ?>">
                         <div class="site-footer__copyright">
-                            <p class="site-footer__copyright-text"><?php print portolite_copyright_text(); ?></p>
+                            <p class="site-footer__copyright-text"><?php echo portolite_copyright_text(); ?></p>
                         </div>
                     </div>
                     <?php if (!empty($portolite_footer_social_switch)): ?>

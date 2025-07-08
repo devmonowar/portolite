@@ -1,19 +1,19 @@
 <?php
 
 /**
- * Breadcrumbs for Portolite Theme
+ * Breadcrumbs for Portolite Theme 
  *
  * @package portolite
  */
 
 function portolite_breadcrumb_func()
 {
-    // Determine the breadcrumb title
-    if (is_front_page() && is_home()) {
-        $title = get_theme_mod('breadcrumb_blog_title', __('Blog', 'portolite'));
-    } elseif (is_front_page()) {
-        return; // Don't show breadcrumbs on front page
-    } elseif (is_home()) {
+    if (is_front_page()) {
+        return; // Static homepage এ breadcrumb
+    }
+
+    // Breadcrumb title
+    if (is_home()) {
         $title = get_the_title(get_option('page_for_posts'));
     } elseif (is_single() && 'post' === get_post_type()) {
         $title = get_the_title();
@@ -27,31 +27,40 @@ function portolite_breadcrumb_func()
         $title = get_the_title();
     }
 
-    // Get current page ID
-    $_id = is_home() ? get_option('page_for_posts') : get_the_ID();
+    // Page/Post ID
+    $page_id = is_home() ? get_option('page_for_posts') : get_the_ID();
+    $page_id = $page_id ? $page_id : null;
 
-    // Option to hide breadcrumb via ACF
-    $is_breadcrumb = function_exists('get_field') ? get_field('is_it_invisible_breadcrumb', $_id) : '';
+    // ACF check
+    $has_acf = function_exists('get_field');
 
-    
-    if (!empty($_GET['s'])) {
-        $is_breadcrumb = null;
+    // Breadcrumb hide field
+    $is_breadcrumb = '';
+    if (is_search()) {
+        $is_breadcrumb = false;
+    } elseif ($has_acf) {
+        $is_breadcrumb = get_field('is_it_invisible_breadcrumb', $page_id);
     }
 
     if (!empty($is_breadcrumb)) return;
 
-    // Theme mod and ACF settings
-    $color         = get_theme_mod('portolite_breadcrumb_bg_color', '#e1e1e1');
-    $bg_img        = get_theme_mod('breadcrumb_bg_img');
-    $right_img     = get_theme_mod('breadcrumb_right_img');
-    $padding_top   = get_theme_mod('portolite_breadcrumb_pt', '115');
-    $padding_bottom = get_theme_mod('portolite_breadcrumb_pb', '130');
-    $style         = function_exists('get_field') ? get_field('breadcrumb_style') : get_theme_mod('choose_default_breadcrumb', 'breadcrumb-style-1');
-    $img_from_page = function_exists('get_field') ? get_field('breadcrumb_background_image', $_id) : '';
-    $hide_img      = function_exists('get_field') ? get_field('hide_breadcrumb_background_image', $_id) : '';
+    // Theme mod & ACF values
+    $color           = get_theme_mod('portolite_breadcrumb_bg_color', '#e1e1e1');
+    $bg_img          = get_theme_mod('breadcrumb_bg_img');
+    $right_img       = get_theme_mod('breadcrumb_right_img');
+    $padding_top     = get_theme_mod('portolite_breadcrumb_pt', '115');
+    $padding_bottom  = get_theme_mod('portolite_breadcrumb_pb', '130');
 
-    if (!$hide_img && !empty($img_from_page['url'])) {
-        $bg_img = $img_from_page['url'];
+    // Breadcrumb style — ACF > fallback to Theme Customizer
+    $style_from_acf = $has_acf ? get_field('breadcrumb_style', $page_id) : '';
+    $style = !empty($style_from_acf) ? $style_from_acf : get_theme_mod('choose_default_breadcrumb', 'breadcrumb-style-1');
+
+    // Background override from page
+    $img_from_page = $has_acf ? get_field('breadcrumb_background_image', $page_id) : '';
+    $hide_img      = $has_acf ? get_field('hide_breadcrumb_background_image', $page_id) : '';
+
+    if (!$hide_img && !empty($img_from_page)) {
+        $bg_img = is_array($img_from_page) ? $img_from_page['url'] : $img_from_page;
     }
 ?>
 
@@ -77,7 +86,7 @@ function portolite_breadcrumb_func()
                         </div>
                     <?php endif; ?>
 
-                    <h2 class="breadcrumb__title"><?php echo wp_kses_post($title); ?></h2>
+                    <h2 class="breadcrumb__title"><?php echo esc_html($title); ?></h2>
 
                     <div class="thm-breadcrumb__box">
                         <ul class="thm-breadcrumb list-unstyled">

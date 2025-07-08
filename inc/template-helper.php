@@ -11,109 +11,91 @@
 /**
  * Load portolite header style dynamically
  */
+
+//
 function portolite_check_header()
 {
-    $header_style = function_exists('get_field') ? get_field('header_style') : null;
+    $has_acf = function_exists('get_field');
+    $page_id = is_home() ? get_option('page_for_posts') : get_the_ID();
+
+    $header_from_acf = $has_acf ? get_field('header_style', $page_id) : '';
+
     $default_style = get_theme_mod('choose_default_header', 'header-style-1');
+    $selected_style = !empty($header_from_acf) ? $header_from_acf : $default_style;
 
-    $selected_style = $header_style ?: $default_style;
-
-    $template_path = 'template-parts/header/' . sanitize_file_name($selected_style) . '.php';
+    $sanitized_style = sanitize_file_name($selected_style);
+    $template_path = 'template-parts/header/' . $sanitized_style . '.php';
 
     if (locate_template($template_path)) {
-        get_template_part('template-parts/header/' . sanitize_file_name($selected_style));
+        get_template_part('template-parts/header/' . $sanitized_style);
     } else {
-        get_template_part('template-parts/header/header-1');
+        get_template_part('template-parts/header/header-style-1');
     }
 }
 add_action('portolite_header_style', 'portolite_check_header', 10);
 
 
 
-
 /**
  * Load portolite newsletter style dynamically
  */
+
 function portolite_check_newsletter()
 {
-    $newsletter_style = function_exists('get_field') ? get_field('newsletter_style') : null;
-    $default_style = get_theme_mod('choose_default_newsletter', 'newsletter-style-1');
-    $selected_style = $newsletter_style ?: $default_style;
+    $has_acf  = function_exists('get_field');
+    $page_id  = is_home() ? get_option('page_for_posts') : get_the_ID();
 
-    $template_path = 'template-parts/newsletter/' . sanitize_file_name($selected_style) . '.php';
+    $newsletter_from_acf = $has_acf ? get_field('newsletter_style', $page_id) : '';
+
+    $default_style = get_theme_mod('choose_default_newsletter', 'newsletter-style-1');
+    $selected_style = !empty($newsletter_from_acf) ? $newsletter_from_acf : $default_style;
+
+    $sanitized_style = sanitize_file_name($selected_style);
+    $template_path   = 'template-parts/newsletter/' . $sanitized_style . '.php';
 
     if (locate_template($template_path)) {
-        get_template_part('template-parts/newsletter/' . sanitize_file_name($selected_style));
+        get_template_part('template-parts/newsletter/' . $sanitized_style);
     } else {
-        get_template_part('template-parts/newsletter/newsletter-1');
+        get_template_part('template-parts/newsletter/newsletter-style-1');
     }
 }
 add_action('portolite_newsletter_style', 'portolite_check_newsletter', 10);
 
 
+
 /**
  * Header logo function
  */
+
 function portolite_header_logo()
 {
-    $logo_enabled  = function_exists('get_field') ? get_field('is_enable_sec_logo') : null;
+    $has_acf      = function_exists('get_field');
+    $page_id      = is_home() ? get_option('page_for_posts') : get_the_ID();
+    $logo_enabled = $has_acf ? get_field('is_enable_sec_logo', $page_id) : false;
+
     $default_white = get_template_directory_uri() . '/assets/img/logo/white-logo.png';
     $default_black = get_template_directory_uri() . '/assets/img/logo/black-logo.png';
-    $logo_width    = get_theme_mod('portolite_logo_width', '120');
 
-    $white_logo = get_theme_mod('white_logo', $default_white);
-    $black_logo = get_theme_mod('black_logo', $default_black);
+    $logo_width  = get_theme_mod('portolite_logo_width', '120');
+    $white_logo  = get_theme_mod('white_logo', $default_white);
+    $black_logo  = get_theme_mod('black_logo', $default_black);
 
-    $logo_class = !empty($logo_enabled) ? 'secondary-logo' : 'standard-logo';
-    $logo_src = !empty($logo_enabled) ? $black_logo : $white_logo;
+    $logo_class = $logo_enabled ? 'secondary-logo' : 'standard-logo';
+    $logo_src   = $logo_enabled ? $black_logo : $white_logo;
 ?>
+
     <a class="<?php echo esc_attr($logo_class); ?>" href="<?php echo esc_url(home_url('/')); ?>">
         <img
             src="<?php echo esc_url($logo_src); ?>"
-            data-width="<?php echo esc_attr($logo_width); ?>"
-            height="auto"
-            alt="<?php echo esc_attr__('logo', 'portolite'); ?>" />
+            width="<?php echo esc_attr($logo_width); ?>"
+            alt="<?php echo esc_attr__('Logo', 'portolite'); ?>" />
     </a>
+
 <?php
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-/**
- * portolite_footer_logo
- */
-function portolite_footer_logo()
-{ ?>
-    <?php
-    $portolite_foooter_logo = function_exists('get_field') ? get_field('portolite_footer_logo') : NULL;
-    $portolite_logo = get_template_directory_uri() . '/assets/img/logo/logo-black.svg';
-    $portolite_footer_logo_default = get_theme_mod('portolite_footer_logo', $portolite_logo);
-    $portolite_site_logo_width = get_theme_mod('portolite_logo_width', '120');
-    ?>
-
-    <?php if (!empty($portolite_foooter_logo)) : ?>
-        <a href="<?php print esc_url(home_url('/')); ?>">
-            <img data-width="<?php echo esc_attr($portolite_site_logo_width); ?>" height="auto" src="<?php print esc_url($portolite_foooter_logo); ?>" alt="<?php print esc_attr__('logo', 'portolite'); ?>" />
-        </a>
-    <?php else : ?>
-        <a href="<?php print esc_url(home_url('/')); ?>">
-            <img data-width="<?php echo esc_attr($portolite_site_logo_width); ?>" height="auto" src="<?php print esc_url($portolite_footer_logo_default); ?>" alt="<?php print esc_attr__('logo', 'portolite'); ?>" />
-        </a>
-    <?php endif; ?>
-<?php
-}
-
-// header logo
+// portolite_header_secondary_logo
 function portolite_header_secondary_logo()
 { ?>
     <?php
@@ -121,13 +103,42 @@ function portolite_header_secondary_logo()
     $portolite_secondary_logo = get_theme_mod('seconday_logo', $portolite_logo_black);
     $portolite_site_logo_width = get_theme_mod('portolite_logo_width', '120');
     ?>
-    <a class="sticky-logo" href="<?php print esc_url(home_url('/')); ?>">
-        <img width="<?php echo esc_attr($portolite_site_logo_width); ?>" height="auto" src="<?php print esc_url($portolite_secondary_logo); ?>" alt="<?php print esc_attr__('logo', 'portolite'); ?>" />
+    <a class="sticky-logo" href="<?php echo esc_url(home_url('/')); ?>">
+        <img width="<?php echo esc_attr($portolite_site_logo_width); ?>" height="auto" src="<?php echo esc_url($portolite_secondary_logo); ?>" alt="<?php echo esc_attr__('logo', 'portolite'); ?>" />
     </a>
 <?php
 }
 
-// header logo
+
+
+/**
+ * Display footer logo with fallback (ACF > Customizer > Default)
+ */
+function portolite_footer_logo()
+{
+    $has_acf = function_exists('get_field');
+    $page_id = is_home() ? get_option('page_for_posts') : get_the_ID();
+
+    $acf_footer_logo = $has_acf ? get_field('portolite_footer_logo', $page_id) : '';
+
+    $default_logo      = get_template_directory_uri() . '/assets/img/logo/logo-black.svg';
+    $customizer_logo   = get_theme_mod('portolite_footer_logo', $default_logo);
+
+    $final_logo = !empty($acf_footer_logo) ? $acf_footer_logo : $customizer_logo;
+
+    $logo_width = get_theme_mod('portolite_logo_width', '120');
+?>
+
+    <a href="<?php echo esc_url(home_url('/')); ?>">
+        <img
+            src="<?php echo esc_url($final_logo); ?>"
+            width="<?php echo esc_attr($logo_width); ?>"
+            alt="<?php echo esc_attr__('Footer Logo', 'portolite'); ?>" />
+    </a>
+
+<?php
+}
+
 
 /**
  * Custom comments callback
@@ -173,65 +184,32 @@ function portolite_header_social_profiles()
     $portolite_topbar_youtube_url = get_theme_mod('portolite_topbar_youtube_url', __('#', 'portolite'));
 ?>
     <?php if (!empty($portolite_topbar_fb_url)): ?>
-        <a href="<?php print esc_url($portolite_topbar_fb_url); ?>"><i class="icon-facebook-f"></i></a>
+        <a href="<?php echo esc_url($portolite_topbar_fb_url); ?>"><i class="icon-facebook-f"></i></a>
     <?php endif; ?>
 
     <?php if (!empty($portolite_topbar_twitter_url)): ?>
-        <a href="<?php print esc_url($portolite_topbar_twitter_url); ?>"><i class="icon-Vector"></i></a>
+        <a href="<?php echo esc_url($portolite_topbar_twitter_url); ?>"><i class="icon-Vector"></i></a>
     <?php endif; ?>
 
     <?php if (!empty($portolite_topbar_instagram_url)): ?>
-        <a href="<?php print esc_url($portolite_topbar_instagram_url); ?>"><i class="icon-instagram"></i></a>
+        <a href="<?php echo esc_url($portolite_topbar_instagram_url); ?>"><i class="icon-instagram"></i></a>
     <?php endif; ?>
 
     <?php if (!empty($portolite_topbar_linkedin_url)): ?>
-        <a href="<?php print esc_url($portolite_topbar_linkedin_url); ?>"><i class="icon-linkedin"></i></a>
+        <a href="<?php echo esc_url($portolite_topbar_linkedin_url); ?>"><i class="icon-linkedin"></i></a>
     <?php endif; ?>
 
     <?php if (!empty($portolite_topbar_youtube_url)): ?>
-        <a href="<?php print esc_url($portolite_topbar_youtube_url); ?>"><i class="icon-pinterest"></i></a>
+        <a href="<?php echo esc_url($portolite_topbar_youtube_url); ?>"><i class="icon-pinterest"></i></a>
     <?php endif; ?>
 
 <?php
 }
 
 /**
- * [portolite_header_social_profiles description]
+ * [portolite_footer_social_profiles description]
  * @return [type] [description]
  */
-function portolite_newsletter_social_profiles()
-{
-    $portolite_newsletter_fb_url = get_theme_mod('portolite_newsletter_fb_url', __('#', 'portolite'));
-    $portolite_newsletter_twitter_url = get_theme_mod('portolite_newsletter_twitter_url', __('#', 'portolite'));
-    $portolite_newsletter_instagram_url = get_theme_mod('portolite_newsletter_instagram_url', __('#', 'portolite'));
-    $portolite_newsletter_linkedin_url = get_theme_mod('portolite_newsletter_linkedin_url', __('#', 'portolite'));
-    $portolite_newsletter_youtube_url = get_theme_mod('portolite_newsletter_youtube_url', __('#', 'portolite'));
-?>
-    <ul>
-        <?php if (!empty($portolite_newsletter_fb_url)): ?>
-            <li><a href="<?php print esc_url($portolite_newsletter_fb_url); ?>"><span><i class="fab fa-facebook-f"></i></span></a></li>
-        <?php endif; ?>
-
-        <?php if (!empty($portolite_newsletter_twitter_url)): ?>
-            <li><a href="<?php print esc_url($portolite_newsletter_twitter_url); ?>"><span><i class="fab fa-twitter"></i></span></a></li>
-        <?php endif; ?>
-
-        <?php if (!empty($portolite_newsletter_instagram_url)): ?>
-            <li><a href="<?php print esc_url($portolite_newsletter_instagram_url); ?>"><span><i class="fab fa-instagram"></i></span></a></li>
-        <?php endif; ?>
-
-        <?php if (!empty($portolite_newsletter_linkedin_url)): ?>
-            <li><a href="<?php print esc_url($portolite_newsletter_linkedin_url); ?>"><span><i class="fab fa-linkedin"></i></span></a></li>
-        <?php endif; ?>
-
-        <?php if (!empty($portolite_newsletter_youtube_url)): ?>
-            <li><a href="<?php print esc_url($portolite_newsletter_youtube_url); ?>"><span><i class="fab fa-youtube"></i></span></a></li>
-        <?php endif; ?>
-    </ul>
-
-<?php
-}
-
 
 function portolite_footer_social_profiles()
 {
@@ -243,31 +221,31 @@ function portolite_footer_social_profiles()
 ?>
 
     <?php if (!empty($portolite_footer_fb_url)): ?>
-        <a href="<?php print esc_url($portolite_footer_fb_url); ?>">
+        <a href="<?php echo esc_url($portolite_footer_fb_url); ?>">
             <i class="fab fa-facebook-f"></i>
         </a>
     <?php endif; ?>
 
     <?php if (!empty($portolite_footer_twitter_url)): ?>
-        <a href="<?php print esc_url($portolite_footer_twitter_url); ?>">
+        <a href="<?php echo esc_url($portolite_footer_twitter_url); ?>">
             <i class="fab fa-twitter"></i>
         </a>
     <?php endif; ?>
 
     <?php if (!empty($portolite_footer_instagram_url)): ?>
-        <a href="<?php print esc_url($portolite_footer_instagram_url); ?>">
+        <a href="<?php echo esc_url($portolite_footer_instagram_url); ?>">
             <i class="fab fa-instagram"></i>
         </a>
     <?php endif; ?>
 
     <?php if (!empty($portolite_footer_linkedin_url)): ?>
-        <a href="<?php print esc_url($portolite_footer_linkedin_url); ?>">
+        <a href="<?php echo esc_url($portolite_footer_linkedin_url); ?>">
             <i class="fab fa-linkedin"></i>
         </a>
     <?php endif; ?>
 
     <?php if (!empty($portolite_footer_youtube_url)): ?>
-        <a href="<?php print esc_url($portolite_footer_youtube_url); ?>">
+        <a href="<?php echo esc_url($portolite_footer_youtube_url); ?>">
             <i class="fab fa-youtube"></i>
         </a>
     <?php endif; ?>
@@ -316,19 +294,15 @@ function portolite_footer_menu()
  */
 function portolite_check_footer()
 {
-    // Get per-page ACF field value if available
+
     $footer_style = function_exists('get_field') ? get_field('footer_style') : null;
 
-    // Get default from Customizer
     $default_style = get_theme_mod('choose_default_footer', 'footer-style-1');
 
-    // Choose either ACF or default
     $selected_style = $footer_style ?: $default_style;
 
-    // Build path
     $template_path = 'template-parts/footer/' . sanitize_file_name($selected_style) . '.php';
 
-    // Load if exists, else fallback to footer-1
     if (locate_template($template_path)) {
         get_template_part('template-parts/footer/' . sanitize_file_name($selected_style));
     } else {
@@ -339,13 +313,10 @@ add_action('portolite_footer_style', 'portolite_check_footer', 10);
 
 
 
-
-
-
 // portolite_copyright_text
 function portolite_copyright_text()
 {
-    print get_theme_mod('portolite_copyright', esc_html__('Copyright © 2025 Monowar_Hossain. All Rights Reserved', 'portolite'));
+    echo get_theme_mod('portolite_copyright', esc_html__('Copyright © 2025 Monowar_Hossain. All Rights Reserved', 'portolite'));
 }
 
 
@@ -413,80 +384,6 @@ if (!function_exists('portolite_pagination')) {
     }
 }
 
-
-
-
-
-// scrollup
-function portolite_scrollup_switch()
-{
-    $scrollup_switch = get_theme_mod('portolite_scrollup_switch', false);
-    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
-    if ($scrollup_switch) {
-        $custom_css = '';
-        $custom_css .= "#scrollUp{ display: none !important;}";
-
-        wp_add_inline_style('portolite-scrollup-switch', $custom_css);
-    }
-}
-add_action('wp_enqueue_scripts', 'portolite_scrollup_switch');
-
-// theme color
-function portolite_custom_color()
-{
-    $color_code = get_theme_mod('portolite_color_option', '#F50963');
-    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
-    if ($color_code != '') {
-        $custom_css = '';
-        $custom_css .= "html:root { --ptl-theme-1 : " . $color_code . "}";
-
-        wp_add_inline_style('portolite-custom', $custom_css);
-    }
-}
-add_action('wp_enqueue_scripts', 'portolite_custom_color');
-
-
-// theme color secondary
-function portolite_custom_color_secondary()
-{
-    $color_code = get_theme_mod('portolite_color_option_2', '#008080');
-    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
-    if ($color_code != '') {
-        $custom_css = '';
-        $custom_css .= "html:root { --ptl-theme-2 : " . $color_code . "}";
-
-        wp_add_inline_style('portolite-custom', $custom_css);
-    }
-}
-add_action('wp_enqueue_scripts', 'portolite_custom_color_secondary');
-
-// portolite_custom_color_third
-function portolite_custom_color_third()
-{
-    $color_code = get_theme_mod('portolite_color_option_3', '#F31E5E');
-    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
-    if ($color_code != '') {
-        $custom_css = '';
-        $custom_css .= "html:root { --ptl-theme-3 : " . $color_code . "}";
-        wp_add_inline_style('portolite-custom', $custom_css);
-    }
-}
-add_action('wp_enqueue_scripts', 'portolite_custom_color_third');
-
-
-
-// scroll to top color
-function portolite_custom_color_scrollup()
-{
-    $color_code = get_theme_mod('portolite_color_scrollup', '#03041C');
-    wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
-    if ($color_code != '') {
-        $custom_css = '';
-        $custom_css .= "html .back-to-top-btn { background-color: " . $color_code . "}";
-        wp_add_inline_style('portolite-custom', $custom_css);
-    }
-}
-add_action('wp_enqueue_scripts', 'portolite_custom_color_scrollup');
 
 
 // portolite_kses_intermediate
@@ -667,21 +564,21 @@ function portolite_kses($raw)
     return $allowed;
 }
 
-// / This code filters the Archive widget to include the post count inside the link /
-add_filter('get_archives_link', 'portolite_archive_count_span');
+// This code filters the Archive widget to include the post count inside the link /
 function portolite_archive_count_span($links)
 {
     $links = str_replace('</a>&nbsp;(', '<span > (', $links);
     $links = str_replace(')', ')</span></a> ', $links);
     return $links;
 }
+add_filter('get_archives_link', 'portolite_archive_count_span');
 
 
-// / This code filters the Category widget to include the post count inside the link /
-add_filter('wp_list_categories', 'portolite_cat_count_span');
+// This code filters the Category widget to include the post count inside the link /
 function portolite_cat_count_span($links)
 {
     $links = str_replace('</a> (', '<span> (', $links);
     $links = str_replace(')', ')</span></a>', $links);
     return $links;
 }
+add_filter('wp_list_categories', 'portolite_cat_count_span');

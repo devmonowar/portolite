@@ -35,14 +35,6 @@ function portolite_customizer_panels_sections($wp_customize)
         'panel'       => 'portolite_customizer',
     ]);
 
-    $wp_customize->add_section('color_setting', [
-        'title'       => esc_html__('Color Setting', 'portolite'),
-        'description' => '',
-        'priority'    => 10,
-        'capability'  => 'edit_theme_options',
-        'panel'       => 'portolite_customizer',
-    ]);
-
     $wp_customize->add_section('header_top_setting', [
         'title'       => esc_html__('Header Top Setting', 'portolite'),
         'description' => '',
@@ -256,69 +248,6 @@ function portolite_typo_fields($fields)
 
 add_filter('kirki/fields', 'portolite_typo_fields');
 
-
-
-// color Setting
-function portolite_color_fields($fields)
-{
-    // Color Settings
-    $fields[] = [
-        'type'        => 'color',
-        'settings'    => 'portolite_color_option',
-        'label'       => __('Theme Color', 'portolite'),
-        'description' => esc_html__('This is a Theme color control.', 'portolite'),
-        'section'     => 'color_setting',
-        'default'     => '#F50963',
-        'priority'    => 10,
-    ];
-    // Color Settings
-    $fields[] = [
-        'type'        => 'color',
-        'settings'    => 'portolite_color_option_2',
-        'label'       => __('Secondary Color', 'portolite'),
-        'description' => esc_html__('This is a Primary color control.', 'portolite'),
-        'section'     => 'color_setting',
-        'default'     => '#008080',
-        'priority'    => 10,
-    ];
-    // Color Settings
-    $fields[] = [
-        'type'        => 'color',
-        'settings'    => 'portolite_color_option_3',
-        'label'       => __('Theme Color 3', 'portolite'),
-        'description' => esc_html__('This is a Theme color control.', 'portolite'),
-        'section'     => 'color_setting',
-        'default'     => '#F31E5E',
-        'priority'    => 10,
-    ];
-
-    // Color Settings
-    $fields[] = [
-        'type'        => 'color',
-        'settings'    => 'portolite_color_scrollup',
-        'label'       => __('ScrollUp Color', 'portolite'),
-        'description' => esc_html__('This is a ScrollUp colo control.', 'portolite'),
-        'section'     => 'color_setting',
-        'default'     => '#03041C',
-        'priority'    => 10,
-    ];
-
-    // Color Settings
-    $fields[] = [
-        'type'        => 'text',
-        'settings'    => 'portolite_color_footer_gradient',
-        'label'       => __('Footer Gradient Color', 'portolite'),
-        'description' => esc_html__('This is a Footer Gradient.', 'portolite'),
-        'section'     => 'color_setting',
-        'default'     => '',
-        'priority'    => 10,
-    ];
-
-    return $fields;
-}
-add_filter('kirki/fields', 'portolite_color_fields');
-
-
 /*
 Header Top
  */
@@ -484,7 +413,7 @@ function _header_header_fields($fields)
         'multiple'    => 1,
         'choices'     => [
             'header-style-1'   => get_template_directory_uri() . '/inc/img/header/header-1.png',
-            //   'header-style-2' => get_template_directory_uri() . '/inc/img/header/header-2.png',
+            'header-style-2' => get_template_directory_uri() . '/inc/img/header/header-2.png',
         ],
         'default'     => 'header-style-1',
     ];
@@ -725,15 +654,6 @@ function _header_blog_fields($fields)
         'priority' => 10,
     ];
 
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'breadcrumb_blog_title',
-        'label'    => esc_html__('Blog Title', 'portolite'),
-        'section'  => 'blog_setting',
-        'default'  => esc_html__('Blog', 'portolite'),
-        'priority' => 10,
-    ];
-
     return $fields;
 }
 add_filter('kirki/fields', '_header_blog_fields');
@@ -745,22 +665,6 @@ newsletter setting
  */
 function _newsletter_setting_fields($fields)
 {
-    $fields[] = [
-        'type'        => 'radio-image',
-        'settings'    => 'choose_default_newsletter',
-        'label'       => esc_html__('Select Newsletter Style', 'portolite'),
-        'section'     => 'newsletter_setting',
-        'placeholder' => esc_html__('Select an option...', 'portolite'),
-        'priority'    => 10,
-        'multiple'    => 1,
-        'choices'     => [
-            'newsletter-style-1'   => get_template_directory_uri() . '/inc/img/newsletter/newsletter-1.png',
-            //    'newsletter-style-2' => get_template_directory_uri() . '/inc/img/newsletter/newsletter-2.png',
-            //    'newsletter-style-3' => get_template_directory_uri() . '/inc/img/newsletter/newsletter-3.png',
-
-        ],
-        'default'     => 'newsletter-style-1',
-    ];
 
     // header Newsletter switch
     $fields[] = [
@@ -775,6 +679,24 @@ function _newsletter_setting_fields($fields)
             'off' => esc_html__('Disable', 'portolite'),
         ],
     ];
+
+    $fields[] = [
+        'type'        => 'radio-image',
+        'settings'    => 'choose_default_newsletter',
+        'label'       => esc_html__('Select Newsletter Style', 'portolite'),
+        'section'     => 'newsletter_setting',
+        'placeholder' => esc_html__('Select an option...', 'portolite'),
+        'priority'    => 10,
+        'multiple'    => 1,
+        'choices'     => [
+            'newsletter-style-1'   => get_template_directory_uri() . '/inc/img/newsletter/newsletter-1.png',
+            'newsletter-style-2' => get_template_directory_uri() . '/inc/img/newsletter/newsletter-2.png',
+            //    'newsletter-style-3' => get_template_directory_uri() . '/inc/img/newsletter/newsletter-3.png',
+
+        ],
+        'default'     => 'newsletter-style-1',
+    ];
+
 
     // Breadcrumb Setting
     $fields[] = [

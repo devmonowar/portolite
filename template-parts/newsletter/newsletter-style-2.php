@@ -19,7 +19,7 @@ $bg_img_theme = get_theme_mod('newsletter_bg_img', get_template_directory_uri() 
 $newsletter_shortcode_theme = get_theme_mod('portolite_newsletter_shortcode', __('Your Shortcode here', 'portolite'));
 $title_theme              = get_theme_mod('portolite_newsletter_title', __('Partering With You To Transform <br> Your  Vision Into Reality', 'portolite'));
 $switch_theme             = get_theme_mod('portolite_newsletter_switch', false);
-$img_theme                = get_theme_mod('portolite_newsletter_right_img'); // Just image URL
+$img_theme                = get_theme_mod('portolite_newsletter_right_img');
 
 // Final values (ACF > Theme Mod)
 $bg_img                 = !empty($bg_img_acf['url']) ? esc_url($bg_img_acf['url']) : esc_url($bg_img_theme);
@@ -29,12 +29,12 @@ $enabled               = ($switch_acf !== null) ? $switch_acf : $switch_theme;
 
 // Right image handling (array expected from ACF)
 $right_image_url = !empty($img_acf['url']) ? esc_url($img_acf['url']) : esc_url($img_theme);
-$right_image_alt = !empty($img_acf['alt']) ? esc_attr($img_acf['alt']) : ''; // No fallback alt, per your request
+$right_image_alt = !empty($img_acf['alt']) ? esc_attr($img_acf['alt']) : '';
 
 ?>
 
 <?php if (!empty($enabled)) : ?>
-   <div class="site-footer__newsletter">
+   <div class="site-footer__newsletter style2">
       <div class="container">
          <div class="site-footer__newsletter-inner">
 

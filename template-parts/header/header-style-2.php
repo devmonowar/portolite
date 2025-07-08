@@ -72,7 +72,7 @@ $portolite_time_text = get_theme_mod('portolite_time_text', __('Sunday-Thursday 
    <?php endif; ?>
 
 
-   <header class="main-header">
+   <header class="main-header header2">
       <div class="main-header__wrapper">
          <nav class="main-menu">
             <div class="main-menu__wrapper">
