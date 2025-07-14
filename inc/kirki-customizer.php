@@ -467,7 +467,7 @@ function _header_page_title_fields($fields)
         'choices'     => [
             'breadcrumb-style-1' => get_template_directory_uri() . '/inc/img/breadcrumb/breadcrumb-1.png',
             'breadcrumb-style-2' => get_template_directory_uri() . '/inc/img/breadcrumb/breadcrumb-2.png',
-            'breadcrumb-style-3' => get_template_directory_uri() . '/inc/img/breadcrumb/breadcrumb-3.png',
+            //'breadcrumb-style-3' => get_template_directory_uri() . '/inc/img/breadcrumb/breadcrumb-3.png',
         ],
         'default'     => 'breadcrumb-style-1',
     ];

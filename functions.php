@@ -87,7 +87,6 @@ require_once PORTOLITE_THEME_INC . 'template-functions.php';
 require_once PORTOLITE_THEME_INC . 'template-helper.php';
 require_once PORTOLITE_THEME_INC . 'kirki-customizer.php';
 require_once PORTOLITE_THEME_INC . 'class-portolite-kirki.php';
-require_once PORTOLITE_THEME_INC . 'class-navwalker.php';
 require_once PORTOLITE_THEME_INC . 'class-tgm-plugin-activation.php';
 require_once PORTOLITE_THEME_INC . 'add_plugin.php';
 require_once PORTOLITE_THEME_INC . 'common/portolite-breadcrumb.php';

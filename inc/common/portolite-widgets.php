@@ -10,17 +10,6 @@
 function portolite_widgets_init()
 {
 
-    // Blog Sidebar
-    // register_sidebar([
-    //     'name'          => esc_html__('Blog Sidebar', 'portolite'),
-    //     'id'            => 'blog-sidebar',
-    //     'description'   => esc_html__('Add widgets here for blog sidebar.', 'portolite'),
-    //     'before_widget' => '<div id="%1$s" class="sidebar_widget mb-45 %2$s">',
-    //     'after_widget'  => '</div>',
-    //     'before_title'  => '<h3 class="sidebar_widget-title">',
-    //     'after_title'   => '</h3>',
-    // ]);
-
     register_sidebar([
         'name'          => esc_html__('Blog Sidebar', 'portolite'),
         'id'            => 'blog-sidebar',

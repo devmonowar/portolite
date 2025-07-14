@@ -95,17 +95,24 @@ function portolite_header_logo()
 }
 
 
-// portolite_header_secondary_logo
+
+/**
+ * Display sticky secondary logo in header
+ */
 function portolite_header_secondary_logo()
-{ ?>
-    <?php
-    $portolite_logo_black = get_template_directory_uri() . '/assets/img/logo/logo.svg';
-    $portolite_secondary_logo = get_theme_mod('seconday_logo', $portolite_logo_black);
-    $portolite_site_logo_width = get_theme_mod('portolite_logo_width', '120');
-    ?>
+{
+    $portolite_logo_black       = get_template_directory_uri() . '/assets/img/logo/logo.svg';
+    $portolite_secondary_logo   = get_theme_mod('black_logo', $portolite_logo_black);
+    $portolite_site_logo_width  = get_theme_mod('portolite_logo_width', '120');
+?>
+
     <a class="sticky-logo" href="<?php echo esc_url(home_url('/')); ?>">
-        <img width="<?php echo esc_attr($portolite_site_logo_width); ?>" height="auto" src="<?php echo esc_url($portolite_secondary_logo); ?>" alt="<?php echo esc_attr__('logo', 'portolite'); ?>" />
+        <img
+            src="<?php echo esc_url($portolite_secondary_logo); ?>"
+            width="<?php echo esc_attr($portolite_site_logo_width); ?>"
+            alt="<?php echo esc_attr__('logo', 'portolite'); ?>" />
     </a>
+
 <?php
 }
 
@@ -264,8 +271,6 @@ function portolite_header_menu()
         'theme_location' => 'main-menu',
         'menu_class'     => 'main-menu__list',
         'container'      => '',
-        'fallback_cb'    => 'PortoLite_Navwalker_Class::fallback',
-        'walker'         => new PortoLite_Navwalker_Class,
     ]);
     ?>
 <?php
@@ -282,8 +287,6 @@ function portolite_footer_menu()
         'theme_location' => 'footer-menu',
         'menu_class'     => 'm-0 footer-list-inline-3',
         'container'      => '',
-        'fallback_cb'    => 'PortoLite_Navwalker_Class::fallback',
-        'walker'         => new PortoLite_Navwalker_Class,
     ]);
 }
 

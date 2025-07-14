@@ -53,6 +53,7 @@ $blog_column = is_active_sidebar('blog-sidebar') ? 8 : 12;
 						<?php endif; ?>
 
 						<?php
+						get_template_part('template-parts/biography');
 						// Load comment template if applicable
 						if (comments_open() || get_comments_number()) :
 							comments_template();
