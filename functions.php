@@ -194,6 +194,16 @@ if (!function_exists('wp_body_open')) {
         do_action('wp_body_open');
     }
 }
+//  custom_tag_cloud_args
+function custom_tag_cloud_args($args)
+{
+    $args['smallest'] = 16; // বা যেই font size চাও
+    $args['largest'] = 16;
+    $args['unit'] = 'px';
+    return $args;
+}
+add_filter('widget_tag_cloud_args', 'custom_tag_cloud_args');
+
 
 /**--------------------------------------------------------------
  * Custom Comment Callback

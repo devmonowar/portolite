@@ -32,8 +32,14 @@ body {
     padding-bottom: 80px;
 }
 
-
-
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
 /* sidebar  */
 
 
@@ -285,4 +291,13 @@ header.main-header {
 .footer__social-3 a:hover {
     color: #e8092e;
     background-color: #fff;
+}
+.footer_widget {
+    color: #fff;
+    margin-bottom: 20px;
+}
+.widget_text li.option {
+    max-width: 300px;
+    display: block;
+    text-wrap: auto;
 }

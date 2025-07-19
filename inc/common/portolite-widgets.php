@@ -14,7 +14,7 @@ function portolite_widgets_init()
         'name'          => esc_html__('Blog Sidebar', 'portolite'),
         'id'            => 'blog-sidebar',
         'description'   => esc_html__('Add widgets here for blog sidebar.', 'portolite'),
-        'before_widget' => '<div id="%1$s" class="sidebar__single %2$s">',
+        'before_widget' => '<div id="%1$s" class="sidebar__widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<div class="sidebar__title-box"><h3 class="sidebar__title">',
         'after_title'   => '</h3>
@@ -30,7 +30,7 @@ function portolite_widgets_init()
         'name'          => esc_html__('Footer Sidebar', 'portolite'),
         'id'            => 'footer-sidebar',
         'description'   => esc_html__('Widgets area for Footer Style', 'portolite'),
-        'before_widget' => '<div id="%1$s" class="col-xl-3 col-lg-6 footer_widget %2$s">',
+        'before_widget' => '<div id="%1$s" class="col-xl-3 col-lg-6 footer__widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4 class="footer-widget__title">',
         'after_title'   => '</h4>',
