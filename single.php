@@ -17,7 +17,7 @@ $blog_column = is_active_sidebar('blog-sidebar') ? 8 : 12;
 	<div class="container">
 		<div class="row">
 			<div class="col-xxl-<?php echo esc_attr($blog_column); ?> col-xl-<?php echo esc_attr($blog_column); ?> col-lg-<?php echo esc_attr($blog_column); ?>">
-				<div class="blog-list__left">
+				<div class="blog-list__left postbox__details">
 					<?php while (have_posts()) : the_post(); ?>
 
 						<?php get_template_part('template-parts/content', get_post_format() ?: 'standard'); ?>

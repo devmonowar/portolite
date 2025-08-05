@@ -624,20 +624,21 @@
 }
 
 .blog-details__img img {
-    width: 100%;
+    /* width: 100%; */
     border-radius: 20px;
 }
 
 .blog-details__content {
     position: relative;
     display: block;
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 .blog-details__title-1 {
     font-size: 45px;
     font-weight: 600;
     line-height: 55px;
+    margin-bottom: 10px;
 }
 
 .blog-details__text-1 {
@@ -688,12 +689,9 @@
     z-index: 1;
 }
 .blog-details__content p {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-.blog-details__content p:last-child {
-    margin-bottom: 50px;
-}
 .blog-details__client-box-bg-shape {
     position: absolute;
     top: 0;

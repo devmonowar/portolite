@@ -315,11 +315,13 @@ function portolite_check_footer()
 add_action('portolite_footer_style', 'portolite_check_footer', 10);
 
 
-
 // portolite_copyright_text
 function portolite_copyright_text()
 {
-    echo get_theme_mod('portolite_copyright', esc_html__('Copyright © 2025 Monowar_Hossain. All Rights Reserved', 'portolite'));
+    echo esc_html(get_theme_mod(
+        'portolite_copyright',
+        __('Copyright © 2025 Monowar_Hossain. All Rights Reserved', 'portolite')
+    ));
 }
 
 
@@ -497,6 +499,13 @@ function portolite_kses($raw)
         'h4'                     => array(),
         'h5'                     => array(),
         'h6'                     => array(),
+        'b' => array(),
+        'strong' => array(),
+        'i' => array(),
+        'em' => array(),
+        'sup' => array(),
+        'sub' => array(),
+        'u' => array(),
         'i'                         => array(
             'class' => array(),
         ),

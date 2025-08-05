@@ -13,19 +13,38 @@ function portolite_breadcrumb_func()
     }
 
     // Breadcrumb title
+    // if (is_home()) {
+    //     $title = get_the_title(get_option('page_for_posts'));
+    // } elseif (is_single() && 'post' === get_post_type()) {
+    //     $title = get_the_title();
+    // } elseif (is_search()) {
+    //     $title = __('Search Results for: ', 'portolite') . get_search_query();
+    // } elseif (is_404()) {
+    //     $title = __('Page not Found', 'portolite');
+    // } elseif (is_archive()) {
+    //     $title = get_the_archive_title();
+    // } else {
+    //     $title = get_the_title();
+    // }
+
+    // Breadcrumb title
+    // Title fetch and filter
     if (is_home()) {
-        $title = get_the_title(get_option('page_for_posts'));
+        $title = portolite_kses(html_entity_decode(get_the_title(get_option('page_for_posts'))));
     } elseif (is_single() && 'post' === get_post_type()) {
-        $title = get_the_title();
+        $title = portolite_kses(html_entity_decode(get_the_title()));
     } elseif (is_search()) {
-        $title = __('Search Results for: ', 'portolite') . get_search_query();
+        $title = portolite_kses('Search Results for: ' . get_search_query());
     } elseif (is_404()) {
-        $title = __('Page not Found', 'portolite');
+        $title = portolite_kses('Page not Found');
     } elseif (is_archive()) {
-        $title = get_the_archive_title();
+        $title = portolite_kses(html_entity_decode(get_the_archive_title()));
     } else {
-        $title = get_the_title();
+        $title = portolite_kses(html_entity_decode(get_the_title()));
     }
+
+
+
 
     // Page/Post ID
     $page_id = is_home() ? get_option('page_for_posts') : get_the_ID();
@@ -86,7 +105,7 @@ function portolite_breadcrumb_func()
                         </div>
                     <?php endif; ?>
 
-                    <h2 class="breadcrumb__title"><?php echo esc_html($title); ?></h2>
+                    <h2 class="breadcrumb__title"><?php echo $title; ?></h2>
 
                     <div class="thm-breadcrumb__box">
                         <ul class="thm-breadcrumb list-unstyled">

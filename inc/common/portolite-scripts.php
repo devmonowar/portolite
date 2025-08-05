@@ -51,9 +51,11 @@ function portolite_scripts()
 
     wp_enqueue_style('portolite-core', PORTOLITE_THEME_CSS_DIR . 'portolite-core.css', [], time());
     wp_enqueue_style('portolite-unit', PORTOLITE_THEME_CSS_DIR . 'portolite-unit.css', [], time());
+    // wp_enqueue_style('portolite-unit2', PORTOLITE_THEME_CSS_DIR . 'portolite-unit2.css', [], time());
     wp_enqueue_style('portolite-widgets', PORTOLITE_THEME_CSS_DIR . 'widgets.css', [], time());
     wp_enqueue_style('portolite-custom', PORTOLITE_THEME_CSS_DIR . 'portolite-custom.css', []);
     wp_enqueue_style('portolite-style', get_stylesheet_uri());
+    wp_enqueue_style('responsive', PORTOLITE_THEME_CSS_DIR . 'responsive.css', []);
 
 
     // all js

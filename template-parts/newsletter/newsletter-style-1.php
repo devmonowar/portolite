@@ -40,14 +40,16 @@ $right_image_alt = !empty($img_acf['alt']) ? esc_attr($img_acf['alt']) : ''; // 
 
             <?php if (!empty($right_image_url)) : ?>
                <div class="site-footer__newsletter-img">
-                  <img src="<?php echo $right_image_url; ?>" alt="<?php echo $right_image_alt; ?>">
+                  <img src='<?php echo esc_url($right_image_url); ?>' alt='<?php echo esc_attr($right_image_alt); ?>'>
+
                </div>
             <?php endif; ?>
 
             <div class="site-footer__newsletter-inner-content">
                <?php if (!empty($bg_img)) : ?>
                   <div class="site-footer__newsletter-shape-1"
-                     style="background-image: url(<?php echo $bg_img; ?>);">
+                     style='background-image: url(<?php echo esc_url($bg_img); ?>);'>
+
                   </div>
                <?php endif; ?>
 

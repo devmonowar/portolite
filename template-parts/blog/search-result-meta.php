@@ -34,7 +34,8 @@ if (function_exists('setPostViews')) {
             ?>
                 <div class="search__blog-meta-author-thumb">
                     <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>">
-                        <?php echo $author_avatar; ?>
+                        <?php echo wp_kses_post( $author_avatar ); ?>
+
                     </a>
                 </div>
             <?php endif; ?>

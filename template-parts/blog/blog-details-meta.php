@@ -29,7 +29,7 @@ $show_views    = get_theme_mod('portolite_blog_view', false);
             <div class="postbox__meta-author d-flex align-items-center">
                 <div class="postbox__meta-author-thumb">
                     <a href="<?php echo esc_url($author_url); ?>">
-                        <?php echo $author_avatar; ?>
+                        <?php echo wp_kses_post($author_avatar); ?>
                     </a>
                 </div>
                 <div class="postbox__meta-content">

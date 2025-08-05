@@ -15,7 +15,7 @@ $style = get_sub_field('about_style') ?: 'style_1'; // fallback
 
 <!--About One Start -->
 <?php if ($title || $description || $image): ?>
-    <section class="<?php echo ($style === 'style_2') ? 'about-five' : 'about-one'; ?>">
+    <section class='<?php echo esc_attr(($style === 'style_2') ? 'about-five' : 'about-one'); ?>'>
         <div class="container">
             <div class="row">
                 <div class="col-xl-6">
@@ -56,15 +56,18 @@ $style = get_sub_field('about_style') ?: 'style_1'; // fallback
                 </div>
 
                 <div class="col-xl-6 wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms">
-                    <div class="<?php echo ($style === 'style_2') ? 'about-five__right' : 'about-one__right'; ?>">
-                        <div class="<?php echo ($style === 'style_2') ? 'about-five__img-box' : 'about-one__img-box'; ?>">
+                    <div class='<?php echo esc_attr(($style === 'style_2') ? 'about-five__right' : 'about-one__right'); ?>'>
+
+                        <div class='<?php echo esc_attr(($style === 'style_2') ? 'about-five__img-box' : 'about-one__img-box'); ?>'>
+
 
                             <?php if ($style === 'style_1'): ?>
                                 <div class="about-one__img-shape-1 float-bob-y-2"></div>
                                 <div class="about-one__img-shape-2 float-bob-x-2"></div>
                             <?php endif; ?>
 
-                            <div class="<?php echo ($style === 'style_2') ? 'about-five__img' : 'about-one__img'; ?>">
+                            <div class='<?php echo esc_attr(($style === 'style_2') ? 'about-five__img' : 'about-one__img'); ?>'>
+
                                 <?php if (!empty($image['url'])): ?>
                                     <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
                                 <?php endif; ?>
@@ -73,8 +76,7 @@ $style = get_sub_field('about_style') ?: 'style_1'; // fallback
                                 <?php if ($box_icon || $box_title || $box_text): ?>
                                     <?php if ($style === 'style_2'): ?>
                                         <div class="about-five__shope-box">
-                                            <div class="about-five__shope-box-bg-shape"
-                                                style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/shapes/about-five-shope-box-bg-shape.png);">
+                                            <div class="about-five__shope-box-bg-shape" style="background-image: url(<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/shapes/about-five-shope-box-bg-shape.png);">
                                             </div>
                                             <?php if ($box_icon): ?>
                                                 <div class="about-five__shope-icon">

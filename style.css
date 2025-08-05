@@ -8,6 +8,8 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: portolite
+Requires PHP:     7.4
+Tested up to:     6.5
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
@@ -300,4 +302,17 @@ header.main-header {
     max-width: 300px;
     display: block;
     text-wrap: auto;
+}
+
+.error-page__form-input {
+    margin-bottom: 30px;
+}
+
+.blog-details__tag-and-social {
+    margin-top: 60px;
+}
+
+
+.wp-block-group p {
+    margin-bottom: 0;
 }

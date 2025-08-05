@@ -17,7 +17,8 @@ $slides = get_sub_field('main_slider');
                 ?>
                     <div class="item">
                         <div class="main-slider__shape-1">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shapes/main-slider-shape-1.png" alt="">
+                            <img src='<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/shapes/main-slider-shape-1.png'>
+
                         </div>
                         <div class="container">
                             <div class="main-slider__content">

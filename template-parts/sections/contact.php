@@ -50,7 +50,8 @@ $experience     = get_sub_field('contact_experience_years');
                             <?php endif; ?>
 
                             <div class="contact-one__img-shape-1">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shapes/contact-one-img-shape-1.png" alt="">
+                                <img src='<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/shapes/contact-one-img-shape-1.png'>
+
                             </div>
 
                             <?php if ($experience): ?>
