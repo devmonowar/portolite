@@ -128,13 +128,16 @@
      color: inherit;
      word-wrap: break-word;
 }
+.postbox__details-content-wrapper .postbox__comment-text > ul, .postbox__details-content-wrapper .postbox__comment-text > ol {
+    margin-bottom: 20px;
+}
 /*tp unt commenst*/
  .latest-comments ul {
      padding-left: 0;
 }
  .comments-avatar img {
-     width: 60px;
-     height: 60px;
+     width: 62px;
+     height: 52px;
      border-radius: 50px;
 }
  .latest-comments li ul.children {
@@ -600,8 +603,9 @@ pre {
 }
  .latest-comments>ul>li {
      list-style: none;
-     margin-bottom: 5px;
+     margin-bottom: 15px;
 }
+
  .comment-reply-title {
      font-size: 28px;
      line-height: 1.1;
@@ -1312,4 +1316,8 @@ pre {
 }
  .ptl-text-white {
      color: #fff;
+}
+
+.post-comments .postbox__comment-text > ul, .post-comments .postbox__comment-text > ol {
+    margin-bottom: 20px;
 }

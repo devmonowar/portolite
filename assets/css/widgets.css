@@ -171,6 +171,10 @@
   background-color: transparent;
   box-shadow: none;
 }
+.sidebar__widget.widget_recent_comments ul li a::after,
+.sidebar__widget.widget_rss ul li a::after {
+display: none;
+}
 .sidebar__widget.widget_rss ul li a:hover {
   background-color: transparent;
   color: #e8092e;

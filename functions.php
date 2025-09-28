@@ -208,34 +208,35 @@ add_filter('widget_tag_cloud_args', 'custom_tag_cloud_args');
 /**--------------------------------------------------------------
  * Custom Comment Callback
  *--------------------------------------------------------------*/
+
+// harry_comment 
 if (!function_exists('portolite_comment')) {
     function portolite_comment($comment, $args, $depth)
     {
-        $GLOBALS['comment'] = $comment;
+        $GLOBAL['comment'] = $comment;
+        extract($args, EXTR_SKIP);
+        $args['reply_text'] = 'Reply';
+        $replayClass = 'comment-depth-' . esc_attr($depth);
 ?>
         <li id="comment-<?php comment_ID(); ?>">
             <div class="comments-box postbox__comment-box d-sm-flex align-items-start">
                 <div class="postbox__comment-info">
                     <div class="postbox__comment-avater comments-avatar">
-                        <?php echo get_avatar($comment, 102); ?>
+                        <?php print get_avatar($comment, 102, null, null, ['class' => []]); ?>
                     </div>
                 </div>
-                <div class="postbox__comment-text">
+
+                <div class="postbox__comment-text ">
                     <div class="postbox__comment-name">
                         <span class="post-meta"><?php comment_time(get_option('date_format')); ?></span>
-                        <h5><?php comment_author_link(); ?></h5>
+                        <h5><?php print get_comment_author_link(); ?></h5>
                     </div>
                     <?php comment_text(); ?>
                     <div class="postbox__comment-reply">
-                        <?php comment_reply_link(array_merge($args, [
-                            'reply_text' => __('Reply', 'portolite'),
-                            'depth'      => $depth,
-                            'max_depth'  => $args['max_depth'],
-                        ])); ?>
+                        <?php comment_reply_link(array_merge($args, ['depth' => $depth, 'max_depth' => $args['max_depth']])); ?>
                     </div>
                 </div>
             </div>
-        </li>
-<?php
+    <?php
     }
 }
