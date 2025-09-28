@@ -212,6 +212,7 @@
  .ptl-post-area ol ol, .ptl-post-area ol ul, .ptl-post-area ul ol, .ptl-post-area ul ul {
      margin-bottom: 0;
 }
+
  .gallery-columns-2 .gallery-item {
      max-width: 50%;
 }
@@ -1320,4 +1321,130 @@ pre {
 
 .post-comments .postbox__comment-text > ul, .post-comments .postbox__comment-text > ol {
     margin-bottom: 20px;
+}
+
+
+/* page unit css  */
+.ptl-page-area ol, .ptl-page-area ul {
+    padding-left: 1rem;
+}
+.ptl-page-area .blog-post-comment {
+    clear: both;
+    padding-top: 30px;
+}
+
+/*pabe table*/
+.ptl-page-area table{
+	margin-bottom: 30px;
+}
+.ptl-page-area table, .ptl-page-area th, .ptl-page-area td {
+	border: 1px solid #d1d1d1;
+}
+.ptl-page-area table th {
+	padding: 12px 12px;
+	font-size: 15px;
+	border-color: #ddd;
+	text-align: center;
+	font-weight: 500;
+}
+.ptl-page-area table tbody td {
+	text-align: center;
+}
+.ptl-page-area table td {
+	border-color: #ddd;
+	padding: 12px 12px;
+}
+.ptl-page-area table a {
+	color: var(--tp-theme-1);
+}
+
+
+
+/*block quote*/
+.wp-block-quote {
+	border: 0;
+}
+
+div.wp-block-columns .wp-block-quote{
+	padding: 32px 20px 35px;
+
+}
+
+ blockquote {
+    text-align: center;
+    background-color: var(--tp-common-white);
+    box-shadow: 0px 1px 3px rgba(3, 4, 28, 0.1);
+    padding: 32px 60px 35px;
+    background-color: var(--tp-common-white);
+    margin-bottom: 45px 0 !important;
+}
+blockquote::before {
+	content: "\f10e";
+	position: static;
+	font-family: "Font Awesome 5 Pro";
+	font-size: 32px;
+	color: var(--tp-theme-1);
+	line-height: 1;
+	margin-bottom: 18px;
+	display: inline-block;
+}
+.ptl-page-area blockquote p {
+	font-family: var(--tp-ff-space);
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 1.36;
+	text-align: center;
+	letter-spacing: -0.02em;
+	color: var(--tp-common-black);
+	margin-bottom: 0;
+}
+blockquote cite {
+	font-size: 14px;
+	display: block;
+	margin-top: 10px;
+	color: #070337;
+	font-style: inherit;
+	font-weight: 500;
+}
+blockquote cite::before {
+	content: "";
+	font-size: 28px;
+	color: #ff5421;
+	padding-bottom: 0px;
+	display: inline-block;
+	background: var(--tp-theme-1);
+	height: 2px;
+	width: 40px;
+	font-weight: 400;
+	text-align: center;
+	top: -4px;
+	margin-right: 10px;
+	position: relative;
+}
+.wp-block-quote.is-large, .wp-block-quote.is-style-large {
+	margin-bottom: 1em;
+	padding: 30px 30px;
+}
+.tp-blog-area .wp-block-quote.has-text-align-right.extraclass p{
+	text-align: right;
+}
+
+.wp-block-quote.has-text-align-right.extraclass{
+	text-align: right;
+}
+
+.postbox__text blockquote.is-style-large cite::before {
+	margin-right: 0;
+}
+.wp-block-quote.has-text-align-right {
+	border-right: 0;
+	padding: 30px;
+}
+.wp-block-pullquote.is-style-solid-color blockquote {
+	margin: auto;
+	display: inline-block;
+}
+
+.comments-box blockquote {
+	background: #fff;
 }
