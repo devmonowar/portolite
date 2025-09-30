@@ -446,6 +446,19 @@ function _header_header_fields($fields)
         'priority' => 10,
     ];
 
+    $fields[] = [
+        'type'     => 'switch',
+        'settings' => 'header_right_switch',
+        'label'    => esc_html__('Header Right Switcher', 'portolite'),
+        'section'  => 'section_header_logo',
+        'default'  => '0',
+        'priority' => 10,
+        'choices'  => [
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
+        ],
+    ];
+
     return $fields;
 }
 add_filter('kirki/fields', '_header_header_fields');

@@ -16,6 +16,9 @@ $portolite_mail_id   = get_theme_mod('portolite_mail_id', __('info@portolite.com
 $portolite_phone_num = get_theme_mod('portolite_phone_num', __('+964 742 44 763', 'portolite'));
 $portolite_time_text = get_theme_mod('portolite_time_text', __('Sunday-Thursday 10am-07pm', 'portolite'));
 
+// header right
+$portolite_header_right = get_theme_mod('header_right_switch', false);
+
 ?>
 
 <div class="page-wrapper">
@@ -88,18 +91,24 @@ $portolite_time_text = get_theme_mod('portolite_time_text', __('Sunday-Thursday 
                      <div class="main-menu__main-menu-box">
                         <?php portolite_header_menu(); ?>
                      </div>
-                     <div class="main-menu__right">
-                        <div class="main-menu__social">
-                           <?php portolite_header_social_profiles(); ?>
+
+                     <?php if (!empty($portolite_header_right)) : ?>
+
+                        <div class="main-menu__right">
+                           <div class="main-menu__social">
+                              <?php portolite_header_social_profiles(); ?>
+                           </div>
+                           <!-- <div class="main-menu__nav-sidebar-icon">
+                              <a class="navSidebar-button" href="#">
+                                 <span class="icon-dots-menu-one"></span>
+                                 <span class="icon-dots-menu-two"></span>
+                                 <span class="icon-dots-menu-three"></span>
+                              </a>
+                           </div> -->
                         </div>
-                        <div class="main-menu__nav-sidebar-icon">
-                           <a class="navSidebar-button" href="#">
-                              <span class="icon-dots-menu-one"></span>
-                              <span class="icon-dots-menu-two"></span>
-                              <span class="icon-dots-menu-three"></span>
-                           </a>
-                        </div>
-                     </div>
+
+                     <?php endif; ?>
+
                   </div>
                </div>
             </div>

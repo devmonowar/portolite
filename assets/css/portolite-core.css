@@ -348,6 +348,7 @@ ul {
   overflow: hidden;
   z-index: 2;
   text-align: center;
+  border: none;
 }
 
 .thm-btn span {

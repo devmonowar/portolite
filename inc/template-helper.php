@@ -203,11 +203,11 @@ function portolite_header_social_profiles()
     <?php endif; ?>
 
     <?php if (!empty($portolite_topbar_linkedin_url)): ?>
-        <a href="<?php echo esc_url($portolite_topbar_linkedin_url); ?>"><i class="icon-linkedin"></i></a>
+        <a href="<?php echo esc_url($portolite_topbar_linkedin_url); ?>"><i class="icon-linkedin-in"></i></a>
     <?php endif; ?>
 
     <?php if (!empty($portolite_topbar_youtube_url)): ?>
-        <a href="<?php echo esc_url($portolite_topbar_youtube_url); ?>"><i class="icon-pinterest"></i></a>
+        <a href="<?php echo esc_url($portolite_topbar_youtube_url); ?>"><i class="icon-pintarest"></i></a>
     <?php endif; ?>
 
 <?php
