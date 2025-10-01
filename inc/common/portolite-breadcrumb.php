@@ -105,7 +105,7 @@ function portolite_breadcrumb_func()
                         </div>
                     <?php endif; ?>
 
-                    <h2 class="breadcrumb__title"><?php echo $title; ?></h2>
+                    <h2 class="breadcrumb__title"><?php echo esc_html($title); ?></h2>
 
                     <div class="thm-breadcrumb__box">
                         <ul class="thm-breadcrumb list-unstyled">

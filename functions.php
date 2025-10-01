@@ -155,6 +155,37 @@ function register_team_post_type()
 }
 add_action('init', 'register_team_post_type');
 
+
+
+if (function_exists('register_block_style')) {
+    register_block_style(
+        'core/quote',
+        array(
+            'name'  => 'fancy-quote',
+            'label' => __('Fancy Quote', 'portolite'),
+        )
+    );
+}
+
+if (function_exists('register_block_pattern')) {
+    register_block_pattern(
+        'portolite/hero-section',
+        array(
+            'title'       => __('Hero Section', 'portolite'),
+            'description' => _x('A full-width hero section with heading and button.', 'Block pattern description', 'portolite'),
+            'content'     => "<!-- wp:cover {\"url\":\"https://example.com/image.jpg\",\"dimRatio\":50} -->
+                                <div class=\"wp-block-cover\"><span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim\"></span>
+                                <img class=\"wp-block-cover__image-background\" alt=\"\" src=\"https://example.com/image.jpg\"/>
+                                <div class=\"wp-block-cover__inner-container\">
+                                <!-- wp:heading {\"textAlign\":\"center\"} --> <h2 class=\"has-text-align-center\">Welcome to My Theme</h2> <!-- /wp:heading -->
+                                <!-- wp:button {\"align\":\"center\"} --> <div class=\"wp-block-button aligncenter\"><a class=\"wp-block-button__link\">Get Started</a></div> <!-- /wp:button -->
+                                </div></div><!-- /wp:cover -->",
+        )
+    );
+}
+
+
+
 /**--------------------------------------------------------------
  * Replace Default Search Form
  *--------------------------------------------------------------*/
@@ -209,7 +240,7 @@ add_filter('widget_tag_cloud_args', 'custom_tag_cloud_args');
  * Custom Comment Callback
  *--------------------------------------------------------------*/
 
-// harry_comment 
+// portolite_comment 
 if (!function_exists('portolite_comment')) {
     function portolite_comment($comment, $args, $depth)
     {
