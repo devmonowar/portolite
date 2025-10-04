@@ -20,6 +20,7 @@ if (!function_exists('portolite_setup')) {
     function portolite_setup()
     {
         load_theme_textdomain('portolite', get_template_directory() . '/languages');
+
         add_theme_support('automatic-feed-links');
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails');
@@ -135,26 +136,6 @@ function portolite_pingback_header()
 }
 add_action('wp_head', 'portolite_pingback_header');
 
-/**--------------------------------------------------------------
- * Register Custom Post Type: Team
- *--------------------------------------------------------------*/
-function register_team_post_type()
-{
-    register_post_type('team', [
-        'labels'       => [
-            'name'          => __('Team Members', 'portolite'),
-            'singular_name' => __('Team Member', 'portolite')
-        ],
-        'public'      => true,
-        'has_archive' => true,
-        'rewrite'     => ['slug' => 'team'],
-        'supports'    => ['title', 'editor', 'thumbnail'],
-        'show_in_rest' => true,
-        'menu_icon'   => 'dashicons-groups',
-    ]);
-}
-add_action('init', 'register_team_post_type');
-
 
 
 if (function_exists('register_block_style')) {
@@ -183,6 +164,13 @@ if (function_exists('register_block_pattern')) {
         )
     );
 }
+
+// Add editor styles
+function portolite_add_editor_styles()
+{
+    add_editor_style('assets/css/editor-style.css');
+}
+add_action('admin_init', 'portolite_add_editor_styles');
 
 
 

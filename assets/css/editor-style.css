@@ -1,0 +1,23 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #111;
+}
+
+a {
+    color: #e8092e;
+    text-decoration: none;
+}
+
+.wp-block-button__link {
+    background: #e8092e;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 6px;
+}
