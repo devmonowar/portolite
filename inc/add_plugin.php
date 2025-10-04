@@ -38,17 +38,12 @@ function portolite_register_required_plugins()
         [
             'name'     => esc_html__('Kirki Customizer Framework', 'portolite'),
             'slug'     => 'kirki',
-            'required' => false,
+            'required' => true,
         ],
         [
             'name'     => esc_html__('Breadcrumb NavXT', 'portolite'),
             'slug'     => 'breadcrumb-navxt',
-            'required' => false,
-        ],
-        [
-            'name'     => esc_html__('WooCommerce', 'portolite'),
-            'slug'     => 'woocommerce',
-            'required' => false,
+            'required' => true,
         ],
     ];
 

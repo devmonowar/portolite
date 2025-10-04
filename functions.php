@@ -19,7 +19,11 @@ define('PORTOLITE_THEME_INC', PORTOLITE_THEME_DIR . '/inc/');
 if (!function_exists('portolite_setup')) {
     function portolite_setup()
     {
-        load_theme_textdomain('portolite', get_template_directory() . '/languages');
+        load_theme_textdomain(
+            'portolite',
+            get_template_directory() . '/languages'
+        );
+
 
         add_theme_support('automatic-feed-links');
         add_theme_support('title-tag');
@@ -224,6 +228,28 @@ function custom_tag_cloud_args($args)
 add_filter('widget_tag_cloud_args', 'custom_tag_cloud_args');
 
 
+/**
+ * Default Menu Fallback
+ */
+function portolite_default_menu()
+{
+?>
+    <ul class="main-menu__list">
+        <?php
+        // Home link
+        echo '<li><a href="' . esc_url(home_url('/')) . '">Home</a></li>';
+
+        // List of all published pages
+        $pages = get_pages();
+        foreach ($pages as $page) {
+            echo '<li><a href="' . esc_url(get_page_link($page->ID)) . '">' . esc_html($page->post_title) . '</a></li>';
+        }
+        ?>
+    </ul>
+    <?php
+}
+
+
 /**--------------------------------------------------------------
  * Custom Comment Callback
  *--------------------------------------------------------------*/
@@ -236,7 +262,7 @@ if (!function_exists('portolite_comment')) {
         extract($args, EXTR_SKIP);
         $args['reply_text'] = 'Reply';
         $replayClass = 'comment-depth-' . esc_attr($depth);
-?>
+    ?>
         <li id="comment-<?php comment_ID(); ?>">
             <div class="comments-box postbox__comment-box d-sm-flex align-items-start">
                 <div class="postbox__comment-info">
@@ -259,3 +285,8 @@ if (!function_exists('portolite_comment')) {
     <?php
     }
 }
+
+
+phpcs --standard=WordPress C:\xampp\htdocs\monofolio\wp-content\themes\portolite
+
+C:\xampp\htdocs\monofolio\wp-content\themes\portolite

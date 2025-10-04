@@ -76,7 +76,7 @@ function portolite_header_logo()
     $default_white = get_template_directory_uri() . '/assets/img/logo/white-logo.png';
     $default_black = get_template_directory_uri() . '/assets/img/logo/black-logo.png';
 
-    $logo_width  = get_theme_mod('portolite_logo_width', '120');
+    $logo_width  = get_theme_mod('portolite_logo_width', '200');
     $white_logo  = get_theme_mod('white_logo', $default_white);
     $black_logo  = get_theme_mod('black_logo', $default_black);
 
@@ -103,7 +103,7 @@ function portolite_header_secondary_logo()
 {
     $portolite_logo_black       = get_template_directory_uri() . '/assets/img/logo/logo.svg';
     $portolite_secondary_logo   = get_theme_mod('black_logo', $portolite_logo_black);
-    $portolite_site_logo_width  = get_theme_mod('portolite_logo_width', '120');
+    $portolite_site_logo_width  = get_theme_mod('portolite_logo_width', '200');
 ?>
 
     <a class="sticky-logo" href="<?php echo esc_url(home_url('/')); ?>">
@@ -133,7 +133,7 @@ function portolite_footer_logo()
 
     $final_logo = !empty($acf_footer_logo) ? $acf_footer_logo : $customizer_logo;
 
-    $logo_width = get_theme_mod('portolite_logo_width', '120');
+    $logo_width = get_theme_mod('portolite_logo_width', '200');
 ?>
 
     <a href="<?php echo esc_url(home_url('/')); ?>">
@@ -271,6 +271,7 @@ function portolite_header_menu()
         'theme_location' => 'main-menu',
         'menu_class'     => 'main-menu__list',
         'container'      => '',
+        'fallback_cb'    => 'portolite_default_menu',
     ]);
     ?>
 <?php

@@ -442,7 +442,7 @@ function _header_header_fields($fields)
         'settings' => 'portolite_logo_width',
         'label'    => esc_html__('Logo Width', 'portolite'),
         'section'  => 'section_header_logo',
-        'default'  => esc_html__('120', 'portolite'),
+        'default'  => esc_html__('200', 'portolite'),
         'priority' => 10,
     ];
 

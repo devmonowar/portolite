@@ -167,6 +167,9 @@ ul {
     border-radius: 10px;
 }
 
+.footer__widget h2 {
+    color: #fff;
+}
 /* breadcroumb */
 
 .thm-breadcrumb {
