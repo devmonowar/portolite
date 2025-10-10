@@ -1448,3 +1448,6 @@ blockquote cite::before {
 .comments-box blockquote {
 	background: #fff;
 }
+.comment-respond .row.post-input {
+    margin-bottom: 30px;
+}

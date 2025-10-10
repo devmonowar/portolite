@@ -406,3 +406,6 @@ header.main-header {
     color: #03041c;
     margin-bottom: 0;
 }
+ul.main-menu__list.default_menu li {
+    width: max-content;
+}

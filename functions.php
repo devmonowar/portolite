@@ -228,25 +228,69 @@ function custom_tag_cloud_args($args)
 add_filter('widget_tag_cloud_args', 'custom_tag_cloud_args');
 
 
+
 /**
  * Default Menu Fallback
+ * Show all published pages with hierarchy and active classes
  */
 function portolite_default_menu()
 {
-?>
-    <ul class="main-menu__list">
-        <?php
-        // Home link
-        echo '<li><a href="' . esc_url(home_url('/')) . '">Home</a></li>';
+    // সব Published Page নিয়ে আসা
+    $pages = get_pages(array(
+        'sort_column' => 'menu_order, post_title',
+        'sort_order'  => 'ASC',
+    ));
 
-        // List of all published pages
-        $pages = get_pages();
-        foreach ($pages as $page) {
-            echo '<li><a href="' . esc_url(get_page_link($page->ID)) . '">' . esc_html($page->post_title) . '</a></li>';
+    if (empty($pages)) {
+        return;
+    }
+
+    // পেজগুলোকে parent অনুযায়ী group করা
+    $pages_by_parent = array();
+    foreach ($pages as $page) {
+        $pages_by_parent[$page->post_parent][] = $page;
+    }
+
+    // Current page data
+    global $post;
+    $current_id = isset($post->ID) ? $post->ID : 0;
+    $ancestors = $current_id ? get_post_ancestors($current_id) : array();
+
+    // Recursive render function
+    function portolite_render_menu_items($parent_id, $pages_by_parent, $current_id, $ancestors)
+    {
+        if (empty($pages_by_parent[$parent_id])) {
+            return;
         }
-        ?>
-    </ul>
-    <?php
+
+        echo $parent_id === 0 ? '<ul class="main-menu__list default_menu">' : '<ul class="sub-menu">';
+
+        foreach ($pages_by_parent[$parent_id] as $page) {
+            $classes = array();
+
+            // Active / Ancestor class যোগ করা
+            if ($page->ID == $current_id) {
+                $classes[] = 'current-menu-item';
+            } elseif (in_array($page->ID, $ancestors)) {
+                $classes[] = 'current-menu-ancestor';
+            }
+
+            $class_attr = !empty($classes) ? ' class="' . esc_attr(implode(' ', $classes)) . '"' : '';
+
+            echo '<li' . $class_attr . '>';
+            echo '<a href="' . esc_url(get_permalink($page->ID)) . '">' . esc_html($page->post_title) . '</a>';
+
+            // যদি child থাকে, recursive call
+            portolite_render_menu_items($page->ID, $pages_by_parent, $current_id, $ancestors);
+
+            echo '</li>';
+        }
+
+        echo '</ul>';
+    }
+
+    // Render root level menu
+    portolite_render_menu_items(0, $pages_by_parent, $current_id, $ancestors);
 }
 
 
@@ -262,7 +306,7 @@ if (!function_exists('portolite_comment')) {
         extract($args, EXTR_SKIP);
         $args['reply_text'] = 'Reply';
         $replayClass = 'comment-depth-' . esc_attr($depth);
-    ?>
+?>
         <li id="comment-<?php comment_ID(); ?>">
             <div class="comments-box postbox__comment-box d-sm-flex align-items-start">
                 <div class="postbox__comment-info">
@@ -285,8 +329,3 @@ if (!function_exists('portolite_comment')) {
     <?php
     }
 }
-
-
-phpcs --standard=WordPress C:\xampp\htdocs\monofolio\wp-content\themes\portolite
-
-C:\xampp\htdocs\monofolio\wp-content\themes\portolite

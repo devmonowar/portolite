@@ -13,22 +13,6 @@ function portolite_breadcrumb_func()
     }
 
     // Breadcrumb title
-    // if (is_home()) {
-    //     $title = get_the_title(get_option('page_for_posts'));
-    // } elseif (is_single() && 'post' === get_post_type()) {
-    //     $title = get_the_title();
-    // } elseif (is_search()) {
-    //     $title = __('Search Results for: ', 'portolite') . get_search_query();
-    // } elseif (is_404()) {
-    //     $title = __('Page not Found', 'portolite');
-    // } elseif (is_archive()) {
-    //     $title = get_the_archive_title();
-    // } else {
-    //     $title = get_the_title();
-    // }
-
-    // Breadcrumb title
-    // Title fetch and filter
     if (is_home()) {
         $title = portolite_kses(html_entity_decode(get_the_title(get_option('page_for_posts'))));
     } elseif (is_single() && 'post' === get_post_type()) {
@@ -105,7 +89,7 @@ function portolite_breadcrumb_func()
                         </div>
                     <?php endif; ?>
 
-                    <h2 class="breadcrumb__title"><?php echo esc_html($title); ?></h2>
+                    <h2 class="breadcrumb__title"><?php echo wp_kses_post($title); ?></h2>
 
                     <div class="thm-breadcrumb__box">
                         <ul class="thm-breadcrumb list-unstyled">
@@ -115,7 +99,7 @@ function portolite_breadcrumb_func()
                             } else {
                                 echo '<li><a href="' . esc_url(home_url('/')) . '">Home</a></li>';
                                 echo '<li class="sep"><i class="fas fa-angle-right"></i></li>';
-                                echo '<li class="current">' . esc_html($title) . '</li>';
+                                echo '<li class="current">' . wp_kses_post($title) . '</li>';
                             }
                             ?>
                         </ul>
