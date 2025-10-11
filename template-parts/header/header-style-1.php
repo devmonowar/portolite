@@ -89,6 +89,7 @@ $portolite_header_right = get_theme_mod('header_right_switch', false);
                         </div>
                      </div>
                      <div class="main-menu__main-menu-box">
+                        <!-- <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a> -->
                         <?php portolite_header_menu(); ?>
                      </div>
 

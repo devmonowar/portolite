@@ -897,36 +897,10 @@ ul {
 
 
 
-.main-menu .main-menu__list,
-.main-menu .main-menu__list>li>ul,
-.main-menu .main-menu__list>li>ul>li>ul,
-.stricky-header .main-menu__list,
-.stricky-header .main-menu__list>li>ul,
-.stricky-header .main-menu__list>li>ul>li>ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: none;
-}
 
 
 
-@media (min-width: 1200px) {
 
-  .main-menu .main-menu__list,
-  .main-menu .main-menu__list>li>ul,
-  .main-menu .main-menu__list>li>ul>li>ul,
-  .stricky-header .main-menu__list,
-  .stricky-header .main-menu__list>li>ul,
-  .stricky-header .main-menu__list>li>ul>li>ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
 
 .main-menu .main-menu__list>li,
 .stricky-header .main-menu__list>li {
