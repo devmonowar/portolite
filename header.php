@@ -31,6 +31,7 @@ if (is_singular() && function_exists('get_field')) {
 <body <?php body_class(); ?> style="background-color: <?php echo esc_attr($page_bg_color); ?>;">
    <?php wp_body_open(); ?>
 
+
    <div id="page" class="site"><!-- ✅ Page Wrapper Start -->
 
       <?php

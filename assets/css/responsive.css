@@ -2142,13 +2142,7 @@
 
 
 
-
-
-
-
 }
-
-
 
 
 
@@ -2710,9 +2704,6 @@
 
 
 @media (max-width: 767px) {
-    .main-menu__right {
-        display: none;
-    }
 
     .main-menu__wrapper-inner {
         padding: 0 15px 0;

@@ -89,7 +89,6 @@ $portolite_header_right = get_theme_mod('header_right_switch', false);
                         </div>
                      </div>
                      <div class="main-menu__main-menu-box">
-                        <!-- <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a> -->
                         <?php portolite_header_menu(); ?>
                      </div>
 
@@ -99,6 +98,7 @@ $portolite_header_right = get_theme_mod('header_right_switch', false);
                            <div class="main-menu__social">
                               <?php portolite_header_social_profiles(); ?>
                            </div>
+
                            <!-- <div class="main-menu__nav-sidebar-icon">
                               <a class="navSidebar-button" href="#">
                                  <span class="icon-dots-menu-one"></span>
@@ -109,6 +109,8 @@ $portolite_header_right = get_theme_mod('header_right_switch', false);
                         </div>
 
                      <?php endif; ?>
+
+                     <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
 
                   </div>
                </div>
