@@ -783,14 +783,14 @@ function _header_footer_fields($fields)
     ];
 
 
-    $fields[] = [
-        'type'        => 'image',
-        'settings'    => 'portolite_footer_logo',
-        'label'       => esc_html__('Footer Logo', 'portolite'),
-        'description' => esc_html__('Upload Your Logo.', 'portolite'),
-        'section'     => 'footer_setting',
-        'default'     => get_template_directory_uri() . '/assets/img/logo/logo-black.svg',
-    ];
+    // $fields[] = [
+    //     'type'        => 'image',
+    //     'settings'    => 'portolite_footer_logo',
+    //     'label'       => esc_html__('Footer Logo', 'portolite'),
+    //     'description' => esc_html__('Upload Your Logo.', 'portolite'),
+    //     'section'     => 'footer_setting',
+    //     'default'     => get_template_directory_uri() . '/assets/img/logo/logo-black.svg',
+    // ];
 
     $fields[] = [
         'type'        => 'color',

@@ -34,7 +34,7 @@ $portolite_copyright_center = $portolite_footer_bottom_menu ? 'col-sm-6' : 'col-
 <!--Site Footer Start-->
 
 <footer class="site-footer">
-    <div class="site-footer__wrap">
+    <div class="site-footer__wrap" style="background-color: <?php echo esc_attr($bg_color); ?>; <?php if (!empty($bg_img)) : ?>background-image: url('<?php echo esc_url($bg_img); ?>'); background-size: cover; background-position: center;<?php endif; ?>">
 
         <div class="site-footer__shape-1"></div>
         <div class="site-footer__shape-2"></div>
@@ -62,6 +62,14 @@ $portolite_copyright_center = $portolite_footer_bottom_menu ? 'col-sm-6' : 'col-
             <div class="container">
 
                 <div class="row site-footer__bottom-inner">
+                    <div class="col-sm-12">
+                        <?php if ($portolite_footer_social_switch) : ?>
+                            <div class="site-footer__social justify-content-center main-menu__social mb-5">
+                                <?php portolite_footer_social_profiles(); ?>
+                            </div>
+                        <?php endif; ?>
+
+                    </div>
                     <div class="<?php echo esc_attr($portolite_copyright_center); ?>">
                         <div class="site-footer__copyright">
                             <p class="site-footer__copyright-text"><?php echo portolite_copyright_text(); ?></p>
@@ -70,7 +78,9 @@ $portolite_copyright_center = $portolite_footer_bottom_menu ? 'col-sm-6' : 'col-
 
                     <?php if (!empty($portolite_footer_bottom_menu)): ?>
                         <div class="col-sm-6">
-                            <?php echo portolite_kses($portolite_footer_bottom_menu); ?>
+                            <div class="footer_bottom_menu text-end">
+                                <?php echo portolite_kses($portolite_footer_bottom_menu); ?>
+                            </div>
                         </div>
                     <?php endif; ?>
                 </div>
