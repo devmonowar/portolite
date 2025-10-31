@@ -336,6 +336,7 @@ function _header_social_fields($fields)
         'type'     => 'switch',
         'settings' => 'portolite_social_switch',
         'label'    => esc_html__('Social On/Off', 'portolite'),
+        'description' => esc_html__('First, turn on Header Right, then Social On/Off.', 'portolite'),
         'section'  => 'header_social',
         'default'  => '0',
         'priority' => 10,
