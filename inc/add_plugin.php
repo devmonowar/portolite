@@ -26,6 +26,20 @@ function portolite_register_required_plugins()
             'required' => false,
         ],
         [
+            'name'     => esc_html__('Advanced Custom Fields PRO', 'portolite'),
+            'slug'     => 'advanced-custom-fields-pro',
+            'source'       => 'C:\xampp\htdocs\monofolio\wp-content\plugins' . '/advanced-custom-fields-pro.zip',
+            'required'     => true,
+            'external_url' => 'C:\xampp\htdocs\monofolio\wp-content\plugins' . '/advanced-custom-fields-pro.zip',
+        ],
+        [
+            'name'         => esc_html__('Portolite Core', 'portolite'),
+            'slug'         => 'portolite-core',
+            'source'       => 'C:\xampp\htdocs\monofolio\wp-content\plugins' . '/portolite-core.zip',
+            'required'     => true,
+            'external_url' => 'C:\xampp\htdocs\monofolio\wp-content\plugins' . '/portolite-core.zip',
+        ],
+        [
             'name'     => esc_html__('Contact Form 7', 'portolite'),
             'slug'     => 'contact-form-7',
             'required' => false,

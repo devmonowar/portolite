@@ -329,3 +329,75 @@ if (!function_exists('portolite_comment')) {
     <?php
     }
 }
+
+
+
+
+/**
+ * One Click Demo Import Configuration (Multiple Demos from external URL)
+ */
+function portolite_import_files()
+{
+    return [
+        [
+            'import_file_name'             => 'Car Repair Services',
+            'import_file_url'              => 'http://localhost/car-repair/demo-content.xml',
+            'import_widget_file_url'       => 'http://localhost/car-repair/widgets.wie',
+            'import_customizer_file_url'   => 'http://localhost/car-repair/customizer.dat',
+            'import_preview_image_url'     => 'http://localhost/car-repair/screenshot.jpg',
+            'import_notice'                => __('Importing Car Repair demo. Please wait a few minutes…', 'portolite'),
+        ],
+
+        [
+            'import_file_name'             => 'Portfolio Demo',
+            'import_file_url'              => 'https://demo.yoursite.com/portfolio/demo-content.xml',
+            'import_widget_file_url'       => 'https://demo.yoursite.com/portfolio/widgets.wie',
+            'import_customizer_file_url'   => 'https://demo.yoursite.com/portfolio/customizer.dat',
+            'import_preview_image_url'     => 'https://demo.yoursite.com/portfolio/screenshot.jpg',
+            'import_notice'                => __('Importing Portfolio demo. Please wait a few minutes…', 'portolite'),
+        ],
+        [
+            'import_file_name'             => 'Agency Demo',
+            'import_file_url'              => 'https://demo.yoursite.com/agency/demo-content.xml',
+            'import_widget_file_url'       => 'https://demo.yoursite.com/agency/widgets.wie',
+            'import_customizer_file_url'   => 'https://demo.yoursite.com/agency/customizer.dat',
+            'import_preview_image_url'     => 'https://demo.yoursite.com/agency/screenshot.jpg',
+            'import_notice'                => __('Importing Agency demo. Please wait a few minutes…', 'portolite'),
+        ],
+        [
+            'import_file_name'             => 'Personal Demo',
+            'import_file_url'              => 'https://demo.yoursite.com/personal/demo-content.xml',
+            'import_widget_file_url'       => 'https://demo.yoursite.com/personal/widgets.wie',
+            'import_customizer_file_url'   => 'https://demo.yoursite.com/personal/customizer.dat',
+            'import_preview_image_url'     => 'https://demo.yoursite.com/personal/screenshot.jpg',
+            'import_notice'                => __('Importing Personal demo. Please wait a few minutes…', 'portolite'),
+        ],
+    ];
+}
+add_filter('ocdi/import_files', 'portolite_import_files');
+
+/**
+ * After import setup (menu, homepage etc.)
+ */
+function portolite_after_import_setup()
+{
+
+    // Assign main menu (if available)
+    $main_menu = get_term_by('name', 'Main Menu', 'nav_menu');
+    if ($main_menu) {
+        set_theme_mod('nav_menu_locations', [
+            'primary' => $main_menu->term_id,
+        ]);
+    }
+
+    // Set Home and Blog pages if exist
+    $front_page = get_page_by_title('Home');
+    $blog_page  = get_page_by_title('Blog');
+
+    if ($front_page && $blog_page) {
+        update_option('show_on_front', 'page');
+        update_option('page_on_front', $front_page->ID);
+        update_option('page_for_posts', $blog_page->ID);
+    }
+}
+add_action('ocdi/after_import', 'portolite_after_import_setup');
