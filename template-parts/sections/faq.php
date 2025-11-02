@@ -17,7 +17,7 @@ $faqs        = get_sub_field('faqs');
                         </div>
                     <?php endif; ?>
                     <?php if (!empty($faq_heading)): ?>
-                        <h2 class="section-title__title title-animation"><?php echo esc_html($faq_heading); ?></h2>
+                        <h2 class="section-title__title title-animation"><?php echo wp_kses_post($faq_heading); ?></h2>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>

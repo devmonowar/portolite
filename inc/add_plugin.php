@@ -18,7 +18,7 @@ function portolite_register_required_plugins()
         [
             'name'     => esc_html__('Elementor Page Builder', 'portolite'),
             'slug'     => 'elementor',
-            'required' => true,
+            'required' => false,
         ],
         [
             'name'     => esc_html__('Classic Editor', 'portolite'),
