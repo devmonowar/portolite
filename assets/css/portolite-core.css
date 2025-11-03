@@ -957,12 +957,13 @@ ul {
   transition: all 500ms ease;
 }
 
-.main-menu .main-menu__list>li.current>a,
+.main-menu .main-menu__list>li.current-menu-item>a,
 .main-menu .main-menu__list>li:hover>a,
-.stricky-header .main-menu__list>li.current>a,
+.stricky-header .main-menu__list>li.current-menu-item>a,
 .stricky-header .main-menu__list>li:hover>a {
   color: var(--portolite-base);
 }
+
 
 .main-menu .main-menu__list>li>a::before,
 .stricky-header .main-menu__list>li>a::before {
@@ -980,9 +981,9 @@ ul {
   z-index: 1;
 }
 
-.main-menu .main-menu__list>li.current>a::before,
+.main-menu .main-menu__list>li.current-menu-item>a::before,
 .main-menu .main-menu__list>li:hover>a::before,
-.stricky-header .main-menu__list>li.current>a::before,
+.stricky-header .main-menu__list>li.current-menu-item>a::before,
 .stricky-header .main-menu__list>li:hover>a::before {
   transform: scale(1, 1);
   transform-origin: right center;
