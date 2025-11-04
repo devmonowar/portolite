@@ -51,6 +51,12 @@ function portolite_breadcrumb_func()
     $color           = get_theme_mod('portolite_breadcrumb_bg_color', '#e1e1e1');
     $bg_img          = get_theme_mod('breadcrumb_bg_img');
     $right_img       = get_theme_mod('breadcrumb_right_img');
+
+    // If current page has a featured image, override theme option image
+    if (has_post_thumbnail()) {
+        $right_img = get_the_post_thumbnail_url(get_the_ID(), 'full');
+    }
+
     $padding_top     = get_theme_mod('portolite_breadcrumb_pt', '115');
     $padding_bottom  = get_theme_mod('portolite_breadcrumb_pb', '130');
 

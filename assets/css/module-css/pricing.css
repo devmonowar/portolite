@@ -5,6 +5,8 @@
     position: relative;
     display: block;
     z-index: 1;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .pricing-one .section-title {
