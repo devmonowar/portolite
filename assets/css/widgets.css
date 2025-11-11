@@ -578,3 +578,10 @@ div.sidebar__author-thumb img {
 .footer__widget.widget_rss a.rsswidget.rss-widget-title {
     color: #fff;
 }
+
+.sidebar__widget:last-child {
+    margin-bottom: 0;
+}
+.footer__widget:last-child {
+    margin-bottom: 0;
+}

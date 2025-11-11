@@ -28,7 +28,7 @@ function portolite_register_required_plugins()
         [
             'name'     => esc_html__('Advanced Custom Fields PRO', 'portolite'),
             'slug'     => 'advanced-custom-fields-pro',
-            'source'       => get_template_directory() . '/plugins /advanced-custom-fields-pro.zip',
+            'source'       => get_template_directory() . '/plugins/advanced-custom-fields-pro.zip',
             'required'     => true,
             'version'            => '6.6.2',
             'force_activation'   => false,

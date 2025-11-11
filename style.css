@@ -443,3 +443,6 @@ header.main-header {
     color: #fff;
     padding: 5px 10px;
 }
+header.archive-header {
+    margin-bottom: 20px;
+}
