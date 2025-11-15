@@ -26,11 +26,22 @@ function portolite_widgets_init()
 
 
     // Footer Sidebar
+    // register_sidebar([
+    //     'name'          => esc_html__('Footer Sidebar', 'portolite'),
+    //     'id'            => 'footer-sidebar',
+    //     'description'   => esc_html__('Widgets area for Footer Style', 'portolite'),
+    //     'before_widget' => '<div id="%1$s" class="col-xl-3 col-lg-6 footer__widget %2$s">',
+    //     'after_widget'  => '</div>',
+    //     'before_title'  => '<h4 class="footer-widget__title">',
+    //     'after_title'   => '</h4>',
+    // ]);
+
+    // Footer Sidebar
     register_sidebar([
         'name'          => esc_html__('Footer Sidebar', 'portolite'),
         'id'            => 'footer-sidebar',
         'description'   => esc_html__('Widgets area for Footer Style', 'portolite'),
-        'before_widget' => '<div id="%1$s" class="col-xl-3 col-lg-6 footer__widget %2$s">',
+        'before_widget' => '<div id="%1$s" class="footer__widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4 class="footer-widget__title">',
         'after_title'   => '</h4>',

@@ -46,11 +46,17 @@ $portolite_copyright_center = $portolite_footer_bottom_menu ? 'col-sm-6' : 'col-
             <div class="site-footer__top">
                 <div class="container">
                     <div class="site-footer__top-inner">
-                        <div class="row">
+                        <!-- <div class="row">
 
+                            <?php // dynamic_sidebar('footer-sidebar'); 
+                            ?>
+
+                        </div> -->
+
+                        <div class="footer__widgets">
                             <?php dynamic_sidebar('footer-sidebar'); ?>
-
                         </div>
+
                     </div>
                 </div>
             </div>

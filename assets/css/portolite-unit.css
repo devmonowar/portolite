@@ -189,6 +189,9 @@
      padding-left: 40px;
      padding-right: 40px;
 }
+.wp-block-group__inner-container .wp-block-button {
+    margin: 20px 0;
+}
 
 
 /*blog css */
@@ -482,33 +485,7 @@ pre {
      margin-bottom: 0;
      text-align: center;
 }
- .postbox__details table {
-     margin-bottom: 30px;
-     width: 100%;
-}
- .postbox__details table td {
-     border-color: #ddd;
-     padding: 12px 12px;
-}
- .post-password-form input[type="password"] {
-     background: #F5F6F8;
-     border: 0;
-     height: 50px;
-     width: 100%;
-     padding: 0 15px;
-}
- .post-password-form input[type="submit"] {
-     width: 120px;
-     height: 50px;
-     background: var(--ptl-theme-2);
-     color: #fff;
-     border: 0;
-     margin-top: 10px;
-     transition: .3s;
-}
- .post-password-form input[type="submit"]:hover {
-     background: #333;
-}
+
  .postbox__comment-text blockquote {
      background: #f2f7f7;
      padding: 35px 40px;

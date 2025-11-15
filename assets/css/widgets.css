@@ -519,9 +519,9 @@ div.sidebar__author-thumb img {
 .sidebar__widget {
     margin-bottom: 45px;
 }
-.footer__widget {
+/* .footer__widget {
     margin-bottom: 45px;
-}
+} */
 .sidebar__widget ul li a:hover {
     color: #fff;
     background-color: #e8092e;
@@ -584,4 +584,27 @@ div.sidebar__author-thumb img {
 }
 .footer__widget:last-child {
     margin-bottom: 0;
+}
+
+/* 
+grid style  */
+
+.footer__widgets {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px 30px; /* 50px vertical, 30px horizontal */
+}
+
+@media (max-width: 1024px) {
+  .footer__widgets {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__widgets {
+    grid-template-columns: 1fr;
+    gap: 30px 20px;
+  }
 }

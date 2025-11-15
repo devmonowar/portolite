@@ -654,7 +654,7 @@
     align-items: center;
     gap: 12px;
     background-color: var(--portolite-base);
-    padding: 8px 20px 7px !important;
+    padding: 3px 20px 10px !important;
     border-radius: 20px;
     z-index: 1;
 }
