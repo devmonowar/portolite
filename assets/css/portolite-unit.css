@@ -438,7 +438,9 @@ pre {
      border: 2px solid var(--ptl-theme-2);
      color: var(--ptl-theme-2);
 }
-
+.wp-block-archives-list.wp-block-archives {
+    color: #fff;
+}
  .postbox__details table tbody td {
      text-align: center;
 }

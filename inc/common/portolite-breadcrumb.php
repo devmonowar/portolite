@@ -53,9 +53,9 @@ function portolite_breadcrumb_func()
     $right_img       = get_theme_mod('breadcrumb_right_img');
 
     // If current page has a featured image, override theme option image
-    if (has_post_thumbnail()) {
-        $right_img = get_the_post_thumbnail_url(get_the_ID(), 'full');
-    }
+    // if (has_post_thumbnail()) {
+    //     $right_img = get_the_post_thumbnail_url(get_the_ID(), 'full');
+    // }
 
     $padding_top     = get_theme_mod('portolite_breadcrumb_pt', '115');
     $padding_bottom  = get_theme_mod('portolite_breadcrumb_pb', '130');
@@ -66,10 +66,17 @@ function portolite_breadcrumb_func()
 
     // Background override from page
     $img_from_page = $has_acf ? get_field('breadcrumb_background_image', $page_id) : '';
+
+    $breadcrumb_from_page = $has_acf ? get_field('breadcrumb_right_image', $page_id) : '';
+
     $hide_img      = $has_acf ? get_field('hide_breadcrumb_background_image', $page_id) : '';
 
     if (!$hide_img && !empty($img_from_page)) {
         $bg_img = is_array($img_from_page) ? $img_from_page['url'] : $img_from_page;
+    }
+
+    if (!$hide_img && !empty($breadcrumb_from_page)) {
+        $right_img = is_array($breadcrumb_from_page) ? $breadcrumb_from_page['url'] : $breadcrumb_from_page;
     }
 ?>
 

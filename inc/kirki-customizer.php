@@ -43,17 +43,16 @@ function portolite_customizer_panels_sections($wp_customize)
         'panel'       => 'portolite_customizer',
     ]);
 
-    $wp_customize->add_section('header_social', [
-        'title'       => esc_html__('Header Social', 'portolite'),
+    $wp_customize->add_section('section_header_logo', [
+        'title'       => esc_html__('Header Setting', 'portolite'),
         'description' => '',
         'priority'    => 20,
         'capability'  => 'edit_theme_options',
         'panel'       => 'portolite_customizer',
     ]);
 
-
-    $wp_customize->add_section('section_header_logo', [
-        'title'       => esc_html__('Header Setting', 'portolite'),
+    $wp_customize->add_section('header_social', [
+        'title'       => esc_html__('Header Social', 'portolite'),
         'description' => '',
         'priority'    => 25,
         'capability'  => 'edit_theme_options',
@@ -327,6 +326,72 @@ function _header_top_fields($fields)
 add_filter('kirki/fields', '_header_top_fields');
 
 /*
+Header Settings
+ */
+function _header_header_fields($fields)
+{
+    $fields[] = [
+        'type'        => 'radio-image',
+        'settings'    => 'choose_default_header',
+        'label'       => esc_html__('Select Header Style', 'portolite'),
+        'section'     => 'section_header_logo',
+        'placeholder' => esc_html__('Select an option...', 'portolite'),
+        'priority'    => 10,
+        'multiple'    => 1,
+        'choices'     => [
+            'header-style-1'   => get_template_directory_uri() . '/inc/img/header/header-1.png',
+            'header-style-2' => get_template_directory_uri() . '/inc/img/header/header-2.png',
+        ],
+        'default'     => 'header-style-1',
+    ];
+
+    $fields[] = [
+        'type'        => 'image',
+        'settings'    => 'white_logo', // Updated from 'logo'
+        'label'       => esc_html__('Header White Logo', 'portolite'),
+        'description' => esc_html__('Upload White Logo (for dark background)', 'portolite'),
+        'section'     => 'section_header_logo',
+        'default'     => get_template_directory_uri() . '/assets/img/logo/white-logo.png',
+    ];
+
+    $fields[] = [
+        'type'        => 'image',
+        'settings'    => 'black_logo', // Updated from 'seconday_logo'
+        'label'       => esc_html__('Header Black Logo', 'portolite'),
+        'description' => esc_html__('Upload Black Logo (for white background)', 'portolite'),
+        'section'     => 'section_header_logo',
+        'default'     => get_template_directory_uri() . '/assets/img/logo/black-logo.png',
+    ];
+
+    // preloader text
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'portolite_logo_width',
+        'label'    => esc_html__('Logo Width', 'portolite'),
+        'section'  => 'section_header_logo',
+        'default'  => esc_html__('200', 'portolite'),
+        'priority' => 10,
+    ];
+
+    $fields[] = [
+        'type'     => 'switch',
+        'settings' => 'header_right_switch',
+        'label'    => esc_html__('Header Right Switcher', 'portolite'),
+        'section'  => 'section_header_logo',
+        'default'  => '0',
+        'priority' => 10,
+        'choices'  => [
+            'on'  => esc_html__('Enable', 'portolite'),
+            'off' => esc_html__('Disable', 'portolite'),
+        ],
+    ];
+
+    return $fields;
+}
+add_filter('kirki/fields', '_header_header_fields');
+
+
+/*
 Header Social
  */
 function _header_social_fields($fields)
@@ -396,73 +461,6 @@ function _header_social_fields($fields)
     return $fields;
 }
 add_filter('kirki/fields', '_header_social_fields');
-
-
-
-/*
-Header Settings
- */
-function _header_header_fields($fields)
-{
-    $fields[] = [
-        'type'        => 'radio-image',
-        'settings'    => 'choose_default_header',
-        'label'       => esc_html__('Select Header Style', 'portolite'),
-        'section'     => 'section_header_logo',
-        'placeholder' => esc_html__('Select an option...', 'portolite'),
-        'priority'    => 10,
-        'multiple'    => 1,
-        'choices'     => [
-            'header-style-1'   => get_template_directory_uri() . '/inc/img/header/header-1.png',
-            'header-style-2' => get_template_directory_uri() . '/inc/img/header/header-2.png',
-        ],
-        'default'     => 'header-style-1',
-    ];
-
-    $fields[] = [
-        'type'        => 'image',
-        'settings'    => 'white_logo', // Updated from 'logo'
-        'label'       => esc_html__('Header White Logo', 'portolite'),
-        'description' => esc_html__('Upload White Logo (for dark background)', 'portolite'),
-        'section'     => 'section_header_logo',
-        'default'     => get_template_directory_uri() . '/assets/img/logo/white-logo.png',
-    ];
-
-    $fields[] = [
-        'type'        => 'image',
-        'settings'    => 'black_logo', // Updated from 'seconday_logo'
-        'label'       => esc_html__('Header Black Logo', 'portolite'),
-        'description' => esc_html__('Upload Black Logo (for white background)', 'portolite'),
-        'section'     => 'section_header_logo',
-        'default'     => get_template_directory_uri() . '/assets/img/logo/black-logo.png',
-    ];
-
-    // preloader text
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'portolite_logo_width',
-        'label'    => esc_html__('Logo Width', 'portolite'),
-        'section'  => 'section_header_logo',
-        'default'  => esc_html__('200', 'portolite'),
-        'priority' => 10,
-    ];
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'header_right_switch',
-        'label'    => esc_html__('Header Right Switcher', 'portolite'),
-        'section'  => 'section_header_logo',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__('Enable', 'portolite'),
-            'off' => esc_html__('Disable', 'portolite'),
-        ],
-    ];
-
-    return $fields;
-}
-add_filter('kirki/fields', '_header_header_fields');
 
 
 /*
@@ -539,6 +537,7 @@ function _header_page_title_fields($fields)
         'label'       => esc_html__('Right Image', 'portolite'),
         'description' => esc_html__('Right Image', 'portolite'),
         'section'     => 'breadcrumb_setting',
+        'default'     => get_template_directory_uri() . '/assets/img/breadcrumb/breadcrumb.png',
     ];
 
     $fields[] = [

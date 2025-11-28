@@ -109,6 +109,40 @@
             "preview_size": "full"
         },
         {
+            "key": "field_6929c9cc12a10",
+            "label": "Breadcrumb Right Image",
+            "name": "breadcrumb_right_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Breadcrumb Background Image",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ee5a2875481b",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg,png",
+            "allow_in_bindings": 1,
+            "preview_size": "full"
+        },
+        {
             "key": "field_5ee5ba74c315f",
             "label": "Enable Secondary Logo",
             "name": "is_enable_sec_logo",
@@ -258,7 +292,10 @@
             "default_value": "",
             "enable_opacity": 0,
             "return_format": "string",
-            "allow_in_bindings": 1
+            "allow_in_bindings": 1,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_63cccea44f077",
@@ -354,7 +391,10 @@
             "default_value": "",
             "enable_opacity": 0,
             "return_format": "string",
-            "allow_in_bindings": 0
+            "allow_in_bindings": 0,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_685ed0ce10d2d",
@@ -422,5 +462,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1751993714
+    "display_title": "",
+    "modified": 1764346385
 }
