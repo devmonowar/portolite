@@ -12,9 +12,16 @@
  * @package portolite
  */
 
+/* ⚠️ Every Modern section root belongs in this list. A section that carries
+   .mp-sec inherits the aliases already; one with its own root class — because
+   it needs a different rhythm or a full-bleed background — does not, and any
+   var(--mp-*) inside it silently resolves to nothing. That is how the CTA
+   band's solid button ended up with no background at all. */
 .modern-page,
 .hero-modern,
-.mp-sec {
+.mp-sec,
+.mp-slide,
+.mp-band {
     /* Surface */
     --mp-ink: var(--portolite-ink);
     --mp-ink-soft: var(--portolite-ink-soft);

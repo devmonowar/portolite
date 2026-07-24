@@ -9,26 +9,13 @@
  * @package portolite
  */
 
-$eyebrow = get_sub_field('eyebrow');
-$title   = get_sub_field('title');
-$lede    = get_sub_field('lede');
 ?>
 
 <section class="mp-sec mp-sec--light mp-faq">
     <div class="mp-shell">
         <div class="mp-faq__grid">
 
-            <div class="mp-head mp-head--flush">
-                <?php if ($eyebrow) : ?>
-                    <span class="mp-eyebrow"><?php echo esc_html($eyebrow); ?></span>
-                <?php endif; ?>
-                <?php if ($title) : ?>
-                    <h2 class="mp-title"><?php echo wp_kses_post($title); ?></h2>
-                <?php endif; ?>
-                <?php if ($lede) : ?>
-                    <p class="mp-lede"><?php echo esc_html($lede); ?></p>
-                <?php endif; ?>
-            </div>
+            <?php portolite_mp_head(['modifiers' => 'mp-head--flush']); ?>
 
             <?php if (have_rows('items')) : ?>
                 <div class="mp-faq__list">

@@ -1,0 +1,431 @@
+/**
+ * Modern layout — sliding text, why-choose, CTA band, feature list
+ *
+ * The four sections the redesign added. Built on the primitives in
+ * modern-base.css and the tokens in portolite-tokens.css; nothing here
+ * hardcodes a colour, space, radius or duration.
+ *
+ * @package portolite
+ */
+
+/* ======================================================== Sliding text */
+
+/* The track holds the phrase list twice and moves by exactly -50%, so the
+   second copy arrives where the first started and the seam never shows. */
+
+.mp-slide {
+    overflow: hidden;
+    padding: var(--portolite-space-5) 0;
+    border-top: 1px solid var(--sec-line);
+    border-bottom: 1px solid var(--sec-line);
+    background-color: var(--sec-bg);
+    color: var(--sec-text);
+    font-family: var(--portolite-font-two);
+}
+
+.mp-slide--accent {
+    --sec-bg: var(--portolite-accent);
+    --sec-text: var(--portolite-ink);
+    --sec-line: transparent;
+}
+
+.mp-slide--dark {
+    --sec-bg: var(--portolite-ink);
+    --sec-text: var(--portolite-ink-text);
+    --sec-line: rgba(var(--portolite-white-rgb), .09);
+}
+
+.mp-slide--light {
+    --sec-bg: var(--portolite-bg-soft);
+    --sec-text: var(--portolite-heading);
+    --sec-line: rgba(var(--portolite-black-rgb), .1);
+}
+
+.mp-slide__track {
+    display: flex;
+    width: max-content;
+    animation: mp-slide-x 32s linear infinite;
+}
+
+.mp-slide--right .mp-slide__track {
+    animation-direction: reverse;
+}
+
+/* A reader who wants to finish a phrase can stop the band. */
+.mp-slide:hover .mp-slide__track,
+.mp-slide:focus-within .mp-slide__track {
+    animation-play-state: paused;
+}
+
+.mp-slide__list {
+    display: flex;
+    align-items: center;
+    gap: var(--portolite-space-10);
+    margin: 0;
+    padding: 0 0 0 var(--portolite-space-10);
+    list-style: none;
+}
+
+.mp-slide__item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--portolite-space-10);
+    white-space: nowrap;
+    font-size: clamp(1.25rem, 2.6vw, 2.25rem);
+    font-weight: var(--portolite-weight-bold);
+    letter-spacing: -.01em;
+    text-transform: uppercase;
+}
+
+.mp-slide__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: .45;
+}
+
+@keyframes mp-slide-x {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mp-slide__track {
+        animation: none;
+    }
+
+    /* Without the animation the doubled list is just a very long line, so the
+       band becomes a static, scrollable strip instead. */
+    .mp-slide {
+        overflow-x: auto;
+    }
+}
+
+/* ========================================================== Why choose */
+
+.mp-why__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(32px, 5vw, 72px);
+}
+
+.mp-why__grid--solo {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 780px;
+}
+
+.mp-why__media {
+    position: relative;
+}
+
+.mp-why__frame {
+    overflow: hidden;
+    border-radius: var(--mp-radius);
+    box-shadow: var(--portolite-shadow-lg);
+}
+
+.mp-why__frame img {
+    display: block;
+    width: 100%;
+    height: clamp(320px, 42vw, 520px);
+    object-fit: cover;
+}
+
+.mp-why__badge {
+    position: absolute;
+    right: calc(var(--portolite-space-6) * -1);
+    bottom: var(--portolite-space-8);
+    display: grid;
+    gap: var(--portolite-space-1);
+    padding: var(--portolite-space-5) var(--portolite-space-6);
+    border-radius: var(--mp-radius-sm);
+    background: var(--mp-accent);
+    color: var(--portolite-ink);
+    box-shadow: var(--portolite-shadow);
+    text-align: center;
+}
+
+.mp-why__badge-value {
+    font-family: var(--mp-display);
+    font-size: var(--portolite-h3);
+    font-weight: var(--portolite-weight-bold);
+    line-height: 1;
+}
+
+.mp-why__badge-label {
+    font-size: var(--portolite-text-xs);
+    font-weight: var(--portolite-weight-semibold);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.mp-why__points {
+    display: grid;
+    gap: var(--portolite-space-6);
+    margin: var(--portolite-space-10) 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mp-why__point {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--portolite-space-5);
+    align-items: start;
+}
+
+.mp-why__point-icon {
+    flex: none;
+}
+
+.mp-why__point-title {
+    margin: 0;
+    color: var(--sec-text);
+    font-family: var(--mp-display);
+    font-size: var(--portolite-h5);
+    font-weight: var(--portolite-weight-semibold);
+    line-height: var(--portolite-leading-snug);
+}
+
+.mp-why__point-text {
+    margin: var(--portolite-space-2) 0 0;
+    color: var(--sec-muted);
+    font-size: var(--portolite-text-sm);
+    line-height: var(--portolite-leading-normal);
+}
+
+.mp-why__btn {
+    margin-top: var(--portolite-space-10);
+}
+
+@media (max-width: 991px) {
+    .mp-why__grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .mp-why__badge {
+        right: var(--portolite-space-5);
+    }
+}
+
+/* =========================================================== CTA band */
+
+.mp-band {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: clamp(80px, 10vw, 152px) 0;
+    background-color: var(--portolite-ink);
+    color: var(--portolite-ink-text);
+    text-align: center;
+}
+
+/* The band declares the dark surface itself: mp-head and mp-btn paint with
+   --sec-*, and this section is not an .mp-sec. */
+.mp-band {
+    --sec-bg: var(--portolite-ink);
+    --sec-text: var(--portolite-ink-text);
+    --sec-muted: var(--portolite-ink-muted);
+    --sec-line: rgba(var(--portolite-white-rgb), .16);
+}
+
+.mp-band__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.mp-band__bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(var(--portolite-ink-rgb), .72),
+            rgba(var(--portolite-ink-rgb), .88));
+}
+
+/* Oversized and fixed to the viewport: the image is still while the section
+   scrolls over it, which is the parallax effect without
+   background-attachment — that property is ignored on iOS. */
+.mp-band__bg-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.mp-band__inner {
+    display: grid;
+    justify-items: center;
+    gap: var(--portolite-space-10);
+}
+
+.mp-band__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--portolite-space-6);
+}
+
+.mp-band__phone {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--portolite-space-3);
+    color: var(--sec-text);
+    font-size: var(--portolite-text-lg);
+    font-weight: var(--portolite-weight-semibold);
+    transition: var(--portolite-transition);
+}
+
+.mp-band__phone:hover,
+.mp-band__phone:focus-visible {
+    color: var(--mp-accent);
+}
+
+/* A fixed background cannot be composited cheaply on a small screen, and the
+   effect is barely visible there anyway. */
+@media (max-width: 991px),
+(prefers-reduced-motion: reduce) {
+    .mp-band__bg-img {
+        position: absolute;
+        height: 100%;
+    }
+}
+
+/* ======================================================== Feature list */
+
+.mp-feature__rows {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--sec-line);
+}
+
+.mp-feature__row {
+    position: relative;
+    border-bottom: 1px solid var(--sec-line);
+}
+
+.mp-feature__link {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--portolite-space-8);
+    padding: var(--portolite-space-8) var(--portolite-space-2);
+    color: var(--sec-text);
+    transition: var(--portolite-transition);
+}
+
+a.mp-feature__link:hover,
+a.mp-feature__link:focus-visible {
+    color: var(--mp-accent);
+    padding-left: var(--portolite-space-6);
+}
+
+.mp-feature__num {
+    font-family: var(--mp-display);
+    font-size: var(--portolite-text-sm);
+    font-weight: var(--portolite-weight-semibold);
+    letter-spacing: .1em;
+    color: var(--mp-accent);
+}
+
+.mp-feature__text {
+    display: grid;
+    gap: var(--portolite-space-2);
+}
+
+.mp-feature__title {
+    font-family: var(--mp-display);
+    font-size: var(--portolite-h4);
+    font-weight: var(--portolite-weight-semibold);
+    line-height: var(--portolite-leading-snug);
+}
+
+.mp-feature__desc {
+    color: var(--sec-muted);
+    font-size: var(--portolite-text-sm);
+    line-height: var(--portolite-leading-normal);
+}
+
+.mp-feature__arrow {
+    flex: none;
+    transition: var(--portolite-transition);
+}
+
+.mp-feature__link:hover .mp-feature__arrow,
+.mp-feature__link:focus-visible .mp-feature__arrow {
+    transform: translateX(6px);
+}
+
+/* The preview sits over the row, pinned to its right edge. It is decorative —
+   the row's own text carries the meaning — so it is aria-hidden and never
+   affects layout. */
+.mp-feature__preview {
+    position: absolute;
+    top: 50%;
+    right: var(--portolite-space-16);
+    z-index: var(--portolite-z-sticky);
+    display: block;
+    width: 260px;
+    overflow: hidden;
+    border-radius: var(--mp-radius-sm);
+    box-shadow: var(--portolite-shadow-lg);
+    opacity: 0;
+    transform: translate(0, -40%) rotate(-3deg) scale(.94);
+    transition: var(--portolite-transition);
+    pointer-events: none;
+}
+
+.mp-feature__preview img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.mp-feature__row:hover .mp-feature__preview,
+.mp-feature__row:focus-within .mp-feature__preview {
+    opacity: 1;
+    transform: translate(0, -50%) rotate(-3deg) scale(1);
+}
+
+@media (max-width: 991px) {
+    .mp-feature__link {
+        gap: var(--portolite-space-5);
+        padding-block: var(--portolite-space-6);
+    }
+
+    /* No hover on touch, so the preview would never appear — and at this width
+       there is no room beside the text for it anyway. */
+    .mp-feature__preview {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    a.mp-feature__link:hover,
+    a.mp-feature__link:focus-visible {
+        padding-left: var(--portolite-space-2);
+    }
+
+    .mp-feature__link:hover .mp-feature__arrow,
+    .mp-feature__link:focus-visible .mp-feature__arrow {
+        transform: none;
+    }
+
+    .mp-feature__row:hover .mp-feature__preview,
+    .mp-feature__row:focus-within .mp-feature__preview {
+        transform: translate(0, -50%);
+    }
+}

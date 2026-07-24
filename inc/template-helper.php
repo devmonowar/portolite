@@ -243,6 +243,58 @@ function portolite_section_title($tagline, $title, $align = 'center')
 
 
 /**
+ * Print the head of a Modern section — eyebrow, title, lede.
+ *
+ * The Modern sections carry their own heading markup rather than
+ * portolite_section_title()'s: no reveal animation, its own class prefix, and
+ * an optional lede paragraph. The block was identical in five templates and
+ * will be in every section written from here on, so it lives once.
+ *
+ * Called inside a flexible-content row, it reads `eyebrow`, `title` and `lede`
+ * itself; pass any of them explicitly to override.
+ *
+ * @param array $args {
+ *     @type string $eyebrow   Small label above the title. Plain text.
+ *     @type string $title     The heading. May carry limited inline HTML.
+ *     @type string $lede      Paragraph under the title. Plain text.
+ *     @type string $modifiers Extra classes for the wrapper, e.g. 'mp-head--center'.
+ * }
+ */
+function portolite_mp_head($args = [])
+{
+    $args += [
+        'eyebrow'   => null,
+        'title'     => null,
+        'lede'      => null,
+        'modifiers' => '',
+    ];
+
+    foreach (['eyebrow', 'title', 'lede'] as $field) {
+        if (null === $args[$field]) {
+            $args[$field] = get_sub_field($field);
+        }
+    }
+
+    if (empty($args['eyebrow']) && empty($args['title']) && empty($args['lede'])) {
+        return;
+    }
+    ?>
+    <div class="mp-head <?php echo esc_attr($args['modifiers']); ?>">
+        <?php if (!empty($args['eyebrow'])) : ?>
+            <span class="mp-eyebrow"><?php echo esc_html($args['eyebrow']); ?></span>
+        <?php endif; ?>
+        <?php if (!empty($args['title'])) : ?>
+            <h2 class="mp-title"><?php echo wp_kses_post($args['title']); ?></h2>
+        <?php endif; ?>
+        <?php if (!empty($args['lede'])) : ?>
+            <p class="mp-lede"><?php echo esc_html($args['lede']); ?></p>
+        <?php endif; ?>
+    </div>
+<?php
+}
+
+
+/**
  * Print a row of social links.
  *
  * The three callers below (header, footer, author bio) each pull URLs from a

@@ -39,12 +39,16 @@ function portolite_section_layout_names()
         'pricing',
         'blog',
         'hero_modern',
+        'sliding_text',
         'services_modern',
         'about_modern',
+        'why_choose',
+        'feature_list',
         'process_modern',
         'pricing_modern',
         'testimonial_modern',
         'faq_modern',
+        'cta_band',
         'cta_modern',
     ];
 }

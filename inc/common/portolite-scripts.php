@@ -95,6 +95,7 @@ function portolite_assets()
             'modern-base'        => ['module-css/modern-base.css', []],
             'hero-modern'        => ['module-css/hero-modern.css', ['modern-base']],
             'modern-sections'    => ['module-css/modern-sections.css', ['modern-base']],
+            'modern-blocks'      => ['module-css/modern-blocks.css', ['modern-base']],
 
             // Header, footer and page header render on every template.
             'module-footer'      => ['module-css/footer.css', [], true],
@@ -211,6 +212,8 @@ function portolite_asset_map()
         ],
 
         // Modern sections are CSS only — no carousel, no animation library.
+        // The marquee, the hover previews and the parallax band are all
+        // keyframes and :hover, so none of them costs a script either.
         'hero_modern'        => ['css' => ['hero-modern'], 'js' => []],
         'services_modern'    => ['css' => ['modern-sections'], 'js' => []],
         'about_modern'       => ['css' => ['modern-sections'], 'js' => []],
@@ -219,6 +222,11 @@ function portolite_asset_map()
         'testimonial_modern' => ['css' => ['modern-sections'], 'js' => []],
         'faq_modern'         => ['css' => ['modern-sections'], 'js' => []],
         'cta_modern'         => ['css' => ['modern-sections'], 'js' => []],
+
+        'sliding_text'       => ['css' => ['modern-blocks'], 'js' => []],
+        'why_choose'         => ['css' => ['modern-blocks'], 'js' => []],
+        'cta_band'           => ['css' => ['modern-blocks'], 'js' => []],
+        'feature_list'       => ['css' => ['modern-blocks'], 'js' => []],
     ];
 }
 

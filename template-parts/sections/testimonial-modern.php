@@ -8,23 +8,12 @@
  * @package portolite
  */
 
-$eyebrow = get_sub_field('eyebrow');
-$title   = get_sub_field('title');
 ?>
 
 <section class="mp-sec mp-sec--dark mp-quotes">
     <div class="mp-shell">
 
-        <?php if ($eyebrow || $title) : ?>
-            <div class="mp-head">
-                <?php if ($eyebrow) : ?>
-                    <span class="mp-eyebrow"><?php echo esc_html($eyebrow); ?></span>
-                <?php endif; ?>
-                <?php if ($title) : ?>
-                    <h2 class="mp-title"><?php echo wp_kses_post($title); ?></h2>
-                <?php endif; ?>
-            </div>
-        <?php endif; ?>
+        <?php portolite_mp_head(); ?>
 
         <?php if (have_rows('items')) : ?>
             <div class="mp-quotes__grid">
