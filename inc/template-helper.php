@@ -511,124 +511,119 @@ if (!function_exists('portolite_pagination')) {
 
 
 
-// WP kses allowed tags
-// ----------------------------------------------------------------------------------------
+/**
+ * Escape a string that is allowed to carry limited markup.
+ *
+ * Used for the three places a site owner writes HTML into a setting: the footer
+ * bottom menu, the newsletter title and the breadcrumb title.
+ *
+ * The list used to carry `data-wow-duration`, `data-wow-delay`,
+ * `data-wallpaper-options` and `data-stellar-background-ratio` as if they were
+ * *element names*. wp_kses reads the top level as tags, so those four
+ * whitelisted elements that do not exist, and the real attributes — which have
+ * to be listed per tag — were stripped from everything passed through here.
+ * `b`, `strong`, `i` and `em` were also each listed twice, the second
+ * declaration silently discarding the first.
+ *
+ * @param string $raw
+ * @return string
+ */
 function portolite_kses($raw)
 {
-
-    $allowed_tags = array(
-        'a'                         => array(
-            'class'   => array(),
-            'href'    => array(),
-            'rel'  => array(),
-            'title'   => array(),
-            'target' => array(),
-        ),
-        'abbr'                      => array(
-            'title' => array(),
-        ),
-        'b'                         => array(),
-        'blockquote'                => array(
-            'cite' => array(),
-        ),
-        'cite'                      => array(
-            'title' => array(),
-        ),
-        'code'                      => array(),
-        'del'                    => array(
-            'datetime'   => array(),
-            'title'      => array(),
-        ),
-        'dd'                     => array(),
-        'div'                    => array(
-            'class'   => array(),
-            'title'   => array(),
-            'style'   => array(),
-        ),
-        'dl'                     => array(),
-        'dt'                     => array(),
-        'em'                     => array(),
-        'h1'                     => array(),
-        'h2'                     => array(),
-        'h3'                     => array(),
-        'h4'                     => array(),
-        'h5'                     => array(),
-        'h6'                     => array(),
-        'b' => array(),
-        'strong' => array(),
-        'i' => array(),
-        'em' => array(),
-        'sup' => array(),
-        'sub' => array(),
-        'u' => array(),
-        'i'                         => array(
-            'class' => array(),
-        ),
-        'img'                    => array(
-            'alt'  => array(),
-            'class'   => array(),
-            'height' => array(),
-            'src'  => array(),
-            'width'   => array(),
-        ),
-        'li'                     => array(
-            'class' => array(),
-        ),
-        'ol'                     => array(
-            'class' => array(),
-        ),
-        'p'                         => array(
-            'class' => array(),
-        ),
-        'q'                         => array(
-            'cite'    => array(),
-            'title'   => array(),
-        ),
-        'span'                      => array(
-            'class'   => array(),
-            'title'   => array(),
-            'style'   => array(),
-        ),
-        'iframe'                 => array(
-            'width'         => array(),
-            'height'     => array(),
-            'scrolling'     => array(),
-            'frameborder'   => array(),
-            'allow'         => array(),
-            'src'        => array(),
-        ),
-        'strike'                 => array(),
-        'br'                     => array(),
-        'strong'                 => array(),
-        'data-wow-duration'            => array(),
-        'data-wow-delay'            => array(),
-        'data-wallpaper-options'       => array(),
-        'data-stellar-background-ratio'   => array(),
-        'ul'                     => array(
-            'class' => array(),
-        ),
-        'svg' => array(
-            'class' => true,
-            'aria-hidden' => true,
-            'aria-labelledby' => true,
-            'role' => true,
-            'xmlns' => true,
-            'width' => true,
-            'height' => true,
-            'viewbox' => true, // <= Must be lower case!
-        ),
-        'g'     => array('fill' => true),
-        'title' => array('title' => true),
-        'path'  => array('d' => true, 'fill' => true,),
+    // Attributes every tag below may carry, on top of its own.
+    $common = array(
+        'class' => array(),
+        'id'    => array(),
+        'title' => array(),
+        'style' => array(),
+        // The animation hooks. These belong here, as attributes — the WOW
+        // classes on a section title read them.
+        'data-wow-duration' => array(),
+        'data-wow-delay'    => array(),
     );
 
-    if (function_exists('wp_kses')) { // WP is here
-        $allowed = wp_kses($raw, $allowed_tags);
-    } else {
-        $allowed = $raw;
-    }
+    $tag = function ($extra = array()) use ($common) {
+        return array_merge($common, $extra);
+    };
 
-    return $allowed;
+    $allowed_tags = array(
+        'a'          => $tag(array('href' => array(), 'rel' => array(), 'target' => array())),
+        'abbr'       => $tag(),
+        'b'          => $tag(),
+        'blockquote' => $tag(array('cite' => array())),
+        'br'         => array(),
+        'cite'       => $tag(),
+        'code'       => $tag(),
+        'dd'         => $tag(),
+        'del'        => $tag(array('datetime' => array())),
+        'div'        => $tag(),
+        'dl'         => $tag(),
+        'dt'         => $tag(),
+        'em'         => $tag(),
+        'h1'         => $tag(),
+        'h2'         => $tag(),
+        'h3'         => $tag(),
+        'h4'         => $tag(),
+        'h5'         => $tag(),
+        'h6'         => $tag(),
+        'i'          => $tag(),
+        'iframe'     => $tag(array(
+            'src'         => array(),
+            'width'       => array(),
+            'height'      => array(),
+            'scrolling'   => array(),
+            'frameborder' => array(),
+            'allow'       => array(),
+            'allowfullscreen' => array(),
+        )),
+        'img'        => $tag(array(
+            'src'     => array(),
+            'srcset'  => array(),
+            'sizes'   => array(),
+            'alt'     => array(),
+            'width'   => array(),
+            'height'  => array(),
+            'loading' => array(),
+        )),
+        'li'         => $tag(),
+        'ol'         => $tag(),
+        'p'          => $tag(),
+        'q'          => $tag(array('cite' => array())),
+        'span'       => $tag(),
+        'strike'     => $tag(),
+        'strong'     => $tag(),
+        'sub'        => $tag(),
+        'sup'        => $tag(),
+        'u'          => $tag(),
+        'ul'         => $tag(),
+
+        // Inline SVG. `viewbox` must stay lower case: wp_kses lower-cases the
+        // attribute before matching, so `viewBox` would never match.
+        'svg'   => array(
+            'class'           => true,
+            'xmlns'           => true,
+            'width'           => true,
+            'height'          => true,
+            'viewbox'         => true,
+            'fill'            => true,
+            'role'            => true,
+            'aria-hidden'     => true,
+            'aria-labelledby' => true,
+            'focusable'       => true,
+        ),
+        'g'     => array('fill' => true),
+        'title' => array('id' => true),
+        'path'  => array(
+            'd'              => true,
+            'fill'           => true,
+            'stroke'         => true,
+            'stroke-width'   => true,
+            'stroke-linecap' => true,
+            'stroke-linejoin' => true,
+        ),
+    );
+
+    return wp_kses($raw, $allowed_tags);
 }
 
 // This code filters the Archive widget to include the post count inside the link /

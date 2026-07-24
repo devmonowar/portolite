@@ -7,7 +7,8 @@
  */
 ?>
 
-<div class="ptl-page-post">
+<?php // post_class() and the post-N id: posts carry both, pages carried neither. ?>
+<div id="post-<?php the_ID(); ?>" <?php post_class('ptl-page-post'); ?>>
 
     <?php
     // Display the full content of the page

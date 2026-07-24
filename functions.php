@@ -62,6 +62,11 @@ if (!function_exists('portolite_setup')) {
         add_theme_support('editor-styles');
         add_theme_support('responsive-embeds');
         remove_theme_support('widgets-block-editor');
+
+        // Has to follow add_theme_support('editor-styles') and belongs on this
+        // hook, not admin_init: the block editor reads the registered styles
+        // through the REST API too, where admin_init never fires.
+        add_editor_style('assets/css/editor-style.css');
     }
 }
 add_action('after_setup_theme', 'portolite_setup');
@@ -203,15 +208,6 @@ function portolite_register_blocks()
     }
 }
 add_action('init', 'portolite_register_blocks');
-
-// Add editor styles
-function portolite_add_editor_styles()
-{
-    add_editor_style('assets/css/editor-style.css');
-}
-add_action('admin_init', 'portolite_add_editor_styles');
-
-
 
 /**--------------------------------------------------------------
  * Replace Default Search Form

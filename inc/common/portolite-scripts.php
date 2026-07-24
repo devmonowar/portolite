@@ -353,7 +353,15 @@ function portolite_scripts()
     // Version must stay null: a version argument makes WordPress rebuild the URL
     // through add_query_arg(), which collapses the repeated `family` parameters
     // down to the last one and silently drops the other font families.
-    wp_enqueue_style('portolite-fonts', portolite_fonts_url(), [], null);
+    //
+    // The URL is empty when a translator sets the "on/off" string to off — the
+    // documented way to switch Google Fonts off for a locale that does not need
+    // them. Registering a handle with an empty src prints <link href=""> and
+    // makes the browser re-request the page itself.
+    $fonts_url = portolite_fonts_url();
+    if ($fonts_url) {
+        wp_enqueue_style('portolite-fonts', $fonts_url, [], null);
+    }
 
     $wanted = array_flip($needed['css']);
 

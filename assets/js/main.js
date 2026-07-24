@@ -747,14 +747,25 @@
 
 
   /*-- Handle Scrollbar --*/
+  // Looked up once, outside the handler. Both of these run on every scroll
+  // frame and $("body").height() forces a synchronous layout, so it is worth
+  // skipping entirely when the button is not on the page — which it never was:
+  // the old guard tested `".scroll-to-top".length`, the length of a *string*,
+  // and a non-empty string is always truthy.
+  const $scrollToTop = $(".scroll-to-top");
+  const $scrollProgress = $scrollToTop.find(".scroll-to-top__inner");
+
   function handleScrollbar() {
+    if (!$scrollProgress.length) {
+      return;
+    }
     const bodyHeight = $("body").height();
     const scrollPos = $(window).innerHeight() + $(window).scrollTop();
     let percentage = (scrollPos / bodyHeight) * 100;
     if (percentage > 100) {
       percentage = 100;
     }
-    $(".scroll-to-top .scroll-to-top__inner").css("width", percentage + "%");
+    $scrollProgress.css("width", percentage + "%");
   }
 
 
@@ -952,15 +963,9 @@
 
   $(window).on("scroll", function () {
     handleScrollbar();
-    
 
-    var scrollToTopBtn = ".scroll-to-top";
-    if (scrollToTopBtn.length) {
-      if ($(window).scrollTop() > 500) {
-        $(scrollToTopBtn).addClass("show");
-      } else {
-        $(scrollToTopBtn).removeClass("show");
-      }
+    if ($scrollToTop.length) {
+      $scrollToTop.toggleClass("show", $(window).scrollTop() > 500);
     }
   });
 
