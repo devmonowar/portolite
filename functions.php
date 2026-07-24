@@ -372,9 +372,9 @@ if (!function_exists('portolite_comment')) {
  * One Click Demo Import configuration.
  *
  * Deliberately empty until real demo content exists. The four entries that used
- * to live here were all broken: one pointed at http://localhost/car-repair/ —
- * a developer machine — and three at the placeholder demo.yoursite.com. A theme
- * offering demos that 404 is worse than one offering none.
+ * to live here were all broken: one pointed at a developer machine's local
+ * server and three at a placeholder domain. A theme offering demos that 404 is
+ * worse than one offering none.
  *
  * When the export is ready, host the files (a GitHub release or a demo
  * subdomain) and return one entry per demo here.
