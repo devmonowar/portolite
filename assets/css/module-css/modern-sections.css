@@ -163,7 +163,7 @@
     height: 44px;
     border-radius: 14px;
     background: linear-gradient(180deg, var(--mp-accent), var(--mp-accent-deep));
-    color: var(--portolite-ink);
+    color: var(--portolite-on-base);
     font-family: var(--mp-display);
     font-size: 1.05rem;
     font-weight: 700;

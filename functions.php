@@ -91,6 +91,7 @@ require_once PORTOLITE_THEME_INC . 'add_plugin.php';
 require_once PORTOLITE_THEME_INC . 'acf/page-sections.php';
 require_once PORTOLITE_THEME_INC . 'common/portolite-breadcrumb.php';
 require_once PORTOLITE_THEME_INC . 'common/portolite-scripts.php';
+require_once PORTOLITE_THEME_INC . 'common/portolite-brand-colour.php';
 require_once PORTOLITE_THEME_INC . 'common/portolite-widgets.php';
 
 /**--------------------------------------------------------------

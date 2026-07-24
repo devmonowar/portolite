@@ -60,7 +60,7 @@ ul {
     display: block;
     padding: 25px 40px 40px;
     background-color: #fff;
-    border-top: 3px solid #E8092E;
+    border-top: 3px solid var(--portolite-base);
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
 }
@@ -71,7 +71,7 @@ ul {
     display: block;
     padding: 40px 40px 40px;
     background-color: var(--portolite-white);
-    border-top: 3px solid #E8092E;
+    border-top: 3px solid var(--portolite-base);
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
 } */
@@ -202,7 +202,7 @@ ul {
 }
 
 .thm-breadcrumb li a:hover {
-    color: #e8092e;
+    color: var(--portolite-base);
 }
 
 .thm-breadcrumb li.sep {
@@ -303,7 +303,7 @@ header.main-header {
     z-index: 1;
 }
 .footer__social-3 a:hover {
-    color: #e8092e;
+    color: var(--portolite-base);
     background-color: #fff;
 }
 .footer_widget {

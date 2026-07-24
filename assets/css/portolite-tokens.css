@@ -48,18 +48,25 @@
 
   /* --------------------------------------------------------------- Colour */
 
-  /* Brand. `-rgb` twins exist so rules can build rgba() from the same source
-     — never write the hex twice. */
-  --portolite-base: #E8092E;
-  --portolite-base-rgb: 232, 9, 46;
-  --portolite-base-dark: #c40726;
+  /* Brand. One accent for the whole theme — the Modern sections used to carry a
+     second one, and two accents that never agreed was a defect, not a feature.
+     `-rgb` twins exist so rules can build rgba() from the same source; never
+     write the hex twice.
 
-  /* Secondary accent. The Modern sections paint with this rather than the
-     brand red; the redesign will most likely collapse the two, and when it
-     does this is the one line to change. */
-  --portolite-accent: #FFB23F;
-  --portolite-accent-rgb: 255, 178, 63;
-  --portolite-accent-deep: #E58A00;
+     ⚠️ These four move together. The Customizer's brand-colour picker
+     (Appearance → Customize → Colours) overrides all four at once and derives
+     the last two, so a buyer changing the colour keeps a legible button and a
+     usable hover state. Editing only --portolite-base here would leave the
+     hover and the on-colour behind. */
+  --portolite-base: #FFB23F;
+  --portolite-base-rgb: 255, 178, 63;
+  --portolite-base-dark: #E58A00;
+
+  /* What text and icons sitting *on* the brand colour are painted with.
+     Amber needs dark text — white on #FFB23F is roughly 1.8:1, which is
+     unreadable — where the old red needed white. That is exactly why this is a
+     token and not a hardcoded colour repeated in twenty rules. */
+  --portolite-on-base: var(--portolite-ink);
 
   /* Neutrals */
   --portolite-black: #171717;

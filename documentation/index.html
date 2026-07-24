@@ -376,8 +376,8 @@
             <p><strong>Appearance &rarr; Customize &rarr; PortoLite Customizer</strong> holds nine
                 sections:</p>
             <ul>
-                <li><strong>Typography Setting</strong> — body and heading fonts, plus the dark-mode
-                    switch.</li>
+                <li><strong>Typography Setting</strong> — the brand colour, body and heading fonts,
+                    and the dark-mode switch.</li>
                 <li><strong>Header Top Setting</strong> — the bar above the header: phone, address,
                     email, and a switch to hide it.</li>
                 <li><strong>Header Setting</strong> — logo and header layout.</li>
@@ -394,18 +394,31 @@
                 editor. The page setting wins over the Customizer default.</p>
 
             <h2 id="colours">7. Colours and type</h2>
+
+            <h3>The brand colour</h3>
+            <p><strong>Appearance &rarr; Customize &rarr; Typography Setting &rarr; Brand
+                    colour.</strong> One picker changes every button, link, icon and accent in the
+                theme.</p>
+            <p>It sets four things, not one: the colour itself, a darker shade for hover states, and
+                the colour of text sitting <em>on</em> the brand colour — which is worked out from
+                the colour you picked. The theme's amber needs dark text; a navy would need white.
+                You do not have to think about it, and the buttons stay readable whatever you
+                choose.</p>
+
+            <h3>Everything else</h3>
             <p>Every colour, type size, space step, radius, shadow and duration the theme uses is
                 declared once, in <code>assets/css/portolite-tokens.css</code>. No section
                 stylesheet hardcodes a value, so changing one there changes it everywhere.</p>
             <p>Override them from a child theme rather than editing the file, so a theme update does
                 not undo your work:</p>
             <pre><code>:root {
-  --portolite-base: #0a7cff;        /* brand colour     */
-  --portolite-accent: #ffb23f;      /* secondary accent */
-  --portolite-shell: 1200px;        /* content width    */
-  --portolite-section-y: 96px;      /* vertical rhythm  */
-  --portolite-radius: 8px;          /* corner rounding  */
+  --portolite-shell: 1200px;        /* content width   */
+  --portolite-section-y: 96px;      /* vertical rhythm */
+  --portolite-radius: 8px;          /* corner rounding */
+  --portolite-text-base: 17px;      /* body text size  */
 }</code></pre>
+            <p>The brand colour is the exception — set it in the Customizer rather than here, so the
+                hover shade and the on-colour are worked out with it.</p>
             <p>Fonts are Space Grotesk for headings and Inter for body text, loaded from Google
                 Fonts. To change them, set <code>--portolite-font</code> and
                 <code>--portolite-font-two</code> in your child theme and enqueue the families you

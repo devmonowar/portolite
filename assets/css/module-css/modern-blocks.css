@@ -24,8 +24,8 @@
 }
 
 .mp-slide--accent {
-    --sec-bg: var(--portolite-accent);
-    --sec-text: var(--portolite-ink);
+    --sec-bg: var(--portolite-base);
+    --sec-text: var(--portolite-on-base);
     --sec-line: transparent;
 }
 
@@ -147,7 +147,7 @@
     padding: var(--portolite-space-5) var(--portolite-space-6);
     border-radius: var(--mp-radius-sm);
     background: var(--mp-accent);
-    color: var(--portolite-ink);
+    color: var(--portolite-on-base);
     box-shadow: var(--portolite-shadow);
     text-align: center;
 }

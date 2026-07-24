@@ -29,9 +29,9 @@
     --mp-paper-soft: var(--portolite-bg);
 
     /* Accent */
-    --mp-accent: var(--portolite-accent);
-    --mp-accent-rgb: var(--portolite-accent-rgb);
-    --mp-accent-deep: var(--portolite-accent-deep);
+    --mp-accent: var(--portolite-base);
+    --mp-accent-rgb: var(--portolite-base-rgb);
+    --mp-accent-deep: var(--portolite-base-dark);
 
     /* Shape */
     --mp-radius: var(--portolite-radius-lg);
@@ -158,12 +158,12 @@
 
 .mp-btn--solid {
     background: linear-gradient(180deg, var(--mp-accent), var(--mp-accent-deep));
-    color: var(--portolite-ink);
+    color: var(--portolite-on-base);
     box-shadow: 0 12px 30px -14px rgba(var(--mp-accent-rgb), .8);
 }
 
 .mp-btn--solid:hover {
-    color: var(--portolite-ink);
+    color: var(--portolite-on-base);
     box-shadow: 0 18px 38px -16px rgba(var(--mp-accent-rgb), .95);
 }
 

@@ -146,7 +146,7 @@
 }
 
 .team-one__social a:hover {
-    color: var(--portolite-white);
+    color: var(--portolite-on-base);
     background-color: var(--portolite-base);
 }
 

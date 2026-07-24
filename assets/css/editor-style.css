@@ -13,13 +13,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: #e8092e;
+    color: var(--portolite-base);
     text-decoration: none;
 }
 
 .wp-block-button__link {
-    background: #e8092e;
-    color: #fff;
+    background: var(--portolite-base);
+    color: var(--portolite-on-base);
     padding: 12px 24px;
     border-radius: 6px;
 }

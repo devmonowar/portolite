@@ -57,7 +57,7 @@
 }
 
 .pricing-one__main-tab-box .tab-buttons .tab-btn.active-btn span {
-    color: var(--portolite-white);
+    color: var(--portolite-on-base);
     background-color: var(--portolite-base);
 }
 

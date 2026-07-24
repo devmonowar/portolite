@@ -190,7 +190,7 @@ ul {
   font-weight: var(--portolite-weight-bold);
   font-size: var(--portolite-text-base);
   line-height: 34px;
-  color: var(--portolite-white);
+  color: var(--portolite-on-base);
   background-color: var(--portolite-base);
   padding: 13px var(--portolite-space-8);
   border-radius: var(--portolite-radius-pill);
@@ -780,7 +780,7 @@ ul {
 .stricky-header .main-menu__list>li>ul>li:hover>a,
 .stricky-header .main-menu__list>li>ul>li>ul>li:hover>a {
   background-color: var(--portolite-base);
-  color: var(--portolite-white);
+  color: var(--portolite-on-base);
 }
 
 .main-menu .main-menu__list>li>ul>li>ul,
@@ -1026,7 +1026,7 @@ ul {
   background-color: var(--portolite-base);
   border: none;
   outline: none;
-  color: #fff;
+  color: var(--portolite-on-base);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1169,7 +1169,7 @@ ul {
   text-align: center;
   font-size: 11px;
   margin-right: 10px;
-  color: #fff;
+  color: var(--portolite-on-base);
 }
 
 .mobile-nav__container .main-logo,

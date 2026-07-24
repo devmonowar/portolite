@@ -59,7 +59,12 @@ template.
 
 = Can I change the colours? =
 
-Every colour resolves to a custom property in
+The brand colour has a picker: Appearance > Customize > Typography Setting >
+Brand colour. It changes every button, link, icon and accent at once, and
+works out the hover shade and the colour of text sitting on it, so the
+buttons stay readable whatever you pick.
+
+Everything else resolves to a custom property in
 assets/css/portolite-tokens.css. Change it there, or override the same
 property from a child theme — no section stylesheet needs touching.
 

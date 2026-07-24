@@ -173,7 +173,7 @@
 
 .main-slider__video-icon:hover {
     background-color: var(--portolite-base);
-    color: var(--portolite-white);
+    color: var(--portolite-on-base);
 }
 
 .main-slider__video-link .ripple,
