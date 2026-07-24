@@ -248,12 +248,18 @@ if (!function_exists('wp_body_open')) {
         do_action('wp_body_open');
     }
 }
-//  portolite_tag_cloud_args
+/**
+ * Flatten the tag cloud.
+ *
+ * WordPress sizes each tag by how many posts carry it, which turns the widget
+ * into a ransom note. One size for all of them, matching the theme's body text.
+ */
 function portolite_tag_cloud_args($args)
 {
-    $args['smallest'] = 16; // বা যেই font size চাও
-    $args['largest'] = 16;
-    $args['unit'] = 'px';
+    $args['smallest'] = 16;
+    $args['largest']  = 16;
+    $args['unit']     = 'px';
+
     return $args;
 }
 add_filter('widget_tag_cloud_args', 'portolite_tag_cloud_args');
@@ -266,7 +272,7 @@ add_filter('widget_tag_cloud_args', 'portolite_tag_cloud_args');
  */
 function portolite_default_menu()
 {
-    // সব Published Page নিয়ে আসা
+    // Every published page, in the order the site owner set.
     $pages = get_pages(array(
         'sort_column' => 'menu_order, post_title',
         'sort_order'  => 'ASC',
@@ -276,7 +282,7 @@ function portolite_default_menu()
         return;
     }
 
-    // পেজগুলোকে parent অনুযায়ী group করা
+    // Grouped by parent, so the tree can be walked without a query per level.
     $pages_by_parent = array();
     foreach ($pages as $page) {
         $pages_by_parent[$page->post_parent][] = $page;
