@@ -1,16 +1,18 @@
 /*!
 Theme Name: PortoLite
-Theme URI: #
-Author: #
-Author URI: #
-Description: PortoLite – Creative Agency & Portfolio WordPress Theme
+Theme URI: https://github.com/devmonowar/portolite
+Author: Monowar Hossain
+Author URI: https://github.com/devmonowar
+Description: Creative agency and portfolio theme. Pages are built from ACF flexible-content sections, each with its own template and stylesheet, and only the assets a page actually uses are loaded. Every colour, size and duration resolves to a design token, so a restyle — including dark mode — is one file.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: portolite
-Requires PHP:     7.4
-Tested up to:     6.5
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Domain Path: /languages
+Requires at least: 6.0
+Requires PHP: 7.4
+Tested up to: 6.5
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, two-columns, right-sidebar, block-styles, wide-blocks
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.

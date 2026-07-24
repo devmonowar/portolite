@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PortoLite — Documentation</title>
+    <style>
+        :root {
+            --ink: #14181d;
+            --muted: #5b6b7c;
+            --line: #e3e7ec;
+            --paper: #ffffff;
+            --soft: #f6f8fa;
+            --accent: #c8102e;
+            --code: #f2f4f7;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --ink: #e9eef4;
+                --muted: #9aa8b8;
+                --line: #262d36;
+                --paper: #0f1318;
+                --soft: #151a21;
+                --accent: #ff7a8a;
+                --code: #171d25;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .wrap {
+            display: grid;
+            grid-template-columns: 250px minmax(0, 1fr);
+            gap: 48px;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 40px 24px 96px;
+        }
+
+        nav {
+            position: sticky;
+            top: 24px;
+            align-self: start;
+            font-size: 14px;
+        }
+
+        nav strong {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 13px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        nav ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav li + li {
+            margin-top: 6px;
+        }
+
+        nav a {
+            color: var(--ink);
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        h1 {
+            margin: 0 0 4px;
+            font-size: 34px;
+            line-height: 1.15;
+        }
+
+        .lede {
+            margin: 0 0 40px;
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        h2 {
+            margin: 48px 0 12px;
+            padding-top: 24px;
+            border-top: 1px solid var(--line);
+            font-size: 24px;
+            line-height: 1.25;
+        }
+
+        h3 {
+            margin: 28px 0 8px;
+            font-size: 17px;
+        }
+
+        p,
+        ul,
+        ol {
+            margin: 0 0 14px;
+        }
+
+        ul,
+        ol {
+            padding-left: 22px;
+        }
+
+        li + li {
+            margin-top: 4px;
+        }
+
+        code {
+            padding: 2px 5px;
+            border-radius: 4px;
+            background: var(--code);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: .9em;
+        }
+
+        pre {
+            overflow-x: auto;
+            margin: 0 0 16px;
+            padding: 14px 16px;
+            border-radius: 8px;
+            background: var(--code);
+        }
+
+        pre code {
+            padding: 0;
+            background: none;
+        }
+
+        table {
+            width: 100%;
+            margin: 0 0 16px;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        th,
+        td {
+            padding: 9px 12px;
+            border-bottom: 1px solid var(--line);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            font-size: 13px;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .note {
+            margin: 0 0 16px;
+            padding: 14px 16px;
+            border-left: 3px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            background: var(--soft);
+        }
+
+        .note p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 860px) {
+            .wrap {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 24px;
+            }
+
+            nav {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <nav>
+            <strong>Contents</strong>
+            <ol>
+                <li><a href="#requirements">1. Requirements</a></li>
+                <li><a href="#install">2. Installing</a></li>
+                <li><a href="#plugins">3. Required plugins</a></li>
+                <li><a href="#pages">4. Building a page</a></li>
+                <li><a href="#sections">5. The sections</a></li>
+                <li><a href="#customizer">6. Customizer</a></li>
+                <li><a href="#colours">7. Colours and type</a></li>
+                <li><a href="#dark">8. Dark mode</a></li>
+                <li><a href="#menus">9. Menus and widgets</a></li>
+                <li><a href="#blog">10. Blog and team</a></li>
+                <li><a href="#child">11. Child theme</a></li>
+                <li><a href="#performance">12. What loads when</a></li>
+                <li><a href="#translate">13. Translating</a></li>
+                <li><a href="#support">14. Support</a></li>
+            </ol>
+        </nav>
+
+        <main>
+            <h1>PortoLite</h1>
+            <p class="lede">Creative agency and portfolio WordPress theme. This document covers
+                setup and every option the theme adds.</p>
+
+            <h2 id="requirements">1. Requirements</h2>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Minimum</th>
+                </tr>
+                <tr>
+                    <td>WordPress</td>
+                    <td>6.0</td>
+                </tr>
+                <tr>
+                    <td>PHP</td>
+                    <td>7.4</td>
+                </tr>
+                <tr>
+                    <td>PHP memory limit</td>
+                    <td>128&nbsp;MB</td>
+                </tr>
+                <tr>
+                    <td>max_execution_time</td>
+                    <td>120 seconds, for the demo import</td>
+                </tr>
+            </table>
+
+            <h2 id="install">2. Installing</h2>
+            <ol>
+                <li>Unzip the download. The theme itself is <code>portolite.zip</code>; the rest of
+                    the package is documentation and licences.</li>
+                <li><strong>Appearance &rarr; Themes &rarr; Add New &rarr; Upload Theme</strong>,
+                    choose <code>portolite.zip</code>, click <em>Install Now</em>.</li>
+                <li>Click <em>Activate</em>.</li>
+                <li>A notice appears listing the required plugins. Install and activate all of them
+                    before doing anything else.</li>
+            </ol>
+            <div class="note">
+                <p>If the upload fails with &ldquo;the link you followed has expired&rdquo;, your
+                    host's <code>upload_max_filesize</code> is below the zip size. Upload the
+                    unzipped folder over FTP to <code>wp-content/themes/</code> instead.</p>
+            </div>
+
+            <h2 id="plugins">3. Required plugins</h2>
+            <table>
+                <tr>
+                    <th>Plugin</th>
+                    <th>Why</th>
+                </tr>
+                <tr>
+                    <td>Advanced Custom Fields PRO</td>
+                    <td>The page builder. Every section is a flexible-content layout, so the theme
+                        cannot build pages without it.</td>
+                </tr>
+                <tr>
+                    <td>Kirki</td>
+                    <td>Powers the Customizer controls the theme adds.</td>
+                </tr>
+                <tr>
+                    <td>PortoLite Core</td>
+                    <td>Registers the Team post type, so your team members survive a theme change.
+                    </td>
+                </tr>
+            </table>
+            <p>All three are offered through the activation notice. ACF PRO is commercial software
+                and comes with the theme package rather than from wordpress.org.</p>
+
+            <h2 id="pages">4. Building a page</h2>
+            <ol>
+                <li><strong>Pages &rarr; Add New.</strong></li>
+                <li>In <em>Page Attributes</em>, set <strong>Template</strong> to <strong>Page
+                        (Flexible Sections)</strong>. Save.</li>
+                <li>A <strong>Page Sections</strong> panel appears below the editor.</li>
+                <li>Click <em>Add Row</em> and pick a section. Fill in its fields.</li>
+                <li>Add as many rows as you need; drag the handle at the left of a row to reorder.
+                </li>
+                <li>Publish, then set the page as your front page under <strong>Settings &rarr;
+                        Reading</strong> if it is the home page.</li>
+            </ol>
+            <p>The main editor content is ignored on this template — everything comes from the
+                sections. Use the ordinary <em>Default template</em> for a normal content page.</p>
+
+            <h2 id="sections">5. The sections</h2>
+            <table>
+                <tr>
+                    <th>Section</th>
+                    <th>Use it for</th>
+                </tr>
+                <tr>
+                    <td>Hero (Modern)</td>
+                    <td>The opening screen: headline, two buttons, a photo, a badge and trust items.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sliding Text (Marquee)</td>
+                    <td>A moving band of short phrases. Pauses while the pointer is over it.</td>
+                </tr>
+                <tr>
+                    <td>Services (Modern)</td>
+                    <td>A grid of icon cards, each with a link.</td>
+                </tr>
+                <tr>
+                    <td>About (Modern)</td>
+                    <td>Image beside a heading, a lede, numbered points and one statistic.</td>
+                </tr>
+                <tr>
+                    <td>Why Choose Us</td>
+                    <td>Image with a badge on one side, reasons on the other. Collapses to a single
+                        column if you leave the image empty.</td>
+                </tr>
+                <tr>
+                    <td>Feature List (hover rows)</td>
+                    <td>A numbered list of rows; each reveals its picture when hovered or tabbed to.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Process (Modern)</td>
+                    <td>Numbered steps.</td>
+                </tr>
+                <tr>
+                    <td>Pricing (Modern)</td>
+                    <td>Plan cards. Tick <em>Featured</em> on one to highlight it.</td>
+                </tr>
+                <tr>
+                    <td>Testimonials (Modern)</td>
+                    <td>Quote cards with a photo, name and role.</td>
+                </tr>
+                <tr>
+                    <td>FAQ (Modern)</td>
+                    <td>An accordion built on native <code>&lt;details&gt;</code>, so it works with
+                        JavaScript switched off.</td>
+                </tr>
+                <tr>
+                    <td>CTA Band (full width)</td>
+                    <td>A full-width band with a photo behind it that stays still as the page
+                        scrolls.</td>
+                </tr>
+                <tr>
+                    <td>Call To Action (Modern)</td>
+                    <td>A boxed call to action with two buttons.</td>
+                </tr>
+            </table>
+            <p>The theme also carries the earlier section set — slider, counters, brand logos,
+                gallery, team, contact, blog — in the same Page Sections panel.</p>
+
+            <h3>Options that repeat across sections</h3>
+            <ul>
+                <li><strong>Tone</strong> — Dark or Light. This is the section's background and the
+                    text colours that go with it; alternate them down the page.</li>
+                <li><strong>Eyebrow</strong> — the small label above the heading.</li>
+                <li><strong>Lede</strong> — the paragraph under the heading.</li>
+                <li><strong>Icon class</strong> — a Flaticon class name, for example
+                    <code>flaticon-check</code>. Leave it empty and the section falls back to a
+                    built-in mark.</li>
+            </ul>
+
+            <h2 id="customizer">6. Customizer</h2>
+            <p><strong>Appearance &rarr; Customize &rarr; PortoLite Customizer</strong> holds nine
+                sections:</p>
+            <ul>
+                <li><strong>Typography Setting</strong> — body and heading fonts, plus the dark-mode
+                    switch.</li>
+                <li><strong>Header Top Setting</strong> — the bar above the header: phone, address,
+                    email, and a switch to hide it.</li>
+                <li><strong>Header Setting</strong> — logo and header layout.</li>
+                <li><strong>Header Social</strong> — the social links in the header.</li>
+                <li><strong>Breadcrumb Setting</strong> — the page-title area: background, height,
+                    and whether the trail shows.</li>
+                <li><strong>Blog Setting</strong> — archive layout, sidebar position, meta.</li>
+                <li><strong>Newsletter Settings</strong> — the newsletter band and its two styles.
+                </li>
+                <li><strong>Footer Settings</strong> — footer layout, columns, copyright.</li>
+                <li><strong>404 Page</strong> — the text on the not-found page.</li>
+            </ul>
+            <p>Header, footer and newsletter style can also be set per page, in the panels below the
+                editor. The page setting wins over the Customizer default.</p>
+
+            <h2 id="colours">7. Colours and type</h2>
+            <p>Every colour, type size, space step, radius, shadow and duration the theme uses is
+                declared once, in <code>assets/css/portolite-tokens.css</code>. No section
+                stylesheet hardcodes a value, so changing one there changes it everywhere.</p>
+            <p>Override them from a child theme rather than editing the file, so a theme update does
+                not undo your work:</p>
+            <pre><code>:root {
+  --portolite-base: #0a7cff;        /* brand colour     */
+  --portolite-accent: #ffb23f;      /* secondary accent */
+  --portolite-shell: 1200px;        /* content width    */
+  --portolite-section-y: 96px;      /* vertical rhythm  */
+  --portolite-radius: 8px;          /* corner rounding  */
+}</code></pre>
+            <p>Fonts are Space Grotesk for headings and Inter for body text, loaded from Google
+                Fonts. To change them, set <code>--portolite-font</code> and
+                <code>--portolite-font-two</code> in your child theme and enqueue the families you
+                want.</p>
+
+            <h2 id="dark">8. Dark mode</h2>
+            <p><strong>Customize &rarr; Typography Setting &rarr; Dark Mode.</strong> The switch adds
+                a class to <code>&lt;body&gt;</code> that redefines nine tokens — background, text,
+                headings, borders. Because sections paint with those tokens rather than with fixed
+                colours, it reaches all of them, including any you add later in a child theme.</p>
+
+            <h2 id="menus">9. Menus and widgets</h2>
+            <p><strong>Appearance &rarr; Menus.</strong> The theme registers one location,
+                <strong>Main Menu</strong>, used by the header and by the mobile drawer. Sub-menus
+                work to two levels.</p>
+            <p><strong>Appearance &rarr; Widgets</strong> has the blog sidebar and the footer
+                columns. Leave a footer area empty and its column is not printed.</p>
+
+            <h2 id="blog">10. Blog and team</h2>
+            <p>Set your posts page under <strong>Settings &rarr; Reading</strong>. Archive layout and
+                sidebar position come from <em>Blog Setting</em> in the Customizer.</p>
+            <p>Team members are a post type from the PortoLite Core plugin: <strong>Team &rarr; Add
+                    New</strong>. Each carries a role, photo, contact details, biography, skills and
+                social links. Add a <em>Team</em> section to a page to show them.</p>
+
+            <h2 id="child">11. Child theme</h2>
+            <p>Do your customising in a child theme. Create
+                <code>wp-content/themes/portolite-child/style.css</code>:</p>
+            <pre><code>/*
+Theme Name: PortoLite Child
+Template: portolite
+Version: 1.0.0
+*/</code></pre>
+            <p>and <code>functions.php</code>:</p>
+            <pre><code>&lt;?php
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_style(
+        'portolite-child',
+        get_stylesheet_directory_uri() . '/style.css',
+        ['portolite-core'],
+        wp_get_theme()-&gt;get('Version')
+    );
+});</code></pre>
+            <p>To override a template part, copy it from the parent into the same path in the child
+                — <code>template-parts/sections/services-modern.php</code>, for example.</p>
+
+            <h2 id="performance">12. What loads when</h2>
+            <p>The theme reads the section list for the page being rendered and enqueues only the
+                stylesheets and scripts those sections need. A page with no carousel loads no
+                carousel library; a page with no scroll animation loads no animation library.</p>
+            <p>To force an asset back on — for a shortcode or a plugin injecting markup the theme
+                cannot see — use the filter:</p>
+            <pre><code>add_filter('portolite_asset_handles', function ($handles, $layouts) {
+    $handles['css'][] = 'owl-carousel';
+    $handles['js'][]  = 'owl-carousel';
+    return $handles;
+}, 10, 2);</code></pre>
+
+            <h2 id="translate">13. Translating</h2>
+            <p>The theme is translation ready and its text domain is <code>portolite</code>.
+                Translation files go in <code>languages/</code> — for example
+                <code>portolite-de_DE.po</code> and its compiled <code>.mo</code>. Loco Translate
+                and Poedit will both do the job.</p>
+
+            <h2 id="support">14. Support</h2>
+            <p>When reporting a problem, include your WordPress version, PHP version, the theme
+                version, the active plugins, and what you did just before it happened. A screenshot
+                of the page and of any error notice usually saves a round trip.</p>
+        </main>
+    </div>
+</body>
+
+</html>
