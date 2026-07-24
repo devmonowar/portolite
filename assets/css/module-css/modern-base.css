@@ -1,0 +1,201 @@
+/**
+ * Modern layout — design tokens and shared primitives
+ *
+ * Everything is scoped to .modern-page, so the older templates keep their own
+ * styling untouched. Section files build on the tokens defined here.
+ *
+ * @package portolite
+ */
+
+/* Tokens live on the section roots as well as the page wrapper, so a section
+   works on its own inside the flexible-content template. */
+.modern-page,
+.hero-modern,
+.mp-sec {
+    /* Surface */
+    --mp-ink: #0a1017;
+    --mp-ink-soft: #121b26;
+    --mp-paper: #f4f6f9;
+    --mp-paper-soft: #ffffff;
+
+    /* Accent */
+    --mp-accent: #ffb23f;
+    --mp-accent-deep: #e58a00;
+
+    /* Shape */
+    --mp-radius: 24px;
+    --mp-radius-sm: 14px;
+    --mp-shell: 1240px;
+
+    /* Type — role aliases, so the Modern sections read in their own vocabulary
+       while still resolving to the theme's two families (portolite-core.css). */
+    --mp-display: var(--portolite-font-two);
+    --mp-body: var(--portolite-font);
+}
+
+/* ------------------------------------------------------- Section shells */
+
+.mp-sec {
+    position: relative;
+    padding: clamp(72px, 9vw, 128px) 0;
+    background-color: var(--sec-bg);
+    color: var(--sec-text);
+    font-family: var(--mp-body);
+}
+
+.mp-sec--dark {
+    --sec-bg: var(--mp-ink);
+    --sec-text: #eef2f6;
+    --sec-muted: #93a3b5;
+    --sec-line: rgba(255, 255, 255, .09);
+    --sec-card: #121b26;
+}
+
+.mp-sec--light {
+    --sec-bg: var(--mp-paper);
+    --sec-text: #0d1620;
+    --sec-muted: #5b6b7c;
+    --sec-line: rgba(13, 22, 32, .1);
+    --sec-card: var(--mp-paper-soft);
+}
+
+.mp-shell {
+    width: min(100% - 40px, var(--mp-shell));
+    margin-inline: auto;
+}
+
+/* --------------------------------------------------------- Section head */
+
+.mp-head {
+    max-width: 640px;
+    margin-bottom: clamp(44px, 5vw, 68px);
+}
+
+.mp-head--center {
+    margin-inline: auto;
+    text-align: center;
+}
+
+.mp-head--flush {
+    margin-bottom: 0;
+}
+
+.mp-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--mp-accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.mp-eyebrow::before {
+    content: '';
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--mp-accent);
+}
+
+.mp-title {
+    margin: 16px 0 0;
+    color: var(--sec-text);
+    font-family: var(--mp-display);
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -.02em;
+}
+
+.mp-lede {
+    margin: 18px 0 0;
+    color: var(--sec-muted);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+}
+
+/* -------------------------------------------------------------- Buttons */
+
+.mp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 26px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-family: var(--mp-body);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease, border-color .25s ease, color .25s ease;
+}
+
+.mp-btn:hover {
+    transform: translateY(-2px);
+}
+
+.mp-btn:focus-visible {
+    outline: 2px solid var(--mp-accent);
+    outline-offset: 3px;
+}
+
+.mp-btn--solid {
+    background: linear-gradient(180deg, var(--mp-accent), var(--mp-accent-deep));
+    color: #1a1206;
+    box-shadow: 0 12px 30px -14px rgba(255, 178, 63, .8);
+}
+
+.mp-btn--solid:hover {
+    color: #1a1206;
+    box-shadow: 0 18px 38px -16px rgba(255, 178, 63, .95);
+}
+
+.mp-btn--ghost {
+    border-color: var(--sec-line);
+    color: var(--sec-text);
+}
+
+.mp-btn--ghost:hover {
+    border-color: var(--mp-accent);
+    color: var(--sec-text);
+}
+
+/* ---------------------------------------------------------------- Cards */
+
+.mp-card {
+    position: relative;
+    padding: 30px;
+    border: 1px solid var(--sec-line);
+    border-radius: var(--mp-radius);
+    background: var(--sec-card);
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+
+.mp-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 178, 63, .45);
+    box-shadow: 0 26px 50px -30px rgba(0, 0, 0, .5);
+}
+
+.mp-card__icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    background: rgba(255, 178, 63, .13);
+    color: var(--mp-accent);
+}
+
+/* --------------------------------------------------------------- Motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .mp-btn,
+    .mp-card {
+        transition: none;
+    }
+}

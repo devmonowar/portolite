@@ -1,0 +1,156 @@
+/*--------------------------------------------------------------
+# PortoLite design tokens
+#
+# Every colour, space, size, radius, shadow and timing the theme uses is
+# declared once here. Section stylesheets reference these and never hardcode a
+# value — that is what makes a restyle a change to this file rather than a
+# search across twenty stylesheets, and what makes dark mode eight lines
+# instead of a hand-written override sheet.
+#
+# Scales are stepped, not arbitrary. Reach for the nearest step; if nothing
+# fits, the design wants a new step here, not a one-off number in a module.
+--------------------------------------------------------------*/
+
+:root {
+  /* ---------------------------------------------------------- Typography */
+
+  /* Two families, two roles. Both are loaded by portolite_fonts_url().
+     Never write a family name anywhere else: an unloaded family renders as the
+     OS default sans, and that mistake is invisible on the machine that happens
+     to have the font installed. */
+  --portolite-font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --portolite-font-two: "Space Grotesk", sans-serif;
+
+  /* Type scale. Display sizes use clamp() so headings shrink on small screens
+     without a media query per size. */
+  --portolite-text-xs: 12px;
+  --portolite-text-sm: 14px;
+  --portolite-text-base: 16px;
+  --portolite-text-lg: 18px;
+  --portolite-text-xl: 20px;
+  --portolite-h6: 18px;
+  --portolite-h5: clamp(18px, 1.4vw, 20px);
+  --portolite-h4: clamp(20px, 1.8vw, 24px);
+  --portolite-h3: clamp(22px, 2.2vw, 30px);
+  --portolite-h2: clamp(28px, 3.4vw, 45px);
+  --portolite-h1: clamp(34px, 5vw, 64px);
+
+  --portolite-leading-tight: 1.15;
+  --portolite-leading-snug: 1.35;
+  --portolite-leading-normal: 1.6;
+
+  --portolite-weight-normal: 400;
+  --portolite-weight-medium: 500;
+  --portolite-weight-semibold: 600;
+  --portolite-weight-bold: 700;
+
+  --portolite-tracking-wide: 1px;
+
+  /* --------------------------------------------------------------- Colour */
+
+  /* Brand. `-rgb` twins exist so rules can build rgba() from the same source
+     — never write the hex twice. */
+  --portolite-base: #E8092E;
+  --portolite-base-rgb: 232, 9, 46;
+  --portolite-base-dark: #c40726;
+
+  /* Neutrals */
+  --portolite-black: #171717;
+  --portolite-black-rgb: 23, 23, 23;
+  --portolite-white: #ffffff;
+  --portolite-white-rgb: 255, 255, 255;
+  --portolite-gray: #17080A;
+  --portolite-gray-rgb: 23, 8, 10;
+
+  /* Semantic surfaces. These are the ones dark mode swaps — module CSS should
+     prefer them over the raw neutrals above wherever it paints a surface or
+     writes text, so a theme switch reaches everything. */
+  --portolite-bg: var(--portolite-white);
+  --portolite-bg-soft: #F4F4F4;
+  --portolite-bg-invert: var(--portolite-black);
+  --portolite-text: var(--portolite-gray);
+  --portolite-text-soft: rgba(var(--portolite-gray-rgb), 0.72);
+  --portolite-heading: var(--portolite-black);
+  --portolite-on-invert: var(--portolite-white);
+
+  --portolite-bdr-color: #E1E1E1;
+  --portolite-bdr-color-rgb: 225, 225, 225;
+  --portolite-border: 1px solid var(--portolite-bdr-color);
+
+  /* ---------------------------------------------------------------- Space */
+
+  /* A 4px-based step scale. Section padding is its own pair because it is the
+     one measurement that must breathe differently on mobile. */
+  --portolite-space-1: 4px;
+  --portolite-space-2: 8px;
+  --portolite-space-3: 12px;
+  --portolite-space-4: 16px;
+  --portolite-space-5: 20px;
+  --portolite-space-6: 24px;
+  --portolite-space-8: 32px;
+  --portolite-space-10: 40px;
+  --portolite-space-12: 48px;
+  --portolite-space-16: 64px;
+  --portolite-space-20: 80px;
+  --portolite-space-24: 96px;
+
+  --portolite-section-y: clamp(56px, 8vw, 120px);
+  --portolite-gutter: 30px;
+  --portolite-shell: 1320px;
+
+  /* --------------------------------------------------------------- Shape */
+
+  --portolite-radius-sm: 6px;
+  --portolite-radius: 12px;
+  --portolite-radius-lg: 24px;
+  --portolite-radius-pill: 999px;
+
+  --portolite-shadow-sm: 0 1px 2px rgba(var(--portolite-black-rgb), 0.06);
+  --portolite-shadow: 0 8px 24px rgba(var(--portolite-black-rgb), 0.08);
+  --portolite-shadow-lg: 0 24px 60px rgba(var(--portolite-black-rgb), 0.12);
+
+  /* --------------------------------------------------------------- Motion */
+
+  --portolite-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --portolite-duration-fast: 150ms;
+  --portolite-duration: 300ms;
+  --portolite-duration-slow: 500ms;
+  --portolite-transition: all var(--portolite-duration) var(--portolite-ease);
+
+  /* ---------------------------------------------------------------- Depth */
+
+  --portolite-z-sticky: 100;
+  --portolite-z-drawer: 999;
+  --portolite-z-overlay: 1000;
+}
+
+/*--------------------------------------------------------------
+# Dark mode
+#
+# Only the semantic surfaces flip. Because module CSS paints with
+# --portolite-bg / --portolite-text / --portolite-heading rather than raw
+# neutrals, this reaches every section — including ones written later.
+#
+# Applied by `body.portolite-dark`, set from the customizer.
+--------------------------------------------------------------*/
+
+body.portolite-dark {
+  --portolite-bg: #0E0E0E;
+  --portolite-bg-soft: #171717;
+  --portolite-bg-invert: var(--portolite-white);
+  --portolite-text: rgba(var(--portolite-white-rgb), 0.78);
+  --portolite-text-soft: rgba(var(--portolite-white-rgb), 0.56);
+  --portolite-heading: var(--portolite-white);
+  --portolite-on-invert: var(--portolite-black);
+  --portolite-bdr-color: #2A2A2A;
+  --portolite-bdr-color-rgb: 42, 42, 42;
+}
+
+/* Respect a reader who has asked the OS for less movement. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --portolite-duration-fast: 0ms;
+    --portolite-duration: 0ms;
+    --portolite-duration-slow: 0ms;
+  }
+}

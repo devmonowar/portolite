@@ -1,0 +1,56 @@
+# PortoLite — what never belongs in the repository
+#
+# The previous history reached 34 MB for a 3.6 MB theme, because there was no
+# ignore file at all: a 6.6 MB commercial plugin zip, a 6.2 MB demo export
+# committed twice, superseded copies of the main stylesheet, and font files
+# that have since been deleted. Git keeps every one of those forever. Add a
+# rule here *before* the first commit of anything large.
+
+# ---------------------------------------------------------------- Licensing
+# Advanced Custom Fields PRO is commercial software. It was committed once and
+# stayed in the history of a public repository — do not let that happen again.
+# TGMPA downloads it from PORTOLITE_PLUGIN_PACKAGE_URL at install time.
+plugins/advanced-custom-fields-pro.zip
+plugins/acf-pro*.zip
+
+# ------------------------------------------------------------ Large exports
+# The demo content export belongs in the buyer package and in GitHub releases,
+# not in the repository — it is several MB and changes wholesale each time.
+sample-data/
+*.wpress
+*.sql
+
+# ----------------------------------------------------------------- Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# ------------------------------------------------------------- OS clutter
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ------------------------------------------------------------ Build output
+node_modules/
+vendor/
+.sass-cache/
+*.css.map
+*.js.map
+
+# --------------------------------------------------------- Working leftovers
+*.log
+*.bak
+*.orig
+*.rej
+*~
+*.tmp
+.php_cs.cache
+.phpunit.result.cache
+
+# Anything a local install writes into the theme folder.
+/languages/*.mo~

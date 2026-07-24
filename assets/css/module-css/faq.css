@@ -1,0 +1,244 @@
+/*--------------------------------------------------------------
+# Faq One
+--------------------------------------------------------------*/
+.faq-one {
+    position: relative;
+    display: block;
+    counter-reset: count;
+    padding: 90px 0 120px;
+    z-index: 1;
+}
+
+.faq-one__inner-content {
+    position: relative;
+    display: block;
+}
+
+.faq-one .faq-one-accrodion .accrodion {
+    position: relative;
+    display: block;
+    border: 1px solid var(--portolite-black);
+    background: var(--portolite-white);
+    border-radius: 20px;
+    overflow: hidden;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.faq-one .faq-one-accrodion .accrodion.active {
+    border: 1px solid transparent;
+}
+
+.faq-one .faq-one-accrodion .accrodion-title {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding: 30px 85px 30px;
+    padding-right: 40px;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.faq-one .faq-one__accrodion-title-count {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+}
+
+.faq-one .faq-one__accrodion-title-count:before {
+    position: relative;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--portolite-black);
+    counter-increment: count;
+    content: "0"counter(count);
+    font-family: var(--portolite-font-two);
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.faq-one .faq-one__accrodion-title-count::after {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    right: -4px;
+    height: 2px;
+    width: 2px;
+    background-color: var(--portolite-black);
+}
+
+.faq-one .faq-one-accrodion .accrodion-title h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: var(--portolite-black);
+    position: relative;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.faq-one .faq-one-accrodion .accrodion+.accrodion {
+    margin-top: 20px;
+}
+
+.faq-one .faq-one-accrodion .accrodion-title h4::before {
+    content: "\e904";
+    font-family: 'icomoon';
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--portolite-gray);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    line-height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background-color: #F4F4F4;
+}
+
+.faq-one .faq-one-accrodion .accrodion.active .accrodion-title h4::before {
+    content: "\e903";
+    color: var(--portolite-black);
+    background-color: transparent;
+    border: 1px solid var(--portolite-base);
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-one .faq-one-accrodion .accrodion-content {
+    position: relative;
+    padding-bottom: 28px;
+    margin-top: -10px;
+    padding-left: 85px;
+    padding-right: 40px;
+    border-bottom: 3px solid var(--portolite-black);
+    border-radius: 20px;
+}
+
+.faq-one .faq-one-accrodion .accrodion-content p {
+    margin: 0;
+}
+
+
+/*--------------------------------------------------------------
+# faq four
+--------------------------------------------------------------*/
+.faq-four .faq-one-accrodion .accrodion {
+    border: 1px solid var(--portolite-bdr-color);
+}
+
+.faq-four .faq-one-accrodion .accrodion-content {
+    border-bottom: 3px solid var(--portolite-base);
+}
+
+.faq-four .faq-one-accrodion .accrodion.active {
+    background-color: #F4F4F4;
+}
+
+/*--------------------------------------------------------------
+# Faq Page
+--------------------------------------------------------------*/
+.faq-page {
+    position: relative;
+    display: block;
+    padding: 120px 0 100px;
+}
+
+.faq-page__single {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.faq-page .faq-one-accrodion .accrodion {
+    position: relative;
+    display: block;
+    border-radius: 10px;
+    background-color: rgba(var(--portolite-bdr-color-rgb), .50);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.faq-page .faq-one-accrodion .accrodion-title {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding: 19px 30px 16px;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    padding-right: 25px;
+}
+
+.faq-page .faq-one-accrodion .accrodion-title h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    color: var(--portolite-black);
+    text-transform: capitalize;
+    position: relative;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.faq-page .faq-one-accrodion .accrodion+.accrodion {
+    margin-top: 20px;
+}
+
+.faq-page .faq-one-accrodion .accrodion-title h4::before {
+    content: "\e91f";
+    font-family: 'icomoon' !important;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--portolite-base);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    line-height: 13px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    text-align: center;
+}
+
+.faq-page .faq-one-accrodion .accrodion.active .accrodion-title h4::before {
+    content: "\e91a";
+}
+
+.faq-page .faq-one-accrodion .accrodion-content {
+    position: relative;
+    padding-bottom: 32px;
+    padding-left: 30px;
+    padding-right: 50px;
+    margin-top: 12px;
+}
+
+.faq-page .faq-one-accrodion .accrodion-content p {
+    margin: 0;
+}
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/
