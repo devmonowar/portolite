@@ -1087,7 +1087,7 @@ ul {
 }
 
 .mobile-nav__top .main-menu__login a {
-  color: var(--portolite-text-dark);
+  color: var(--portolite-heading);
 }
 
 .mobile-nav__container {
@@ -1126,7 +1126,7 @@ ul {
 }
 
 .mobile-nav__contact li {
-  color: var(--portolite-text-dark);
+  color: var(--portolite-heading);
   font-size: 14px;
   font-weight: 500;
   position: relative;

@@ -1,36 +1,32 @@
 /**
  * Hero — Modern
  *
- * Self-contained hero section. Every token is scoped to .hero-modern so this
- * section can sit next to the older modules without leaking styles into them.
+ * The hero is a dark section, so it declares the same --sec-* surface set that
+ * .mp-sec--dark does in modern-base.css and paints with nothing else. It is not
+ * an .mp-sec itself — it has its own vertical rhythm and a full-bleed
+ * background — which is the only reason the four lines are repeated here rather
+ * than inherited.
+ *
+ * The --mp-* aliases it uses (accent, radius, shell, families) are already
+ * declared on .hero-modern by modern-base.css, which this file depends on.
  *
  * @package portolite
  */
 
 .hero-modern {
-    /* Mapped from the shared tokens in modern-base.css, with local fallbacks
-       so the hero still renders if it is used outside .modern-page. */
-    --hm-ink: var(--mp-ink, #0a1017);
-    --hm-ink-soft: var(--mp-ink-soft, #121b26);
-    --hm-line: rgba(255, 255, 255, .08);
-
-    --hm-accent: var(--mp-accent, #ffb23f);
-    --hm-accent-deep: var(--mp-accent-deep, #e58a00);
-
-    --hm-text: #eef2f6;
-    --hm-muted: #93a3b5;
-
-    --hm-radius: 28px;
-    --hm-radius-sm: 14px;
-    --hm-shell: var(--mp-shell, 1240px);
+    --sec-bg: var(--mp-ink);
+    --sec-text: var(--portolite-ink-text);
+    --sec-muted: var(--portolite-ink-muted);
+    --sec-line: rgba(var(--portolite-white-rgb), .08);
+    --sec-card: var(--mp-ink-soft);
 
     position: relative;
     isolation: isolate;
     overflow: hidden;
     padding: clamp(96px, 12vw, 168px) 0 0;
-    background-color: var(--hm-ink);
-    color: var(--hm-text);
-    font-family: var(--mp-body, 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif);
+    background-color: var(--sec-bg);
+    color: var(--sec-text);
+    font-family: var(--mp-body);
 }
 
 /* Ambient light + faint workshop grid */
@@ -45,14 +41,14 @@
 
 .hero-modern::before {
     background:
-        radial-gradient(58% 50% at 82% 8%, rgba(255, 178, 63, .20), transparent 70%),
-        radial-gradient(46% 44% at 6% 96%, rgba(76, 201, 240, .12), transparent 72%);
+        radial-gradient(58% 50% at 82% 8%, rgba(var(--mp-accent-rgb), .20), transparent 70%),
+        radial-gradient(46% 44% at 6% 96%, rgba(var(--portolite-glow-rgb), .12), transparent 72%);
 }
 
 .hero-modern::after {
     background-image:
-        linear-gradient(var(--hm-line) 1px, transparent 1px),
-        linear-gradient(90deg, var(--hm-line) 1px, transparent 1px);
+        linear-gradient(var(--sec-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--sec-line) 1px, transparent 1px);
     background-size: 76px 76px;
     -webkit-mask-image: radial-gradient(78% 62% at 50% 34%, #000 20%, transparent 100%);
     mask-image: radial-gradient(78% 62% at 50% 34%, #000 20%, transparent 100%);
@@ -60,7 +56,7 @@
 }
 
 .hero-modern__shell {
-    width: min(100% - 40px, var(--hm-shell));
+    width: min(100% - 40px, var(--mp-shell));
     margin-inline: auto;
 }
 
@@ -78,10 +74,10 @@
     align-items: center;
     gap: 10px;
     padding: 8px 16px 8px 12px;
-    border: 1px solid var(--hm-line);
+    border: 1px solid var(--sec-line);
     border-radius: 999px;
-    background: rgba(255, 255, 255, .04);
-    color: var(--hm-muted);
+    background: rgba(var(--portolite-white-rgb), .04);
+    color: var(--sec-muted);
     font-size: 13px;
     font-weight: 500;
     letter-spacing: .04em;
@@ -92,15 +88,15 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--hm-accent);
-    box-shadow: 0 0 0 0 rgba(255, 178, 63, .55);
+    background: var(--mp-accent);
+    box-shadow: 0 0 0 0 rgba(var(--mp-accent-rgb), .55);
     animation: hm-pulse 2.4s ease-out infinite;
 }
 
 .hero-modern__title {
     margin: 26px 0 0;
     max-width: 15ch;
-    color: var(--hm-text);
+    color: var(--sec-text);
     font-family: var(--mp-display);
     font-size: clamp(2.6rem, 5.4vw, 4.5rem);
     font-weight: 700;
@@ -111,7 +107,7 @@
 /* Accented phrase with a hand-drawn feeling underline */
 .hero-modern__accent {
     position: relative;
-    color: var(--hm-accent);
+    color: var(--mp-accent);
     font-style: normal;
 }
 
@@ -123,7 +119,7 @@
     bottom: -.14em;
     height: .1em;
     border-radius: 999px;
-    background: linear-gradient(90deg, var(--hm-accent), var(--hm-accent-deep));
+    background: linear-gradient(90deg, var(--mp-accent), var(--mp-accent-deep));
     transform: skewX(-14deg);
     opacity: .85;
 }
@@ -131,7 +127,7 @@
 .hero-modern__deck {
     margin: 26px 0 0;
     max-width: 52ch;
-    color: var(--hm-muted);
+    color: var(--sec-muted);
     font-size: clamp(1rem, 1.15vw, 1.125rem);
     line-height: 1.7;
 }
@@ -173,30 +169,30 @@
 }
 
 .hero-modern__btn:focus-visible {
-    outline: 2px solid var(--hm-accent);
+    outline: 2px solid var(--mp-accent);
     outline-offset: 3px;
 }
 
 .hero-modern__btn--solid {
-    background: linear-gradient(180deg, var(--hm-accent), var(--hm-accent-deep));
-    color: #1a1206;
-    box-shadow: 0 12px 30px -12px rgba(255, 178, 63, .75);
+    background: linear-gradient(180deg, var(--mp-accent), var(--mp-accent-deep));
+    color: var(--portolite-ink);
+    box-shadow: 0 12px 30px -12px rgba(var(--mp-accent-rgb), .75);
 }
 
 .hero-modern__btn--solid:hover {
-    color: #1a1206;
-    box-shadow: 0 18px 38px -14px rgba(255, 178, 63, .9);
+    color: var(--portolite-ink);
+    box-shadow: 0 18px 38px -14px rgba(var(--mp-accent-rgb), .9);
 }
 
 .hero-modern__btn--ghost {
-    border-color: var(--hm-line);
-    background: rgba(255, 255, 255, .03);
-    color: var(--hm-text);
+    border-color: var(--sec-line);
+    background: rgba(var(--portolite-white-rgb), .03);
+    color: var(--sec-text);
 }
 
 .hero-modern__btn--ghost:hover {
-    border-color: rgba(255, 178, 63, .5);
-    color: var(--hm-text);
+    border-color: rgba(var(--mp-accent-rgb), .5);
+    color: var(--sec-text);
 }
 
 /* --------------------------------------------------------------- Trust */
@@ -208,27 +204,27 @@
     gap: 14px 22px;
     margin-top: 40px;
     padding-top: 28px;
-    border-top: 1px solid var(--hm-line);
-    color: var(--hm-muted);
+    border-top: 1px solid var(--sec-line);
+    color: var(--sec-muted);
     font-size: 14px;
 }
 
 .hero-modern__trust b {
-    color: var(--hm-text);
+    color: var(--sec-text);
     font-weight: 600;
 }
 
 .hero-modern__stars {
     display: inline-flex;
     gap: 3px;
-    color: var(--hm-accent);
+    color: var(--mp-accent);
 }
 
 .hero-modern__trust-sep {
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background: var(--hm-line);
+    background: var(--sec-line);
 }
 
 /* --------------------------------------------------------------- Media */
@@ -239,9 +235,9 @@
 
 .hero-modern__frame {
     position: relative;
-    border-radius: var(--hm-radius);
+    border-radius: var(--mp-radius);
     overflow: hidden;
-    box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .9);
+    box-shadow: 0 40px 80px -40px rgba(var(--portolite-ink-rgb), .9);
 }
 
 .hero-modern__frame img {
@@ -256,8 +252,8 @@
     content: '';
     position: absolute;
     inset: 22px -22px -22px 22px;
-    border: 1px solid rgba(255, 178, 63, .45);
-    border-radius: var(--hm-radius);
+    border: 1px solid rgba(var(--mp-accent-rgb), .45);
+    border-radius: var(--mp-radius);
     z-index: -1;
 }
 
@@ -270,12 +266,12 @@
     gap: 14px;
     max-width: 280px;
     padding: 16px 20px;
-    border: 1px solid var(--hm-line);
-    border-radius: var(--hm-radius-sm);
-    background: rgba(18, 27, 38, .92);
+    border: 1px solid var(--sec-line);
+    border-radius: var(--mp-radius-sm);
+    background: rgba(var(--portolite-ink-soft-rgb), .92);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    box-shadow: 0 24px 50px -26px rgba(0, 0, 0, .9);
+    box-shadow: 0 24px 50px -26px rgba(var(--portolite-ink-rgb), .9);
 }
 
 .hero-modern__badge-icon {
@@ -285,13 +281,13 @@
     width: 42px;
     height: 42px;
     border-radius: 12px;
-    background: rgba(255, 178, 63, .14);
-    color: var(--hm-accent);
+    background: rgba(var(--mp-accent-rgb), .14);
+    color: var(--mp-accent);
 }
 
 .hero-modern__badge-title {
     display: block;
-    color: var(--hm-text);
+    color: var(--sec-text);
     font-size: 15px;
     font-weight: 600;
 }
@@ -299,7 +295,7 @@
 .hero-modern__badge-text {
     display: block;
     margin-top: 2px;
-    color: var(--hm-muted);
+    color: var(--sec-muted);
     font-size: 13px;
     line-height: 1.45;
 }
@@ -313,12 +309,12 @@
     gap: 12px;
     margin-top: clamp(56px, 7vw, 92px);
     padding: 22px 0 clamp(56px, 7vw, 88px);
-    border-top: 1px solid var(--hm-line);
+    border-top: 1px solid var(--sec-line);
 }
 
 .hero-modern__strip-label {
     margin-inline-end: 8px;
-    color: var(--hm-muted);
+    color: var(--sec-muted);
     font-size: 13px;
     letter-spacing: .06em;
     text-transform: uppercase;
@@ -329,10 +325,10 @@
     align-items: center;
     gap: 8px;
     padding: 10px 18px;
-    border: 1px solid var(--hm-line);
+    border: 1px solid var(--sec-line);
     border-radius: 999px;
-    background: rgba(255, 255, 255, .03);
-    color: var(--hm-text);
+    background: rgba(var(--portolite-white-rgb), .03);
+    color: var(--sec-text);
     font-size: 14px;
     text-decoration: none;
     transition: border-color .25s ease, background-color .25s ease, transform .25s ease;
@@ -343,14 +339,14 @@
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: var(--hm-accent);
+    background: var(--mp-accent);
 }
 
 .hero-modern__chip:hover {
     transform: translateY(-2px);
-    border-color: rgba(255, 178, 63, .5);
-    background: rgba(255, 178, 63, .08);
-    color: var(--hm-text);
+    border-color: rgba(var(--mp-accent-rgb), .5);
+    background: rgba(var(--mp-accent-rgb), .08);
+    color: var(--sec-text);
 }
 
 /* ------------------------------------------------------------ Motion */
@@ -385,7 +381,7 @@
 
 @keyframes hm-pulse {
     to {
-        box-shadow: 0 0 0 12px rgba(255, 178, 63, 0);
+        box-shadow: 0 0 0 12px rgba(var(--mp-accent-rgb), 0);
     }
 }
 

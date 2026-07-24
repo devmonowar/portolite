@@ -364,7 +364,7 @@ header.main-header {
 .postbox__comment-text p {
     font-size: 16px;
     line-height: 1.5;
-    color: var(--tp-text-1);
+    color: var(--portolite-heading);
     margin-bottom: 22px;
 }
 .latest-comments ul li .children li {

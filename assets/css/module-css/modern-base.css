@@ -1,43 +1,50 @@
 /**
- * Modern layout — design tokens and shared primitives
+ * Modern layout — shared primitives
  *
- * Everything is scoped to .modern-page, so the older templates keep their own
- * styling untouched. Section files build on the tokens defined here.
+ * Every value here resolves to a token in portolite-tokens.css. The --mp-*
+ * names are aliases, kept because the section files read better in their own
+ * vocabulary — but they define nothing of their own, so a change to the design
+ * is a change to the tokens file and nothing else.
+ *
+ * The aliases sit on the section roots as well as the page wrapper, so a
+ * section still works on its own inside the flexible-content template.
  *
  * @package portolite
  */
 
-/* Tokens live on the section roots as well as the page wrapper, so a section
-   works on its own inside the flexible-content template. */
 .modern-page,
 .hero-modern,
 .mp-sec {
     /* Surface */
-    --mp-ink: #0a1017;
-    --mp-ink-soft: #121b26;
-    --mp-paper: #f4f6f9;
-    --mp-paper-soft: #ffffff;
+    --mp-ink: var(--portolite-ink);
+    --mp-ink-soft: var(--portolite-ink-soft);
+    --mp-paper: var(--portolite-bg-soft);
+    --mp-paper-soft: var(--portolite-bg);
 
     /* Accent */
-    --mp-accent: #ffb23f;
-    --mp-accent-deep: #e58a00;
+    --mp-accent: var(--portolite-accent);
+    --mp-accent-rgb: var(--portolite-accent-rgb);
+    --mp-accent-deep: var(--portolite-accent-deep);
 
     /* Shape */
-    --mp-radius: 24px;
-    --mp-radius-sm: 14px;
-    --mp-shell: 1240px;
+    --mp-radius: var(--portolite-radius-lg);
+    --mp-radius-sm: var(--portolite-radius);
+    --mp-shell: var(--portolite-shell);
 
-    /* Type — role aliases, so the Modern sections read in their own vocabulary
-       while still resolving to the theme's two families (portolite-core.css). */
+    /* Type — role aliases resolving to the theme's two families. */
     --mp-display: var(--portolite-font-two);
     --mp-body: var(--portolite-font);
 }
 
 /* ------------------------------------------------------- Section shells */
 
+/* A section declares --sec-* by choosing --dark or --light; everything below
+   paints with those four names and never reaches for a colour directly. That
+   is what lets one class flip a whole section. */
+
 .mp-sec {
     position: relative;
-    padding: clamp(72px, 9vw, 128px) 0;
+    padding: var(--portolite-section-y) 0;
     background-color: var(--sec-bg);
     color: var(--sec-text);
     font-family: var(--mp-body);
@@ -45,22 +52,22 @@
 
 .mp-sec--dark {
     --sec-bg: var(--mp-ink);
-    --sec-text: #eef2f6;
-    --sec-muted: #93a3b5;
-    --sec-line: rgba(255, 255, 255, .09);
-    --sec-card: #121b26;
+    --sec-text: var(--portolite-ink-text);
+    --sec-muted: var(--portolite-ink-muted);
+    --sec-line: rgba(var(--portolite-white-rgb), .09);
+    --sec-card: var(--mp-ink-soft);
 }
 
 .mp-sec--light {
     --sec-bg: var(--mp-paper);
-    --sec-text: #0d1620;
-    --sec-muted: #5b6b7c;
-    --sec-line: rgba(13, 22, 32, .1);
+    --sec-text: var(--portolite-heading);
+    --sec-muted: var(--portolite-text-soft);
+    --sec-line: rgba(var(--portolite-black-rgb), .1);
     --sec-card: var(--mp-paper-soft);
 }
 
 .mp-shell {
-    width: min(100% - 40px, var(--mp-shell));
+    width: min(100% - var(--portolite-space-10), var(--mp-shell));
     margin-inline: auto;
 }
 
@@ -85,8 +92,8 @@
     align-items: center;
     gap: 9px;
     color: var(--mp-accent);
-    font-size: 13px;
-    font-weight: 600;
+    font-size: var(--portolite-text-xs);
+    font-weight: var(--portolite-weight-semibold);
     letter-spacing: .12em;
     text-transform: uppercase;
 }
@@ -100,20 +107,20 @@
 }
 
 .mp-title {
-    margin: 16px 0 0;
+    margin: var(--portolite-space-4) 0 0;
     color: var(--sec-text);
     font-family: var(--mp-display);
-    font-size: clamp(2rem, 3.4vw, 3rem);
-    font-weight: 700;
-    line-height: 1.12;
+    font-size: var(--portolite-h2);
+    font-weight: var(--portolite-weight-bold);
+    line-height: var(--portolite-leading-tight);
     letter-spacing: -.02em;
 }
 
 .mp-lede {
-    margin: 18px 0 0;
+    margin: var(--portolite-space-5) 0 0;
     color: var(--sec-muted);
-    font-size: 1.0625rem;
-    line-height: 1.75;
+    font-size: var(--portolite-text-lg);
+    line-height: var(--portolite-leading-normal);
 }
 
 /* -------------------------------------------------------------- Buttons */
@@ -121,16 +128,16 @@
 .mp-btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: var(--portolite-space-3);
     padding: 15px 26px;
     border: 1px solid transparent;
-    border-radius: 999px;
+    border-radius: var(--portolite-radius-pill);
     font-family: var(--mp-body);
-    font-size: 15px;
-    font-weight: 600;
+    font-size: var(--portolite-text-sm);
+    font-weight: var(--portolite-weight-semibold);
     line-height: 1;
     text-decoration: none;
-    transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease, border-color .25s ease, color .25s ease;
+    transition: var(--portolite-transition);
 }
 
 .mp-btn:hover {
@@ -144,13 +151,13 @@
 
 .mp-btn--solid {
     background: linear-gradient(180deg, var(--mp-accent), var(--mp-accent-deep));
-    color: #1a1206;
-    box-shadow: 0 12px 30px -14px rgba(255, 178, 63, .8);
+    color: var(--portolite-ink);
+    box-shadow: 0 12px 30px -14px rgba(var(--mp-accent-rgb), .8);
 }
 
 .mp-btn--solid:hover {
-    color: #1a1206;
-    box-shadow: 0 18px 38px -16px rgba(255, 178, 63, .95);
+    color: var(--portolite-ink);
+    box-shadow: 0 18px 38px -16px rgba(var(--mp-accent-rgb), .95);
 }
 
 .mp-btn--ghost {
@@ -167,17 +174,17 @@
 
 .mp-card {
     position: relative;
-    padding: 30px;
+    padding: var(--portolite-space-8);
     border: 1px solid var(--sec-line);
     border-radius: var(--mp-radius);
     background: var(--sec-card);
-    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    transition: var(--portolite-transition);
 }
 
 .mp-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(255, 178, 63, .45);
-    box-shadow: 0 26px 50px -30px rgba(0, 0, 0, .5);
+    border-color: rgba(var(--mp-accent-rgb), .45);
+    box-shadow: var(--portolite-shadow-lg);
 }
 
 .mp-card__icon {
@@ -185,17 +192,19 @@
     place-items: center;
     width: 52px;
     height: 52px;
-    border-radius: 15px;
-    background: rgba(255, 178, 63, .13);
+    border-radius: var(--portolite-radius);
+    background: rgba(var(--mp-accent-rgb), .13);
     color: var(--mp-accent);
 }
 
 /* --------------------------------------------------------------- Motion */
 
+/* The duration tokens already collapse to 0ms under prefers-reduced-motion,
+   so the transitions above stop on their own. Transforms need saying. */
 @media (prefers-reduced-motion: reduce) {
 
-    .mp-btn,
-    .mp-card {
-        transition: none;
+    .mp-btn:hover,
+    .mp-card:hover {
+        transform: none;
     }
 }

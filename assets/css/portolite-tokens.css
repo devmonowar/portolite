@@ -54,6 +54,13 @@
   --portolite-base-rgb: 232, 9, 46;
   --portolite-base-dark: #c40726;
 
+  /* Secondary accent. The Modern sections paint with this rather than the
+     brand red; the redesign will most likely collapse the two, and when it
+     does this is the one line to change. */
+  --portolite-accent: #FFB23F;
+  --portolite-accent-rgb: 255, 178, 63;
+  --portolite-accent-deep: #E58A00;
+
   /* Neutrals */
   --portolite-black: #171717;
   --portolite-black-rgb: 23, 23, 23;
@@ -61,6 +68,20 @@
   --portolite-white-rgb: 255, 255, 255;
   --portolite-gray: #17080A;
   --portolite-gray-rgb: 23, 8, 10;
+
+  /* Ink — the blue-tinted near-black the dark sections are painted on, and
+     the text colours that sit on it. Deliberately not --portolite-black: the
+     slight blue is what gives those sections their character. */
+  --portolite-ink: #0A1017;
+  --portolite-ink-rgb: 10, 16, 23;
+  --portolite-ink-soft: #121B26;
+  --portolite-ink-soft-rgb: 18, 27, 38;
+  --portolite-ink-text: #EEF2F6;
+  --portolite-ink-muted: #93A3B5;
+
+  /* The cool half of the hero's ambient light. Only ever used at low alpha
+     against ink, opposite the accent — it is a glow, not a UI colour. */
+  --portolite-glow-rgb: 76, 201, 240;
 
   /* Semantic surfaces. These are the ones dark mode swaps — module CSS should
      prefer them over the raw neutrals above wherever it paints a surface or
