@@ -19,6 +19,8 @@
     --sec-muted: var(--portolite-ink-muted);
     --sec-line: rgba(var(--portolite-white-rgb), .08);
     --sec-card: var(--mp-ink-soft);
+    --sec-accent: var(--portolite-base);
+    --sec-accent-deep: var(--portolite-base-dark);
 
     position: relative;
     isolation: isolate;

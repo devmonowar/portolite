@@ -11,7 +11,7 @@
 .services-one__inner {
     position: relative;
     display: block;
-    background-color: var(--portolite-white);
+    background-color: var(--portolite-bg);
     max-width: 1710px;
     width: 100%;
     margin: 0 auto 0;
@@ -68,7 +68,7 @@
     left: -514px;
     width: 790px;
     height: 417.6px;
-    background: #FF0000;
+    background: var(--portolite-base);
     filter: blur(102.476px);
     transform: matrix(0, 1, 1, 0, 0, 0) scale(0);
     opacity: .50;
@@ -88,7 +88,7 @@
     right: -100px;
     width: 484px;
     height: 390px;
-    background: #063FFF;
+    background: rgb(var(--portolite-glow-rgb));
     filter: blur(102.476px);
     transform: matrix(0, 1, 1, 0, 0, 0) scale(0);
     opacity: .50;
@@ -143,7 +143,7 @@
     position: absolute;
     width: 192px;
     height: 101px;
-    background: #FF0000;
+    background: var(--portolite-base);
     filter: blur(24.9942px);
     transform: rotate(-90deg);
     left: -130px;
@@ -164,7 +164,7 @@
     height: 95px;
     right: -25px;
     top: 90px;
-    background: #063FFF;
+    background: rgb(var(--portolite-glow-rgb));
     filter: blur(24.9942px);
     transform: rotate(-90deg);
     opacity: .50;
@@ -186,7 +186,7 @@
 }
 
 .services-one__title a {
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
 }
 
 .services-one__single:hover .services-one__title a {
@@ -215,7 +215,7 @@
 .services-two__single {
     position: relative;
     display: block;
-    background-color: var(--portolite-white);
+    background-color: var(--portolite-bg);
     border: 1px solid var(--portolite-bdr-color);
     border-radius: 20px;
     padding: 52px 40px 39px;
@@ -231,11 +231,11 @@
 }
 
 .services-two__title a {
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
 }
 
 .services-two__title a:hover {
-    color: var(--portolite-base);
+    color: var(--portolite-base-ink);
 }
 
 .services-two__icon {
@@ -248,7 +248,7 @@
     position: relative;
     display: inline-block;
     font-size: 60px;
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
     transition: all 500ms linear;
     transition-delay: 0.1s;
     transform: scale(1);
@@ -282,7 +282,7 @@
 
 .services-page .services-one__single {
     border: none;
-    background-color: #F4F4F4;
+    background-color: var(--portolite-bg-soft);
 }
 
 
@@ -290,7 +290,7 @@
   # Services Five
   --------------------------------------------------------------*/
 .services-five .services-two__single {
-    background-color: #F4F4F4;
+    background-color: var(--portolite-bg-soft);
 }
 
 
@@ -306,7 +306,7 @@
 
 .services-page .services-one__single {
     border: none;
-    background-color: #F4F4F4;
+    background-color: var(--portolite-bg-soft);
 }
 
 

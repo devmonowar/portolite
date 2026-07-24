@@ -57,12 +57,19 @@
     font-family: var(--mp-body);
 }
 
+/* --sec-accent is the brand colour *for this section*. On a dark section that
+   is the bright amber; on a light one the bright amber is 1.63:1, so it is the
+   darkened variant instead. A section that writes var(--mp-accent) directly
+   gets the bright one either way, which is the bug this pair exists to stop. */
+
 .mp-sec--dark {
     --sec-bg: var(--mp-ink);
     --sec-text: var(--portolite-ink-text);
     --sec-muted: var(--portolite-ink-muted);
     --sec-line: rgba(var(--portolite-white-rgb), .09);
     --sec-card: var(--mp-ink-soft);
+    --sec-accent: var(--portolite-base);
+    --sec-accent-deep: var(--portolite-base-dark);
 }
 
 .mp-sec--light {
@@ -71,11 +78,35 @@
     --sec-muted: var(--portolite-text-soft);
     --sec-line: rgba(var(--portolite-black-rgb), .1);
     --sec-card: var(--mp-paper-soft);
+    --sec-accent: var(--portolite-base-ink);
+    --sec-accent-deep: var(--portolite-base-ink);
 }
 
 .mp-shell {
     width: min(100% - var(--portolite-space-10), var(--mp-shell));
     margin-inline: auto;
+}
+
+/* portolite-unit.css styles WordPress's content elements, and its `blockquote`
+   selector carries no scope at all — so it painted the testimonial cards, which
+   are blockquotes, white on a dark section. The Modern sections are their own
+   design system; anything they render is styled here, not by the blog's rules. */
+.mp-sec blockquote,
+.hero-modern blockquote,
+.mp-band blockquote,
+.mp-slide blockquote {
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    text-align: inherit;
+}
+
+.mp-sec blockquote::before,
+.hero-modern blockquote::before,
+.mp-band blockquote::before,
+.mp-slide blockquote::before {
+    content: none;
 }
 
 /* --------------------------------------------------------- Section head */
@@ -98,7 +129,7 @@
     display: inline-flex;
     align-items: center;
     gap: 9px;
-    color: var(--mp-accent);
+    color: var(--sec-accent);
     font-size: var(--portolite-text-xs);
     font-weight: var(--portolite-weight-semibold);
     letter-spacing: .12em;
@@ -201,7 +232,7 @@
     height: 52px;
     border-radius: var(--portolite-radius);
     background: rgba(var(--mp-accent-rgb), .13);
-    color: var(--mp-accent);
+    color: var(--sec-accent);
 }
 
 /* --------------------------------------------------------------- Motion */

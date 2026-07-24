@@ -29,7 +29,7 @@
     left: -485px;
     width: 1404px;
     height: 741px;
-    background: #FF0000;
+    background: var(--portolite-base);
     filter: blur(182px);
     opacity: .50;
     z-index: -1;
@@ -41,7 +41,7 @@
     right: 225px;
     width: 861px;
     height: 693px;
-    background: #063FFF;
+    background: rgb(var(--portolite-glow-rgb));
     filter: blur(182px);
     opacity: .50;
     z-index: -1;
@@ -140,7 +140,7 @@
 }
 
 .contact-one__btn-box .thm-btn:hover {
-    color: var(--portolite-black);
+    color: var(--portolite-on-base);
 }
 
 .contact-one__right {
@@ -216,7 +216,7 @@
     background-color: rgba(var(--portolite-black-rgb), .10);
     border-radius: 50%;
     font-size: 36px;
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
 }
 
 .contact-one__experience-count-box {
@@ -243,7 +243,7 @@
 
 .contact-one__experience-text {
     font-size: 20px;
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
     margin-top: 15px;
 }
 
@@ -252,9 +252,9 @@
 /* Date Picker Css Start */
 
 #ui-datepicker-div.ui-widget-content {
-    background: #fff none repeat scroll 0 0;
+    background: var(--portolite-bg) none repeat scroll 0 0;
     border: 1px solid var(--portolite-black);
-    color: #252525;
+    color: var(--portolite-text-soft);
     font-size: 14px;
     border-radius: 0px;
     width: 270px;
@@ -272,10 +272,10 @@
 }
 
 .ui-datepicker td a {
-    color: var(--portolite-black) !important;
+    color: var(--portolite-heading) !important;
     text-align: center;
     background-image: none !important;
-    background: #f5f5f5 !important;
+    background: var(--portolite-bg-soft) !important;
     border: 1px solid #f9f9f9 !important;
 }
 
@@ -362,7 +362,7 @@
 .contact-three__inner {
     position: relative;
     display: block;
-    background-color: #F4F4F4;
+    background-color: var(--portolite-bg-soft);
     border-radius: 30px;
     padding: 80px 80px 80px;
 }
@@ -392,7 +392,7 @@
     height: 60px;
     width: 100%;
     line-height: 60px;
-    background-color: var(--portolite-white);
+    background-color: var(--portolite-bg);
     border: none;
     padding-left: 30px;
     padding-right: 30px;
@@ -411,7 +411,7 @@
 .contact-three__input-box .nice-select {
     height: 60px;
     width: 100%;
-    background-color: var(--portolite-white);
+    background-color: var(--portolite-bg);
     border: none;
     padding-left: 30px;
     padding-right: 30px;
@@ -445,7 +445,7 @@
     position: relative;
     height: 135px;
     width: 100%;
-    background-color: var(--portolite-white);
+    background-color: var(--portolite-bg);
     border: none;
     padding-top: 10px;
     padding-left: 30px;
@@ -523,7 +523,7 @@
     position: relative;
     display: inline-block;
     font-size: 16px;
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
 }
 
 .contact-four__contact-list li h5 {
@@ -534,11 +534,11 @@
 }
 
 .contact-four__contact-list li h5 a {
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
 }
 
 .contact-four__contact-list li h5 a:hover {
-    color: var(--portolite-base);
+    color: var(--portolite-base-ink);
 }
 
 .contact-four__right {

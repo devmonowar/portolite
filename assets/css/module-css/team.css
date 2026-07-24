@@ -11,7 +11,7 @@
 .team-one__single {
     position: relative;
     display: block;
-    background-color: var(--portolite-white);
+    background-color: var(--portolite-bg);
     border: 1px solid #e1e1e1;
     border-radius: 20px;
     padding: 10px;
@@ -91,19 +91,20 @@
 .team-one__plus-and-social:hover .team-one__plus {
     border: 1px solid var(--portolite-base);
     background-color: var(--portolite-base);
+    color: var(--portolite-on-base);
 }
 
 .team-one__plus span {
     position: relative;
     display: inline-block;
     font-size: 20px;
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .team-one__plus-and-social:hover .team-one__plus span {
-    color: var(--portolite-white);
+    color: var(--portolite-on-base);
 }
 
 .team-one__social {
@@ -165,11 +166,11 @@
 }
 
 .team-one__title a {
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
 }
 
 .team-one__title a:hover {
-    color: var(--portolite-base);
+    color: var(--portolite-base-ink);
 }
 
 
@@ -255,7 +256,7 @@
 }
 
 .team-details__client-address li p span {
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
 }
 
 .team-details__client-address li h5 {
@@ -266,11 +267,11 @@
 }
 
 .team-details__client-address li h5 a {
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
 }
 
 .team-details__client-address li h5 a:hover {
-    color: var(--portolite-base);
+    color: var(--portolite-base-ink);
 }
 
 .team-details__bottom {
@@ -325,7 +326,7 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 30px;
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
     margin-bottom: 11px;
 }
 

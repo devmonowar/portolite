@@ -74,8 +74,14 @@ function portolite_breadcrumb_func()
 
     $title = portolite_page_title();
 
-    // Theme mod & ACF values
-    $color           = get_theme_mod('portolite_breadcrumb_bg_color', '#e1e1e1');
+    // Theme mod & ACF values.
+    //
+    // The default is a token rather than a hex, so an untouched breadcrumb
+    // follows dark mode with the rest of the page. A site owner who picks a
+    // colour gets exactly that colour in both themes, which is what picking one
+    // means — the default is the only case the theme gets to decide.
+    $color           = get_theme_mod('portolite_breadcrumb_bg_color', '');
+    $color           = $color ? $color : 'var(--portolite-bg-soft)';
     $bg_img          = get_theme_mod('breadcrumb_bg_img');
     $right_img       = get_theme_mod('breadcrumb_right_img');
 
@@ -103,7 +109,15 @@ function portolite_breadcrumb_func()
     <!--Page Header Start-->
     <section class="page-header breadcrumb__area <?php echo esc_attr($style); ?>">
         <div class="page-header__wrap">
-            <div class="page-header__shape-1" style="background-color: <?php echo esc_attr($color); ?>; background-image: url('<?php echo esc_url($bg_img); ?>');"></div>
+            <?php
+            // background-image is only emitted when there is one: url('') makes
+            // the browser request the current page as an image.
+            $shape_style = 'background-color: ' . $color . ';';
+            if (!empty($bg_img)) {
+                $shape_style .= " background-image: url('" . esc_url($bg_img) . "');";
+            }
+            ?>
+            <div class="page-header__shape-1" style="<?php echo esc_attr($shape_style); ?>"></div>
             <div class="container">
                 <div class="page-header__inner"
                     style="padding-top: <?php echo esc_attr($padding_top); ?>px; padding-bottom: <?php echo esc_attr($padding_bottom); ?>px;">

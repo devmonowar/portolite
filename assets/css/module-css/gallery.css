@@ -132,7 +132,7 @@
 }
 
 .gallery-one__icon a:hover {
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
     background-color: var(--portolite-white);
 }
 

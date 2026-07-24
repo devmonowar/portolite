@@ -42,8 +42,10 @@
     text-align: center;
     font-size: 16px;
     line-height: 16px;
-    color: var(--portolite-black);
-    background-color: var(--portolite-white);
+    color: var(--portolite-heading);
+    /* The inactive pill is a surface carrying text, so it follows the theme.
+       A fixed white here gave a white pill with white text in dark mode. */
+    background-color: var(--portolite-bg);
     padding: 13px 30px 13px;
     border: 1px solid var(--portolite-base);
     font-weight: 700;
@@ -108,7 +110,7 @@
 .pricing-one__single {
     position: relative;
     display: block;
-    background-color: var(--portolite-white);
+    background-color: var(--portolite-bg);
     padding: 35px 40px 40px;
     border-radius: 20px;
     margin-bottom: 30px;
@@ -138,7 +140,7 @@
 .pricing-one__text {
     font-size: 12px;
     line-height: 20px;
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
 }
 
 .pricing-one__price-and-icon-box {
@@ -179,7 +181,7 @@
     justify-content: center;
     height: 60px;
     width: 60px;
-    background-color: #F4F4F4;
+    background-color: var(--portolite-bg-soft);
     border-radius: 50%;
     overflow: hidden;
     z-index: 1;
@@ -208,7 +210,7 @@
 
 .pricing-one__icon-box span {
     font-size: 30px;
-    color: var(--portolite-base);
+    color: var(--portolite-base-ink);
     position: relative;
     display: inline-block;
     transition: all 500ms linear;
@@ -248,7 +250,7 @@
     position: relative;
     display: inline-block;
     font-size: 15px;
-    color: var(--portolite-base);
+    color: var(--portolite-base-ink);
 }
 
 .list-unstyled.pricing-one__points li .text {
@@ -265,8 +267,8 @@
 
 .pricing-one__btn-box .thm-btn {
     width: 100%;
-    background-color: #f4f4f4;
-    color: var(--portolite-black);
+    background-color: var(--portolite-bg-soft);
+    color: var(--portolite-on-base);
 }
 
 .pricing-one__btn-box .thm-btn::after {

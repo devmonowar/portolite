@@ -49,7 +49,7 @@
     position: relative;
     display: inline-block;
     font-size: 15px;
-    color: var(--portolite-base);
+    color: var(--portolite-base-ink);
 }
 
 .about-one__points li .text {
@@ -120,6 +120,7 @@
     border-radius: 10px;
     padding: 15px 20px 26px;
     z-index: 2;
+    color: var(--portolite-on-base);
 }
 
 .about-one__content-icon {
@@ -227,7 +228,7 @@
 .about-two__tab-btn-single {
     position: relative;
     display: block;
-    background-color: var(--portolite-white);
+    background-color: var(--portolite-bg);
     border-radius: 20px;
     padding: 30px 30px 30px;
     overflow: hidden;
@@ -246,6 +247,7 @@
     opacity: 0;
     transition: all 0.4s linear;
     z-index: -1;
+    color: var(--portolite-on-base);
 }
 
 .about-two__tab-box .tab-buttons .tab-btn.active-btn .about-two__tab-btn-single:before {
@@ -305,7 +307,7 @@
     position: relative;
     display: inline-block;
     font-size: 40px;
-    color: var(--portolite-black);
+    color: var(--portolite-heading);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
@@ -427,7 +429,7 @@
     position: relative;
     display: inline-block;
     font-size: 14px;
-    color: var(--portolite-base);
+    color: var(--portolite-base-ink);
 }
 
 .about-two__tab-content-points li p {
@@ -488,7 +490,7 @@
     position: relative;
     display: inline-block;
     font-size: 15px;
-    color: var(--portolite-base);
+    color: var(--portolite-base-ink);
 }
 
 .about-five__points li .text {
@@ -580,7 +582,7 @@
 }
 
 .about-five__shope-box:hover .about-five__shope-icon span {
-    color: var(--portolite-base);
+    color: var(--portolite-base-ink);
 }
 
 .about-five__shope-title {

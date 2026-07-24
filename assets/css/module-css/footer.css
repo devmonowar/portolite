@@ -14,7 +14,7 @@
     width: 100%;
     margin: 0 auto 0;
     padding: 80px 15px 0;
-    background-color: #232323;
+    background-color: var(--portolite-black-soft);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     overflow: hidden;
@@ -27,7 +27,7 @@
     left: -800px;
     width: 1404px;
     height: 741px;
-    background: #FF0000;
+    background: var(--portolite-base);
     filter: blur(182px);
     transform: rotate(-90deg);
     opacity: .50;
@@ -40,7 +40,7 @@
     left: 0px;
     width: 861px;
     height: 693px;
-    background: #063FFF;
+    background: rgb(var(--portolite-glow-rgb));
     filter: blur(182px);
     transform: rotate(-90deg);
     opacity: .50;
@@ -458,7 +458,7 @@
     left: -700px;
     width: 1404px;
     height: 741px;
-    background: #063FFF;
+    background: rgb(var(--portolite-glow-rgb));
     filter: blur(182px);
     opacity: .50;
     z-index: -1;
@@ -470,7 +470,7 @@
     left: -564px;
     width: 861px;
     height: 693px;
-    background: #FF0000;
+    background: var(--portolite-base);
     filter: blur(182px);
     opacity: .50;
     z-index: -1;
@@ -502,7 +502,7 @@
     justify-content: center;
     height: 40px;
     width: 40px;
-    background-color: #232323;
+    background-color: var(--portolite-black-soft);
     border-radius: 50%;
     font-size: 15px;
     color: var(--portolite-white);

@@ -68,9 +68,26 @@
      token and not a hardcoded colour repeated in twenty rules. */
   --portolite-on-base: var(--portolite-ink);
 
-  /* Neutrals */
+  /* The brand colour used the other way round: as *text* on a light surface.
+     Amber on white is 1.8:1 — below even the 3:1 that icons need — so a link
+     or a label cannot simply be --portolite-base. This is that colour darkened
+     until it clears 4.5:1, which is the same hue doing a different job.
+
+     Use --portolite-base when the brand is a background or a large graphic,
+     and --portolite-base-ink when it is text or a small icon on the page.
+
+     Darkened far enough to clear 4.5:1 on --portolite-bg-soft as well as on
+     --portolite-bg — the sidebar and the widget panels sit on the soft one,
+     and a value that only passed against white failed there at 4.26:1. */
+  --portolite-base-ink: #946725;
+
+  /* Neutrals. These are fixed points — they do **not** change with dark mode.
+     Reach for them only where a surface is meant to stay that colour in both
+     themes: the header bar, the footer, an overlay. Everything else wants a
+     semantic surface below. */
   --portolite-black: #171717;
   --portolite-black-rgb: 23, 23, 23;
+  --portolite-black-soft: #232323;
   --portolite-white: #ffffff;
   --portolite-white-rgb: 255, 255, 255;
   --portolite-gray: #17080A;
@@ -163,6 +180,10 @@
 --------------------------------------------------------------*/
 
 body.portolite-dark {
+  /* On a dark page the brand colour needs no darkening — amber on #0E0E0E is
+     about 10.7:1. The darkened variant would be the unreadable one here. */
+  --portolite-base-ink: var(--portolite-base);
+
   --portolite-bg: #0E0E0E;
   --portolite-bg-soft: #171717;
   --portolite-bg-invert: var(--portolite-white);

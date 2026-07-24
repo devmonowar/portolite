@@ -483,13 +483,16 @@ function portolite_header_page_title_fields($fields)
 
     // Breadcrumb Setting
 
+    // No default: left empty, the breadcrumb band uses --portolite-bg-soft and
+    // therefore follows dark mode. A hex default here would pin it light in
+    // both themes for every site that never touched this control.
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'portolite_breadcrumb_bg_color',
         'label'       => __('Breadcrumb BG Color', 'portolite'),
-        'description' => esc_html__('This is a Breadcrumb bg color control.', 'portolite'),
+        'description' => esc_html__('Leave empty to follow the theme, including dark mode.', 'portolite'),
         'section'     => 'portolite_breadcrumb',
-        'default'     => '#e1e1e1',
+        'default'     => '',
         'priority'    => 10,
     ];
 

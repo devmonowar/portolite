@@ -22,10 +22,10 @@
   font-family: var(--portolite-font-two);
   font-weight: 500;
   font-size: 15px;
-  color: #03041c;
+  color: var(--portolite-heading);
   position: relative;
   padding-left: 14px;
-  background: #FFFFFF;
+  background: var(--portolite-bg);
   box-shadow: 0px 1px 3px rgba(3, 4, 28, 0.06);
   display: block;
   padding: 7px 14px;
@@ -43,7 +43,7 @@
   transform: translate(-50%, -50%);
   width: 4px;
   height: 4px;
-  background-color: #03041c;
+  background-color: var(--portolite-black);
   border-radius: 50%;
 }
 
@@ -66,14 +66,14 @@
   background-color: var(--portolite-base);
 }
 .sidebar__widget ul li a:hover::after {
-  background-color: #FFFFFF;
+  background-color: var(--portolite-bg);
 }
 .sidebar__widget ul li a:hover span {
-  color: #FFFFFF;
+  color: var(--portolite-white);
   border-color: rgba(255, 255, 255, 0.3);
 }
 .sidebar__widget ul li:hover {
-  color: #FFFFFF;
+  color: var(--portolite-white);
 }
 .sidebar__widget ul li ul {
   padding-left: 15px;
@@ -86,7 +86,7 @@
 }
 .sidebar__widget .nice-select .list {
     width: 100%;
-    background: #fff;
+    background: var(--portolite-bg);
     border-radius: 5px;
     box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
 }
@@ -94,7 +94,7 @@
     max-width: 100%;
     background: transparent;
 	margin-bottom: 0 !important;
-  color: #17080a;
+  color: var(--portolite-text);
     margin-bottom: 0 !important;
     max-width: 100%;
     text-wrap: wrap;
@@ -105,12 +105,12 @@
 .sidebar__widget .nice-select .option:hover, 
 .sidebar__widget .nice-select .option.focus, 
 .sidebar__widget .nice-select .option.selected.focus {
-    color: var(--portolite-base);
+    color: var(--portolite-base-ink);
 } 
 .nice-select .option:hover, 
 .nice-select .option.focus, 
 .nice-select .option.selected.focus {
-    background: #fff;
+    background: var(--portolite-bg);
 }
 
 
@@ -124,10 +124,10 @@
 
 
 .sidebar__widget #wp-calendar thead th {
-  color: #03041c;
+  color: var(--portolite-heading);
 }
 .sidebar__widget #wp-calendar caption {
-  color: #03041c;
+  color: var(--portolite-heading);
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
@@ -135,7 +135,7 @@
   transition: all 0.3s ease-out 0s;
 }
 .sidebar__widget #wp-calendar caption:hover {
-  color: var(--portolite-base);
+  color: var(--portolite-base-ink);
 }
 .sidebar__widget.widget_recent_comments ul li a {
   display: inline;
@@ -144,17 +144,17 @@
   box-shadow: none;
 }
 .sidebar__widget.widget_recent_comments .comment-author-link a {
-  color: var(--portolite-base);
+  color: var(--portolite-base-ink);
 }
 .sidebar__widget.widget_recent_comments ul li a:hover {
-  color: var(--portolite-base);
+  color: var(--portolite-base-ink);
   background-color: transparent;
 }
 .sidebar__widget.widget_recent_comments ul li:hover {
   color: var(--portolite-heading);
 }
 .sidebar__widget.widget_recent_entries ul li a {
-  color: #03041c;
+  color: var(--portolite-heading);
   display: inline;
   padding: 0;
   background-color: transparent;
@@ -162,10 +162,10 @@
 }
 .sidebar__widget.widget_recent_entries ul li a:hover {
   background-color: transparent;
-  color: var(--portolite-base);
+  color: var(--portolite-base-ink);
 }
 .sidebar__widget.widget_rss ul li a {
-  color: #03041c;
+  color: var(--portolite-heading);
   display: inline;
   padding: 0;
   background-color: transparent;
@@ -177,7 +177,7 @@ display: none;
 }
 .sidebar__widget.widget_rss ul li a:hover {
   background-color: transparent;
-  color: var(--portolite-base);
+  color: var(--portolite-base-ink);
 }
 .sidebar__widget.widget_rss ul li:hover {
   color: var(--portolite-heading);
@@ -191,7 +191,7 @@ display: none;
   line-height: 60px;
   padding-left: 25px;
   padding-right: 50px;
-  background-color: #FFFFFF;
+  background-color: var(--portolite-bg);
   outline: 0;
   border: 0;
   box-shadow: 0px 1px 3px rgba(3, 4, 28, 0.06);
@@ -201,22 +201,22 @@ display: none;
 .sidebar__search input::-webkit-input-placeholder {
   font-size: 15px;
   letter-spacing: -0.02em;
-  color: #919193;
+  color: var(--portolite-text-soft);
 }
 .sidebar__search input:-moz-placeholder {
   font-size: 15px;
   letter-spacing: -0.02em;
-  color: #919193;
+  color: var(--portolite-text-soft);
 }
 .sidebar__search input::-moz-placeholder {
   font-size: 15px;
   letter-spacing: -0.02em;
-  color: #919193;
+  color: var(--portolite-text-soft);
 }
 .sidebar__search input:-ms-input-placeholder {
   font-size: 15px;
   letter-spacing: -0.02em;
-  color: #919193;
+  color: var(--portolite-text-soft);
 }
 .sidebar__search button {
   position: absolute;
@@ -224,9 +224,9 @@ display: none;
   right: 0;
   height: 100%;
   padding: 0 24px;
-  color: #03041c;
+  color: var(--portolite-heading);
   line-height: 60px;
-  background-color: #FFFFFF;
+  background-color: var(--portolite-bg);
 }
 .sidebar__search button svg {
   -webkit-transform: translateY(-2px);
@@ -236,11 +236,11 @@ display: none;
   transform: translateY(-2px);
 }
 .sidebar__search button:hover {
-  color: var(--portolite-base);
+  color: var(--portolite-base-ink);
 }
 .sidebar__author {
   padding: 45px 50px 50px;
-  background-color: #FFFFFF;
+  background-color: var(--portolite-bg);
   box-shadow: 0px 1px 3px rgba(3, 4, 28, 0.06);
   text-align: center;
 }
@@ -271,7 +271,7 @@ div.sidebar__author-thumb img {
   line-height: 38px;
   text-align: center;
   border: 1px solid #EAEAEF;
-  color: #03041c;
+  color: var(--portolite-heading);
   margin-right: 3px;
 }
 
@@ -293,7 +293,7 @@ div.sidebar__author-thumb img {
   font-family: var(--portolite-font-two);
   font-weight: 700;
   font-size: 14px;
-  color: #03041c;
+  color: var(--portolite-heading);
   margin-right: 12px;
 }
 
@@ -303,10 +303,10 @@ div.sidebar__author-thumb img {
   font-weight: 500;
   font-size: 14px !important;
   line-height: 1;
-  color: #03041c;
+  color: var(--portolite-heading);
   box-shadow: 0px 1px 3px rgba(3, 4, 28, 0.06);
   padding: 9px 18.5px;
-  background-color: #FFFFFF;
+  background-color: var(--portolite-bg);
   text-transform: capitalize;
   margin-bottom: 6px;
   margin-right: 2px;
@@ -325,7 +325,7 @@ div.sidebar__author-thumb img {
     color: var(--portolite-on-base);
 }
 .widget_rss a.rsswidget.rss-widget-title {
-    color: #171717;
+    color: var(--portolite-heading);
 }
 .widget_text p {
     margin-bottom: 15px;
@@ -350,7 +350,7 @@ div.sidebar__author-thumb img {
 }
 .footer__widget-title {
   font-size: 24px;
-  color: #FFFFFF;
+  color: var(--portolite-white);
   margin-bottom: 25px;
   position: relative;
   font-family: var(--portolite-font-two);
@@ -360,12 +360,12 @@ div.sidebar__author-thumb img {
   list-style: none;
   margin-bottom: 17px;
   line-height: 1;
-  color: #b0b0b8;
+  color: var(--portolite-ink-muted);
 }
 .footer__widget ul li a {
   font-family: var(--portolite-font);
   font-size: 16px;
-  color: #b0b0b8;
+  color: var(--portolite-ink-muted);
   position: relative;
   padding-left: 13px;
   line-height: 1.5;
@@ -381,10 +381,10 @@ div.sidebar__author-thumb img {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  background-color: #b0b0b8;
+  background-color: var(--portolite-ink-muted);
   width: 5px;
   height: 5px;
-  background-color: #b0b0b8;
+  background-color: var(--portolite-ink-muted);
   border-radius: 50%;
 }
 
@@ -392,7 +392,7 @@ div.sidebar__author-thumb img {
   color: var(--portolite-base);
 }
 .footer__widget p {
-  color: #b0b0b8;
+  color: var(--portolite-ink-muted);
   font-size: 16px;
   font-weight: 500;
   font-family: var(--portolite-font);
@@ -442,7 +442,7 @@ div.sidebar__author-thumb img {
 .footer__blog-title {
   font-size: 17px;
   text-transform: capitalize;
-  color: #FFFFFF;
+  color: var(--portolite-white);
   margin-bottom: 4px;
   line-height: 1.3;
   font-family: var(--portolite-font-two);
@@ -504,13 +504,13 @@ div.sidebar__author-thumb img {
 }
 
 .footer__widget .nice-select .list {
-    background-color: #fff;
+    background-color: var(--portolite-bg);
     border-radius: 0px;
     box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
 }
 .footer__widget .nice-select .option {
     margin-bottom: 0 !important;
-    color: #525258 !important;
+    color: var(--portolite-text-soft) !important;
 }
 .footer__widget .nice-select .option:hover {
     color: var(--portolite-base) !important;
@@ -526,7 +526,7 @@ div.sidebar__author-thumb img {
 	margin-bottom: 0;
 	padding-bottom: 0;
 	padding-top: 0;
-	color: #fff;
+	color: var(--portolite-white);
 }
 #wp-calendar thead {
 	font-size: 14px;
@@ -534,20 +534,20 @@ div.sidebar__author-thumb img {
 #wp-calendar thead th {
 	padding-bottom: 10px;
 	text-align: center;
-	color: #fff;
+	color: var(--portolite-white);
 }
 #wp-calendar tbody {
-	color: #666;
+	color: var(--portolite-text-soft);
 }
 #wp-calendar tbody td {
-	background: #fff;
+	background: var(--portolite-bg);
 	border: 1px solid #e1e1e1;
 	text-align: center;
 	padding: 8px 0;
 	transition: 0.3s;
 }
 .footer__widget.widget_rss a.rsswidget.rss-widget-title {
-    color: #fff;
+    color: var(--portolite-white);
 }
 
 .sidebar__widget:last-child {

@@ -35,7 +35,7 @@
     align-items: center;
     gap: 8px;
     margin-top: 20px;
-    color: var(--mp-accent);
+    color: var(--sec-accent);
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
@@ -71,6 +71,10 @@
     object-fit: cover;
 }
 
+/* A dark badge that can sit inside a *light* section. Because it paints its own
+   surface it has to redeclare --sec-* as well, or the light section hands it
+   the darkened accent, which on ink reads at 3.84:1. Same for .mp-cta__box
+   below. */
 .mp-about__stat {
     position: absolute;
     right: 20px;
@@ -80,6 +84,11 @@
     background: var(--mp-ink);
     color: var(--portolite-ink-text);
     text-align: center;
+
+    --sec-text: var(--portolite-ink-text);
+    --sec-muted: var(--portolite-ink-muted);
+    --sec-accent: var(--portolite-base);
+    --sec-accent-deep: var(--portolite-base-dark);
 }
 
 .mp-about__stat b {
@@ -87,7 +96,7 @@
     font-family: var(--mp-display);
     font-size: 2rem;
     line-height: 1;
-    color: var(--mp-accent);
+    color: var(--sec-accent);
 }
 
 .mp-about__stat span {
@@ -120,7 +129,7 @@
     margin-top: 2px;
     border-radius: 50%;
     background: rgba(var(--mp-accent-rgb), .16);
-    color: var(--mp-accent-deep);
+    color: var(--sec-accent-deep);
 }
 
 .mp-about__list strong {
@@ -205,7 +214,7 @@
     padding: 6px 12px;
     border-radius: 999px;
     background: rgba(var(--mp-accent-rgb), .16);
-    color: var(--mp-accent-deep);
+    color: var(--sec-accent-deep);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: .04em;
@@ -269,7 +278,7 @@
 .mp-plan__list svg {
     flex: none;
     margin-top: 3px;
-    color: var(--mp-accent-deep);
+    color: var(--sec-accent-deep);
 }
 
 .mp-plan .mp-btn {
@@ -288,7 +297,7 @@
 .mp-quote__stars {
     display: inline-flex;
     gap: 3px;
-    color: var(--mp-accent);
+    color: var(--sec-accent);
 }
 
 .mp-quote__text {
@@ -315,7 +324,7 @@
     height: 44px;
     border-radius: 50%;
     background: rgba(var(--mp-accent-rgb), .16);
-    color: var(--mp-accent);
+    color: var(--sec-accent);
     font-family: var(--mp-display);
     font-weight: 700;
 }
@@ -419,6 +428,12 @@
         radial-gradient(70% 140% at 88% 10%, rgba(var(--mp-accent-rgb), .22), transparent 70%),
         var(--mp-ink-soft);
     border: 1px solid rgba(var(--portolite-white-rgb), .1);
+
+    --sec-text: var(--portolite-ink-text);
+    --sec-muted: var(--portolite-ink-muted);
+    --sec-line: rgba(var(--portolite-white-rgb), .18);
+    --sec-accent: var(--portolite-base);
+    --sec-accent-deep: var(--portolite-base-dark);
 }
 
 .mp-cta__box h2 {

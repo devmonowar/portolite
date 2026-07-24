@@ -234,6 +234,8 @@
     --sec-text: var(--portolite-ink-text);
     --sec-muted: var(--portolite-ink-muted);
     --sec-line: rgba(var(--portolite-white-rgb), .16);
+    --sec-accent: var(--portolite-base);
+    --sec-accent-deep: var(--portolite-base-dark);
 }
 
 .mp-band__bg {
@@ -289,7 +291,7 @@
 
 .mp-band__phone:hover,
 .mp-band__phone:focus-visible {
-    color: var(--mp-accent);
+    color: var(--sec-accent);
 }
 
 /* A fixed background cannot be composited cheaply on a small screen, and the
@@ -328,7 +330,7 @@
 
 a.mp-feature__link:hover,
 a.mp-feature__link:focus-visible {
-    color: var(--mp-accent);
+    color: var(--sec-accent);
     padding-left: var(--portolite-space-6);
 }
 
@@ -337,7 +339,7 @@ a.mp-feature__link:focus-visible {
     font-size: var(--portolite-text-sm);
     font-weight: var(--portolite-weight-semibold);
     letter-spacing: .1em;
-    color: var(--mp-accent);
+    color: var(--sec-accent);
 }
 
 .mp-feature__text {

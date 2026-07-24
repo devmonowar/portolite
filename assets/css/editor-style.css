@@ -2,18 +2,18 @@
    editor stylesheet is that the preview matches the front end. */
 body {
     font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-    color: #333;
+    color: var(--portolite-text-soft);
     line-height: 1.7;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 600;
-    color: #111;
+    color: var(--portolite-heading);
 }
 
 a {
-    color: var(--portolite-base);
+    color: var(--portolite-base-ink);
     text-decoration: none;
 }
 
