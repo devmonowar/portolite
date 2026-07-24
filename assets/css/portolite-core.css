@@ -20,12 +20,10 @@
 /* Tokens live in portolite-tokens.css, which loads first. Do not redeclare
    them here — one source or none. */
 
-.row {
-  --bs-gutter-x: var(--portolite-gutter);
-}
-
+/* The grid's own default is already --portolite-gutter; this stays as the
+   theme's named alias for a row that also needs vertical spacing. */
 .gutter-y-30 {
-  --bs-gutter-y: var(--portolite-gutter);
+  --portolite-gutter-y: var(--portolite-gutter);
 }
 
 body {
@@ -61,6 +59,9 @@ a:visited {
   text-decoration: none;
 }
 
+/* A placeholder inherits the field's colour rather than the browser's grey.
+   Declared once, here — the prefixed variants have to be separate rules
+   because one unknown selector invalidates the whole list. */
 ::-webkit-input-placeholder {
   color: inherit;
   opacity: 1;
@@ -111,26 +112,6 @@ ul {
   margin-bottom: 0;
 }
 
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 1;
-}
-
-:-ms-input-placeholder {
-  color: inherit;
-  opacity: 1;
-}
-
-::-ms-input-placeholder {
-  color: inherit;
-  opacity: 1;
-}
-
-::placeholder {
-  color: inherit;
-  opacity: 1;
-}
-
 .page-wrapper {
   position: relative;
   margin: 0 auto;
@@ -141,40 +122,8 @@ ul {
   overflow: hidden;
 }
 
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.list-unstyled {
-  padding-left: 0;
-}
-
-@media (min-width: 1320px) {
-  .container {
-    max-width: 1320px;
-  }
-}
-
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 1;
-}
-
-:-ms-input-placeholder {
-  color: inherit;
-  opacity: 1;
-}
-
-::-ms-input-placeholder {
-  color: inherit;
-  opacity: 1;
-}
-
-::placeholder {
-  color: inherit;
-  opacity: 1;
-}
+/* .container and .list-unstyled live in portolite-grid.css — the container's
+   width comes from --portolite-shell. */
 
 #particles-js {
   position: absolute;

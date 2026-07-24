@@ -61,7 +61,11 @@ function portolite_assets()
 
             // Always on: the grid, the icon fonts, and the select styling that
             // applies to comment forms and widgets on every template.
-            'bootstrap'          => ['bootstrap.min.css', ['tokens'], true],
+            //
+            // `grid` is the theme's own reboot + 12-column grid + layout
+            // utilities. It replaced Bootstrap, keeping the class names so no
+            // markup changed; see the header of portolite-grid.css.
+            'grid'               => ['portolite-grid.css', ['tokens'], true],
             'flaticon'           => ['flaticon.css', [], true],
             'nice-select'        => ['nice-select.css', [], true],
 

@@ -3,8 +3,6 @@
 /**
  * Template for displaying the Team custom post type archive
  *
- * Redirects to homepage if not viewing the actual 'team' archive.
- *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package portolite
@@ -27,9 +25,7 @@ get_header();
                 <?php endwhile; ?>
             <?php else : ?>
                 <div class="col-12">
-                    <div class="alert alert-warning text-center">
-                        <?php esc_html_e('No team members found.', 'portolite'); ?>
-                    </div>
+                    <?php get_template_part('template-parts/content', 'none'); ?>
                 </div>
             <?php endif; ?>
         </div>
