@@ -53,7 +53,26 @@ return [
                 portolite_acf_textarea('683994691d40e', 'description', 'Description', [
                     'parent_repeater' => 'field_6839941c1d40a',
                 ]),
-                portolite_acf_text('6839947b1d40f', 'animation', 'Animation', [
+                // A select, not free text. The class goes straight onto the
+                // element for WOW to animate, and assets/css/animate.css only
+                // carries these twelve — a name outside the list leaves the
+                // element at opacity 0 with no animation to reveal it. The
+                // choices must stay in step with $keep in
+                // portolite-memory/scripts/build-animate-subset.php.
+                portolite_acf_select('6839947b1d40f', 'animation', 'Animation', [
+                    'fadeIn'       => 'Fade in',
+                    'fadeInUp'     => 'Fade in — from below',
+                    'fadeInDown'   => 'Fade in — from above',
+                    'fadeInLeft'   => 'Fade in — from the left',
+                    'fadeInRight'  => 'Fade in — from the right',
+                    'slideInUp'    => 'Slide in — from below',
+                    'slideInDown'  => 'Slide in — from above',
+                    'slideInLeft'  => 'Slide in — from the left',
+                    'slideInRight' => 'Slide in — from the right',
+                    'zoomIn'       => 'Zoom in',
+                    'bounceIn'     => 'Bounce in',
+                    'flipInX'      => 'Flip in',
+                ], [
                     'default_value'   => 'fadeInLeft',
                     'parent_repeater' => 'field_6839941c1d40a',
                 ]),
